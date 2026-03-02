@@ -10,6 +10,8 @@
         content="SENA, gestión administrativa, Access, Power BI, Power Query, base de datos, ETL, tecnólogo" />
     <meta name="author" content="SENA - Gestión Administrativa" />
     <meta name="theme-color" content="#030712" />
+    <meta name="msapplication-TileColor" content="#030712" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-and-white" />
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json" />
@@ -640,6 +642,33 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- EJEMPLO GUIADO: REGLA DE VALIDACIÓN -->
+                            <div class="info-box info-box--success mt-20 border-l-4 border-l-success">
+                                <span class="info-icon">🎯</span>
+                                <div>
+                                    <strong>Ejemplo Guiado: Regla de Validación</strong>
+                                    <p class="mt-4 text-095">Supongamos que al crear la tabla <code>EMPLEADOS</code>,
+                                        queremos evitar que, por error de tipeo, se ingrese un salario negativo o
+                                        inferior a la ley.</p>
+                                    <ol class="list-decimal pl-20 mt-8 mb-8 text-095 text-text-2 space-y-4">
+                                        <li>En la <strong>Vista Diseño</strong> de la tabla, selecciona el campo
+                                            <code>SalarioBase</code> (Tipo: Moneda).
+                                        </li>
+                                        <li>En la sección inferior <em>Propiedades del campo</em>, ubícate en la fila
+                                            <strong>Regla de validación</strong>.
+                                        </li>
+                                        <li>Escribe la expresión lógica de control: <code>>= 1300000</code>.</li>
+                                        <li>En la fila de abajo, <strong>Texto de validación</strong>, escribe el
+                                            mensaje de error personalizado: <em>"El salario base no puede ser menor al
+                                                mínimo legal de $1.300.000."</em></li>
+                                    </ol>
+                                    <p class="text-090 text-success mt-4"><em>Resultado Práctico:</em> Al intentar
+                                        ingresar <code>1200000</code> en la Vista Hoja de Datos, Access bloqueará la
+                                        acción inmediatamente mostrando tu mensaje personalizado, ¡blindando así tu
+                                        información administrativa!</p>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="theory-card theory-card--full border-l-green">
@@ -1002,6 +1031,85 @@
                                 <p><strong>¡Cuidado!</strong> La operación <strong>DELETE</strong> es irreversible en
                                     Access. Asegúrate siempre de configurar reglas de validación o confirmaciones en tus
                                     botones para evitar pérdidas accidentales de datos.</p>
+                            </div>
+
+                            <!-- PRÁCTICA EXTENDIDA CRUD: CASOS ADMINISTRATIVOS/CLÍNICOS -->
+                            <div class="mt-32 pt-20 border-t-accent">
+                                <div class="flex items-center gap-10 mb-15">
+                                    <span class="dt-icon text-24">🏥</span>
+                                    <h4 class="m-0 text-18 font-bold">Casos Prácticos: Gestión de Hospital</h4>
+                                </div>
+                                <p class="text-text-2 mb-20">Aterricemos el CRUD a la realidad de una clínica médica:
+                                </p>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+                                    <!-- Caso Create -->
+                                    <div class="bg-gray-800-50 p-16 rounded-12 border-l-4 border-l-green shadow-sm">
+                                        <div class="flex items-center justify-between mb-8">
+                                            <span class="font-bold text-green">1. CREATE (Alta Médica)</span>
+                                            <span class="text-11 bg-white-10 px-8 py-2 rounded-full font-mono">Form:
+                                                Médicos</span>
+                                        </div>
+                                        <p class="text-13 m-0 leading-18 text-text-2">
+                                            <strong>Escenario:</strong> Un nuevo Cardiólogo entra a trabajar.<br><br>
+                                            <strong>Acción:</strong> Abres el formulario <em>Frm_Medicos</em>, haces
+                                            clic en el botón <strong>"Nuevo Registro"</strong> (icono `*`) e ingresas su
+                                            Nombre, Especialidad y Teléfono. Access guarda el registro automáticamente
+                                            al cambiar de campo.
+                                        </p>
+                                    </div>
+
+                                    <!-- Caso Read -->
+                                    <div class="bg-gray-800-50 p-16 rounded-12 border-l-4 border-l-blue shadow-sm">
+                                        <div class="flex items-center justify-between mb-8">
+                                            <span class="font-bold text-blue">2. READ (Búsqueda de Paciente)</span>
+                                            <span class="text-11 bg-white-10 px-8 py-2 rounded-full font-mono">Form:
+                                                Pacientes</span>
+                                        </div>
+                                        <p class="text-13 m-0 leading-18 text-text-2">
+                                            <strong>Escenario:</strong> Un paciente llama pero solo recuerdas su
+                                            apellido "Martínez".<br><br>
+                                            <strong>Acción:</strong> En <em>Frm_Pacientes</em>, presionas
+                                            <code>Ctrl + B</code> sobre el campo Apellido, eliges "Coincidir en
+                                            cualquier parte del campo". Access lista todos los Martínez de la base de
+                                            datos sin borrar a los demás.
+                                        </p>
+                                    </div>
+
+                                    <!-- Caso Update -->
+                                    <div class="bg-gray-800-50 p-16 rounded-12 border-l-4 border-l-orange shadow-sm">
+                                        <div class="flex items-center justify-between mb-8">
+                                            <span class="font-bold text-orange">3. UPDATE (Ajuste de Stock)</span>
+                                            <span class="text-11 bg-white-10 px-8 py-2 rounded-full font-mono">Form:
+                                                Inventario</span>
+                                        </div>
+                                        <p class="text-13 m-0 leading-18 text-text-2">
+                                            <strong>Escenario:</strong> Llega un cargamento de 500 Paracetamol.<br><br>
+                                            <strong>Acción:</strong> Buscas el medicamento (READ), haces clic en la
+                                            celda <code>Stock Actual</code>, borras el número viejo y pones el nuevo. Al
+                                            cerrar el formulario, el <strong>Update</strong> queda registrado,
+                                            reflejándose inmediatamente en los Informes.
+                                        </p>
+                                    </div>
+
+                                    <!-- Caso Delete -->
+                                    <div class="bg-gray-800-50 p-16 rounded-12 border-l-4 border-l-red shadow-sm">
+                                        <div class="flex items-center justify-between mb-8">
+                                            <span class="font-bold text-red">4. DELETE (Baja de Equipo)</span>
+                                            <span class="text-11 bg-white-10 px-8 py-2 rounded-full font-mono">Form:
+                                                Equipos</span>
+                                        </div>
+                                        <p class="text-13 m-0 leading-18 text-text-2">
+                                            <strong>Escenario:</strong> Un viejo monitor de signos vitales se descompone
+                                            y debe salir del sistema.<br><br>
+                                            <strong>Acción:</strong> Seleccionas el registro en la barra lateral del
+                                            formulario y oprimes <code>Supr</code>.<br> <br><span
+                                                class="text-12 text-accent">⚠️ Tip de Integridad: Si dejas el equipo
+                                                registrado para historial, mejor usa un UPDATE cambiando su estado a
+                                                "Baja" en lugar de hacer un DELETE real en la tabla base.</span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1456,6 +1564,19 @@
                                             <strong>Exigir integridad referencial</strong> y haz clic en
                                             <kbd>Crear</kbd>. Verás el "1" y el "∞" entre ambas tablas.
                                         </p>
+                                        <div
+                                            class="info-box info-box--tip py-8 px-12 mt-8 mb-12 border-l-custom-dml border-l-4">
+                                            <span class="info-icon">💡</span>
+                                            <div>
+                                                <strong>Teoría en Acción (PK a FK):</strong>
+                                                <p class="text-085 mt-4">Al arrastrar la línea, estás conectando la
+                                                    <strong>Llave Primaria (PK)</strong> de la tabla PADRE
+                                                    (`ID_Estudiante` en ESTUDIANTES) con la <strong>Llave Foránea
+                                                        (FK)</strong> de la tabla HIJO (en INSCRIPCIONES). Esto crea la
+                                                    dependencia estricta 1 a Muchos.
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="n3">
                                         Completado</label>
@@ -1501,6 +1622,205 @@
                                     A, (2) Crea tabla B, (3) Crea tabla INTERMEDIA con FK de A y FK de B más sus propios
                                     datos, (4) Crea relación 1:N de A a Intermedia, (5) Crea relación 1:N de B a
                                     Intermedia. ¡Así se resuelve cualquier N:M!</p>
+                            </div>
+                        </div>
+
+                        <!-- PARTE 4: EJEMPLO GUIADO FORMULARIOS -->
+                        <div class="guide-section border-t-accent pt-28 mt-32" id="gs-formularios">
+                            <div class="guide-section-header">
+                                <span class="guide-section-icon">📱</span>
+                                <div>
+                                    <h4 class="guide-section-title">PARTE 4 — Ejemplo Guiado: Creando un Formulario con
+                                        Cuadro Combinado</h4>
+                                    <p class="guide-section-sub">Aprende a conectar la interfaz visual con las llaves
+                                        foráneas para evitar errores de digitación del usuario.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box info-box--warning mb-24">
+                                <span class="info-icon">🎯</span>
+                                <p><strong>Escenario:</strong> Has creado la tabla <code>INSCRIPCIONES</code> (con la FK
+                                    `ID_Estudiante`). Si un usuario digita el ID "5" pero el estudiante 5 no existe,
+                                    habrá un error. Vamos a cambiar el cuadro de texto por un <strong>Cuadro Combinado
+                                        (Lista Desplegable)</strong> para que el usuario seleccione el nombre, pero la
+                                    base de datos guarde el ID invisiblemente.</p>
+                            </div>
+
+                            <div class="guide-steps">
+                                <div class="guide-step" data-step="f1">
+                                    <div class="gs-marker gs-marker--access"><span>1</span></div>
+                                    <div class="gs-content">
+                                        <h5>Generar el Formulario Base</h5>
+                                        <p>Selecciona la tabla <strong>INSCRIPCIONES</strong> en el panel izquierdo.
+                                            Luego ve a la pestaña <kbd>Crear</kbd> → <kbd>Formulario</kbd>. Access
+                                            creará un diseño básico automáticamente. Haz clic derecho en la pestaña del
+                                            nuevo formulario y selecciona <strong>Vista Diseño</strong>.</p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="f1">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="f2">
+                                    <div class="gs-marker gs-marker--access"><span>2</span></div>
+                                    <div class="gs-content">
+                                        <h5>Eliminar el Campo Textbox Original</h5>
+                                        <p>En el diseño, busca el cuadro de texto correspondiente a
+                                            <code>ID_Estudiante</code>. Haz clic sobre él y presiona la tecla
+                                            <kbd>Suprimir</kbd>. ¡Vamos a reemplazarlo por algo mucho mejor!
+                                        </p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="f2">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="f3">
+                                    <div class="gs-marker gs-marker--access"><span>3</span></div>
+                                    <div class="gs-content">
+                                        <h5>Insertar el Cuadro Combinado (Combobox)</h5>
+                                        <p>Arriba en la pestaña "Diseño de Formulario", despliega la galería de
+                                            <strong>Controles</strong>. Activa el botón de "Varita mágica" (Usar
+                                            asistentes para controles). Ahora haz clic en el icono de <strong>Cuadro
+                                                Combinado 🔽</strong> y haz clic en el formulario para insertarlo.
+                                        </p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="f3">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="f4">
+                                    <div class="gs-marker gs-marker--access"><span>4</span></div>
+                                    <div class="gs-content">
+                                        <h5>Configurar el Asistente del Cuadro Combinado</h5>
+                                        <p>El Asistente te guiará con 4 preguntas vitales. Responde así:</p>
+                                        <ul class="pl-20 mt-8 mb-8 text-090 text-text-2 space-y-4">
+                                            <li><strong>Paso 1:</strong> Selecciona "Deseo que el cuadro busque los
+                                                valores en otra tabla".</li>
+                                            <li><strong>Paso 2:</strong> ¿De qué tabla? Selecciona la tabla origen:
+                                                <strong>ESTUDIANTES</strong>.
+                                            </li>
+                                            <li><strong>Paso 3:</strong> Pasa dos campos a la derecha:
+                                                <code>ID_Estudiante</code> (para guardar) y
+                                                <code>NombreEstudiante</code> (para que el usuario lo vea).
+                                            </li>
+                                            <li><strong>Paso 4 (El secreto):</strong> Activa la casilla "Ocultar la
+                                                columna clave (recomendado)".</li>
+                                            <li><strong>Paso 5:</strong> Selecciona "Almacenar el valor en este campo" y
+                                                escoge la llave foránea: <strong>ID_Estudiante</strong> (de la tabla
+                                                Inscripciones).</li>
+                                        </ul>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="f4">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="f5">
+                                    <div class="gs-marker gs-marker--access"><span>5</span></div>
+                                    <div class="gs-content">
+                                        <h5>¡Verifica la Magia!</h5>
+                                        <p>Cambia a <strong>Vista Formulario</strong>. Ahora, cuando despliegues la
+                                            lista, verás los nombres de los estudiantes. Al elegir "Ana Pérez"
+                                            (ejemplo), Access guardará silenciosamente su ID autonumérico subyacente
+                                            asegurando la <em>Integridad Referencial</em>. ¡Has creado un sistema a
+                                            prueba de errores!</p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="f5">
+                                        Completado</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PARTE 5: EJEMPLO GUIADO INFORMES -->
+                        <div class="guide-section border-t-blue pt-28 mt-32" id="gs-informes">
+                            <div class="guide-section-header">
+                                <span class="guide-section-icon">📑</span>
+                                <div>
+                                    <h4 class="guide-section-title">PARTE 5 — Ejemplo Guiado: Respaldando la Toma de
+                                        Decisiones con Informes y Agrupación</h4>
+                                    <p class="guide-section-sub">Transforma los datos crudos en un documento
+                                        profesional, listo para imprimir o enviar en PDF a Gerencia.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box info-box--tip mb-24">
+                                <span class="info-icon">📊</span>
+                                <p><strong>Escenario:</strong> El coordinador te pide un reporte de todos los
+                                    estudiantes inscritos, pero <strong>agrupados por curso</strong>, para saber cuántos
+                                    alumnos hay por cada materia. Un informe con niveles de agrupación es la solución
+                                    perfecta.</p>
+                            </div>
+
+                            <div class="guide-steps">
+                                <div class="guide-step" data-step="i1">
+                                    <div class="gs-marker gs-marker--access"><span>1</span></div>
+                                    <div class="gs-content">
+                                        <h5>Preparar el Origen de Datos (Record Source)</h5>
+                                        <p>Recuerda la teoría: <em>Un buen Informe nace de una buena Consulta</em>. Ve a
+                                            <kbd>Crear</kbd> → <kbd>Diseño de Consulta</kbd>. Agrega las tablas
+                                            "CURSOS", "INSCRIPCIONES" y "ESTUDIANTES". Arrastra los campos
+                                            <code>NombreCurso</code> y <code>NombreEstudiante</code> a la cuadrícula
+                                            inferior. Guarda esta consulta como <strong>"Q_Listado_Cursos"</strong>.
+                                        </p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="i1">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="i2">
+                                    <div class="gs-marker gs-marker--access"><span>2</span></div>
+                                    <div class="gs-content">
+                                        <h5>Lanzar el Asistente para Informes</h5>
+                                        <p>Con tu consulta nueva seleccionada en el panel izquierdo (Q_Listado_Cursos),
+                                            ve a la pestaña <kbd>Crear</kbd> y haz clic en <strong>Asistente para
+                                                Informes</strong>. Pasa todos los campos disponibles al cuadro de la
+                                            derecha ("Campos seleccionados").</p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="i2">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="i3">
+                                    <div class="gs-marker gs-marker--access"><span>3</span></div>
+                                    <div class="gs-content">
+                                        <h5>Configurar Niveles de Agrupamiento</h5>
+                                        <p>Esta es la pantalla más crucial del asistente: <em>"¿Desea agregar algún
+                                                nivel de agrupamiento?"</em>. Selecciona <strong>NombreCurso</strong> y
+                                            haz clic en la flecha <kbd>></kbd>. Verás en el diagrama de vista previa
+                                            cómo <code>NombreCurso</code> sube de jerarquía, quedando los estudiantes
+                                            tabulados debajo de él.</p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="i3">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="i4">
+                                    <div class="gs-marker gs-marker--access"><span>4</span></div>
+                                    <div class="gs-content">
+                                        <h5>Ordenar y Personalizar Diseño</h5>
+                                        <p>En el siguiente paso, elige ordenar los registros por
+                                            <strong>NombreEstudiante</strong> en modo Ascendente. Luego, elige la
+                                            distribución en <strong>"Pasos"</strong> o "Bloque". ¡Esto le dará ese look
+                                            corporativo profesional! Finaliza el asistente y mira tu reporte generado.
+                                        </p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="i4">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="i5">
+                                    <div class="gs-marker gs-marker--access"><span>5</span></div>
+                                    <div class="gs-content">
+                                        <h5>Toque Maestro: Totales (Vista Diseño)</h5>
+                                        <p>Haz clic derecho en tu informe y entra a <strong>Vista Diseño</strong>. Ve al
+                                            botón <em>Agrupar y Ordenar</em> (arriba). En la barra inferior que se abre,
+                                            dale a <code>Más ></code> junto a NombreCurso. Cambia "sin sección de pie de
+                                            página" a <strong>"con una sección de pie de página"</strong>. ¡Allí puedes
+                                            arrastrar un Cuadro de Texto de la galería para poner la fórmula
+                                            <code>=Cuenta([NombreEstudiante])</code> y mostrar el total por curso!
+                                        </p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="i5">
+                                        Completado</label>
+                                </div>
                             </div>
                         </div>
 
@@ -2151,22 +2471,66 @@ ORDER BY
                                 <div>
                                     <h4 class="guide-section-title">PARTE 1 — Operaciones Básicas (CRUD)</h4>
                                     <p class="guide-section-sub">Aprende a Crear, Leer, Actualizar y Borrar registros.
-                                        La base de todo sistema.</p>
+                                        La base de todo sistema de información.</p>
                                 </div>
                             </div>
+
+                            <!-- Imagen CRUD Generada -->
+                            <div class="crud-visual-container mb-32">
+                                <img src="crud_lifecycle_diagram_1772482391001.png" alt="Ciclo de vida CRUD"
+                                    class="crud-main-img glass-card">
+                                <div class="crud-legend-overlay">
+                                    <span class="badge badge--create">CREATE</span>
+                                    <span class="badge badge--read">READ</span>
+                                    <span class="badge badge--update">UPDATE</span>
+                                    <span class="badge badge--delete">DELETE</span>
+                                </div>
+                            </div>
+
                             <div class="guide-steps">
                                 <div class="guide-step" data-step="q1">
                                     <div class="gs-marker gs-marker--sql"><span>1</span></div>
                                     <div class="gs-content">
                                         <h5>C: CREATE (Insertar Datos)</h5>
-                                        <p>En Access, puedes agregar datos directamente abriendo la tabla
-                                            <strong>CLIENTES</strong>
-                                            en <em>Vista Hoja de datos</em> y escribiendo en la última fila (marcada con
-                                            un asterisco <span class="text-secondary">*</span>).
-                                        </p>
+                                        <p>Para añadir nueva información a tu base de datos mediante la interfaz de
+                                            Access, sigue estos pasos:</p>
+                                        <ol class="pl-20 mb-12 list-decimal">
+                                            <li class="mb-4">Ve al <strong>Panel de Navegación</strong> a la izquierda y
+                                                haz doble clic sobre la tabla <strong>CLIENTES</strong> para abrirla en
+                                                <em>Vista Hoja de datos</em>.
+                                            </li>
+                                            <li class="mb-4">Desplázate hasta la última fila de la tabla. Sabrás cuál es
+                                                porque tiene un asterisco (<span
+                                                    class="text-secondary font-bold">*</span>) en el margen izquierdo.
+                                            </li>
+                                            <li class="mb-4">Haz clic en el primer campo vacío (por ejemplo,
+                                                <code>NombreCliente</code>) y comienza a escribir los datos del nuevo
+                                                cliente (ej. "Ana García").
+                                            </li>
+                                            <li class="mb-4">Presiona la tecla <kbd>Tab</kbd> para pasar al siguiente
+                                                campo (por ejemplo, <code>Ciudad</code>) y escribe la información
+                                                correspondiente (ej. "Bogotá").</li>
+                                            <li>Para que Access guarde permanentemente el nuevo registro, simplemente
+                                                presiona <kbd>Enter</kbd> o haz clic en cualquier otra fila de la tabla.
+                                                Access guarda automáticamente sin necesidad de un botón "Guardar".</li>
+                                        </ol>
+                                        <div
+                                            class="info-box info-box--success py-8 px-12 mt-8 mb-12 border-l-custom-dml border-l-4">
+                                            <span class="info-icon">💡</span>
+                                            <div>
+                                                <strong>Teoría en Acción (DML - Insert):</strong>
+                                                <p class="text-085 mt-4">Al insertar, si el campo ID es
+                                                    <em>Autonumérico</em> (Primary Key), no necesitas escribirlo; Access
+                                                    lo asigna solo. Si olvidas un campo marcado como <em>"Requerido"
+                                                        (Not Null)</em>, la base de datos no te dejará guardar la fila.
+                                                </p>
+                                            </div>
+                                        </div>
                                         <p class="mt-8 text-09 text-text-2"><strong>Equivalente SQL (DML):</strong><br>
-                                            <code>INSERT INTO CLIENTES (NombreCliente, Ciudad) VALUES ('Ana García', 'Bogotá');</code>
+                                            <code
+                                                class="block-code">INSERT INTO CLIENTES (NombreCliente, Ciudad) VALUES ('Ana García', 'Bogotá');</code>
                                         </p>
+
                                     </div>
                                     <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="q1">
                                         Completado</label>
@@ -2176,15 +2540,46 @@ ORDER BY
                                     <div class="gs-marker gs-marker--sql"><span>2</span></div>
                                     <div class="gs-content">
                                         <h5>R: READ (Consultar Datos - SELECT)</h5>
-                                        <p>Para ver datos sin modificarlos, usamos consultas de selección. Ve a
-                                            <kbd>Crear</kbd> →
-                                            <kbd>Diseño de consulta</kbd>, agrega la tabla CLIENTES, doble clic en
-                                            <code>NombreCliente</code>
-                                            y haz clic en <kbd>Ejecutar</kbd> (!).
-                                        </p>
+                                        <p>Para buscar, filtrar y visualizar datos sin alterarlos, creamos consultas de
+                                            selección:</p>
+                                        <ol class="pl-20 mb-12 list-decimal">
+                                            <li class="mb-4">En la cinta de opciones superior, ve a la pestaña
+                                                <kbd>Crear</kbd>.
+                                            </li>
+                                            <li class="mb-4">Haz clic en el botón <kbd>Diseño de consulta</kbd> (se
+                                                abrirá una nueva pestaña y el panel "Agregar tablas").</li>
+                                            <li class="mb-4">En el panel derecho, selecciona la tabla
+                                                <strong>CLIENTES</strong> y haz clic en "Agregar" (o haz doble clic
+                                                sobre ella), luego cierra el panel.
+                                            </li>
+                                            <li class="mb-4">Verás la tabla en la parte superior. Haz doble clic en los
+                                                campos que deseas ver (ej. <code>NombreCliente</code> y
+                                                <code>Ciudad</code>) para que bajen a la cuadrícula de diseño inferior.
+                                            </li>
+                                            <li class="mb-4">(Opcional) En la fila <em>Criterios:</em> debajo de Ciudad,
+                                                puedes escribir <code>"Madrid"</code> para filtrar solo esos clientes.
+                                            </li>
+                                            <li>Finalmente, ve a la pestaña <em>Diseño de consulta</em> y haz clic en el
+                                                botón grande rojo <kbd>Ejecutar (!)</kbd> en la esquina superior
+                                                izquierda para ver los resultados.</li>
+                                        </ol>
+                                        <div
+                                            class="info-box info-box--info py-8 px-12 mt-8 mb-12 border-l-custom-dql border-l-4">
+                                            <span class="info-icon">💡</span>
+                                            <div>
+                                                <strong>Teoría en Acción (DQL - Select):</strong>
+                                                <p class="text-085 mt-4">La instrucción <code>SELECT</code> permite
+                                                    <strong>proyectar</strong> columnas puntuales (ver solo Nombre,
+                                                    ocultar Ciudad) y <strong>restringir</strong> filas (ver solo
+                                                    clientes de Madrid con la cláusula <code>WHERE</code>). Leer datos
+                                                    <em>nunca</em> modifica la base de datos original.
+                                                </p>
+                                            </div>
+                                        </div>
                                         <p class="mt-8 text-09 text-text-2"><strong>Equivalente SQL (DQL):</strong><br>
-                                            <code>SELECT NombreCliente FROM CLIENTES;</code>
+                                            <code class="block-code">SELECT NombreCliente FROM CLIENTES;</code>
                                         </p>
+
                                     </div>
                                     <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="q2">
                                         Completado</label>
@@ -2194,12 +2589,41 @@ ORDER BY
                                     <div class="gs-marker gs-marker--sql"><span>3</span></div>
                                     <div class="gs-content">
                                         <h5>U: UPDATE (Actualizar Datos)</h5>
-                                        <p>En la <em>Vista Hoja de datos</em>, simplemente haz clic sobre una celda (ej.
-                                            la ciudad de Ana)
-                                            y escribe el nuevo valor. Access guarda el cambio al cambiar de fila.</p>
+                                        <p>Para modificar información existente que ha cambiado (ej. un cliente se muda
+                                            de ciudad):</p>
+                                        <ol class="pl-20 mb-12 list-decimal">
+                                            <li class="mb-4">Abre la tabla <strong>CLIENTES</strong> con doble clic para
+                                                verla en <em>Vista Hoja de datos</em>.</li>
+                                            <li class="mb-4">Busca el registro que deseas modificar (ej. Ana García).
+                                            </li>
+                                            <li class="mb-4">Haz clic directamente sobre la celda que contiene el dato
+                                                incorrecto o desactualizado (ej. haz clic en "Bogotá").</li>
+                                            <li class="mb-4">Borra el texto antiguo escribiendo directamente sobre él el
+                                                nuevo valor (ej. escribe "Medellín"). Notaras que aparece un símbolo de
+                                                lápiz (✏️) en el margen izquierdo izquierdo indicando que el registro
+                                                está en edición.</li>
+                                            <li>Para guardar el cambio permanentemente, presiona <kbd>Enter</kbd>, tecla
+                                                hacia abajo, o simplemente haz clic en cualquier otra fila. El lápiz
+                                                desaparecerá confirmando el guardado.</li>
+                                        </ol>
+                                        <div
+                                            class="info-box info-box--warning py-8 px-12 mt-8 mb-12 border-l-custom-dml border-l-4">
+                                            <span class="info-icon">⚠️</span>
+                                            <div>
+                                                <strong>Regla de Oro en SQL (Update):</strong>
+                                                <p class="text-085 mt-4">Si ejecutas un <code>UPDATE</code> en código
+                                                    SQL <strong>sin la cláusula WHERE</strong>, cambiarás el valor de
+                                                    <strong>TODAS las filas de la tabla</strong> drásticamente. Access
+                                                    en modo gráfico te protege de esto porque clicas una celda
+                                                    específica, pero en código puro es un error fatal común.
+                                                </p>
+                                            </div>
+                                        </div>
                                         <p class="mt-8 text-09 text-text-2"><strong>Equivalente SQL (DML):</strong><br>
-                                            <code>UPDATE CLIENTES SET Ciudad = 'Medellín' WHERE ID_Cliente = 1;</code>
+                                            <code
+                                                class="block-code">UPDATE CLIENTES SET Ciudad = 'Medellín' WHERE ID_Cliente = 1;</code>
                                         </p>
+
                                     </div>
                                     <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="q3">
                                         Completado</label>
@@ -2209,14 +2633,46 @@ ORDER BY
                                     <div class="gs-marker gs-marker--sql"><span>4</span></div>
                                     <div class="gs-content">
                                         <h5>D: DELETE (Borrar Datos)</h5>
-                                        <p>En la tabla, selecciona toda la fila haciendo clic en el cuadro gris a la
-                                            izquierda del registro
-                                            y presiona la tecla <kbd>Supr</kbd>.
-                                            <span class="text-secondary font-bold">¡Cuidado, no se puede
-                                                deshacer!</span>
-                                        </p>
-                                        <p class="mt-8 text-09 text-text-2"><strong>Equivalente SQL (DML):</strong><br>
-                                            <code>DELETE FROM CLIENTES WHERE ID_Cliente = 1;</code>
+                                        <p>Para eliminar registros completos que ya no son necesarios (¡con extrema
+                                            precaución!):</p>
+                                        <ol class="pl-20 mb-12 list-decimal">
+                                            <li class="mb-4">Abre la tabla donde se encuentra el registro a eliminar en
+                                                <em>Vista Hoja de datos</em>.
+                                            </li>
+                                            <li class="mb-4">Identifica la fila que quieres borrar. Mueve el cursor al
+                                                margen gris izquierdo (selector de registro) justo al lado de esa fila
+                                                hasta que el cursor se convierta en una flecha negra apuntando a la
+                                                derecha (➡️).</li>
+                                            <li class="mb-4">Haz clic una vez para seleccionar <strong>toda la
+                                                    fila</strong> (se resaltará en otro color).</li>
+                                            <li class="mb-4">Presiona la tecla <kbd>Suprimir (Supr/Del)</kbd> en tu
+                                                teclado, o haz clic derecho sobre la fila seleccionada y elige "Eliminar
+                                                registro".</li>
+                                            <li>Access mostrará un cuadro de alerta advirtiéndote: <em>"Va a eliminar 1
+                                                    registro(s). Si hace clic en Sí, no podrá deshacer la
+                                                    operación..."</em>. Haz clic en <strong>Sí</strong> solo si estás
+                                                completamente seguro.</li>
+                                        </ol>
+                                        <div
+                                            class="info-box info-box--tip py-8 px-12 mt-8 mb-12 border-l-custom-dml border-l-4">
+                                            <span class="info-icon">🔗</span>
+                                            <div>
+                                                <strong>Teoría en Acción (Integridad Referencial):</strong>
+                                                <p class="text-085 mt-4">¿Qué pasa si intentas borrar un CLIENTE que ya
+                                                    tiene PEDIDOS asignados? Si la "Integridad Referencial" está activa,
+                                                    Access te lo impedirá para no dejar "pedidos huérfanos". A menos que
+                                                    actives la opción de <em>"Eliminación en cascada"</em>, que borraría
+                                                    al cliente y todos sus pedidos simultáneamente.</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-box info-box--warning py-8 px-12 mt-8 mb-12">
+                                            <span class="info-icon">⚠️</span>
+                                            <p class="text-085"><strong>¡Cuidado!</strong> A diferencia de Excel, en
+                                                Access el borrado es definitivo. No existe el botón "Deshacer" (Ctrl+Z)
+                                                para registros eliminados.</p>
+                                        </div>
+                                        <p class="mt-12 text-09 text-text-2"><strong>Equivalente SQL (DML):</strong><br>
+                                            <code class="block-code">DELETE FROM CLIENTES WHERE ID_Cliente = 1;</code>
                                         </p>
                                     </div>
                                     <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="q4">
@@ -2224,6 +2680,7 @@ ORDER BY
                                 </div>
                             </div>
                         </div>
+
 
                         <!-- SECCIÓN B: INNER JOIN -->
                         <div class="guide-section border-t-purple pt-28 mt-32" id="gs-qbe-innerjoin">
@@ -2262,10 +2719,18 @@ ORDER BY
                                             la dibuja
                                             si hiciste bien tus relaciones (Módulo 1).
                                         </p>
-                                        <p class="mt-8 text-09 text-text-2"><strong>Magia SQL Automática:</strong><br>
-                                            Esa simple línea le dice a Access que genere este código por detrás:<br>
-                                            <code>FROM CLIENTES INNER JOIN PEDIDOS ON CLIENTES.ID_Cliente = PEDIDOS.ID_Cliente</code>
-                                        </p>
+                                        <div
+                                            class="info-box info-box--success py-8 px-12 mt-8 mb-12 border-l-custom-dql border-l-4">
+                                            <span class="info-icon">✨</span>
+                                            <div>
+                                                <strong>Magia SQL Automática (INNER JOIN):</strong>
+                                                <p class="text-085 mt-4">Esa simple línea visual generó todo este código
+                                                    estructurado por ti en Access:<br>
+                                                    <code
+                                                        class="block-code mt-4">FROM CLIENTES INNER JOIN PEDIDOS ON CLIENTES.ID_Cliente = PEDIDOS.ID_Cliente</code>
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="q6">
                                         Completado</label>
@@ -2381,6 +2846,38 @@ ORDER BY
                                             <code>&gt;100000 Y &lt;900000</code> para un rango. En inglés usa
                                             <code>AND</code> y <code>OR</code> si alguien te pide el SQL.
                                         </div>
+
+                                        <!-- EJEMPLOS GUIADOS: CRITERIOS QBE -->
+                                        <div class="info-box info-box--tip mt-16 border-l-4 border-l-info">
+                                            <span class="info-icon">🎯</span>
+                                            <div>
+                                                <strong>Ejemplos Guiados: Criterios Inteligentes (QBE)</strong>
+                                                <p class="mt-4 text-090 text-text-2">El QBE nos permite filtrar datos de
+                                                    forma muy potente usando expresiones. Pruébalas en tu base de datos:
+                                                </p>
+                                                <ul class="pl-20 mt-8 mb-4 text-090 text-text-2 space-y-4">
+                                                    <li><strong>Comodines de Texto (LIKE):</strong> En la columna
+                                                        <code>Ciudad</code> escribe <code>Como "B*"</code>. Access
+                                                        filtrará todas las ciudades que empiecen con "B" (Bogotá,
+                                                        Barranquilla). El asterisco <code>*</code> reemplaza cualquier
+                                                        cantidad de caracteres.
+                                                    </li>
+                                                    <li><strong>Filtro de Fechas (Rangos):</strong> En la columna
+                                                        <code>FechaPedido</code> escribe
+                                                        <code>Entre #01/01/2024# Y #31/12/2024#</code>. Los símbolos de
+                                                        numeral <code>#</code> le indican a Access que el dato es
+                                                        estrictamente una fecha.
+                                                    </li>
+                                                    <li><strong>Parámetro Interactivo:</strong> Escribe
+                                                        <code>[¿Qué ciudad deseas buscar?]</code> (con los corchetes).
+                                                        Al ejecutar la consulta, Access <em>pausará</em> y le mostrará
+                                                        al usuario una ventana emergente haciendo esa pregunta,
+                                                        filtrando por lo que el usuario responda.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
                                     </div>
                                     <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="q11">
                                         Completado</label>
@@ -2703,32 +3200,34 @@ WHERE PEDIDOS.TotalPedido > 500000;</pre>
                                         <h5>Corregir Tipos de Datos</h5>
                                         <p>Haz clic en el <strong>ícono del tipo</strong> (ABC / 123 / 📅) junto al
                                             nombre de cada columna para asignar el tipo correcto:</p>
-                                        <table class="gs-table mt-10">
-                                            <thead>
-                                                <tr>
-                                                    <th>Columna</th>
-                                                    <th>Tipo incorrecto</th>
-                                                    <th>Tipo correcto</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><code>FechaVenta</code></td>
-                                                    <td>Texto (ABC)</td>
-                                                    <td>📅 Fecha</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>MontoVenta</code></td>
-                                                    <td>Texto (ABC)</td>
-                                                    <td>💰 Moneda</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>CantidadUnidades</code></td>
-                                                    <td>Decimal</td>
-                                                    <td>1,2,3 Número entero</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <div class="overflow-x-auto">
+                                            <table class="gs-table mt-10">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Columna</th>
+                                                        <th>Tipo incorrecto</th>
+                                                        <th>Tipo correcto</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><code>FechaVenta</code></td>
+                                                        <td>Texto (ABC)</td>
+                                                        <td>📅 Fecha</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>MontoVenta</code></td>
+                                                        <td>Texto (ABC)</td>
+                                                        <td>💰 Moneda</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>CantidadUnidades</code></td>
+                                                        <td>Decimal</td>
+                                                        <td>1,2,3 Número entero</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                         <div class="gs-tip">⭐ Si Power Query detecta errores de conversión, aparecerá
                                             "Error" en rojo en esas celdas. Puedes hacer clic derecho → <strong>Quitar
                                                 errores</strong> para eliminar esas filas, o corregir el origen.</div>
@@ -2768,6 +3267,50 @@ WHERE PEDIDOS.TotalPedido > 500000;</pre>
                                             eliminar datos válidos. Siempre hazlo sobre el campo ID único.</div>
                                     </div>
                                     <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="e5">
+                                        Completado</label>
+                                </div>
+
+                                <!-- EJEMPLOS GUIADOS EXTRA -->
+                                <div class="info-box info-box--tip mt-16 mb-16 border-l-4 border-l-info ml-20 mr-20">
+                                    <span class="info-icon">🎯</span>
+                                    <div>
+                                        <strong>Casos de Uso Reales: Limpieza Avanzada</strong>
+                                        <p class="mt-4 text-090 text-text-2">Estos son dos de los trucos más usados por
+                                            los analistas financieros y administrativos:</p>
+                                    </div>
+                                </div>
+
+                                <div class="guide-step" data-step="e5a">
+                                    <div class="gs-marker gs-marker--pq bg-info text-white"><span>⭐</span></div>
+                                    <div class="gs-content">
+                                        <h5>Ejemplo Guiado: Reemplazar Valores (Traducción de Códigos)</h5>
+                                        <p><strong>Escenario:</strong> En la columna <code>EstadoPedido</code> viene el
+                                            código "P" y necesitas que diga "Pendiente".</p>
+                                        <p class="mt-8"><strong>Solución:</strong> Selecciona la columna → clic derecho
+                                            → <kbd>Reemplazar valores...</kbd>. En "Valor que buscar" escribe
+                                            <code>P</code> y en "Reemplazar con" escribe <code>Pendiente</code>. ¡Así de
+                                            fácil arreglas miles de registros a la vez!
+                                        </p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="e5a">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="e5b">
+                                    <div class="gs-marker gs-marker--pq bg-info text-white"><span>⭐</span></div>
+                                    <div class="gs-content">
+                                        <h5>Ejemplo Guiado: Agregar Columna Condicional (Clasificación IF)</h5>
+                                        <p><strong>Escenario:</strong> Quieres crear una nueva columna "Prioridad"
+                                            basada en el <code>MontoVenta</code>. Si es mayor a 500,000 será "Alta",
+                                            sino "Normal".</p>
+                                        <p class="mt-8"><strong>Solución:</strong> Ve a la pestaña <kbd>Agregar
+                                                columna</kbd> (arriba) → <kbd>Columna condicional</kbd>. Aparecerá una
+                                            ventana muy intuitiva donde configuras la lógica: <em>Si [MontoVenta] es
+                                                mayor que 500000, entonces "Alta", de lo contrario "Normal"</em>. Power
+                                            Query genera el código <code>if ... then ... else</code> por ti por detrás.
+                                        </p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="e5b">
                                         Completado</label>
                                 </div>
                             </div>
@@ -3112,41 +3655,56 @@ WHERE PEDIDOS.TotalPedido > 500000;</pre>
                                             <strong>Hechos</strong> rodeada de tablas de <strong>Dimensiones</strong>.
                                             Esto garantiza un rendimiento óptimo y filtros coherentes.
                                         </p>
-                                        <table class="gs-table mt-10">
-                                            <thead>
-                                                <tr>
-                                                    <th>Componente</th>
-                                                    <th>Nombre Tabla</th>
-                                                    <th>Propósito de Negocio</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>⭐ <strong>Hechos</strong></td>
-                                                    <td><code>FACT_VENTAS</code></td>
-                                                    <td>Registro histórico de ventas y transacciones.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>📐 <strong>Dimensión</strong></td>
-                                                    <td><code>DIM_CLIENTES</code></td>
-                                                    <td>Atributos del cliente (nombre, ciudad, segmento).</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>📐 <strong>Dimensión</strong></td>
-                                                    <td><code>DIM_PRODUCTOS</code></td>
-                                                    <td>Catálogo detallado (marca, categoría, precio).</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>📐 <strong>Dimensión</strong></td>
-                                                    <td><code>DIM_TIEMPO</code></td>
-                                                    <td>Inteligencia temporal (fechas, meses, trimestres).</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <div class="overflow-x-auto">
+                                            <table class="gs-table mt-10">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Componente</th>
+                                                        <th>Nombre Tabla</th>
+                                                        <th>Propósito de Negocio</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>⭐ <strong>Hechos</strong></td>
+                                                        <td><code>FACT_VENTAS</code></td>
+                                                        <td>Registro histórico de ventas y transacciones.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>📐 <strong>Dimensión</strong></td>
+                                                        <td><code>DIM_CLIENTES</code></td>
+                                                        <td>Atributos del cliente (nombre, ciudad, segmento).</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>📐 <strong>Dimensión</strong></td>
+                                                        <td><code>DIM_PRODUCTOS</code></td>
+                                                        <td>Catálogo detallado (marca, categoría, precio).</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>📐 <strong>Dimensión</strong></td>
+                                                        <td><code>DIM_TIEMPO</code></td>
+                                                        <td>Inteligencia temporal (fechas, meses, trimestres).</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                         <div class="gs-tip">⚠️ La relación debe ser de <strong>1 a varios (1:*)</strong>
                                             siempre desde la Dimensión hacia el Hecho. Un error común es tener
                                             relaciones de muchos a muchos o en sentido inverso, lo que rompe la
                                             jerarquía de filtrado.</div>
+                                        <div
+                                            class="info-box info-box--warning py-8 px-12 mt-8 mb-12 border-l-4 border-l-warn">
+                                            <span class="info-icon">⚖️</span>
+                                            <div>
+                                                <strong>Cuidado con la Granularidad:</strong>
+                                                <p class="text-085 mt-4">La <em>Granularidad</em> es el "nivel de
+                                                    detalle" de la tabla de Hechos (Ej. Ventas por día vs por mes).
+                                                    Mezclar granularidades cruzadas (ej. metas de venta mensuales vs
+                                                    ventas diarias) en un mismo Dashboard generará filtros rotos y
+                                                    totales inflados en DAX. Unifica tus Hechos a un nivel atómico
+                                                    siempre que sea posible.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="b2">
                                         Completado</label>
@@ -3437,52 +3995,54 @@ Ticket Promedio = DIVIDE([Total Ventas], [Cantidad Pedidos], 0)</pre>
                                     <p>Crea un archivo Excel llamado <code>Nomina_Empresa.xlsx</code> con la hoja
                                         <strong>Nómina</strong> que contenga estas columnas:
                                     </p>
-                                    <table class="gs-table mt-10">
-                                        <thead>
-                                            <tr>
-                                                <th>Columna</th>
-                                                <th>Tipo</th>
-                                                <th>Ejemplo</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><code>ID_Empleado</code></td>
-                                                <td>Número</td>
-                                                <td>1001</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>NombreEmpleado</code></td>
-                                                <td>Texto</td>
-                                                <td>Ana Torres</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>Area</code></td>
-                                                <td>Texto</td>
-                                                <td>Contabilidad</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>Cargo</code></td>
-                                                <td>Texto</td>
-                                                <td>Auxiliar</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>SalarioBase</code></td>
-                                                <td>Moneda</td>
-                                                <td>1.800.000</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>AuxTransporte</code></td>
-                                                <td>Moneda</td>
-                                                <td>162.000</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>FechaPago</code></td>
-                                                <td>Fecha</td>
-                                                <td>2024-01-31</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="overflow-x-auto">
+                                        <table class="gs-table mt-10">
+                                            <thead>
+                                                <tr>
+                                                    <th>Columna</th>
+                                                    <th>Tipo</th>
+                                                    <th>Ejemplo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><code>ID_Empleado</code></td>
+                                                    <td>Número</td>
+                                                    <td>1001</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>NombreEmpleado</code></td>
+                                                    <td>Texto</td>
+                                                    <td>Ana Torres</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>Area</code></td>
+                                                    <td>Texto</td>
+                                                    <td>Contabilidad</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>Cargo</code></td>
+                                                    <td>Texto</td>
+                                                    <td>Auxiliar</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>SalarioBase</code></td>
+                                                    <td>Moneda</td>
+                                                    <td>1.800.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>AuxTransporte</code></td>
+                                                    <td>Moneda</td>
+                                                    <td>162.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>FechaPago</code></td>
+                                                    <td>Fecha</td>
+                                                    <td>2024-01-31</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                     <p class="mt-10">Ingresa al menos <strong>15 filas</strong> con datos
                                         reales o inventados de 3 áreas distintas (Contabilidad, RRHH, Ventas).</p>
                                     <div class="gs-tip">💡 Puedes copiar los datos crudos directamente desde un

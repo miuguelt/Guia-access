@@ -3535,7 +3535,9 @@ select {
 .gs-content {
   min-width: 0;
   /* Crucial para evitar desbordamiento por pre/code */
+  overflow-wrap: break-word;
 }
+
 
 .gs-content h5 {
   font-size: 1rem;
@@ -3600,7 +3602,85 @@ select {
   padding: 2px 6px;
   font-size: 0.8rem;
   color: var(--c-secondary);
+  word-break: break-all;
+  white-space: pre-wrap;
 }
+
+.block-code {
+  display: block;
+  padding: 12px;
+  background: var(--c-bg) !important;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  margin-top: 8px;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--c-primary) !important;
+}
+
+/* ──── CRUD VISUAL STYLES ──── */
+.crud-visual-container {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+}
+
+.crud-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.crud-visual-container:hover .crud-main-img {
+  transform: scale(1.02);
+}
+
+.crud-legend-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 2;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: white;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.badge--create {
+  background: rgba(16, 185, 129, 0.4);
+}
+
+.badge--read {
+  background: rgba(59, 130, 246, 0.4);
+}
+
+.badge--update {
+  background: rgba(168, 85, 247, 0.4);
+}
+
+.badge--delete {
+  background: rgba(239, 68, 68, 0.4);
+}
+
 
 /* Propiedades */
 .gs-props {
