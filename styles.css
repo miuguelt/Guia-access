@@ -1208,7 +1208,11 @@ select {
   margin-bottom: 36px;
   overflow-x: auto;
   padding-bottom: 0;
-  scrollbar-width: none;
+
+  @supports (scrollbar-width: none) {
+    scrollbar-width: none;
+  }
+
   -ms-overflow-style: none;
   /* IE and Edge */
 }
@@ -4276,9 +4280,28 @@ kbd {
 }
 
 /* Scrollbar Compatibility */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--c-primary) transparent;
+@supports (scrollbar-width: thin) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--c-primary) transparent;
+  }
+}
+
+/* Safari and Chrome < 121 */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--c-primary);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
 }
 
 ::-webkit-scrollbar {

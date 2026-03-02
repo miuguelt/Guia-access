@@ -5,11 +5,16 @@ services:
     build: .
     container_name: guia-sena-web
     restart: always
-    ports:
-      - "8013:80"
+    expose:
+      - "80"
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:80" ]
       interval: 30s
       timeout: 10s
       retries: 3
+    labels:
+      - "coolify.managed=true"
+      - "traefik.enable=true"
+      - "traefik.http.routers.guia-sena-web.rule=Host(`${DOMAIN:-localhost}`)"
+      - "traefik.http.services.guia-sena-web.loadbalancer.server.port=80"
     # Coolify detectará este servicio automáticamente

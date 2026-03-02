@@ -76,8 +76,15 @@ function initTheme() {
   const moon = btn.querySelector('.icon-moon');
   function applyTheme() {
     document.documentElement.setAttribute('data-theme', STATE.theme);
-    if (STATE.theme === 'dark') { sun.style.display = ''; moon.style.display = 'none'; }
-    else { sun.style.display = 'none'; moon.style.display = ''; }
+    if (STATE.theme === 'dark') {
+      sun.style.display = ''; moon.style.display = 'none';
+      const meta = $('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', '#030712');
+    } else {
+      sun.style.display = 'none'; moon.style.display = '';
+      const meta = $('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', '#ffffff');
+    }
     localStorage.setItem('tga-theme', STATE.theme);
   }
   btn.addEventListener('click', () => {
