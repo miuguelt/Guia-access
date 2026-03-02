@@ -1,0 +1,5 @@
+[    2410ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8000/icons/icon-192.png:0
+[    2410ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8000/favicon.ico:0
+[    2415ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:8000/icons/icon-192.png (Download error or resource isn't a valid image) @ http://localhost:8000/index.html:0
+[ 2718231ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:8000/icons/icon-192.png (Download error or resource isn't a valid image) @ http://localhost:8000/index.html#modulo-2:0
+[ 2737582ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:8000/icons/icon-192.png (Download error or resource isn't a valid image) @ http://localhost:8000/index.html#modulo-2:0
