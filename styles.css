@@ -668,6 +668,7 @@ select {
   gap: 0;
   justify-content: center;
   background: var(--c-glass-bg);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid var(--c-glass-brd);
   border-radius: var(--radius-lg);
@@ -767,6 +768,7 @@ select {
   background: var(--c-glass-bg);
   color: var(--c-text);
   border: 1px solid var(--c-glass-brd);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -836,6 +838,7 @@ select {
   background: var(--c-glass-bg);
   border: 1px solid var(--c-glass-brd);
   border-radius: var(--radius-lg);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
@@ -1206,6 +1209,8 @@ select {
   overflow-x: auto;
   padding-bottom: 0;
   scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* IE and Edge */
 }
 
 .tabs::-webkit-scrollbar {
@@ -1707,6 +1712,7 @@ select {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   z-index: 10;
 }
@@ -4275,7 +4281,34 @@ kbd {
   scrollbar-color: var(--c-primary) transparent;
 }
 
-/* End of utilities */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--c-primary);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Utilities */
+.hidden {
+  display: none !important;
+}
+
+.w-0 {
+  width: 0% !important;
+}
+
+.video-card--master {
+  background: linear-gradient(135deg, rgba(57, 208, 184, 0.1), rgba(91, 108, 255, 0.15)) !important;
+}
 
 .deliverable-item:hover {
   background: rgba(30, 41, 59, 0.6);
@@ -4739,8 +4772,8 @@ kbd {
 
 /* ──── PREMIUM CHECKBOX ──── */
 .gs-check input[type="checkbox"] {
-  appearance: none;
   -webkit-appearance: none;
+  appearance: none;
   width: 18px;
   height: 18px;
   border: 2px solid var(--c-border);
