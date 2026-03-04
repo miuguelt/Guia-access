@@ -1,0 +1,60 @@
+﻿WARNING: openDivs went negative at line 381 Line: </div>
+WARNING: openDivs went negative at line 1293 Line: </div>
+WARNING: openDivs went negative at line 1294 Line: </div>
+WARNING: openDivs went negative at line 1494 Line: </div>
+m1-practica matched at line 1497 open divs: 1
+m1-entregables matched at line 2496 open divs: 4
+WARNING: openDivs went negative at line 3485 Line: </div>
+WARNING: openDivs went negative at line 3486 Line: </div>
+WARNING: openDivs went negative at line 3501 Line: </div>
+WARNING: openDivs went negative at line 3508 Line: </div>
+WARNING: openDivs went negative at line 3512 Line: </div>
+WARNING: openDivs went negative at line 3519 Line: </div>
+WARNING: openDivs went negative at line 3523 Line: </div>
+WARNING: openDivs went negative at line 3530 Line: </div>
+WARNING: openDivs went negative at line 3534 Line: </div>
+WARNING: openDivs went negative at line 3535 Line: </div>
+WARNING: openDivs went negative at line 3536 Line: </div>
+WARNING: openDivs went negative at line 3537 Line: </div>
+WARNING: openDivs went negative at line 3538 Line: </div>
+WARNING: openDivs went negative at line 3632 Line: </div>
+WARNING: openDivs went negative at line 4478 Line: </div>
+WARNING: openDivs went negative at line 4535 Line: </div>
+WARNING: openDivs went negative at line 4734 Line: </div>
+WARNING: openDivs went negative at line 4735 Line: </div>
+WARNING: openDivs went negative at line 4737 Line: </div>
+WARNING: openDivs went negative at line 4738 Line: </div>
+WARNING: openDivs went negative at line 4799 Line: </div>
+WARNING: openDivs went negative at line 5304 Line: </div>
+WARNING: openDivs went negative at line 5369 Line: </div>
+WARNING: openDivs went negative at line 5847 Line: </div>
+WARNING: openDivs went negative at line 5973 Line: </div> <!-- fin m4-practica (NUEVO CIERRE CORRECTO) -->
+WARNING: openDivs went negative at line 5984 Line: </div>
+WARNING: openDivs went negative at line 5985 Line: </div>
+WARNING: openDivs went negative at line 5987 Line: </div>
+WARNING: openDivs went negative at line 5988 Line: </div><!-- fin tab entregables -->
+WARNING: openDivs went negative at line 5993 Line: </div>
+WARNING: openDivs went negative at line 6175 Line: MATRICULA</div>
+WARNING: openDivs went negative at line 6179 Line: </div>
+WARNING: openDivs went negative at line 6184 Line: CURSO</div>
+WARNING: openDivs went negative at line 6187 Line: </div>
+WARNING: openDivs went negative at line 6191 Line: </div>
+WARNING: openDivs went negative at line 6192 Line: </div>
+WARNING: openDivs went negative at line 6193 Line: </div>
+WARNING: openDivs went negative at line 6194 Line: </div>
+WARNING: openDivs went negative at line 6378 Line: </div>
+WARNING: openDivs went negative at line 6379 Line: </div>
+WARNING: openDivs went negative at line 6381 Line: </div>
+WARNING: openDivs went negative at line 6382 Line: </div>
+WARNING: openDivs went negative at line 6419 Line: </div>
+WARNING: openDivs went negative at line 6424 Line: </div>
+WARNING: openDivs went negative at line 6429 Line: </div>
+WARNING: openDivs went negative at line 6430 Line: </div>
+WARNING: openDivs went negative at line 6431 Line: </div>
+WARNING: openDivs went negative at line 6541 Line: </div>
+WARNING: openDivs went negative at line 6555 Line: </div>
+WARNING: openDivs went negative at line 6556 Line: </div>
+WARNING: openDivs went negative at line 6557 Line: </div>
+WARNING: openDivs went negative at line 6558 Line: </div>
+WARNING: openDivs went negative at line 6559 Line: </div>
+Final open divs: 0

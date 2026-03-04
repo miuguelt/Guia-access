@@ -1,0 +1,87 @@
+﻿                                <div class="guide-step" data-step="g2_0">
+                                    <div class="gs-marker"><span>0</span></div>
+                                    <div class="gs-content">
+                                        <h5>Preparar las Tablas Base</h5>
+                                        <p>Antes de relacionar, asegÃºrate de tener creadas estas dos tablas en
+                                            Vista
+                                            DiseÃ±o:</p>
+                                        <ul class="list-disc ml-20 mt-8 mb-8 text-095 text-text-2">
+                                            <li><strong>Tabla TipoFruta:</strong> Crea un campo
+                                                <code>idTipo</code>
+                                                (AutonumeraciÃ³n, Clave Principal) y <code>descripcionTipo</code>
+                                                (Texto
+                                                corto).
+                                            </li>
+                                            <li><strong>Tabla Fruta:</strong> Crea un campo <code>idFruta</code>
+                                                (AutonumeraciÃ³n, Clave Principal), <code>nombreFruta</code>
+                                                (Texto
+                                                corto) y el mÃ¡s importante: <code>idTipoFruta</code> (Tipo de
+                                                dato:
+                                                <strong class="text-warn">NÃºmero</strong>).
+                                            </li>
+                                        </ul>
+                                        <div class="gs-tip">âš ï¸ CRÃTICO: El campo que recibe la llave forÃ¡nea
+                                            (idTipoFruta) NO puede ser AutonumÃ©rico, debe ser NÃºmero (tamaÃ±o
+                                            Entero
+                                            largo) para que coincida con el AutonumÃ©rico original.</div>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="g2_0">
+                                        Completado</label>
+                                </div>
+                                <div class="guide-step" data-step="g2_1">
+                                    <div class="gs-marker gs-marker--purple"><span>2</span></div>
+                                    <div class="gs-content">
+                                        <div class="info-box info-box--info mb-20">
+                                            <span class="info-icon">ðŸ“Œ</span>
+                                            <p><strong>PreparaciÃ³n de la tabla PEDIDOS:</strong> Crea la tabla
+                                                PEDIDOS con
+                                                Vista
+                                                DiseÃ±o y agrega estos campos: <code>ID_Pedido</code>
+                                                (AutonumÃ©rico, PK),
+                                                <code>ID_Cliente</code> (<strong>NÃºmero Â· Entero
+                                                    largo</strong>),
+                                                <code>FechaPedido</code> (Fecha/Hora), <code>TotalPedido</code>
+                                                (Moneda). El
+                                                campo
+                                                <code>ID_Cliente</code> en PEDIDOS es la <em>clave forÃ¡nea</em>
+                                                que enlazarÃ¡
+                                                con
+                                                CLIENTES.
+                                            </p>
+                                        </div>
+
+                                        <div class="guide-steps">
+                                            <div class="guide-step" data-step="r1">
+                                                <div class="gs-marker gs-marker--green"><span>1</span></div>
+                                                <div class="gs-content">
+                                                    <h5>Abrir el Panel de Relaciones</h5>
+                                                    <p>En la cinta de opciones, ve a la pestaÃ±a
+                                                        <kbd>Herramientas de base de
+                                                            datos</kbd> â†’ haz clic en <kbd>Relaciones</kbd>. Se
+                                                        abrirÃ¡ un
+                                                        panel
+                                                        en
+                                                        blanco (o con tablas previas si ya habÃ­as trabajado).
+                                                        <strong>Cierra
+                                                            todas
+                                                            las tablas antes de abrir Relaciones.</strong>
+                                                    </p>
+                                                </div>
+                                                <label class="gs-check"><input type="checkbox" class="guide-chk"
+                                                        data-guide="r1">
+                                                    Completado</label>
+                                            </div>
+
+                                            <div class="guide-step" data-step="r2">
+                                                <div class="gs-marker gs-marker--green"><span>2</span></div>
+                                                <div class="gs-content">
+                                                    <h5>Agregar las Tablas al Panel</h5>
+                                                    <p>En el cuadro "Mostrar tabla" que aparece automÃ¡ticamente,
+                                                        haz doble
+                                                        clic
+                                                        sobre <strong>CLIENTES</strong> y luego sobre
+                                                        <strong>PEDIDOS</strong>.
+                                                        Haz
+                                                        clic en <kbd>Cerrar</kbd>. VerÃ¡s ambas tablas en la zona
+                                                        superior
+                                                        con

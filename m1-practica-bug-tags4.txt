@@ -1,0 +1,56 @@
+﻿1 |                                                 <div class="gs-content">
+1 |                                                     <h5>Agregar las Tablas al Panel</h5>
+1 |                                                     <p>En el cuadro "Mostrar tabla" que aparece automÃ¡ticamente,
+1 |                                                         haz doble
+1 |                                                         clic
+1 |                                                         sobre <strong>CLIENTES</strong> y luego sobre
+1 |                                                         <strong>PEDIDOS</strong>.
+1 |                                                         Haz
+1 |                                                         clic en <kbd>Cerrar</kbd>. VerÃ¡s ambas tablas en la zona
+1 |                                                         superior
+1 |                                                         con
+1 |                                                         una
+1 |                                                         lÃ­nea de uniÃ³n entre ellas.
+1 |                                                     </p>
+2 |                                                     <div class="gs-tip">ðŸ’¡ Puedes reposicionar las tablas dentro
+2 |                                                         del panel
+2 |                                                         arrastrÃ¡ndolas por su barra de tÃ­tulo para que queden
+2 |                                                         ordenadas.
+1 |                                                     </div>
+0 |                                                 </div>
+0 |                                                 <label class="gs-check"><input type="checkbox" class="guide-chk"
+0 |                                                         data-guide="r2">
+0 |                                                     Completado</label>
+-1 |                                             </div>
+-1 | 
+0 |                                             <div class="guide-step" data-step="r3">
+0 |                                                 <div class="gs-marker gs-marker--green"><span>3</span></div>
+1 |                                                 <div class="gs-content">
+1 |                                                     <h5>Crear el VÃ­nculo (Arrastrar campos)</h5>
+1 |                                                     <p>Este es el paso clave. <strong>Haz clic sobre
+1 |                                                             <code>ID_Cliente</code>
+1 |                                                             en
+1 |                                                             la
+1 |                                                             tabla CLIENTES</strong> (no sueltes el mouse) y
+1 |                                                         <strong>arrÃ¡stralo</strong> hasta el campo
+1 |                                                         <code>ID_Cliente</code>
+1 |                                                         en la
+1 |                                                         tabla PEDIDOS. Cuando sueltes, aparecerÃ¡ el cuadro de
+1 |                                                         diÃ¡logo
+1 |                                                         "Modificar
+1 |                                                         relaciones".
+1 |                                                     </p>
+2 |                                                     <div class="gs-tip">âš ï¸ Siempre debes arrastrar desde la
+2 |                                                         tabla PADRE
+2 |                                                         (CLIENTES,
+2 |                                                         lado "1") hacia la tabla HIJO (PEDIDOS, lado "N"). Si lo
+2 |                                                         haces al
+2 |                                                         revÃ©s
+1 |                                                         funcionarÃ¡, pero la convenciÃ³n es padre â†’ hijo.</div>
+0 |                                                 </div>
+0 |                                                 <label class="gs-check"><input type="checkbox" class="guide-chk"
+0 |                                                         data-guide="r3">
+0 |                                                     Completado</label>
+-1 |                                             </div>
+-1 | 
+0 |                                             <div class="guide-step" data-step="r4">

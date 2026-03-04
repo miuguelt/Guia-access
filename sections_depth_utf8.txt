@@ -1,0 +1,6 @@
+﻿Line 1506: id=gs-crear-bd, DepthBefore=3, DepthAfter=4
+Line 1538: id=gs-crear-tabla, DepthBefore=3, DepthAfter=4
+Line 1701: id=gs-rel-1n, DepthBefore=3, DepthAfter=4
+Line 1931: id=gs-modificar-tabla, DepthBefore=3, DepthAfter=4
+Line 1999: id=gs-tables, DepthBefore=3, DepthAfter=4
+Line 2206: id=gs-formularios, DepthBefore=2, DepthAfter=3

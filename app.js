@@ -58,6 +58,121 @@ window.copyCode = function (btn) {
   });
 };
 
+/* ─── MÓDULO EXTRA: SIMULADOR SQL INTERACTIVO ─── */
+function initSQLSimulator() {
+  const sourceGrid = $('#sql-source-blocks');
+  const targetZone = $('#sql-target-zone');
+  const livePreview = $('#sql-live-preview');
+  const placeholder = $('#sql-placeholder-msg');
+  const resetBtn = $('#btn-reset-sql');
+  const validationStatus = $('#sql-validation-status');
+
+  if (!sourceGrid || !targetZone) return;
+
+  const validSequence = ['SELECT', '*', 'nombre, salario', 'FROM', 'Empleados', 'WHERE', 'salario > 2000', 'ORDER BY', 'nombre ASC'];
+  let currentBlocks = [];
+
+  function updatePreview() {
+    if (currentBlocks.length === 0) {
+      livePreview.innerHTML = '<span style="color: var(--c-sql-com);">-- Tu código SQL aparecerá aquí</span>';
+      placeholder.style.display = 'block';
+      validationStatus.style.opacity = '0';
+      return;
+    }
+
+    placeholder.style.display = 'none';
+
+    let sqlStr = '';
+    let isComplete = false;
+
+    // Build the string with basic formatting
+    currentBlocks.forEach((blockStr, i) => {
+      if (['SELECT', 'FROM', 'WHERE', 'ORDER BY'].includes(blockStr)) {
+        sqlStr += (i > 0 ? '\n' : '') + `<span style="color: var(--c-sql-kw); font-weight: bold;">${blockStr}</span> `;
+      } else {
+        sqlStr += `<span style="color: var(--c-sql-str);">${blockStr}</span> `;
+      }
+    });
+
+    livePreview.innerHTML = sqlStr.trim() + ';';
+
+    // Simple validation logic
+    const structure = currentBlocks.filter(b => ['SELECT', 'FROM', 'WHERE', 'ORDER BY'].includes(b));
+    const hasSelectFrom = structure.includes('SELECT') && structure.includes('FROM') && currentBlocks.indexOf('SELECT') < currentBlocks.indexOf('FROM');
+
+    // Check if it's a valid minimal query (SELECT something FROM somewhere)
+    if (hasSelectFrom) {
+      const selectIdx = currentBlocks.indexOf('SELECT');
+      const fromIdx = currentBlocks.indexOf('FROM');
+      if (fromIdx - selectIdx > 1 && currentBlocks.length > fromIdx + 1) {
+        isComplete = true; // Minimal valid structure
+      }
+    }
+
+    if (isComplete) {
+      validationStatus.style.opacity = '1';
+      targetZone.style.borderColor = 'var(--c-success)';
+      targetZone.style.background = 'rgba(52, 168, 83, 0.05)';
+
+      // Save progress if they built a cool query
+      if (currentBlocks.length >= 4) {
+        STATE.progress[`msql-interactive-done`] = true;
+        saveProgress();
+      }
+    } else {
+      validationStatus.style.opacity = '0';
+      targetZone.style.borderColor = 'var(--c-border)';
+      targetZone.style.background = 'var(--c-surface2)';
+    }
+  }
+
+  function handleBlockClick(e) {
+    if (!e.target.classList.contains('sql-block-btn')) return;
+
+    const block = e.target;
+    const str = block.dataset.str;
+    const isSource = block.parentElement === sourceGrid;
+
+    // Add animation effect
+    block.style.transform = 'scale(0.9)';
+    setTimeout(() => block.style.transform = '', 150);
+
+    if (isSource) {
+      // Move to target
+      currentBlocks.push(str);
+      const clone = block.cloneNode(true);
+      clone.classList.add('in-target');
+
+      // Add sound or particle effect here if desired (reusing existing TGA DNA)
+
+      targetZone.appendChild(clone);
+      block.classList.add('opacity-50', 'pointer-events-none');
+    } else {
+      // Remove from target
+      const idx = currentBlocks.lastIndexOf(str);
+      if (idx > -1) currentBlocks.splice(idx, 1);
+
+      // Re-enable in source
+      const original = Array.from(sourceGrid.children).find(c => c.dataset.str === str && c.classList.contains('opacity-50'));
+      if (original) original.classList.remove('opacity-50', 'pointer-events-none');
+
+      block.remove();
+    }
+
+    updatePreview();
+  }
+
+  sourceGrid.addEventListener('click', handleBlockClick);
+  targetZone.addEventListener('click', handleBlockClick);
+
+  resetBtn?.addEventListener('click', () => {
+    currentBlocks = [];
+    targetZone.querySelectorAll('.sql-block-btn').forEach(b => b.remove());
+    sourceGrid.querySelectorAll('.sql-block-btn').forEach(b => b.classList.remove('opacity-50', 'pointer-events-none'));
+    updatePreview();
+  });
+}
+
 
 /* ─── SPLASH ─── */
 function initSplash() {
@@ -126,8 +241,8 @@ function initNavActive() {
 
 /* ─── PROGRESO GLOBAL ─── */
 function updateGlobalProgress() {
-  const modules = [1, 2, 3, 4];
-  const guideTotals = { 1: 15, 2: 7, 3: 7, 4: 7 };
+  const modules = [1, 'sql', 2, 3, 4, 5];
+  const guideTotals = { 1: 15, 'sql': 5, 2: 7, 3: 7, 4: 7, 5: 8, drv5: 4 };
   let globalSum = 0;
 
   modules.forEach((m) => {
@@ -142,8 +257,13 @@ function updateGlobalProgress() {
     const guidePct = Math.min(40, (stepsDone / totalSteps) * 40);
     modulePct += guidePct;
 
-    // 3. Quiz (50%)
-    if (STATE.progress[`quiz-m${m}-done`]) modulePct += 50;
+    // 3. Quiz o Entregable Final (50%)
+    if (m === 5) {
+      const drvDone = STATE.progress[`m5drv-steps`] || 0;
+      modulePct += (drvDone / 2) * 50;
+    } else {
+      if (STATE.progress[`quiz-m${m}-done`]) modulePct += 50;
+    }
 
     modulePct = Math.round(modulePct);
     globalSum += modulePct;
@@ -213,22 +333,69 @@ function initStatCounters() {
 function initTabs() {
   $$('.tabs').forEach(tabBar => {
     const tabs = $$('.tab', tabBar);
+    const parentContainer = tabBar.closest('.module-body') || tabBar.closest('section');
+    if (!parentContainer) return;
+
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        const panel = $('#' + tab.getAttribute('aria-controls'));
+        const panelId = tab.getAttribute('aria-controls');
+        const panel = parentContainer.querySelector(`#${panelId}`);
         if (!panel) return;
-        const allPanels = $$('.tab-panel', tabBar.closest('.module-body, .container'));
-        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-        allPanels.forEach(p => p.classList.remove('active'));
+
+        // Get all tabs and panels within this specific container context
+        const containerTabs = tabBar.querySelectorAll('.tab');
+        const containerPanels = parentContainer.querySelectorAll(':scope > .tab-panel, :scope > .container > .tab-panel');
+
+        containerTabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+
+        // Hide all panels at the same level
+        parentContainer.querySelectorAll('.tab-panel').forEach(p => {
+          if (p.parentElement === panel.parentElement) {
+            p.classList.remove('active');
+          }
+        });
+
         tab.classList.add('active');
         tab.setAttribute('aria-selected', 'true');
         panel.classList.add('active');
+
         // mark module started
-        const moduleSection = tab.closest('[data-module]');
+        const moduleSection = tabBar.closest('[data-module]');
         if (moduleSection) {
           STATE.progress[`m${moduleSection.dataset.module}-started`] = true;
           saveProgress();
         }
+      });
+    });
+  });
+}
+
+/* ─── MINI TABS (Dentro de Guías) ─── */
+function initMiniTabs() {
+  $$('.tabs--mini').forEach(tabBar => {
+    const tabs = $$('.tab', tabBar);
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.dataset.target;
+        const container = tab.closest('.gs-content');
+        if (!container) return;
+
+        // Reset tabs
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+
+        // Reset panels
+        $$('.tab-panel-mini', container).forEach(p => p.classList.add('hidden'));
+
+        // Activate
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        $(`#${targetId}`, container)?.classList.remove('hidden');
       });
     });
   });
@@ -274,36 +441,38 @@ const FIELD_TYPES = ['Autonumérico', 'Texto corto', 'Texto largo', 'Número', '
 
 const PRESETS = {
   clientes: {
-    name: 'CLIENTES',
+    name: 'MAESTRO_CLIENTES',
     fields: [
-      { pk: true, name: 'ID_CLIENTE', type: 'Autonumérico', required: true, desc: 'Identificador único' },
-      { pk: false, name: 'Nombre', type: 'Texto corto', required: true, desc: 'Nombre completo' },
-      { pk: false, name: 'NIT', type: 'Texto corto', required: true, desc: 'Número de identificación tributaria' },
-      { pk: false, name: 'Ciudad', type: 'Texto corto', required: false, desc: 'Ciudad de residencia' },
-      { pk: false, name: 'Telefono', type: 'Texto corto', required: false, desc: 'Teléfono de contacto' },
-      { pk: false, name: 'FechaRegistro', type: 'Fecha/Hora', required: true, desc: 'Fecha de ingreso al sistema' },
+      { pk: true, name: 'ID_CLIENTE', type: 'Autonumérico', required: true, desc: 'PK: Código único interno' },
+      { pk: false, name: 'Nombre_RazonSocial', type: 'Texto corto', required: true, desc: 'Nombre legal de la entidad' },
+      { pk: false, name: 'NIT_CC', type: 'Texto corto', required: true, desc: 'Identificación tributaria' },
+      { pk: false, name: 'Ciudad_Sede', type: 'Texto corto', required: false, desc: 'Ubicación principal' },
+      { pk: false, name: 'Telefono_Contacto', type: 'Texto corto', required: true, desc: 'Número de celular o fijo' },
+      { pk: false, name: 'Fecha_Vinculacion', type: 'Fecha/Hora', required: true, desc: 'Fecha de alta en el sistema' },
+      { pk: false, name: 'Cupo_Credito', type: 'Moneda', required: false, desc: 'Límite máximo de deuda' },
     ]
   },
   productos: {
-    name: 'PRODUCTOS',
+    name: 'CATALOGO_PRODUCTOS',
     fields: [
-      { pk: true, name: 'ID_PRODUCTO', type: 'Autonumérico', required: true, desc: 'ID único del producto' },
-      { pk: false, name: 'NombreProducto', type: 'Texto corto', required: true, desc: 'Nombre del producto' },
-      { pk: false, name: 'Categoria', type: 'Texto corto', required: false, desc: 'Categoría del producto' },
-      { pk: false, name: 'PrecioUnitario', type: 'Moneda', required: true, desc: 'Precio en pesos colombianos' },
-      { pk: false, name: 'Stock', type: 'Número', required: true, desc: 'Unidades disponibles' },
-      { pk: false, name: 'Activo', type: 'Sí/No', required: false, desc: 'Estado del producto' },
+      { pk: true, name: 'ID_PRODUCTO', type: 'Autonumérico', required: true, desc: 'PK: Código de barras interno' },
+      { pk: false, name: 'Descripcion_Articulo', type: 'Texto corto', required: true, desc: 'Nombre comercial del producto' },
+      { pk: false, name: 'Familia_Categoria', type: 'Texto corto', required: true, desc: 'Categorización (Ej: Aseo)' },
+      { pk: false, name: 'Precio_Unitario', type: 'Moneda', required: true, desc: 'Precio de venta al público' },
+      { pk: false, name: 'Stock_Actual', type: 'Número', required: true, desc: 'Unidades en bodega' },
+      { pk: false, name: 'Minimo_Seguridad', type: 'Número', required: true, desc: 'Punto de reorden' },
+      { pk: false, name: 'Estado_Disponible', type: 'Sí/No', required: true, desc: 'Habilitado para la venta' },
     ]
   },
   pedidos: {
-    name: 'PEDIDOS',
+    name: 'HISTORICO_VENTAS',
     fields: [
-      { pk: true, name: 'ID_PEDIDO', type: 'Autonumérico', required: true, desc: 'ID único del pedido' },
-      { pk: false, name: 'ID_CLIENTE', type: 'Número', required: true, desc: 'FK → CLIENTES' },
-      { pk: false, name: 'ID_PRODUCTO', type: 'Número', required: true, desc: 'FK → PRODUCTOS' },
-      { pk: false, name: 'Cantidad', type: 'Número', required: true, desc: 'Cantidad pedida' },
-      { pk: false, name: 'FechaPedido', type: 'Fecha/Hora', required: true, desc: 'Fecha del pedido' },
-      { pk: false, name: 'Monto', type: 'Moneda', required: true, desc: 'Monto total del pedido' },
+      { pk: true, name: 'ID_TRANSACCION', type: 'Autonumérico', required: true, desc: 'PK: Consecutivo de factura' },
+      { pk: false, name: 'ID_CLIENTE', type: 'Número', required: true, desc: 'FK: Vinculado a MAESTRO_CLIENTES' },
+      { pk: false, name: 'ID_PRODUCTO', type: 'Número', required: true, desc: 'FK: Vinculado a CATALOGO_PRODUCTOS' },
+      { pk: false, name: 'Cantidad_Despachada', type: 'Número', required: true, desc: 'Unidades del ítem' },
+      { pk: false, name: 'Fecha_Emision', type: 'Fecha/Hora', required: true, desc: 'Fecha y hora del movimiento' },
+      { pk: false, name: 'Subtotal_Gravado', type: 'Moneda', required: true, desc: 'Base imponible' },
     ]
   },
   empleados: {
@@ -433,6 +602,41 @@ function initRelationsCanvas() {
       td.fields.map(f => `<div class="rel-table-field ${f.pk ? 'pk' : f.fk ? 'fk' : ''}">${f.pk ? '🔑 ' : f.fk ? '🔗 ' : '📝 '}${f.n}</div>`).join('');
     canvas.appendChild(el);
     tableEls[td.id] = el;
+
+    // --- DRAG LOGIC ---
+    let isDragging = false;
+    let startX, startY;
+
+    el.querySelector('.rel-table-header').addEventListener('mousedown', e => {
+      isDragging = true;
+      startX = e.clientX - el.offsetLeft;
+      startY = e.clientY - el.offsetTop;
+      el.style.zIndex = '100';
+      $$('.rel-table').forEach(t => { if (t !== el) t.style.zIndex = '10'; });
+      document.addEventListener('mousemove', onMouseMove);
+      document.addEventListener('mouseup', onMouseUp);
+    });
+
+    function onMouseMove(e) {
+      if (!isDragging) return;
+      let newX = e.clientX - startX;
+      let newY = e.clientY - startY;
+
+      // Bounds check
+      const cR = canvas.getBoundingClientRect();
+      newX = Math.max(0, Math.min(newX, cR.width - el.offsetWidth));
+      newY = Math.max(0, Math.min(newY, cR.height - el.offsetHeight));
+
+      el.style.left = newX + 'px';
+      el.style.top = newY + 'px';
+      drawRelations();
+    }
+
+    function onMouseUp() {
+      isDragging = false;
+      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseup', onMouseUp);
+    }
   });
 
   function drawRelations() {
@@ -478,28 +682,114 @@ function initRelationsCanvas() {
   const validClients = [1, 2, 3, 4, 5];
   const testBtn = $('#test-integrity-btn');
   testBtn?.addEventListener('click', () => {
-    const val = parseInt($('#nuevo-pedido-cliente')?.value);
+    const valInput = $('#nuevo-pedido-cliente');
+    const val = parseInt(valInput?.value);
     const result = $('#integrity-result');
-    if (!result) return;
+    const demoRow = $('#integrity-demo-row');
+    const demoVal = $('#integrity-demo-val');
+    const demoFoot = $('#integrity-demo-foot');
+    if (!result || !demoRow || !demoVal) return;
 
     // Reset state & show loading
     result.style.display = 'none';
+    demoRow.className = 'pending-row';
+    demoVal.textContent = isNaN(val) ? '?' : val;
     testBtn.disabled = true;
-    testBtn.innerHTML = '<span>⏳</span> Procesando...';
+    testBtn.innerHTML = '<span>⏳</span> Validando...';
 
     setTimeout(() => {
       testBtn.disabled = false;
       testBtn.innerHTML = '<span>⚡</span> Probar Inserción';
 
       if (validClients.includes(val)) {
+        demoRow.className = 'success-row animate-pop';
+        demoFoot.innerHTML = '<span class="text-success">✅ ¡Relación válida!</span>';
         result.className = 'integrity-result success';
-        result.innerHTML = `<span class="integrity-icon">✅</span> <div><strong>Inserción PERMITIDA:</strong> El cliente ID=${val} existe en la tabla maestra. Access valida la relación correctamente.</div>`;
+        result.innerHTML = `
+          <div class="flex flex-col gap-8">
+            <div class="flex items-center gap-10">
+              <span class="integrity-icon">✅</span> 
+              <strong>INSERCIÓN PERMITIDA</strong>
+            </div>
+            <p class="text-090 opacity-90">El cliente <strong>ID=${val}</strong> existe en la tabla CLIENTES. Access permite crear el pedido porque la relación es íntegra: cada pedido (hijo) tiene un cliente (padre) real.</p>
+          </div>`;
       } else {
+        demoRow.className = 'error-row shake';
+        demoFoot.innerHTML = '<span class="text-danger">❌ ID no encontrado</span>';
         result.className = 'integrity-result error';
-        result.innerHTML = `<span class="integrity-icon">❌</span> <div><strong>ERROR DE INTEGRIDAD:</strong> No existe un cliente con ID=${val}. Access bloquea la operación para evitar datos huérfanos.</div>`;
+        result.innerHTML = `
+          <div class="flex flex-col gap-8">
+            <div class="flex items-center gap-10">
+              <span class="integrity-icon">❌</span> 
+              <strong>BLOQUEO DE INTEGRIDAD</strong>
+            </div>
+            <p class="text-090 opacity-90">No existe el cliente <strong>ID=${val}</strong>. Access bloquea la operación para evitar un <strong>"registro huérfano"</strong>. Si se permitiera, tendríamos un pedido de alguien que no existe, dañando la base de datos.</p>
+          </div>`;
+        setTimeout(() => demoRow.classList.remove('shake'), 600);
       }
       result.style.display = 'flex';
-    }, 600); // Small realistic delay
+    }, 800);
+  });
+
+  // --- TOUR LOGIC ---
+  const tourSteps = [
+    { el: '#relations-canvas', title: '🏗️ El Canvas de Diseño', text: 'Aquí ves tus tablas como en Access. Ahora puedes **arrastrarlas** desde su encabezado para organizar tu diagrama.' },
+    { el: '#rel-cli', title: '👤 Tabla Maestra (Padre)', text: 'Esta tabla contiene los datos principales. Nota la llave 🔑 en ID_CLIENTE.' },
+    { el: '#rel-ped', title: '🛒 Tabla Relacionada (Hijo)', text: 'Aquí el ID_CLIENTE tiene un eslabón 🔗. Indica que este campo "mira" hacia la tabla de Clientes.' },
+    { el: '.integrity-demo', title: '🔒 Prueba de Fuego', text: 'En este panel simulamos qué pasa cuando intentas romper las reglas. ¡Prueba con los IDs que te sugerimos abajo!' }
+  ];
+
+  let currentStep = 0;
+  function showStep(idx) {
+    $$('.tour-popover').forEach(p => p.remove());
+    $$('.tour-highlight').forEach(h => h.classList.remove('tour-highlight'));
+
+    if (idx >= tourSteps.length) return;
+
+    const step = tourSteps[idx];
+    const target = $(step.el);
+    if (!target) return;
+
+    target.classList.add('tour-highlight');
+    const rect = target.getBoundingClientRect();
+
+    const pop = document.createElement('div');
+    pop.className = 'tour-popover';
+    pop.innerHTML = `
+      <h4>${step.title}</h4>
+      <p>${step.text}</p>
+      <div class="tour-btns">
+        <span class="text-11 text-text-3">Paso ${idx + 1} de ${tourSteps.length}</span>
+        <button class="btn btn-xs btn-primary">${idx === tourSteps.length - 1 ? 'Finalizar' : 'Siguiente →'}</button>
+      </div>
+    `;
+
+    document.body.appendChild(pop);
+
+    // Position popover
+    const pR = pop.getBoundingClientRect();
+    let top = rect.bottom + 10;
+    let left = rect.left + (rect.width / 2) - (pR.width / 2);
+
+    if (top + pR.height > window.innerHeight) top = rect.top - pR.height - 10;
+    left = Math.max(10, Math.min(left, window.innerWidth - pR.width - 10));
+
+    pop.style.top = top + 'px';
+    pop.style.left = left + 'px';
+
+    pop.querySelector('button').onclick = () => {
+      currentStep++;
+      if (currentStep < tourSteps.length) showStep(currentStep);
+      else {
+        pop.remove();
+        target.classList.remove('tour-highlight');
+      }
+    };
+  }
+
+  $('#start-sim-tour')?.addEventListener('click', () => {
+    currentStep = 0;
+    showStep(0);
   });
 }
 
@@ -635,7 +925,17 @@ function initETLSimulator() {
   ];
   let cleanData = JSON.parse(JSON.stringify(dirtyData));
   const log = [];
-  let txDone = { trim: false, dup: false, date: false, bool: false, empty: false };
+  let txDone = STATE.progress['etl-tx-done'] || { trim: false, dup: false, date: false, bool: false, empty: false };
+
+  // Restore clean data based on persisted txDone
+  if (txDone.trim) cleanData = cleanData.map(r => ({ ...r, nombre: r.nombre.trim().replace(/\s+/g, ' '), telefono: r.telefono.replace(/\s+/g, '') }));
+  if (txDone.dup) {
+    const seen = new Set();
+    cleanData = cleanData.filter(r => { const k = r.nombre.toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true; });
+  }
+  if (txDone.date) cleanData = cleanData.map(r => ({ ...r, fecha: r.fecha.replace(/[-\/]/g, '/').split('/').map((p, i) => i < 2 ? p.padStart(2, '0') : p).join('/') }));
+  if (txDone.bool) cleanData = cleanData.map(r => ({ ...r, activo: ['si', 'yes', 'true', '1'].includes(r.activo.toLowerCase()) ? 'TRUE' : 'FALSE' }));
+  if (txDone.empty) cleanData = cleanData.filter(r => r.nombre && r.telefono);
 
   function renderTable(data, title, icon, dirty = false) {
     return `<div class="etl-table-wrapper">
@@ -664,17 +964,17 @@ function initETLSimulator() {
     }
 
     return `
-      <div class="etl-progress-container" style="margin-bottom: 25px; background: rgba(30, 41, 59, 0.4); padding: 18px; border-radius: 12px; border: 1px solid var(--c-border); backdrop-filter: blur(10px);">
+      <div class="etl-progress-container" style="margin-bottom: 25px; background: var(--c-surface2); padding: 18px; border-radius: 12px; border: 1px solid var(--c-border); backdrop-filter: blur(10px);">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
            <span style="font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; gap: 8px;">
              ${pct === 100 ? '✅' : '⏳'} Estado de Limpieza (Power Query)
            </span>
            <span style="font-size: 1.1rem; font-weight: 800; color: ${feedbackParams.color}; text-shadow: 0 0 10px ${feedbackParams.color}40;">${pct}%</span>
         </div>
-        <div style="width: 100%; height: 10px; background: rgba(255,255,255,0.05); border-radius: 6px; overflow: hidden; margin-bottom: 12px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);">
+        <div style="width: 100%; height: 10px; background: var(--c-bg); border-radius: 6px; overflow: hidden; margin-bottom: 12px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);">
            <div style="height: 100%; width: ${pct}%; background: ${pct === 100 ? 'var(--c-success)' : 'var(--gradient-1)'}; transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease; border-radius: 6px;"></div>
         </div>
-        <div style="font-size: 0.9rem; color: ${pct === 100 ? 'var(--c-success)' : 'var(--c-text-1)'}; display: flex; align-items: center; gap: 8px; font-weight: 500;">
+        <div style="font-size: 0.9rem; color: ${pct === 100 ? 'var(--c-success)' : 'var(--c-text-2)'}; display: flex; align-items: center; gap: 8px; font-weight: 500;">
            <span>${pct === 100 ? '🎉' : '💡'}</span>
            ${feedbackParams.msg}
         </div>
@@ -705,31 +1005,38 @@ function initETLSimulator() {
 
     $('#tx-trim')?.addEventListener('click', () => {
       cleanData = cleanData.map(r => ({ ...r, nombre: r.nombre.trim().replace(/\s+/g, ' '), telefono: r.telefono.replace(/\s+/g, '') }));
-      log.push('Espacios eliminados en Nombre y Teléfono'); txDone.trim = true; render();
+      log.push('Espacios eliminados en Nombre y Teléfono'); txDone.trim = true;
+      STATE.progress['etl-tx-done'] = txDone; saveProgress(); render();
     });
     $('#tx-dup')?.addEventListener('click', () => {
       const before = cleanData.length;
       const seen = new Set();
       cleanData = cleanData.filter(r => { const k = r.nombre.toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true; });
-      log.push(`Duplicados eliminados: ${before - cleanData.length} filas removidas`); txDone.dup = true; render();
+      log.push(`Duplicados eliminados: ${before - cleanData.length} filas removidas`); txDone.dup = true;
+      STATE.progress['etl-tx-done'] = txDone; saveProgress(); render();
     });
     $('#tx-date')?.addEventListener('click', () => {
       cleanData = cleanData.map(r => ({ ...r, fecha: r.fecha.replace(/[-\/]/g, '/').split('/').map((p, i) => i < 2 ? p.padStart(2, '0') : p).join('/') }));
-      log.push('Fechas normalizadas al formato DD/MM/YYYY'); txDone.date = true; render();
+      log.push('Fechas normalizadas al formato DD/MM/YYYY'); txDone.date = true;
+      STATE.progress['etl-tx-done'] = txDone; saveProgress(); render();
     });
     $('#tx-bool')?.addEventListener('click', () => {
       cleanData = cleanData.map(r => ({ ...r, activo: ['si', 'yes', 'true', '1'].includes(r.activo.toLowerCase()) ? 'TRUE' : 'FALSE' }));
-      log.push('Campo Activo convertido a booleano (TRUE/FALSE)'); txDone.bool = true; render();
+      log.push('Campo Activo convertido a booleano (TRUE/FALSE)'); txDone.bool = true;
+      STATE.progress['etl-tx-done'] = txDone; saveProgress(); render();
     });
     $('#tx-empty')?.addEventListener('click', () => {
       const before = cleanData.length;
       cleanData = cleanData.filter(r => r.nombre && r.telefono);
-      log.push(`Filas incompletas eliminadas: ${before - cleanData.length} removidas`); txDone.empty = true; render();
+      log.push(`Filas incompletas eliminadas: ${before - cleanData.length} removidas`); txDone.empty = true;
+      STATE.progress['etl-tx-done'] = txDone; saveProgress(); render();
     });
     $('#tx-reset')?.addEventListener('click', () => {
       cleanData = JSON.parse(JSON.stringify(dirtyData));
       log.length = 0;
       txDone = { trim: false, dup: false, date: false, bool: false, empty: false };
+      STATE.progress['etl-tx-done'] = txDone;
+      saveProgress();
       render(); toast('Datos y progreso restablecidos', 'info');
     });
   }
@@ -1005,10 +1312,10 @@ function initQuiz(moduleNum) {
         const fb = $('#quiz-fb', container);
         $$('.quiz-option', container).forEach(b => b.classList.add('disabled'));
         if (idx === q.correct) {
-          btn.classList.add('correct'); score++;
+          btn.classList.add('correct', 'correct-answer'); score++;
           if (fb) { fb.className = 'quiz-feedback correct show'; fb.innerHTML = `✅ <strong>¡Correcto!</strong> ${q.exp}`; }
         } else {
-          btn.classList.add('wrong');
+          btn.classList.add('wrong', 'incorrect-answer');
           $$('.quiz-option', container)[q.correct].classList.add('correct');
           if (fb) { fb.className = 'quiz-feedback wrong show'; fb.innerHTML = `❌ <strong>Incorrecto.</strong> ${q.exp}`; }
         }
@@ -1022,20 +1329,49 @@ function initQuiz(moduleNum) {
 
 /* ─── PROGRESO DE GUÍAS PRÁCTICAS (todos los módulos) ─── */
 function initGuideProgress() {
+  const guideTotals = {
+    m1: 20,
+    msql: 5,
+    m2: 12,
+    m3: 12,
+    m4: 12,
+    m4b: 5,
+    m4drv: 5,
+    m5: 8,
+    m5drv: 2,
+    m6: 8, // Nuevo: Proyecto Integrador - Parte 1
+    m7: 8, // Nuevo: Proyecto Integrador - Parte 2
+    m8: 8, // Nuevo: Proyecto Integrador - Parte 3
+    m9: 8, // Nuevo: Proyecto Integrador - Parte 4
+    m10: 8, // Nuevo: Proyecto Integrador - Parte 5
+    m11: 8, // Nuevo: Proyecto Integrador - Parte 6
+    m12: 8, // Nuevo: Proyecto Integrador - Parte 7
+    m13: 8, // Nuevo: Proyecto Integrador - Parte 8
+  };
+
   const guides = [
     {
       module: 1,
       selector: '#m1-practica .guide-chk, #m1-entregables .guide-chk',
-      total: 20,
+      total: guideTotals.m1,
       barId: 'guide-bar-fill',
       labelId: 'guide-pct',
       color: null,
       toastMsg: '🎉 ¡Guía de Access completada! Dominas tablas y relaciones.'
     },
     {
+      module: 'sql',
+      selector: '#msql-practica .guide-chk',
+      total: guideTotals.msql,
+      barId: null,
+      labelId: null,
+      color: 'linear-gradient(90deg,#2ecc71,#27ae60)',
+      toastMsg: '🎉 ¡SQL Puro completado! Ya dominas SELECT, FROM y WHERE nativo.'
+    },
+    {
       module: 2,
       selector: '#m2-practica .guide-chk',
-      total: 12,
+      total: guideTotals.m2,
       barId: 'guide-bar-fill-m2',
       labelId: 'guide-pct-m2',
       color: 'linear-gradient(90deg,#5b6cff,#a855f7)',
@@ -1078,6 +1414,25 @@ function initGuideProgress() {
       toastMsg: '☁️ ¡Todos los entregables subidos a Google Drive! El instructor recibirá tu trabajo.',
       labelUnit: 'archivos'
     },
+    {
+      module: 5,
+      selector: '#m5-practica .guide-chk',
+      total: 8,
+      barId: 'guide-bar-fill-m5',
+      labelId: 'guide-pct-m5',
+      color: 'linear-gradient(90deg,#00C6ff,#0072ff)',
+      toastMsg: '🚀 ¡Módulo 5 Completado! Has dominado las relaciones N:M y el diseño relacional avanzado. ¡Felicidades, Experto!'
+    },
+    {
+      module: '5drv',
+      selector: '#m5-entregables .guide-chk',
+      total: 4,
+      barId: 'guide-bar-fill-drv5',
+      labelId: 'guide-pct-drv5',
+      color: 'linear-gradient(90deg,#34a853,#00C6ff)',
+      toastMsg: '🎖️ ¡Auditoría Técnica Superada! Todos tus entregables cumplen con los estándares de calidad.',
+      labelUnit: 'evidencias'
+    },
   ];
 
   guides.forEach(cfg => {
@@ -1092,7 +1447,9 @@ function initGuideProgress() {
       const label = $(`#${cfg.labelId}`);
 
       // Guardar progreso en STATE
-      STATE.progress[`m${cfg.module}-steps`] = checked;
+      const checkedIds = checks.filter(c => c.checked).map(c => c.dataset.guide);
+      STATE.progress[`m${cfg.module}-ids`] = checkedIds;
+      STATE.progress[`m${cfg.module}-steps`] = checkedIds.length;
       saveProgress();
 
       if (bar) {
@@ -1111,9 +1468,11 @@ function initGuideProgress() {
 
     $$(cfg.selector).forEach(chk => {
       // Restaurar estado desde STATE
-      const savedSteps = STATE.progress[`m${cfg.module}-steps`] || 0;
-      // Nota: Esto restauraría el número de checks pero no cuáles. 
-      // Por simplicidad en este MVP, el conteo es lo que cuenta para el progreso global.
+      const savedIds = STATE.progress[`m${cfg.module}-ids`] || [];
+      const gid = chk.dataset.guide;
+      if (gid && savedIds.includes(gid)) {
+        chk.checked = true;
+      }
       chk.addEventListener('change', update);
     });
     update(); // inicializar al cargar
@@ -1140,8 +1499,26 @@ function initTransformLab() {
     { ID: 104, Empleado: "Ruiz, Ana", Departamento: "RRHH-BOG", Sueldo: 1800000 },
   ];
 
+  let steps = STATE.progress['lab-steps'] || [{ id: 'source', text: 'Origen (JSON)', icon: '📥' }];
   let currentData = JSON.parse(JSON.stringify(INITIAL_DATA));
-  let steps = [{ id: 'source', text: 'Origen (JSON)', icon: '📥' }];
+
+  // Restore data based on steps
+  steps.forEach(s => {
+    if (s.id === 'split') {
+      currentData = currentData.map(r => {
+        const parts = r.Departamento ? r.Departamento.split('-') : [r.Area, r.Sede];
+        const newR = { ...r };
+        delete newR.Departamento;
+        newR.Area = parts[0];
+        newR.Sede = parts[1];
+        return newR;
+      });
+    } else if (s.id === 'upper') {
+      currentData = currentData.map(r => ({ ...r, Empleado: r.Empleado.toUpperCase() }));
+    } else if (s.id === 'bonus') {
+      currentData = currentData.map(r => ({ ...r, Bono: (r.Sueldo || 0) > 1300000 ? 150000 : 50000 }));
+    }
+  });
 
   function generateMCode() {
     let code = `<span class="m-keyword">let</span>\n  Origen = <span class="m-func">Json.Document</span>(<span class="m-str">"DATA_INTERNA"</span>),\n`;
@@ -1239,12 +1616,14 @@ function initTransformLab() {
         return newR;
       });
       steps.push({ id: 'split', text: 'Columna dividida', icon: '✂️', mFunc: 'Table.SplitColumn', mArgs: ', "Depto", ...' });
+      STATE.progress['lab-steps'] = steps; saveProgress();
       render();
     });
 
     $('#lab-upper')?.addEventListener('click', () => {
       currentData = currentData.map(r => ({ ...r, Empleado: r.Empleado.toUpperCase() }));
       steps.push({ id: 'upper', text: 'Texto en Mayúsculas', icon: 'UP', mFunc: 'Table.TransformColumns', mArgs: ', {"Empleado", Text.Upper}' });
+      STATE.progress['lab-steps'] = steps; saveProgress();
       render();
     });
 
@@ -1252,12 +1631,14 @@ function initTransformLab() {
       if (steps.some(s => s.id === 'bonus')) return;
       currentData = currentData.map(r => ({ ...r, Bono: r.Sueldo > 1300000 ? 150000 : 50000 }));
       steps.push({ id: 'bonus', text: 'Columna condicional agregada', icon: '💰', mFunc: 'Table.AddColumn', mArgs: ', "Bono", each if ...' });
+      STATE.progress['lab-steps'] = steps; saveProgress();
       render();
     });
 
     $('#lab-reset')?.addEventListener('click', () => {
       currentData = JSON.parse(JSON.stringify(INITIAL_DATA));
       steps = [{ id: 'source', text: 'Origen (JSON)', icon: '📥' }];
+      STATE.progress['lab-steps'] = steps; saveProgress();
       render();
       toast('Laboratorio reiniciado', 'info');
     });
@@ -1284,6 +1665,8 @@ function init() {
   initTransformLab();
   initStarModel();
   initDashboard();
+  initSQLSimulator();
+  initMiniTabs();
   [1, 2, 3, 4].forEach(initQuiz);
   initGuideProgress();
   initScrollToTop();
@@ -1327,5 +1710,16 @@ function initGuideAnimations() {
   });
 }
 
+// DEBUG: Test tab clicks
+function testTabs() {
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function () {
+      console.log('Tab clicked:', this.getAttribute('aria-controls'));
+    });
+  });
+}
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  testTabs();
+});

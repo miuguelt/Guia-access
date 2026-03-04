@@ -1,0 +1,52 @@
+﻿                                                        relaciÃ³n
+                                                        1:N estÃ¡ creada! Ahora cuando agregues registros a
+                                                        PEDIDOS, el campo
+                                                        <code>ID_Cliente</code> solo aceptarÃ¡ valores que
+                                                        existan en
+                                                        CLIENTES.
+                                                    </p>
+                                                    <div class="gs-tip">ðŸŽ¯ <strong>Resultado visible:</strong>
+                                                        En la tabla
+                                                        PEDIDOS,
+                                                        si haces clic en el campo ID_Cliente, Access puede
+                                                        mostrarte una
+                                                        lista
+                                                        desplegable con los clientes existentes si configuras
+                                                        una Lista de
+                                                        bÃºsqueda.
+                                                    </div>
+                                                </div>
+                                                <label class="gs-check"><input type="checkbox" class="guide-chk"
+                                                        data-guide="r5">
+                                                    Completado</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="g2_1">
+                                        Completado</label>
+                                </div>
+
+                                <!-- SECCIÃ“N C: MODIFICAR ESTRUCTURA (ALTER TABLE) -->
+                                <div class="guide-section border-t-accent pt-28 mt-32" id="gs-modificar-tabla">
+                                    <div class="guide-section-header">
+                                        <span class="guide-section-icon">ðŸ”„</span>
+                                        <div>
+                                            <h4 class="guide-section-title">PRÃCTICA 3 â€” Modificar Estructura
+                                                (ALTER
+                                                TABLE)</h4>
+                                            <p class="guide-section-sub">En Access, alterar una tabla es tan
+                                                sencillo
+                                                como volver a la Vista DiseÃ±o.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="guide-steps">
+                                        <div class="guide-step" data-step="g3_1">
+                                            <div class="gs-marker"><span>1</span></div>
+                                            <div class="gs-content">
+                                                <h5>Agregar un nuevo campo (ADD COLUMN)</h5>
+                                                <p>Ejemplo: A la tabla <code>Electrodomestico</code>, vamos a
+                                                    agregar el
+                                                    campo de <code>precio</code>.</p>
+                                                <ul class="list-disc ml-20 mt-8 mb-8 text-095 text-text-2">
+                                                    <li>Abre <code>Electrodomestico</code> en <strong>Vista

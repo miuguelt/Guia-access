@@ -1,0 +1,80 @@
+﻿                                            <div class="guide-step" data-step="r4">
+                                                <div class="gs-marker gs-marker--green"><span>4</span></div>
+                                                <div class="gs-content">
+                                                    <h5>Configurar Integridad Referencial</h5>
+                                                    <p>En el cuadro "Modificar relaciones" verÃ¡s tres opciones
+                                                        importantes:
+                                                    </p>
+                                                    <div class="gs-props">
+                                                        <div class="gs-prop gs-prop--required"><strong>âœ… Exigir
+                                                                integridad
+                                                                referencial:</strong> SIEMPRE actÃ­vala.
+                                                            Garantiza que no
+                                                            puedas
+                                                            agregar un pedido con un ID_Cliente que no exista en
+                                                            CLIENTES.
+                                                        </div>
+                                                        <div class="gs-prop"><strong>Actualizar en cascada
+                                                                campos
+                                                                relacionados:</strong> Si cambias el ID de un
+                                                            cliente en
+                                                            CLIENTES,
+                                                            automÃ¡ticamente se actualiza en todos sus pedidos.
+                                                        </div>
+                                                        <div class="gs-prop"><strong>Eliminar en cascada
+                                                                registros
+                                                                relacionados:</strong> Si eliminas un cliente,
+                                                            elimina
+                                                            tambiÃ©n
+                                                            todos
+                                                            sus pedidos. Ãšsalo con precauciÃ³n.</div>
+                                                    </div>
+                                                    <p>Haz clic derecho sobre la lÃ­nea de uniÃ³n y selecciona
+                                                        <strong>Exigir
+                                                            integridad referencial</strong>. Luego haz clic en
+                                                        el botÃ³n
+                                                        <strong>Crear</strong>. VerÃ¡s
+                                                        una
+                                                        lÃ­nea que
+                                                        une las dos tablas con <strong>"1"</strong> en el lado
+                                                        de CLIENTES y
+                                                        <strong>"âˆž"</strong> en el lado de PEDIDOS.
+                                                    </p>
+                                                </div>
+                                                <label class="gs-check"><input type="checkbox" class="guide-chk"
+                                                        data-guide="r4">
+                                                    Completado</label>
+                                            </div>
+
+                                            <div class="guide-step" data-step="r5">
+                                                <div class="gs-marker gs-marker--green"><span>5</span></div>
+                                                <div class="gs-content">
+                                                    <h5>Guardar el Diagrama de Relaciones</h5>
+                                                    <p>Presiona <kbd>Ctrl + S</kbd> o cierra el panel y acepta
+                                                        guardar. Â¡La
+                                                        relaciÃ³n
+                                                        1:N estÃ¡ creada! Ahora cuando agregues registros a
+                                                        PEDIDOS, el campo
+                                                        <code>ID_Cliente</code> solo aceptarÃ¡ valores que
+                                                        existan en
+                                                        CLIENTES.
+                                                    </p>
+                                                    <div class="gs-tip">ðŸŽ¯ <strong>Resultado visible:</strong>
+                                                        En la tabla
+                                                        PEDIDOS,
+                                                        si haces clic en el campo ID_Cliente, Access puede
+                                                        mostrarte una
+                                                        lista
+                                                        desplegable con los clientes existentes si configuras
+                                                        una Lista de
+                                                        bÃºsqueda.
+                                                    </div>
+                                                </div>
+                                                <label class="gs-check"><input type="checkbox" class="guide-chk"
+                                                        data-guide="r5">
+                                                    Completado</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="g2_1">
+                                        Completado</label>

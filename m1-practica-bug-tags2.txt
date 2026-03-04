@@ -1,0 +1,51 @@
+﻿-1 |                                     </div>
+-1 |                                     <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="g2_0">
+-1 |                                         Completado</label>
+-2 |                                 </div>
+-1 |                                 <div class="guide-step" data-step="g2_1">
+-1 |                                     <div class="gs-marker gs-marker--purple"><span>2</span></div>
+0 |                                     <div class="gs-content">
+1 |                                         <div class="info-box info-box--info mb-20">
+1 |                                             <span class="info-icon">ðŸ“Œ</span>
+1 |                                             <p><strong>PreparaciÃ³n de la tabla PEDIDOS:</strong> Crea la tabla
+1 |                                                 PEDIDOS con
+1 |                                                 Vista
+1 |                                                 DiseÃ±o y agrega estos campos: <code>ID_Pedido</code>
+1 |                                                 (AutonumÃ©rico, PK),
+1 |                                                 <code>ID_Cliente</code> (<strong>NÃºmero Â· Entero
+1 |                                                     largo</strong>),
+1 |                                                 <code>FechaPedido</code> (Fecha/Hora), <code>TotalPedido</code>
+1 |                                                 (Moneda). El
+1 |                                                 campo
+1 |                                                 <code>ID_Cliente</code> en PEDIDOS es la <em>clave forÃ¡nea</em>
+1 |                                                 que enlazarÃ¡
+1 |                                                 con
+1 |                                                 CLIENTES.
+1 |                                             </p>
+0 |                                         </div>
+0 | 
+1 |                                         <div class="guide-steps">
+2 |                                             <div class="guide-step" data-step="r1">
+2 |                                                 <div class="gs-marker gs-marker--green"><span>1</span></div>
+3 |                                                 <div class="gs-content">
+3 |                                                     <h5>Abrir el Panel de Relaciones</h5>
+3 |                                                     <p>En la cinta de opciones, ve a la pestaÃ±a
+3 |                                                         <kbd>Herramientas de base de
+3 |                                                             datos</kbd> â†’ haz clic en <kbd>Relaciones</kbd>. Se
+3 |                                                         abrirÃ¡ un
+3 |                                                         panel
+3 |                                                         en
+3 |                                                         blanco (o con tablas previas si ya habÃ­as trabajado).
+3 |                                                         <strong>Cierra
+3 |                                                             todas
+3 |                                                             las tablas antes de abrir Relaciones.</strong>
+3 |                                                     </p>
+2 |                                                 </div>
+2 |                                                 <label class="gs-check"><input type="checkbox" class="guide-chk"
+2 |                                                         data-guide="r1">
+2 |                                                     Completado</label>
+1 |                                             </div>
+1 | 
+2 |                                             <div class="guide-step" data-step="r2">
+2 |                                                 <div class="gs-marker gs-marker--green"><span>2</span></div>
+3 |                                                 <div class="gs-content">

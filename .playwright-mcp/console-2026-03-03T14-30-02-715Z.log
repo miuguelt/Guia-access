@@ -1,0 +1,56 @@
+[     396ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/master_dna/theme.css:0
+[     563ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/R0R0X5B_r0I/mqdefault.jpg:0
+[     605ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/master_dna/components.js:0
+[     607ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/crud_lifecycle_diagram_1772482391001.png:0
+[     944ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/E_M1XQv7KqU/mqdefault.jpg:0
+[     944ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/_k7R6F43V4A/mqdefault.jpg:0
+[     945ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/Z3jZ-PjQK0o/mqdefault.jpg:0
+[    1059ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/icons/icon-192.png:0
+[    1060ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/favicon.ico:0
+[    1060ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:8080/icons/icon-192.png (Download error or resource isn't a valid image) @ http://localhost:8080/index.html#msql-teoria:0
+[   36947ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/master_dna/theme.css:0
+[   37007ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/crud_lifecycle_diagram_1772482391001.png:0
+[   37010ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/master_dna/components.js:0
+[   37024ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/E_M1XQv7KqU/mqdefault.jpg:0
+[   37025ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/R0R0X5B_r0I/mqdefault.jpg:0
+[   37036ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/_k7R6F43V4A/mqdefault.jpg:0
+[   37090ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/Z3jZ-PjQK0o/mqdefault.jpg:0
+[   37102ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/icons/icon-192.png:0
+[   37103ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:8080/icons/icon-192.png (Download error or resource isn't a valid image) @ http://localhost:8080/index.html#msql-teoria:0
+[   40499ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/master_dna/theme.css:0
+[   40518ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/R0R0X5B_r0I/mqdefault.jpg:0
+[   40526ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/E_M1XQv7KqU/mqdefault.jpg:0
+[   40532ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/master_dna/components.js:0
+[   40534ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/_k7R6F43V4A/mqdefault.jpg:0
+[   40556ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/Z3jZ-PjQK0o/mqdefault.jpg:0
+[   40562ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/crud_lifecycle_diagram_1772482391001.png:0
+[   40817ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/favicon.ico:0
+[   40818ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/icons/icon-192.png:0
+[   40822ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:8080/icons/icon-192.png (Download error or resource isn't a valid image) @ http://localhost:8080/index.html#msql-teoria:0
+[  726632ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/module2_header.png:0
+[  726633ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/module3_header.png:0
+[ 1261205ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/master_dna/theme.css:0
+[ 1261376ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/R0R0X5B_r0I/mqdefault.jpg:0
+[ 1261406ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/crud_lifecycle_diagram_1772482391001.png:0
+[ 1261526ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/_k7R6F43V4A/mqdefault.jpg:0
+[ 1261527ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/E_M1XQv7KqU/mqdefault.jpg:0
+[ 1261527ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/Z3jZ-PjQK0o/mqdefault.jpg:0
+[ 1261531ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/master_dna/components.js:0
+[ 1261734ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/favicon.ico:0
+[ 1261735ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/icons/icon-192.png:0
+[ 1261735ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:8080/icons/icon-192.png (Download error or resource isn't a valid image) @ http://localhost:8080/index.html#inicio:0
+[ 2736153ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/crud_lifecycle_diagram_1772482391001.png:0
+[ 2736228ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/R0R0X5B_r0I/mqdefault.jpg:0
+[ 2736228ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/_k7R6F43V4A/mqdefault.jpg:0
+[ 2736245ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/E_M1XQv7KqU/mqdefault.jpg:0
+[ 2736296ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/Z3jZ-PjQK0o/mqdefault.jpg:0
+[ 2736305ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/icons/icon-192.png:0
+[ 2736307ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:8080/icons/icon-192.png (Download error or resource isn't a valid image) @ http://localhost:8080/index.html#inicio:0
+[ 2739999ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/R0R0X5B_r0I/mqdefault.jpg:0
+[ 2740011ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/E_M1XQv7KqU/mqdefault.jpg:0
+[ 2740014ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/_k7R6F43V4A/mqdefault.jpg:0
+[ 2740173ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/crud_lifecycle_diagram_1772482391001.png:0
+[ 2740173ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://img.youtube.com/vi/Z3jZ-PjQK0o/mqdefault.jpg:0
+[ 2740290ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/favicon.ico:0
+[ 2740329ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8080/icons/icon-192.png:0
+[ 2740329ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:8080/icons/icon-192.png (Download error or resource isn't a valid image) @ http://localhost:8080/index.html#inicio:0

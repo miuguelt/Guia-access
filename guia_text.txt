@@ -1,0 +1,459 @@
+                                                                                                                        
+ 
+ 
+GFPI -F-135 V 04 
+ 
+ 
+PROCESO DE GESTIÓN DE  FORMACIÓN PROFESIONAL INTEGRAL  
+FORMATO GUÍA DE APRENDIZAJE  
+ 
+1. IDENTIFICACIÓN DE LA GUIA DE APRENDIZAJE  
+• Denominación del Programa de Formación:  Análisis y Desarrollo de Software . 
+• Código del Programa de Formación: 228118  
+• Nombre del Proyecto Formativo:  Construcción de software a la medida para el control de 
+acceso de personal, elementos de almacén y flujo de equipos externos para el centro de 
+gestión agroempresarial del oriente.  
+• Fase del Proyecto:  Ejecución  
+• Actividad de Proyecto Formativo:  DETERMINAR LA ESTRUCTURA LÓGICA Y  TECNOLÓGICA 
+DEL SISTEMA . 
+• Competencia:  Modelado de los artefactos del software . 
+• Resultados de Aprendizaje: Estructurar el modelo de datos del software de acuerdo con las 
+especificaciones del análisis.  
+• Duración de la Guía de Aprendizaje:  50 horas  
+2. PRESENTACIÓN  
+ 
+En esta actividad de aprendizaje usted Generará script DDL (lenguaje de definición de datos) de  la 
+base de datos en SQL .  
+Almacenar información es uno de los usos más frecuentes que una organización o empresa realiza 
+día a día en un computador. La construcción e implementación de bases de datos permite que la 
+organización pueda almacenar la información relevante del negocio a  través de la construcción de 
+una base de datos que se realiza por medio del lenguaje de definición de datos (DDL = Data 
+Definition Language).  
+                                                                                                                         
+ 
+ 
+GFPI -F-135 V 04 
+ 
+El lenguaje de definición de datos permite establecer y/o modificar el esquema relacional, es decir, 
+añadir, borrar o actualizar atributos, tablas, índices, etc . 
+3.  FORMULACIÓN DE LAS ACTIVIDADES DE APRENDIZAJE  
+3.1 Dadas los siguientes tipos de datos de un base de datos típica decir cuál es el tipo de datos 
+apropiado para el valor dado:  
+Identificador  Descripción  Rango de valores  
+TINYINT  Entero minúsculo  Desde -128 hasta 127  
+SMALLINT  Entero pequeño  Desde -32768 hasta 32767  
+MEDIUMINT  Entero medio  Desde -8388608 hasta 8388607  
+INT Entero  Desde -2.147.483.648 hasta 2.147.483.647  
+BIGINT  Entero Grande  De -9223372036854775808 a 
+9223372036854775807  
+DECIMAL (p,s)  P = dígitos  y s= 
+decimales  Valores con punto decimal exacto  
+FLOAT (n)  Valores con decimales  Valores con decimal aproximado precisión simple  
+DOUBLE  Valores con decimales  Valores con decimal aproximado precisión doble  
+DATE  Fecha  '2015 -08-25' 
+DATETIME  Fecha y hora  '2015 -08-25 07:30:21'  
+TIMESTAMP  Fecha y hora tipo int  De '1970 -01-01 00:00:01' hasta '2038 -01-09 
+03:14:07'  
+YEAR  Año '2015'  
+TIME  Hora:Minutos:Segundos  '07:30:21'  
+CHAR (n)  Cadena de caracteres  Almacena siempre N caracteres el resto son 
+espacios.  
+VARCHAR (n)  Cadena de caracteres  Almacena máximo N caracteres.  
+BINARY(n)  Caracteres y/o bytes  Almacena siempre N bytes el resto llenado ceros  
+VARBINARY(n)  Caracteres y/o bytes  Almacena máximo N caracteres y/o bytes                                                                                                                          
+ 
+ 
+GFPI -F-135 V 04 
+ 
+TINYTEXT  Text de más de 255 
+letras  2^8 letras  
+TEXT  Texto más de 255 letras  2^16 letras  
+TINYBLOB  Contenido > 255 bytes  2 ^ 8 letras y/o bytes  
+BLOB  Contenido > 255 bytes  2 ^16 letras y/o bytes  
+MEDIUMBLOB  Contenido > 255 bytes  2 ^24 letras y/o bytes  
+ 
+(Tip: busque siempre el valor más grande y razonable posible)  
+Valor  Tipo de dato apropiado  
+Cedula solo Colombia   
+Placa moto solo Colombia   
+Edad   
+Fecha de nacimiento   
+Cantidad de estudiantes por ambiente   
+Placa carro solo Colombia   
+EPS  
+Municipio   
+Departamento   
+Hora de salida   
+Precio de un producto de tienda con centavos   
+Contenido de una hoja de un libro   
+Imagen o foto   
+Nombres con apellidos de un cliente   
+Correo electrónico   
+ 
+                                                                                                                          
+ 
+ 
+GFPI -F-135 V 04 
+ 
+3.2 Haga una lectura comprensiva de los siguientes párrafos  
+CREATE DATABASE  
+Permite crear una base de datos en blanco generalmente se agrega la sentencia USE 
+nombreBaseDatos  ej. 
+CREATE DATABASE drogueria;  
+USE droguería ; (si está  dentro de phpmyadmin no hay necesidad de escribir USE haga clic en la 
+base de datos para usarla).  
+3.3 Vaya ejecutando los comandos que van apareciendo en phpmyadmin pestaña SQL:  
+CREATE TABLE  
+Permite crear una tabla con campos con los tipos de dato, solo funciona si ya creo la base de datos 
+y la tiene en uso, ejemplo 1:  
+Producto  
+codigoProducto  nombreProducto  precioProducto  
+1001  Acetaminofen  3400  
+1020  Jeringa 10ml  1100  
+ 
+CREATE TABLE Producto(  
+      codigoProducto  SMALLINT NOT NULL PRIMARY KEY , 
+      nombreProducto VARCHAR(40) NOT NULL , 
+      precioProducto  MEDIUMINT NOT NULL  
+); 
+ 
+Explicación:  
+NOT NULL = Significa que obligatoriamente debe llevar algún  dato al momento de hacer INSERT  
+SMALLINT, MEDIUMINT, VARCHAR(40) = Son tipos de datos.  
+PRIMARY KEY  = Es la llave primaria cuyo valor al hacer INSERT no se debe repetir.  
+ 
+Y le insertamos los dos productos:                                                                                                                          
+ 
+ 
+GFPI -F-135 V 04 
+ 
+INSERT INTO Producto ( codigoProducto , nombreProducto , PrecioProducto ) VALUES ( 1001 , 
+‘Acetaminofen ’, 3400 ); 
+INSERT INTO Producto ( codigoProducto , nombreProducto , PrecioProducto ) VALUES ( 1002 ,’Jeringa 
+10ml ’, 1100 ); 
+ 
+Ejemplo 2:  
+ 
+TipoFruta  
+idTipo  descripcionTipo  
+1 Dulce  
+ 
+ CREATE TABLE TipoFruta(  
+       idTipo TINYINT NOT NULL AUTO_INCREMENT 
+PRIMARY KEY , 
+       descripcionTipo VARCHAR( 10) NOT NULL  
+); 
+ 
+INSERT INTO TipoFruta ( idTipo , descripcionTipo) 
+VALUES ( NULL ,’Dulce’);  
+ 
+Fruta  
+idFruta  nombreFruta  idTipoFruta  
+1 Mango  1 
+ 
+ CREATE TABLE Fruta(  
+       idFruta SMALLINT NOT NULL AUTO_INCREMENT 
+PRIMARY KEY , 
+       nombreFruta VARCHAR(20) NOT NULL,  
+       idTipoFruta TINYINT NOT NULL,  
+       FOREIGN KEY (idtipoFruta) REFERENCES  
+TipoFruta(idTipo)  
+); 
+ 
+INSERT INTO Fruta ( idFruta , nombreFruta, idTipoFruta ) 
+VALUES ( NULL ,’Mango’, 1); 
+ 
+FOREIGN KEY = de la tabla actual se selecciona el campo que va a ser llave foránea                                                                                                                          
+ 
+ 
+GFPI -F-135 V 04 
+ 
+REFERENCES = dice que va a relacionar la llave foránea seleccionado con la llave primaria de otra 
+tabla, esto significa la relación entre tablas.  
+ 
+Procedimiento para crear una tabla usando comandos DDL:  
+1. Tener cargado XAMPP  
+2. en localhost abrir phpmyadmin  
+3. Crear una base de datos llamada EjemplosDDL  
+4. Dar clic en esa base de datos y luego en las pestaña SQL y escribir el script  
+ 
+5. Presionar el boton continuar y aparece:  
+ 
+ALTER TABLE  
+Permite modificar o actualizar la estructura de una tabla por ejemplo añadir una columna, cambiar 
+el nombre de una columna, cambiar el tipo de datos de una columna, agregar  o eliminar una llave 
+primaria, foránea , entre otros.  
+Ej. Cambiar el nombre de la tabla (renombrar la tabla)  
+ALTER TABLE  Personas RENAME  Empleados;  
+ 
+Ej. Agregar la columna nacionalidad a la tabla Autor  
+Autor  
+idAutor  NombreAutor  
+                                                                                                                        
+ 
+ 
+GFPI -F-135 V 04 
+ 
+1 Gabriel Garcia 
+Marquez  
+ 
+ALTER TABLE Autor  
+    ADD COLUMN nacionali VARCHAR(30) NOT NULL  
+    AFTER nombreAutor;  
+ 
+Autor  
+idAutor  nombreAutor  nacionali  
+1 Gabriel Garcia 
+Marquez   
+ 
+Como la columna nacionali  quedó mal escrita entonces podemos renombrarla por nacionalidad  asi  
+ALTER TABLE Autor CHANGE nacionali  nacionalidad VARCHAR(30);  
+Como vimos debemos volver a escribir el tipo de dato.  
+ 
+Como la nacionalidad queda vacia entonces le actualizamos la nacionalidad al autor.  
+UPDATE Autor SET nacionalidad=’Colombia’  WHERE idAutor=1;  
+ 
+Ej. Agregar una llave foranea a una tabla ya creada libro  al que se olvidó agrega la relación entre 
+Libro  y Autor : 
+ALTER TABLE Libro  ADD CONSTRAINT FK_IdAutorLibro FOREIGN KEY ( idAutorLibro ) REFERENCES 
+Autor  (idAutor ); 
+(Cuando agregue llaves foraneas si la tabla esta con datos verifique no se viole la integridad 
+referencial, es decir, que tenga ids que no existan, si no hay datos en la tabla no hay problemas, 
+esto, para evitar el error cannot add or update a child row a foreign key constraint fails)  
+Ejemplo de cómo cambiar un tipo de datos de una columna que estaba en VARCHAR a DATE 
+(obviamente los datos escritos son fechas)                                                                                                                          
+ 
+ 
+GFPI -F-135 V 04 
+ 
+ALTER TABLE Estudiante MODIFY fechaNacimiento DATE;  
+ 
+Para eliminar todos los registros de una tabla: TRUNCATE Estudiante  
+ 
+Otros comandos útiles:  
+SHOW DATABASES;  
+SHOW TABLES;  
+DESCRIBE nombreTabla;  
+DROP nombreTabla;  
+ALTER TABLE nombreTabla DROP PRIMARY KEY; //posiblemente requiera primero quitar el 
+autoincrement  
+mysql - -user=root   (desde la linea de comandos ingresa a mysql como root)  
+quit (para salir de mysql)  
+ 
+3.4 Crear una base de datos llamada TareasDDL y genere los scripts DDL (CREATE e INSERT INTO) 
+para los siguientes tablas tanto en un archivo en word o wordpad (TareasDDL.doc) como en la 
+pestaña sql de phpmyadmin (tener en cuenta durante la creacion, la llave foranea usando 
+REFERENCES)  
+ 
+Alumno  
+cedula  nombre  Email  Telefono  Direccion  estrato  fechaNacimiento  
+110199988  Yair 
+Lopez  yair@lopez.co  320111444  Cll 40 No 2 -12 
+Tunja  3 2014 -09-14 
+-- 
+TipoMascota  
+idTipoMascota  descripcionTipo  
+1 Canino  
+ Mascota  
+idMascot
+a nombreMascot
+a idTipoMascot
+a 
+1 Rintintin  1 
+                                                                                                                         
+ 
+ 
+GFPI -F-135 V 04 
+ 
+-- 
+ 
+GeneroMusical  
+idGeneroMusica
+l descripcionGeneroMusic
+al 
+1 Rock  
+ 
+  
+Grupo  
+idGrupo  nombreGrupo  twitter  
+1 Aterciopelados  @aterciopelado  
+ 
+ 
+ 
+Cancion  
+idCancio
+n nombreCancio
+n GrupoCancio
+n GeneroCancio
+n duracionCancio
+n fechaLanzamien
+t 
+1 Media costilla  1 1 0:7:20  2001 -2-14 
+-- 
+ 
+GeneroLiterario  
+idGeneroLiterario  descripcionGeneroLiterario  
+1 Novela  
+  
+Pais 
+idPais  nombrePais  
+1 Colombia  
+ 
+ 
+ 
+Autor  
+idAutor  nombreAutor  nacionalidad  
+1 Gabriel Garcia M.  1 
+  
+Editorial  
+idEditorial  nombreEditorial  
+1 Santillana  
+ 
+ 
+Libro  
+idLibro  nombreLibro  AutorLibro  GeneroLibro  EditorialLibro  paginas                                                                                                                          
+ 
+ 
+GFPI -F-135 V 04 
+ 
+1 100 años de 
+soledad  1 1 1 230 
+ 
+3.5 Crear una base de datos llamada EjerciciosDDL  y genere los scripts DDL (CREATE, INSERT INTO, 
+ALTER y UPDATE) para los siguientes ejercicios en archivo Word EjercicioDDL.doc y en 
+phpmyadmin:  
+3.5.1  Realizar la siguiente tabla e insertar un registro:  
+ 
+Electrodomestico  
+idElectrodomestico  nombreElectrodomestico  
+1 Lavadora Wash Machine  
+Realizar el script para agregar la columna precio y el script para actualizarle el precio a la lavadora 
+de 760000.  
+ 
+3.5.2  Realizar script DDL para crear la siguiente tabla e insertar un registro:  
+Joyas  
+idJoya  nombreJoya  
+1 Pulsera de eslabones  
+Crear la tabla Material (idMaterial, nombreMaterial) insertar el registro ‘Oro’  
+A la tabla Joyas agregarle la columna idMaterial , precio y kilates; actualizar el registro con el 
+material, precio = 230000 y kilates = 8.1  
+ 
+3.5.3  Realizar script DDL para crear la siguientes tablas e insertar un registro:  
+ 
+Crear la tabla TipoHabitacion( idTipoHabitacion , descripcionTipoHabitacion) insertarle el registro 
+‘Ejecutivo’  Habitación  
+idHabitación  NumeroHabitacion  
+1 101                                                                                                                         
+ 
+ 
+GFPI -F-135 V 04 
+ 
+A la tabla Habitación agregar la columna idTipoHabitación  que este relacionada con 
+TipoHabitación, también agregar cantidad de camas y precio; actualizarle los registros de 
+tipoHabitacion = 1, cantidadCamas = 2 y precio = 50000  
+Crear la tabla clienteHotel con las columnas cedula , nombre, telefono y ciudadProcedencia; 
+insertar el registro de 13999444, ‘Julio Sanchez’, ‘3001112222’,’Socorro’  
+Crear la tabla Checkin con las columnas idCheckin, cedulaCliente , idHabitacion , fechaCheckin, 
+cantidadDías ( hay que recordar  que los campos id están relacionados con las otras tablas que ya 
+creó); insertar el registro 1,1,1,’2014 -09-15’,4  
+ 
+Suba todos los archivos generados al link designado por el instructor en la plataforma LMS.  
+ 
+4. PLANTEAMIENTO DE EVIDENCIAS DE APRENDIZAJE PARA LA EVALUACIÓN EN EL PROCESO 
+FORMATIVO.   
+Crear una base de datos llamada ProyectoDDL  y genere los scripts DDL CREATE TABLE para su 
+proyecto formativo.  
+ 
+Fase del 
+proyecto 
+formativo  Actividad del 
+proyecto 
+formativo  Actividad de 
+Aprendizaje  Evidencias de 
+Aprendizaje  Criterios de 
+Evaluación  Técnicas e 
+Instrumentos 
+de Evaluación  
+Planeación  DETERMINAR 
+LA 
+ESTRUCTURA 
+LÓGICA  Y 
+TECNOLÓGICA 
+DEL SISTEMA  Diseñar la 
+estructura 
+de la base de 
+datos del 
+sistema  Evidencias  de 
+Producto:  
+- TareasDDL  
+- EjercicioDDL  
+- ProyectoDDL  
+ Diseña la 
+estructura de 
+la base de 
+datos, que 
+cumpla con las 
+necesidades 
+del sistema de 
+información, 
+utilizando Técnica de 
+Evaluación : 
+Valoración de 
+producto  
+Instrumento 
+de Evaluación : 
+Lista de 
+Verificación                                                                                                                          
+ 
+ 
+GFPI -F-135 V 04 
+ 
+herramientas 
+tecnológicas, 
+de acuerdo 
+con el modelo 
+definido y 
+siguiendo 
+normas 
+técnicas.  
+  
+5. GLOSARIO DE TÉRMINOS  
+DDL: Data Definition Language  o Lenguaje de definición de datos entre los que podemos encontrar 
+los comandos CREATE, ALTER, DROP  
+DML : Data Manipulation Language o Lenguaje de manipulación de datos entre los que podemos 
+encontrar INSERT INTO, UPDATE SET, DELETE FROM, SELECT FROM  
+Script: Secuencia de comandos que permite ejercutar una serie de procesos, en este caso una 
+sentencia completa para crear, alterar, insertar, actualizar, eliminar, seleccionar, entre otros se le 
+denomina script.  
+ 
+6. REFERENTES BILBIOGRÁFICOS  
+Bases de datos diseño, implementación y administración 9ª edición.  Carlos Coronel, Steven 
+Morris, Peter Rob. Ed. Cengage Learning. 2011.  
+Procesamiento de bases de datos 8ª edición. David M. Kroenke. Ed. Pearson Prentice Hall. 2003  
+Database Modeling and desing : Logical desing 5th edition. Toby Torey, Sam Lightstone, Tom 
+Nadeau, H. V. Jagadish. Ed. Morgan Kaufmann. 2011  
+MySQL 5.6 Reference Manual: Including MySQL Cluster NDB 7.3 Reference Guide. David AxMark, 
+Michael “Monty” Widenius and MySQL Documentation Team, Oracle 2014.  
+SQL. Charte Ojeda Francisco. Editorial Anaya Multimedia Interactiva.  
+Aprende SQL Segunda Edicion. Beaulieu Alan. Editorial Grupo Anaya Comercial. 2010.                                                                                                                          
+ 
+ 
+GFPI -F-135 V 04 
+ 
+ 
+7. CONTROL DEL DOCUMENTO  
+ 
+ Nombre  Cargo  Dependencia  Fecha  
+Autor (es)  Germán Alberto Cruz 
+Vargas  Instructor  Coordinación 
+Académica  15 de febrero 2017  
+ 
+8. CONTROL DE CAMBIOS (diligenciar únicamente si realiza ajustes a la guía)  
+ Nombre  Cargo  Dependencia  Fecha  Razón del Cambio  
+Autor (es)  Miguel Ángel Tejedor 
+Mendoza  Instructor  Coordinación 
+Académica  10 de 
+febrero 
+2023  Se actualizó al 
+formato actual.  
+ 

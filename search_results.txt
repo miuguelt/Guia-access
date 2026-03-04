@@ -1,0 +1,950 @@
+﻿
+> index.html:246:                                
+<div class="module-progress-fill w-0-pct" 
+id="m1-progress"></div>
+  index.html:247:                            </div>
+  index.html:248:                        </div>
+  index.html:249:                        <div 
+class="step-badge">Fundamentos</div>
+  index.html:250:                    </a>
+  index.html:251:                    <div 
+class="pipeline-arrow" aria-hidden="true">
+  index.html:252:                        <svg 
+width="32" height="32" viewBox="0 0 32 32" 
+fill="none">
+  index.html:253:                            <path 
+d="M4 16h20M18 10l6 6-6 6" stroke="url(#arr1)" 
+stroke-width="2.5"
+  index.html:254:                                
+stroke-linecap="round" stroke-linejoin="round" />
+  index.html:255:                            <defs>
+  index.html:256:                                
+<linearGradient id="arr1" x1="0" y1="0" x2="24" 
+y2="16" gradientUnits="userSpaceOnUse">
+  index.html:257:                                   
+ <stop stop-color="#39d0b8" />
+  index.html:258:                                   
+ <stop offset="1" stop-color="#5b6cff" />
+  index.html:259:                                
+</linearGradient>
+  index.html:260:                            </defs>
+  index.html:261:                        </svg>
+  index.html:262:                    </div>
+  index.html:263:
+  index.html:264:                    <a 
+href="#modulo-2" class="pipeline-step" 
+role="listitem" data-phase="2">
+  index.html:265:                        <div 
+class="step-icon step-icon--sql">🔍</div>
+  index.html:266:                        <div 
+class="step-info">
+  index.html:267:                            <div 
+class="step-phase-header">
+  index.html:268:                                
+<span class="step-phase">Fase 2</span>
+  index.html:269:                                
+<span class="step-pct" id="step-pct-2">0%</span>
+  index.html:270:                            </div>
+  index.html:271:                            <h3 
+class="step-title">Lógica Relacional</h3>
+  index.html:272:                            <p 
+class="step-tool">Consultas & SQL</p>
+  index.html:273:                            <div 
+class="step-progress-track">
+  index.html:274:                                
+<div class="step-progress-fill 
+step-progress-fill--sql w-0" id="step-prog-2"></div>
+  index.html:275:                            </div>
+  index.html:276:                        </div>
+  index.html:277:                        <div 
+class="step-badge">Consultas</div>
+  index.html:278:                    </a>
+  index.html:279:                    <div 
+class="pipeline-arrow" aria-hidden="true">
+  index.html:280:                        <svg 
+width="32" height="32" viewBox="0 0 32 32" 
+fill="none">
+  index.html:281:                            <path 
+d="M4 16h20M18 10l6 6-6 6" stroke="url(#arr2)" 
+stroke-width="2.5"
+  index.html:282:                                
+stroke-linecap="round" stroke-linejoin="round" />
+  index.html:283:                            <defs>
+  index.html:284:                                
+<linearGradient id="arr2" x1="0" y1="0" x2="24" 
+y2="16" gradientUnits="userSpaceOnUse">
+  index.html:285:                                   
+ <stop stop-color="#5b6cff" />
+  index.html:286:                                   
+ <stop offset="1" stop-color="#a855f7" />
+  index.html:287:                                
+</linearGradient>
+  index.html:288:                            </defs>
+  index.html:289:                        </svg>
+  index.html:290:                    </div>
+  index.html:291:
+  index.html:292:                    <a 
+href="#modulo-3" class="pipeline-step" 
+role="listitem" data-phase="3">
+  index.html:293:                        <div 
+class="step-icon step-icon--pq">⚙</div>
+  index.html:294:                        <div 
+class="step-info">
+  index.html:295:                            <div 
+class="step-phase-header">
+  index.html:296:                                
+<span class="step-phase">Fase 3</span>
+> index.html:510:                            <h2 
+id="m1-heading" class="module-title">Estructura de 
+Datos</h2>
+  index.html:511:                            <p 
+class="module-subtitle">Microsoft Access 2024 / 365 
+· Tablas · Relaciones · Integridad
+  index.html:512:                                
+Referencial</p>
+  index.html:513:                        </div>
+  index.html:514:                        <div 
+class="header-visual">
+  index.html:515:                            <img 
+src="module1_3d_abstract.png" alt="Access Header 
+Visual" class="header-img"
+  index.html:516:                                
+loading="lazy">
+  index.html:517:                        </div>
+  index.html:518:                    </div>
+  index.html:519:                    <div 
+class="module-progress-bar">
+> index.html:520:                        <div 
+class="module-progress-fill w-0-pct" 
+id="m1-progress"></div>
+  index.html:521:                    </div>
+  index.html:522:                </div>
+  index.html:523:            </div>
+  index.html:524:
+  index.html:525:            <div class="container 
+module-body">
+  index.html:526:
+  index.html:527:                <!-- Tabs -->
+  index.html:528:                <div class="tabs" 
+role="tablist" aria-label="Contenido del Módulo 1">
+  index.html:529:                    <button 
+class="tab active" role="tab" aria-selected="true" 
+aria-controls="m1-teoria"
+  index.html:530:                        
+id="tab-m1-teoria">📖 Teoría</button>
+  index.html:531:                    <button 
+class="tab" role="tab" aria-selected="false" 
+aria-controls="m1-simulador" id="tab-m1-sim">🎮
+  index.html:532:                        
+Simulador</button>
+  index.html:533:                    <button 
+class="tab" role="tab" aria-selected="false" 
+aria-controls="m1-relaciones"
+  index.html:534:                        
+id="tab-m1-rel">🔗 Relaciones</button>
+  index.html:535:                    <button 
+class="tab" role="tab" aria-selected="false" 
+aria-controls="m1-practica"
+  index.html:536:                        
+id="tab-m1-pract">📋 Guía Práctica</button>
+  index.html:537:                    <button 
+class="tab" role="tab" aria-selected="false" 
+aria-controls="m1-entregables"
+  index.html:538:                        
+id="tab-m1-ent">📦 Entregables</button>
+  index.html:539:                    <button 
+class="tab" role="tab" aria-selected="false" 
+aria-controls="m1-avanzado"
+  index.html:540:                        
+id="tab-m1-avanzado">🎓 Temas Avanzados</button>
+  index.html:541:                    <button 
+class="tab" role="tab" aria-selected="false" 
+aria-controls="m1-quiz" id="tab-m1-quiz">✅
+  index.html:542:                        
+Quiz</button>
+  index.html:543:                </div>
+  index.html:544:
+  index.html:545:                <!-- Tab: Teoría 
+-->
+> index.html:546:                <div 
+class="tab-panel active" id="m1-teoria" 
+role="tabpanel" aria-labelledby="tab-m1-teoria">
+  index.html:547:                    <div 
+class="theory-grid">
+  index.html:548:                        <div 
+class="theory-card">
+  index.html:549:                            
+<h3>¿Qué es Microsoft Access 2024 / 365?</h3>
+  index.html:550:                            <p 
+class="mt-15">Access es un <strong>SGBD 
+Relacional</strong> (Sistema de Gestión de Bases
+  index.html:551:                                de 
+Datos).
+  index.html:552:                                
+Relacionales
+  index.html:553:                                
+(RDBMS)</strong> de la suite de Microsoft 365 
+diseñado para el entorno empresarial
+  index.html:554:                                no 
+técnico. Permite crear, organizar y consultar datos 
+estructurados utilizando la
+  index.html:555:                                
+última tecnología del motor relacional ACE.</p>
+  index.html:556:                            <div 
+class="info-box info-box--tip">
+  index.html:557:                                
+<span class="info-icon">💡</span>
+  index.html:558:                                
+<p>Access es ideal para el gestor administrativo 
+porque combina una interfaz visual
+  index.html:559:                                   
+ amigable con un motor relacional potente 
+(ACE/Jet).</p>
+  index.html:560:                            </div>
+  index.html:561:                        </div>
+  index.html:562:
+  index.html:563:                        <div 
+class="theory-card">
+  index.html:564:                            
+<h3>Componentes Fundamentales</h3>
+  index.html:565:                            <div 
+class="component-list">
+  index.html:566:                                
+<div class="component-item">
+  index.html:567:                                   
+ <span class="comp-icon">📋</span>
+  index.html:568:                                   
+ <div>
+  index.html:569:                                   
+     <strong>Tabla</strong>
+  index.html:570:                                   
+     <p>Colección de registros del mismo tipo. Como 
+una hoja de cálculo con
+  index.html:571:                                   
+         estructura definida.</p>
+  index.html:572:                                   
+ </div>
+  index.html:573:                                
+</div>
+  index.html:574:                                
+<div class="component-item">
+  index.html:575:                                   
+ <span class="comp-icon">📝</span>
+  index.html:576:                                   
+ <div>
+  index.html:577:                                   
+     <strong>Registro (Fila)</strong>
+  index.html:578:                                   
+     <p>Una instancia completa de la entidad. Ej: 
+los datos de UN cliente específico.
+  index.html:579:                                   
+     </p>
+  index.html:580:                                   
+ </div>
+  index.html:581:                                
+</div>
+  index.html:582:                                
+<div class="component-item">
+  index.html:583:                                   
+ <span class="comp-icon">🏷</span>
+  index.html:584:                                   
+ <div>
+  index.html:585:                                   
+     <strong>Campo (Columna)</strong>
+  index.html:586:                                   
+     <p>Un atributo de la entidad. Ej: Nombre, 
+Apellido, NIT, Teléfono.</p>
+  index.html:587:                                   
+ </div>
+  index.html:588:                                
+</div>
+  index.html:589:                                
+<div class="component-item">
+  index.html:590:                                   
+ <span class="comp-icon">🔑</span>
+  index.html:591:                                   
+ <div>
+  index.html:592:                                   
+     <strong>Llave Primaria</strong>
+  index.html:593:                                   
+     <p>Identificador único e irrepetible de cada 
+registro. Ej: ID_CLIENTE.</p>
+  index.html:594:                                   
+ </div>
+  index.html:595:                                
+</div>
+  index.html:596:                            </div>
+> index.html:1297:                <div 
+class="tab-panel" id="m1-simulador" role="tabpanel" 
+aria-labelledby="tab-m1-sim">
+  index.html:1298:                    <div 
+class="simulator-container">
+  index.html:1299:                        <div 
+class="sim-header">
+  index.html:1300:                            
+<h3>🗃 Simulador: Constructor de Tablas con 
+Ejemplos Reales</h3>
+  index.html:1301:                            
+<p>Crea tablas como lo harías en Access Vista 
+Diseño o utiliza los
+  index.html:1302:                                
+<strong>Presets</strong>
+  index.html:1303:                                
+inferiores para ver estructuras profesionales de 
+Inventario y Ventas.
+  index.html:1304:                            </p>
+  index.html:1305:                        </div>
+  index.html:1306:
+  index.html:1307:                        <div 
+class="table-builder" id="table-builder">
+  index.html:1308:                            <!-- 
+Table name input -->
+  index.html:1309:                            <div 
+class="builder-row">
+  index.html:1310:                                
+<label class="builder-label" 
+for="table-name-input">Nombre de la Tabla:</label>
+  index.html:1311:                                
+<input type="text" id="table-name-input" 
+class="builder-input"
+  index.html:1312:                                  
+  placeholder="Ej: CLIENTES" maxlength="30" />
+  index.html:1313:                                
+<button class="btn btn-sm btn-secondary" 
+id="add-field-btn">+ Agregar
+  index.html:1314:                                  
+  Campo</button>
+  index.html:1315:                                
+<button class="btn btn-sm btn-accent" 
+id="generate-sql-btn">Ver SQL →</button>
+  index.html:1316:                            </div>
+  index.html:1317:
+  index.html:1318:                            <!-- 
+Fields table -->
+  index.html:1319:                            <div 
+class="fields-table-wrapper" role="region" 
+aria-label="Campos de la tabla">
+  index.html:1320:                                
+<table class="fields-table" aria-label="Diseño de 
+campos">
+  index.html:1321:                                  
+  <thead>
+  index.html:1322:                                  
+      <tr>
+  index.html:1323:                                  
+          <th scope="col">🔑</th>
+  index.html:1324:                                  
+          <th scope="col">Nombre del Campo</th>
+  index.html:1325:                                  
+          <th scope="col">Tipo de Dato</th>
+  index.html:1326:                                  
+          <th scope="col">Requerido</th>
+  index.html:1327:                                  
+          <th scope="col">Descripción</th>
+  index.html:1328:                                  
+          <th scope="col"></th>
+  index.html:1329:                                  
+      </tr>
+  index.html:1330:                                  
+  </thead>
+  index.html:1331:                                  
+  <tbody id="fields-tbody">
+  index.html:1332:                                  
+      <!-- Rows injected by JS -->
+  index.html:1333:                                  
+  </tbody>
+  index.html:1334:                                
+</table>
+  index.html:1335:                            </div>
+  index.html:1336:
+  index.html:1337:                            <!-- 
+SQL Preview -->
+  index.html:1338:                            <div 
+class="sql-preview" id="sql-preview" hidden>
+  index.html:1339:                                
+<div class="sql-header">
+  index.html:1340:                                  
+  <span class="sql-badge">SQL Generado 
+Automáticamente</span>
+  index.html:1341:                                  
+  <button class="btn btn-xs btn-ghost" 
+id="copy-sql-btn" aria-label="Copiar SQL">📋
+  index.html:1342:                                  
+      Copiar</button>
+  index.html:1343:                                
+</div>
+  index.html:1344:                                
+<pre class="sql-code" id="sql-output" 
+aria-live="polite"></pre>
+  index.html:1345:                            </div>
+  index.html:1346:
+  index.html:1347:                            <div 
+class="preset-bar">
+> index.html:1361:                <div 
+class="tab-panel" id="m1-relaciones" 
+role="tabpanel" aria-labelledby="tab-m1-rel">
+  index.html:1362:                    <div 
+class="relations-container">
+  index.html:1363:                        <div 
+class="sim-header flex justify-between items-start">
+  index.html:1364:                            <div>
+  index.html:1365:                                
+<h3>🔗 Constructor Visual de Relaciones</h3>
+  index.html:1366:                                
+<p>Simula el diagrama de relaciones de Access. 
+Arrastra los campos para crear
+  index.html:1367:                                  
+  vínculos.
+  index.html:1368:                                
+</p>
+  index.html:1369:                            </div>
+  index.html:1370:                            
+<button class="btn btn-sm btn-primary" 
+id="start-sim-tour">
+  index.html:1371:                                
+<span>💡</span> Ver Guía Rápida
+  index.html:1372:                            
+</button>
+  index.html:1373:                        </div>
+  index.html:1374:
+  index.html:1375:                        <div 
+class="relations-canvas" id="relations-canvas" 
+role="img"
+  index.html:1376:                            
+aria-label="Diagrama de relaciones entre tablas">
+  index.html:1377:                            <!-- 
+Tables rendered by JS -->
+  index.html:1378:                        </div>
+  index.html:1379:
+  index.html:1380:                        <div 
+class="relation-info-panel" id="relation-info" 
+aria-live="polite">
+  index.html:1381:                            <div 
+class="info-placeholder">
+  index.html:1382:                                
+<span>👆 Haz clic en una relación para ver sus 
+propiedades</span>
+  index.html:1383:                            </div>
+  index.html:1384:                        </div>
+  index.html:1385:
+  index.html:1386:                        <div 
+class="integrity-demo glass-card">
+  index.html:1387:                            
+<h4><span>🔒</span> Demostración de Integridad 
+Referencial</h4>
+  index.html:1388:                            <div 
+class="integrity-test">
+  index.html:1389:                                
+<p>La <strong>Integridad Referencial</strong> es un 
+sistema de reglas que
+  index.html:1390:                                  
+  utiliza Access para asegurarse de que las 
+relaciones entre registros de
+  index.html:1391:                                  
+  tablas relacionadas sean válidas, y que no se 
+eliminen ni cambien
+  index.html:1392:                                  
+  accidentalmente datos relacionados.</p>
+  index.html:1393:
+  index.html:1394:                                
+<div class="integrity-visual-grid mb-24">
+  index.html:1395:                                  
+  <div class="demo-card master-card">
+  index.html:1396:                                  
+      <div class="demo-card-header">👤 CLIENTES 
+(Tabla Padre)</div>
+  index.html:1397:                                  
+      <div class="demo-card-body">
+  index.html:1398:                                  
+          <table class="demo-mini-table">
+  index.html:1399:                                  
+              <thead>
+  index.html:1400:                                  
+                  <tr>
+  index.html:1401:                                  
+                      <th>ID_CLI</th>
+  index.html:1402:                                  
+                      <th>Nombre</th>
+  index.html:1403:                                  
+                  </tr>
+  index.html:1404:                                  
+              </thead>
+  index.html:1405:                                  
+              <tbody>
+  index.html:1406:                                  
+                  <tr>
+  index.html:1407:                                  
+                      <td>1</td>
+  index.html:1408:                                  
+                      <td>Ana García</td>
+  index.html:1409:                                  
+                  </tr>
+  index.html:1410:                                  
+                  <tr>
+  index.html:1411:                                  
+                      <td>2</td>
+> index.html:1497:                <div 
+class="tab-panel" id="m1-practica" role="tabpanel" 
+aria-labelledby="tab-m1-pract">
+  index.html:1498:                    <div 
+class="simulator-container">
+  index.html:1499:                        <div 
+class="sim-header">
+  index.html:1500:                            
+<h3>📋 Guía Práctica Completa: Tablas y Relaciones 
+en Access</h3>
+  index.html:1501:                            
+<p>Sigue cada paso cuidadosamente. Marca los pasos 
+completados para rastrear tu
+  index.html:1502:                                
+avance.</p>
+  index.html:1503:                        </div>
+  index.html:1504:
+  index.html:1505:                        <!-- 
+SECCIÓN A: CREAR TABLA -->
+  index.html:1506:                        <div 
+class="guide-section" id="gs-crear-bd">
+  index.html:1507:                            <div 
+class="guide-section-header">
+  index.html:1508:                                
+<span class="guide-section-icon">💾</span>
+  index.html:1509:                                
+<div>
+  index.html:1510:                                  
+  <h4 class="guide-section-title">PRÁCTICA 0 — 
+Creación de la Base de Datos
+  index.html:1511:                                  
+  </h4>
+  index.html:1512:                                  
+  <p class="guide-section-sub">Antes de almacenar 
+datos, necesitamos el
+  index.html:1513:                                  
+      archivo
+  index.html:1514:                                  
+      contenedor principal.</p>
+  index.html:1515:                                
+</div>
+  index.html:1516:                            </div>
+  index.html:1517:
+  index.html:1518:                            <div 
+class="guide-steps">
+  index.html:1519:                                
+<div class="guide-step" data-step="g0_1">
+  index.html:1520:                                  
+  <div class="gs-marker"><span>1</span></div>
+  index.html:1521:                                  
+  <div class="gs-content">
+  index.html:1522:                                  
+      <h5>Abrir Access y Crear Archivo</h5>
+  index.html:1523:                                  
+      <p>Abre Microsoft Access. En la pantalla 
+inicial, selecciona
+  index.html:1524:                                  
+          <strong>Base de
+  index.html:1525:                                  
+              datos del escritorio en 
+blanco</strong>. Asigna el nombre
+  index.html:1526:                                  
+          <code>drogueria</code> y haz clic en 
+<kbd>Crear</kbd>.
+  index.html:1527:                                  
+      </p>
+  index.html:1528:                                  
+      <div class="gs-tip">💡 En SQL puro esto 
+equivaldría al comando
+  index.html:1529:                                  
+          <code>CREATE DATABASE drogueria;</code>
+  index.html:1530:                                  
+      </div>
+  index.html:1531:                                  
+  </div>
+  index.html:1532:                                  
+  <label class="gs-check"><input type="checkbox" 
+class="guide-chk" data-guide="g0_1">
+  index.html:1533:                                  
+      Completado</label>
+  index.html:1534:                                
+</div>
+  index.html:1535:                            </div>
+  index.html:1536:                        </div>
+  index.html:1537:
+  index.html:1538:                        <div 
+class="guide-section mt-32 border-t-accent pt-28" 
+id="gs-crear-tabla">
+  index.html:1539:                            <div 
+class="guide-section-header">
+  index.html:1540:                                
+<span class="guide-section-icon">🗃️</span>
+  index.html:1541:                                
+<div>
+  index.html:1542:                                  
+  <h4 class="guide-section-title">PRÁCTICA 1 — 
+Crear Tabla Producto (Vista
+  index.html:1543:                                  
+      Diseño)
+  index.html:1544:                                  
+  </h4>
+  index.html:1545:                                  
+  <p class="guide-section-sub">La Vista Diseño es 
+el método profesional: te
+  index.html:1546:                                  
+      permite
+  index.html:1547:                                  
+      definir cada campo con precisión antes de 
+ingresar datos, equivalente a
+> index.html:2503:                <div 
+class="tab-panel" id="m1-entregables" 
+role="tabpanel" aria-labelledby="tab-m1-ent">
+  index.html:2504:                    <div 
+class="simulator-container">
+  index.html:2505:                        <div 
+class="sim-header">
+  index.html:2506:                            
+<h3>📦 Entregables del Módulo Access</h3>
+  index.html:2507:                            <p>Tu 
+misión final. Sigue las instrucciones del proyecto 
+integrador, genera la
+  index.html:2508:                                
+base de datos y adjunta tus evidencias para 
+certificar este nivel.</p>
+  index.html:2509:                        </div>
+  index.html:2510:
+  index.html:2511:                        <!-- 
+PROYECTO INTEGRADOR M1 -->
+> index.html:2512:                        <div 
+class="evidence-card" id="m1-proyecto">
+  index.html:2513:                            <div 
+class="evidence-header">
+  index.html:2514:                                
+<span class="evidence-icon">🚀</span>
+  index.html:2515:                                
+<h4 class="evidence-title">Proyecto Integrador: 
+Gestión de Suministros
+  index.html:2516:                                  
+  Hospitalarios</h4>
+  index.html:2517:                            </div>
+  index.html:2518:                            <p 
+class="text-text-2 text-095 mb-24">Aplicaremos lo 
+aprendido para crear una
+  index.html:2519:                                
+base de datos robusta que controle el inventario de 
+insumos médicos,
+  index.html:2520:                                
+asegurando la integridad de la data.</p>
+  index.html:2521:
+  index.html:2522:                            <div 
+class="guide-steps">
+  index.html:2523:                                
+<div class="guide-step" data-step="m1p1">
+  index.html:2524:                                  
+  <div class="gs-marker 
+gs-marker--access"><span>1</span></div>
+  index.html:2525:                                  
+  <div class="gs-content">
+  index.html:2526:                                  
+      <h5>Diseño del Modelo: Suministros y 
+Proveedores</h5>
+  index.html:2527:                                  
+      <p>Identifica las entidades: 
+<code>PROVEEDORES</code> (NIT, Nombre,
+  index.html:2528:                                  
+          Teléfono) y <code>INSUMOS</code> (Código, 
+Descripción, Precio,
+  index.html:2529:                                  
+          ID_Proveedor). Considera la relación 
+natural (1:N).</p>
+  index.html:2530:                                  
+  </div>
+  index.html:2531:                                  
+  <label class="gs-check"><input type="checkbox" 
+class="guide-chk" data-guide="m1p1">
+  index.html:2532:                                  
+      Completado</label>
+  index.html:2533:                                
+</div>
+  index.html:2534:
+  index.html:2535:                                
+<div class="guide-step" data-step="m1p2">
+  index.html:2536:                                  
+  <div class="gs-marker 
+gs-marker--access"><span>2</span></div>
+  index.html:2537:                                  
+  <div class="gs-content">
+  index.html:2538:                                  
+      <h5>Creación de Tablas y Claves</h5>
+  index.html:2539:                                  
+      <p>Crea ambas tablas en Access. Asegúrate de 
+que <code>NIT</code>
+  index.html:2540:                                  
+          sea PK (Texto Corto) en Proveedores y 
+<code>Código</code> sea PK
+  index.html:2541:                                  
+          en Insumos. Agrega 
+<code>ID_Proveedor</code> (Texto Corto) como
+  index.html:2542:                                  
+          FK en Insumos.</p>
+  index.html:2543:                                  
+  </div>
+  index.html:2544:                                  
+  <label class="gs-check"><input type="checkbox" 
+class="guide-chk" data-guide="m1p2">
+  index.html:2545:                                  
+      Completado</label>
+  index.html:2546:                                
+</div>
+  index.html:2547:
+  index.html:2548:                                
+<div class="guide-step" data-step="m1p3">
+  index.html:2549:                                  
+  <div class="gs-marker 
+gs-marker--access"><span>3</span></div>
+  index.html:2550:                                  
+  <div class="gs-content">
+  index.html:2551:                                  
+      <h5>Reglas de Validación Avanzadas</h5>
+  index.html:2552:                                  
+      <p>En Insumos, al campo <code>Precio</code> 
+agrégale una Regla de
+  index.html:2553:                                  
+          Validación: <code>>0</code> y un Texto: 
+"Debe ser mayor a cero".
+  index.html:2554:                                  
+          Al Teléfono del Proveedor añádele una 
+<strong>Máscara de
+  index.html:2555:                                  
+              Entrada</strong>: <code>\(999\) 
+0000000;0;_</code></p>
+  index.html:2556:                                  
+  </div>
+  index.html:2557:                                  
+  <label class="gs-check"><input type="checkbox" 
+class="guide-chk" data-guide="m1p3">
+  index.html:2558:                                  
+      Completado</label>
+  index.html:2559:                                
+</div>
+  index.html:2560:
+  index.html:2561:                                
+<div class="guide-step" data-step="m1p4">
+  index.html:2562:                                  
+  <div class="gs-marker 
+gs-marker--access"><span>4</span></div>
+> index.html:2600:            <div 
+class="tab-panel" id="m1-avanzado" role="tabpanel" 
+aria-labelledby="tab-m1-avanzado">
+  index.html:2601:                <div 
+class="theory-grid">
+  index.html:2602:
+  index.html:2603:                    <!-- ─── 1. 
+CONDICIONALES / EXPRESIONES ─── -->
+  index.html:2604:                    <div 
+class="theory-card theory-card--full 
+border-l-primary">
+  index.html:2605:                        <h3>⚡ 
+Expresiones Condicionales en Access</h3>
+  index.html:2606:                        <p>Access 
+usa la función <strong>SiInm()</strong> 
+(equivalente a SI() de Excel) para
+  index.html:2607:                            
+evaluar condiciones directamente en campos 
+calculados de consultas, formularios
+  index.html:2608:                            e 
+informes. Su sintaxis es:</p>
+  index.html:2609:                        <div 
+class="info-box info-box--tip mt-15">
+  index.html:2610:                            <span 
+class="info-icon">📐</span>
+  index.html:2611:                            <div>
+  index.html:2612:                                
+<code>SiInm(<em>condición</em>; 
+<em>valor_si_verdadero</em>; 
+<em>valor_si_falso</em>)</code>
+  index.html:2613:                                
+<p class="mt-8 text-095">Ejemplo:
+  index.html:2614:                                  
+  <code>SiInm([Precio]&gt;=100000; 
+&quot;Premium&quot;; &quot;Estándar&quot;)</code>
+  index.html:2615:                                
+</p>
+  index.html:2616:                            </div>
+  index.html:2617:                        </div>
+  index.html:2618:                        <div 
+class="datatypes-grid mt-15">
+  index.html:2619:                            <div 
+class="datatype-item">
+  index.html:2620:                                
+<span class="dt-icon">🔀</span>
+  index.html:2621:                                
+<span class="dt-name">SiInm() Simple</span>
+  index.html:2622:                                
+<span class="dt-desc">Evalúa una sola condición. Ej:
+  index.html:2623:                                  
+  <code>SiInm([Stock]=0; &quot;Agotado&quot;; 
+&quot;Disponible&quot;)</code></span>
+  index.html:2624:                            </div>
+  index.html:2625:                            <div 
+class="datatype-item">
+  index.html:2626:                                
+<span class="dt-icon">🔀🔀</span>
+  index.html:2627:                                
+<span class="dt-name">SiInm() Anidado</span>
+  index.html:2628:                                
+<span class="dt-desc">Múltiples condiciones. Ej:
+  index.html:2629:                                  
+  <code>SiInm([Nota]&gt;=90;&quot;A&quot;;SiInm([Not
+a]&gt;=70;&quot;B&quot;;&quot;C&quot;))</code></span
+>
+  index.html:2630:                            </div>
+  index.html:2631:                            <div 
+class="datatype-item">
+  index.html:2632:                                
+<span class="dt-icon">📊</span>
+  index.html:2633:                                
+<span class="dt-name">SiInm() con fechas</span>
+  index.html:2634:                                
+<span class="dt-desc">Ej:
+  index.html:2635:                                  
+  <code>SiInm([FechaVence]&lt;Fecha();&quot;Vencido&
+quot;;&quot;Vigente&quot;)</code></span>
+  index.html:2636:                            </div>
+  index.html:2637:                            <div 
+class="datatype-item">
+  index.html:2638:                                
+<span class="dt-icon">🔢</span>
+  index.html:2639:                                
+<span class="dt-name">ElegirV() (Switch)</span>
+  index.html:2640:                                
+<span class="dt-desc">Evalúa múltiples pares 
+condición-resultado. Ideal para
+  index.html:2641:                                  
+  categorías:
+  index.html:2642:                                  
+  <code>ElegirV([Ciudad]=&quot;Medellín&quot;;&quot;
+Antioquia&quot;; [Ciudad]=&quot;Cali&quot;;&quot;Val
+le&quot;)</code></span>
+  index.html:2643:                            </div>
+  index.html:2644:                        </div>
+  index.html:2645:                        <!-- 
+EJERCICIO GUIADO -->
+  index.html:2646:                        <div 
+class="info-box info-box--success mt-20">
+  index.html:2647:                            <span 
+class="info-icon">🎯</span>
+  index.html:2648:                            <div>
+  index.html:2649:                                
+<strong>Ejercicio Guiado: Categorizar Inventario 
+por Precio</strong>
+  index.html:2650:                                
+<p class="mt-4 text-095">Vamos a crear un campo 
+calculado en una consulta
+> index.html:3232:            <div 
+class="tab-panel" id="m1-quiz" role="tabpanel" 
+aria-labelledby="tab-m1-quiz">
+  index.html:3233:                <div 
+class="quiz-container" id="quiz-m1" 
+data-module="1"></div>
+  index.html:3234:            </div>
+  index.html:3235:            </div>
+  index.html:3236:        </section>
+  index.html:3237:
+  index.html:3238:        <!-- 
+─────────────────────────────────────
+  index.html:3239:         MÓDULO SQL: SQL PURO
+  index.html:3240:    
+───────────────────────────────────── -->
+  index.html:3241:        <section id="modulo-sql" 
+class="section module-section" data-module="sql" 
+aria-labelledby="msql-heading">
+  index.html:3242:            <div 
+class="module-header module-header--sql"
+  index.html:3243:                
+style="background: linear-gradient(135deg, rgba(46, 
+204, 113, 0.1) 0%, rgba(39, 174, 96, 0.05) 100%);">
+  index.html:3244:                <div 
+class="container">
+  index.html:3245:                    <div 
+class="header-content-flex">
+  index.html:3246:                        <div 
+class="header-text">
+  index.html:3247:                            <div 
+class="module-badge" style="background: rgba(46, 
+204, 113, 0.2); color: #2ecc71;">
+  index.html:3248:                                
+Módulo Extra</div>
+  index.html:3249:                            <h2 
+id="msql-heading" class="module-title">Laboratorio 
+SQL Puro</h2>
+  index.html:3250:                            <p 
+class="module-subtitle">Aprende a comunicarte 
+directamente con la base de datos sin
+  index.html:3251:                                
+interfaz gráfica.</p>
+  index.html:3252:                        </div>
+  index.html:3253:                        <div 
+class="header-visual">
+  index.html:3254:                            <div 
+style="font-size: 4rem; filter: drop-shadow(0 0 
+15px rgba(46, 204, 113, 0.5));">💻
+  index.html:3255:                            </div>
+  index.html:3256:                        </div>
+  index.html:3257:                    </div>
+  index.html:3258:                    <div 
+class="module-progress-bar">
+  index.html:3259:                        <div 
+class="module-progress-fill w-0-pct" 
+id="msql-progress" style="background: 
+#2ecc71;"></div>
+  index.html:3260:                    </div>
+  index.html:3261:                </div>
+  index.html:3262:            </div>
+  index.html:3263:
+  index.html:3264:            <div class="container 
+module-body">
+  index.html:3265:                <div class="tabs" 
+role="tablist" aria-label="Módulo SQL contenido">
+  index.html:3266:                    <button 
+class="tab active" role="tab" aria-selected="true" 
+aria-controls="msql-teoria"
+  index.html:3267:                        
+id="tab-msql-teoria">📖 Sintaxis SQL</button>
+  index.html:3268:                    <button 
+class="tab" role="tab" aria-selected="false" 
+aria-controls="msql-practica"
+  index.html:3269:                        
+id="tab-msql-pract">📋 Ejercicios</button>
+  index.html:3270:                </div>
+  index.html:3271:
+  index.html:3272:                <!-- Tab: Teoría 
+SQL -->
+  index.html:3273:                <div 
+class="tab-panel" id="msql-teoria" role="tabpanel" 
+aria-labelledby="tab-msql-teoria">
+  index.html:3274:                    <div 
+class="theory-grid">
+  index.html:3275:                        <div 
+class="theory-card theory-card--full 
+animate-premium border-t-primary"
+  index.html:3276:                            
+style="background: var(--c-surface); border-top: 
+4px solid var(--c-primary); border-radius: 
+var(--radius-lg); padding: 32px; box-shadow: 
+var(--shadow-2);">
+  index.html:3277:                            <div 
+class="flex justify-between items-center mb-24 
+flex-wrap gap-16">
+  index.html:3278:                                
+<div>
+  index.html:3279:                                  
+  <h3 class="text-15 font-800 mb-8 flex 
+items-center gap-12"><span
+  index.html:3280:                                  
+          class="text-primary text-20">🎮</span> 
+Simulador SQL Interactivo</h3>
+  index.html:3281:                                  
+  <p class="text-text-2">Aprende la sintaxis 
+armando tu propia consulta.
+  index.html:3282:                                  
+      <strong>Arrastra o haz clic</strong> en los 
+bloques en el orden correcto para
+
+

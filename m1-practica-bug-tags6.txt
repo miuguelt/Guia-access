@@ -1,0 +1,71 @@
+﻿L1784:                                                 <label class="gs-check"><input type="checkbox" class="guide-chk"
+L1842:                                                         data-guide="r3">
+L1786:                                                     Completado</label>
+L1469:                                             </div>
+L3: 
+L1846:                                             <div class="guide-step" data-step="r4">
+L1847:                                                 <div class="gs-marker gs-marker--green"><span>4</span></div>
+L1770:                                                 <div class="gs-content">
+L1849:                                                     <h5>Configurar Integridad Referencial</h5>
+L1850:                                                     <p>En el cuadro "Modificar relaciones" verÃ¡s tres opciones
+L1851:                                                         importantes:
+L1782:                                                     </p>
+L1853:                                                     <div class="gs-props">
+L1854:                                                         <div class="gs-prop gs-prop--required"><strong>âœ… Exigir
+L1855:                                                                 integridad
+L1856:                                                                 referencial:</strong> SIEMPRE actÃ­vala.
+L1857:                                                             Garantiza que no
+L1858:                                                             puedas
+L1859:                                                             agregar un pedido con un ID_Cliente que no exista en
+L1860:                                                             CLIENTES.
+L1861:                                                         </div>
+L1862:                                                         <div class="gs-prop"><strong>Actualizar en cascada
+L1863:                                                                 campos
+L1864:                                                                 relacionados:</strong> Si cambias el ID de un
+L1865:                                                             cliente en
+L1866:                                                             CLIENTES,
+L1867:                                                             automÃ¡ticamente se actualiza en todos sus pedidos.
+L1861:                                                         </div>
+L1869:                                                         <div class="gs-prop"><strong>Eliminar en cascada
+L1870:                                                                 registros
+L1871:                                                                 relacionados:</strong> Si eliminas un cliente,
+L1872:                                                             elimina
+L1873:                                                             tambiÃ©n
+L1874:                                                             todos
+L1875:                                                             sus pedidos. Ãšsalo con precauciÃ³n.</div>
+L1809:                                                     </div>
+L1877:                                                     <p>Haz clic derecho sobre la lÃ­nea de uniÃ³n y selecciona
+L1878:                                                         <strong>Exigir
+L1879:                                                             integridad referencial</strong>. Luego haz clic en
+L1880:                                                         el botÃ³n
+L1881:                                                         <strong>Crear</strong>. VerÃ¡s
+L1802:                                                         una
+L1883:                                                         lÃ­nea que
+L1884:                                                         une las dos tablas con <strong>"1"</strong> en el lado
+L1885:                                                         de CLIENTES y
+L1886:                                                         <strong>"âˆž"</strong> en el lado de PEDIDOS.
+L1782:                                                     </p>
+L1783:                                                 </div>
+L1784:                                                 <label class="gs-check"><input type="checkbox" class="guide-chk"
+L1890:                                                         data-guide="r4">
+L1786:                                                     Completado</label>
+L1469:                                             </div>
+L3: 
+L1894:                                             <div class="guide-step" data-step="r5">
+L1895:                                                 <div class="gs-marker gs-marker--green"><span>5</span></div>
+L1770:                                                 <div class="gs-content">
+L1897:                                                     <h5>Guardar el Diagrama de Relaciones</h5>
+L1898:                                                     <p>Presiona <kbd>Ctrl + S</kbd> o cierra el panel y acepta
+L1899:                                                         guardar. Â¡La
+L1900:                                                         relaciÃ³n
+L1901:                                                         1:N estÃ¡ creada! Ahora cuando agregues registros a
+L1902:                                                         PEDIDOS, el campo
+L1903:                                                         <code>ID_Cliente</code> solo aceptarÃ¡ valores que
+L1904:                                                         existan en
+L1905:                                                         CLIENTES.
+L1782:                                                     </p>
+L1907:                                                     <div class="gs-tip">ðŸŽ¯ <strong>Resultado visible:</strong>
+L1908:                                                         En la tabla
+L1909:                                                         PEDIDOS,
+L1910:                                                         si haces clic en el campo ID_Cliente, Access puede
+L1911:                                                         mostrarte una

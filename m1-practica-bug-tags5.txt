@@ -1,0 +1,46 @@
+﻿L1846: 1 | O:1 C:0 | <div class="guide-step" data-step="r4">
+L1847: 1 | O:1 C:1 | <div class="gs-marker gs-marker--green"><span>4</span></div>
+L1770: 2 | O:1 C:0 | <div class="gs-content">
+L1849: 2 | O:0 C:0 | <h5>Configurar Integridad Referencial</h5>
+L1850: 2 | O:0 C:0 | <p>En el cuadro "Modificar relaciones" verÃ¡s tres opciones
+L1851: 2 | O:0 C:0 | importantes:
+L1782: 2 | O:0 C:0 | </p>
+L1853: 3 | O:1 C:0 | <div class="gs-props">
+L1854: 4 | O:1 C:0 | <div class="gs-prop gs-prop--required"><strong>âœ… Exigir
+L1855: 4 | O:0 C:0 | integridad
+L1856: 4 | O:0 C:0 | referencial:</strong> SIEMPRE actÃ­vala.
+L1857: 4 | O:0 C:0 | Garantiza que no
+L1858: 4 | O:0 C:0 | puedas
+L1859: 4 | O:0 C:0 | agregar un pedido con un ID_Cliente que no exista en
+L1860: 4 | O:0 C:0 | CLIENTES.
+L1861: 3 | O:0 C:1 | </div>
+L1862: 4 | O:1 C:0 | <div class="gs-prop"><strong>Actualizar en cascada
+L1863: 4 | O:0 C:0 | campos
+L1864: 4 | O:0 C:0 | relacionados:</strong> Si cambias el ID de un
+L1865: 4 | O:0 C:0 | cliente en
+L1866: 4 | O:0 C:0 | CLIENTES,
+L1867: 4 | O:0 C:0 | automÃ¡ticamente se actualiza en todos sus pedidos.
+L1861: 3 | O:0 C:1 | </div>
+L1869: 4 | O:1 C:0 | <div class="gs-prop"><strong>Eliminar en cascada
+L1870: 4 | O:0 C:0 | registros
+L1871: 4 | O:0 C:0 | relacionados:</strong> Si eliminas un cliente,
+L1872: 4 | O:0 C:0 | elimina
+L1873: 4 | O:0 C:0 | tambiÃ©n
+L1874: 4 | O:0 C:0 | todos
+L1875: 3 | O:0 C:1 | sus pedidos. Ãšsalo con precauciÃ³n.</div>
+L1809: 2 | O:0 C:1 | </div>
+L1877: 2 | O:0 C:0 | <p>Haz clic derecho sobre la lÃ­nea de uniÃ³n y selecciona
+L1878: 2 | O:0 C:0 | <strong>Exigir
+L1879: 2 | O:0 C:0 | integridad referencial</strong>. Luego haz clic en
+L1880: 2 | O:0 C:0 | el botÃ³n
+L1881: 2 | O:0 C:0 | <strong>Crear</strong>. VerÃ¡s
+L1802: 2 | O:0 C:0 | una
+L1883: 2 | O:0 C:0 | lÃ­nea que
+L1884: 2 | O:0 C:0 | une las dos tablas con <strong>"1"</strong> en el lado
+L1885: 2 | O:0 C:0 | de CLIENTES y
+L1886: 2 | O:0 C:0 | <strong>"âˆž"</strong> en el lado de PEDIDOS.
+L1782: 2 | O:0 C:0 | </p>
+L1783: 1 | O:0 C:1 | </div>
+L1784: 1 | O:0 C:0 | <label class="gs-check"><input type="checkbox" class="guide-chk"
+L1890: 1 | O:0 C:0 | data-guide="r4">
+L1786: 1 | O:0 C:0 | Completado</label>

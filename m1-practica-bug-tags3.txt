@@ -1,0 +1,61 @@
+﻿0 |                                                     Completado</label>
+-1 |                                             </div>
+-1 | 
+0 |                                             <div class="guide-step" data-step="r5">
+0 |                                                 <div class="gs-marker gs-marker--green"><span>5</span></div>
+1 |                                                 <div class="gs-content">
+1 |                                                     <h5>Guardar el Diagrama de Relaciones</h5>
+1 |                                                     <p>Presiona <kbd>Ctrl + S</kbd> o cierra el panel y acepta
+1 |                                                         guardar. Â¡La
+1 |                                                         relaciÃ³n
+1 |                                                         1:N estÃ¡ creada! Ahora cuando agregues registros a
+1 |                                                         PEDIDOS, el campo
+1 |                                                         <code>ID_Cliente</code> solo aceptarÃ¡ valores que
+1 |                                                         existan en
+1 |                                                         CLIENTES.
+1 |                                                     </p>
+2 |                                                     <div class="gs-tip">ðŸŽ¯ <strong>Resultado visible:</strong>
+2 |                                                         En la tabla
+2 |                                                         PEDIDOS,
+2 |                                                         si haces clic en el campo ID_Cliente, Access puede
+2 |                                                         mostrarte una
+2 |                                                         lista
+2 |                                                         desplegable con los clientes existentes si configuras
+2 |                                                         una Lista de
+2 |                                                         bÃºsqueda.
+1 |                                                     </div>
+0 |                                                 </div>
+0 |                                                 <label class="gs-check"><input type="checkbox" class="guide-chk"
+0 |                                                         data-guide="r5">
+0 |                                                     Completado</label>
+-1 |                                             </div>
+-2 |                                         </div>
+-3 |                                     </div>
+-3 |                                     <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="g2_1">
+-3 |                                         Completado</label>
+-4 |                                 </div>
+-4 | 
+-4 |                                 <!-- SECCIÃ“N C: MODIFICAR ESTRUCTURA (ALTER TABLE) -->
+-3 |                                 <div class="guide-section border-t-accent pt-28 mt-32" id="gs-modificar-tabla">
+-2 |                                     <div class="guide-section-header">
+-2 |                                         <span class="guide-section-icon">ðŸ”„</span>
+-1 |                                         <div>
+-1 |                                             <h4 class="guide-section-title">PRÃCTICA 3 â€” Modificar Estructura
+-1 |                                                 (ALTER
+-1 |                                                 TABLE)</h4>
+-1 |                                             <p class="guide-section-sub">En Access, alterar una tabla es tan
+-1 |                                                 sencillo
+-1 |                                                 como volver a la Vista DiseÃ±o.</p>
+-2 |                                         </div>
+-3 |                                     </div>
+-3 | 
+-2 |                                     <div class="guide-steps">
+-1 |                                         <div class="guide-step" data-step="g3_1">
+-1 |                                             <div class="gs-marker"><span>1</span></div>
+0 |                                             <div class="gs-content">
+0 |                                                 <h5>Agregar un nuevo campo (ADD COLUMN)</h5>
+0 |                                                 <p>Ejemplo: A la tabla <code>Electrodomestico</code>, vamos a
+0 |                                                     agregar el
+0 |                                                     campo de <code>precio</code>.</p>
+0 |                                                 <ul class="list-disc ml-20 mt-8 mb-8 text-095 text-text-2">
+0 |                                                     <li>Abre <code>Electrodomestico</code> en <strong>Vista
