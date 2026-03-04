@@ -15,6 +15,19 @@ const STATE = {
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
+function escapeHTML(str) {
+  if (typeof str !== 'string') return str;
+  return str.replace(/[&<>"']/g, function (m) {
+    return {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    }[m];
+  });
+}
+
 function saveProgress() {
   localStorage.setItem('tga-progress', JSON.stringify(STATE.progress));
   updateGlobalProgress();
@@ -25,7 +38,16 @@ function toast(msg, type = 'info') {
   const t = document.createElement('div');
   t.className = `toast ${type}`;
   const icons = { success: '✅', error: '❌', info: 'ℹ️' };
-  t.innerHTML = `<span>${icons[type] || '💬'}</span><span>${msg}</span>`;
+
+  const iconSpan = document.createElement('span');
+  iconSpan.textContent = icons[type] || '💬';
+
+  const msgSpan = document.createElement('span');
+  msgSpan.textContent = msg;
+
+  t.appendChild(iconSpan);
+  t.appendChild(msgSpan);
+
   c.appendChild(t);
   setTimeout(() => t.remove(), 3500);
 }
@@ -87,10 +109,11 @@ function initSQLSimulator() {
 
     // Build the string with basic formatting
     currentBlocks.forEach((blockStr, i) => {
+      const escaped = escapeHTML(blockStr);
       if (['SELECT', 'FROM', 'WHERE', 'ORDER BY'].includes(blockStr)) {
-        sqlStr += (i > 0 ? '\n' : '') + `<span style="color: var(--c-sql-kw); font-weight: bold;">${blockStr}</span> `;
+        sqlStr += (i > 0 ? '\n' : '') + `<span style="color: var(--c-sql-kw); font-weight: bold;">${escaped}</span> `;
       } else {
-        sqlStr += `<span style="color: var(--c-sql-str);">${blockStr}</span> `;
+        sqlStr += `<span style="color: var(--c-sql-str);">${escaped}</span> `;
       }
     });
 
@@ -502,15 +525,66 @@ const PRESETS = {
 function createFieldRow(field = null) {
   const tr = document.createElement('tr');
   const f = field || { pk: false, name: '', type: 'Texto corto', required: false, desc: '' };
-  tr.innerHTML = `
-    <td><input type="checkbox" class="pk-checkbox" title="Llave Primaria" ${f.pk ? 'checked' : ''}></td>
-    <td><input type="text" class="field-input" placeholder="NombreCampo" value="${f.name}" maxlength="30"></td>
-    <td><select class="field-select">${FIELD_TYPES.map(t => `<option ${t === f.type ? 'selected' : ''}>${t}</option>`).join('')}</select></td>
-    <td><input type="checkbox" class="pk-checkbox" ${f.required ? 'checked' : ''}></td>
-    <td><input type="text" class="field-input" placeholder="Descripción..." value="${f.desc}"></td>
-    <td><button class="delete-row-btn" title="Eliminar campo" aria-label="Eliminar campo">✕</button></td>
-  `;
-  tr.querySelector('.delete-row-btn').addEventListener('click', () => tr.remove());
+
+  const tdPk = document.createElement('td');
+  const pkCheck = document.createElement('input');
+  pkCheck.type = 'checkbox';
+  pkCheck.className = 'pk-checkbox';
+  pkCheck.title = 'Llave Primaria';
+  pkCheck.checked = f.pk;
+  tdPk.appendChild(pkCheck);
+
+  const tdName = document.createElement('td');
+  const nameInput = document.createElement('input');
+  nameInput.type = 'text';
+  nameInput.className = 'field-input';
+  nameInput.placeholder = 'NombreCampo';
+  nameInput.value = f.name;
+  nameInput.maxLength = 30;
+  tdName.appendChild(nameInput);
+
+  const tdType = document.createElement('td');
+  const typeSelect = document.createElement('select');
+  typeSelect.className = 'field-select';
+  FIELD_TYPES.forEach(t => {
+    const opt = document.createElement('option');
+    opt.textContent = t;
+    if (t === f.type) opt.selected = true;
+    typeSelect.appendChild(opt);
+  });
+  tdType.appendChild(typeSelect);
+
+  const tdReq = document.createElement('td');
+  const reqCheck = document.createElement('input');
+  reqCheck.type = 'checkbox';
+  reqCheck.className = 'pk-checkbox';
+  reqCheck.checked = f.required;
+  tdReq.appendChild(reqCheck);
+
+  const tdDesc = document.createElement('td');
+  const descInput = document.createElement('input');
+  descInput.type = 'text';
+  descInput.className = 'field-input';
+  descInput.placeholder = 'Descripción...';
+  descInput.value = f.desc;
+  tdDesc.appendChild(descInput);
+
+  const tdDel = document.createElement('td');
+  const delBtn = document.createElement('button');
+  delBtn.className = 'delete-row-btn';
+  delBtn.title = 'Eliminar campo';
+  delBtn.setAttribute('aria-label', 'Eliminar campo');
+  delBtn.textContent = '✕';
+  delBtn.addEventListener('click', () => tr.remove());
+  tdDel.appendChild(delBtn);
+
+  tr.appendChild(tdPk);
+  tr.appendChild(tdName);
+  tr.appendChild(tdType);
+  tr.appendChild(tdReq);
+  tr.appendChild(tdDesc);
+  tr.appendChild(tdDel);
+
   return tr;
 }
 
@@ -598,8 +672,19 @@ function initRelationsCanvas() {
     el.className = 'rel-table';
     el.style.cssText = `left:${td.x}px;top:${td.y}px;`;
     el.id = 'rel-' + td.id;
-    el.innerHTML = `<div class="rel-table-header">${td.name}</div>` +
-      td.fields.map(f => `<div class="rel-table-field ${f.pk ? 'pk' : f.fk ? 'fk' : ''}">${f.pk ? '🔑 ' : f.fk ? '🔗 ' : '📝 '}${f.n}</div>`).join('');
+
+    const header = document.createElement('div');
+    header.className = 'rel-table-header';
+    header.textContent = td.name;
+    el.appendChild(header);
+
+    td.fields.forEach(f => {
+      const fieldEl = document.createElement('div');
+      fieldEl.className = `rel-table-field ${f.pk ? 'pk' : f.fk ? 'fk' : ''}`;
+      fieldEl.textContent = `${f.pk ? '🔑 ' : f.fk ? '🔗 ' : '📝 '}${f.n}`;
+      el.appendChild(fieldEl);
+    });
+
     canvas.appendChild(el);
     tableEls[td.id] = el;
 
@@ -864,9 +949,9 @@ function initJoinsVisual() {
     ]
   };
   function renderTable(rows, cols, title, icon) {
-    return `<div class="etl-table-wrapper"><div class="etl-table-title">${icon} ${title}</div>
-    <table class="etl-data-table"><thead><tr>${cols.map(c => `<th>${c}</th>`).join('')}</tr></thead>
-    <tbody>${rows.map(r => `<tr>${cols.map(c => `<td>${r[c] ?? '-'}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+    return `<div class="etl-table-wrapper"><div class="etl-table-title">${escapeHTML(icon)} ${escapeHTML(title)}</div>
+    <table class="etl-data-table"><thead><tr>${cols.map(c => `<th>${escapeHTML(c)}</th>`).join('')}</tr></thead>
+    <tbody>${rows.map(r => `<tr>${cols.map(c => `<td>${escapeHTML(r[c] ?? '-')}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
   }
   function renderJoin(type) {
     let rows = [];
@@ -939,13 +1024,13 @@ function initETLSimulator() {
 
   function renderTable(data, title, icon, dirty = false) {
     return `<div class="etl-table-wrapper">
-      <div class="etl-table-title">${icon} ${title}</div>
+      <div class="etl-table-title">${escapeHTML(icon)} ${escapeHTML(title)}</div>
       <table class="etl-data-table"><thead><tr><th>Nombre</th><th>Fecha</th><th>Teléfono</th><th>Activo</th></tr></thead>
       <tbody>${data.map(r => `<tr>
-        <td class="${dirty && (r.nombre !== r.nombre.trim() || r.nombre === '') ? (r.nombre === '' ? 'cell-dirty' : 'cell-dirty') : 'cell-clean'}">${r.nombre || '<em style="color:var(--c-danger)">VACÍO</em>'}</td>
-        <td>${r.fecha}</td>
-        <td class="${dirty && r.telefono.includes('  ') ? 'cell-dirty' : ''}">${r.telefono || '<em style="color:var(--c-danger)">VACÍO</em>'}</td>
-        <td>${r.activo}</td>
+        <td class="${dirty && (r.nombre !== r.nombre.trim() || r.nombre === '') ? (r.nombre === '' ? 'cell-dirty' : 'cell-dirty') : 'cell-clean'}">${escapeHTML(r.nombre) || '<em style="color:var(--c-danger)">VACÍO</em>'}</td>
+        <td>${escapeHTML(r.fecha)}</td>
+        <td class="${dirty && r.telefono.includes('  ') ? 'cell-dirty' : ''}">${escapeHTML(r.telefono) || '<em style="color:var(--c-danger)">VACÍO</em>'}</td>
+        <td>${escapeHTML(r.activo)}</td>
       </tr>`).join('')}</tbody></table></div>`;
   }
 
@@ -1293,10 +1378,10 @@ function initQuiz(moduleNum) {
     const q = questions[current];
     answered = false;
     container.innerHTML = `
-      <div class="quiz-question">${current + 1}. ${q.q}</div>
+      <div class="quiz-question">${current + 1}. ${escapeHTML(q.q)}</div>
       <div class="quiz-options">
         ${q.opts.map((o, i) => `<button class="quiz-option" data-idx="${i}" role="option">
-          <span class="option-letter">${'ABCD'[i]}</span><span>${o}</span></button>`).join('')}
+          <span class="option-letter">${'ABCD'[i]}</span><span>${escapeHTML(o)}</span></button>`).join('')}
       </div>
       <div class="quiz-feedback" id="quiz-fb"></div>
       <div class="quiz-nav">
@@ -1313,11 +1398,11 @@ function initQuiz(moduleNum) {
         $$('.quiz-option', container).forEach(b => b.classList.add('disabled'));
         if (idx === q.correct) {
           btn.classList.add('correct', 'correct-answer'); score++;
-          if (fb) { fb.className = 'quiz-feedback correct show'; fb.innerHTML = `✅ <strong>¡Correcto!</strong> ${q.exp}`; }
+          if (fb) { fb.className = 'quiz-feedback correct show'; fb.innerHTML = `✅ <strong>¡Correcto!</strong> ${escapeHTML(q.exp)}`; }
         } else {
           btn.classList.add('wrong', 'incorrect-answer');
           $$('.quiz-option', container)[q.correct].classList.add('correct');
-          if (fb) { fb.className = 'quiz-feedback wrong show'; fb.innerHTML = `❌ <strong>Incorrecto.</strong> ${q.exp}`; }
+          if (fb) { fb.className = 'quiz-feedback wrong show'; fb.innerHTML = `❌ <strong>Incorrecto.</strong> ${escapeHTML(q.exp)}`; }
         }
         const skipBtn = $('#quiz-skip', container);
         if (skipBtn) { skipBtn.disabled = false; skipBtn.addEventListener('click', () => { current++; render(); }); }
