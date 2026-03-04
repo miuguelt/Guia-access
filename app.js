@@ -1710,16 +1710,6 @@ function initGuideAnimations() {
   });
 }
 
-// DEBUG: Test tab clicks
-function testTabs() {
-  document.querySelectorAll('.tab').forEach(tab => {
-    tab.addEventListener('click', function () {
-      console.log('Tab clicked:', this.getAttribute('aria-controls'));
-    });
-  });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   init();
-  testTabs();
 });
