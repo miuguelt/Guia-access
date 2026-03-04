@@ -1,0 +1,13 @@
+{
+  "name": "mcp-local-analyzer",
+  "version": "1.0.0",
+  "description": "MCP Server para análisis de código local y offload a Ollama",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0"
+  }
+}

@@ -1,0 +1,51 @@
+L1901: d=3 | 1:N está creada! Ahora cuando agregues registros a
+L1902: d=3 | PEDIDOS, el campo
+L1903: d=3 | <code>ID_Cliente</code> solo aceptará valores que
+L1904: d=3 | existan en
+L1905: d=3 | CLIENTES.
+L1906: d=3 | </p>
+L1907: d=4 | <div class="gs-tip">🎯 <strong>Resultado visible:<
+L1908: d=4 | En la tabla
+L1909: d=4 | PEDIDOS,
+L1910: d=4 | si haces clic en el campo ID_Cliente, Access puede
+L1911: d=4 | mostrarte una
+L1912: d=4 | lista
+L1913: d=4 | desplegable con los clientes existentes si configu
+L1914: d=4 | una Lista de
+L1915: d=4 | búsqueda.
+L1916: d=3 | </div>
+L1917: d=2 | </div>
+L1918: d=2 | <label class="gs-check"><input type="checkbox" cla
+L1919: d=2 | Completado</label>
+L1920: d=1 | </div>
+L1921: d=0 | </div>
+L1922: d=-1 | </div>
+L1923: d=-2 | </div>
+L1924: d=-3 | </div>
+L1925: d=-3 | 
+L1926: d=-3 | <!-- SECCIÓN C: MODIFICAR ESTRUCTURA (ALTER TABLE)
+L1927: d=-2 | <div class="guide-section border-t-accent pt-28 mt
+L1928: d=-1 | <div class="guide-section-header">
+L1929: d=-1 | <span class="guide-section-icon">🔄</span>
+L1930: d=0 | <div>
+L1931: d=0 | <h4 class="guide-section-title">PRÁCTICA 3 — Modif
+L1932: d=0 | (ALTER
+L1933: d=0 | TABLE)</h4>
+L1934: d=0 | <p class="guide-section-sub">En Access, alterar un
+L1935: d=0 | sencillo
+L1936: d=0 | como volver a la Vista Diseño.</p>
+L1937: d=-1 | </div>
+L1938: d=-2 | </div>
+L1939: d=-2 | 
+L1940: d=-1 | <div class="guide-steps">
+L1941: d=0 | <div class="guide-step" data-step="g3_1">
+L1942: d=0 | <div class="gs-marker"><span>1</span></div>
+L1943: d=1 | <div class="gs-content">
+L1944: d=1 | <h5>Agregar un nuevo campo (ADD COLUMN)</h5>
+L1945: d=1 | <p>Ejemplo: A la tabla <code>Electrodomestico</cod
+L1946: d=1 | agregar el
+L1947: d=1 | campo de <code>precio</code>.</p>
+L1948: d=1 | <ul class="list-disc ml-20 mt-8 mb-8 text-095 text
+L1949: d=1 | <li>Abre <code>Electrodomestico</code> en <strong>
+L1950: d=1 | Diseño</strong> (clic derecho sobre la tabla > Vis
+L1951: d=1 | Diseño).</li>

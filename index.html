@@ -1763,169 +1763,165 @@
                                             CLIENTES.
                                         </p>
                                     </div>
-
-                                    <div class="guide-steps">
-                                        <div class="guide-step" data-step="r1">
-                                            <div class="gs-marker gs-marker--green"><span>1</span></div>
-                                            <div class="gs-content">
-                                                <h5>Abrir el Panel de Relaciones</h5>
-                                                <p>En la cinta de opciones, ve a la pestaña
-                                                    <kbd>Herramientas de base de
-                                                        datos</kbd> → haz clic en <kbd>Relaciones</kbd>. Se
-                                                    abrirá un
-                                                    panel
-                                                    en
-                                                    blanco (o con tablas previas si ya habías trabajado).
-                                                    <strong>Cierra
-                                                        todas
-                                                        las tablas antes de abrir Relaciones.</strong>
-                                                </p>
-                                            </div>
-                                            <label class="gs-check"><input type="checkbox" class="guide-chk"
-                                                    data-guide="r1">
-                                                Completado</label>
-                                        </div>
-
-                                        <div class="guide-step" data-step="r2">
-                                            <div class="gs-marker gs-marker--green"><span>2</span></div>
-                                            <div class="gs-content">
-                                                <h5>Agregar las Tablas al Panel</h5>
-                                                <p>En el cuadro "Mostrar tabla" que aparece automáticamente,
-                                                    haz doble
-                                                    clic
-                                                    sobre <strong>CLIENTES</strong> y luego sobre
-                                                    <strong>PEDIDOS</strong>.
-                                                    Haz
-                                                    clic en <kbd>Cerrar</kbd>. Verás ambas tablas en la zona
-                                                    superior
-                                                    con
-                                                    una
-                                                    línea de unión entre ellas.
-                                                </p>
-                                                <div class="gs-tip">💡 Puedes reposicionar las tablas dentro
-                                                    del panel
-                                                    arrastrándolas por su barra de título para que queden
-                                                    ordenadas.
-                                                </div>
-                                            </div>
-                                            <label class="gs-check"><input type="checkbox" class="guide-chk"
-                                                    data-guide="r2">
-                                                Completado</label>
-                                        </div>
-
-                                        <div class="guide-step" data-step="r3">
-                                            <div class="gs-marker gs-marker--green"><span>3</span></div>
-                                            <div class="gs-content">
-                                                <h5>Crear el Vínculo (Arrastrar campos)</h5>
-                                                <p>Este es el paso clave. <strong>Haz clic sobre
-                                                        <code>ID_Cliente</code>
-                                                        en
-                                                        la
-                                                        tabla CLIENTES</strong> (no sueltes el mouse) y
-                                                    <strong>arrástralo</strong> hasta el campo
-                                                    <code>ID_Cliente</code>
-                                                    en la
-                                                    tabla PEDIDOS. Cuando sueltes, aparecerá el cuadro de
-                                                    diálogo
-                                                    "Modificar
-                                                    relaciones".
-                                                </p>
-                                                <div class="gs-tip">⚠️ Siempre debes arrastrar desde la
-                                                    tabla PADRE
-                                                    (CLIENTES,
-                                                    lado "1") hacia la tabla HIJO (PEDIDOS, lado "N"). Si lo
-                                                    haces al
-                                                    revés
-                                                    funcionará, pero la convención es padre → hijo.</div>
-                                            </div>
-                                            <label class="gs-check"><input type="checkbox" class="guide-chk"
-                                                    data-guide="r3">
-                                                Completado</label>
-                                        </div>
-
-                                        <div class="guide-step" data-step="r4">
-                                            <div class="gs-marker gs-marker--green"><span>4</span></div>
-                                            <div class="gs-content">
-                                                <h5>Configurar Integridad Referencial</h5>
-                                                <p>En el cuadro "Modificar relaciones" verás tres opciones
-                                                    importantes:
-                                                </p>
-                                                <div class="gs-props">
-                                                    <div class="gs-prop gs-prop--required"><strong>✅ Exigir
-                                                            integridad
-                                                            referencial:</strong> SIEMPRE actívala.
-                                                        Garantiza que no
-                                                        puedas
-                                                        agregar un pedido con un ID_Cliente que no exista en
-                                                        CLIENTES.
-                                                    </div>
-                                                    <div class="gs-prop"><strong>Actualizar en cascada
-                                                            campos
-                                                            relacionados:</strong> Si cambias el ID de un
-                                                        cliente en
-                                                        CLIENTES,
-                                                        automáticamente se actualiza en todos sus pedidos.
-                                                    </div>
-                                                    <div class="gs-prop"><strong>Eliminar en cascada
-                                                            registros
-                                                            relacionados:</strong> Si eliminas un cliente,
-                                                        elimina
-                                                        también
-                                                        todos
-                                                        sus pedidos. Úsalo con precaución.</div>
-                                                </div>
-                                                <p>Haz clic derecho sobre la línea de unión y selecciona
-                                                    <strong>Exigir
-                                                        integridad referencial</strong>. Luego haz clic en
-                                                    el botón
-                                                    <strong>Crear</strong>. Verás
-                                                    una
-                                                    línea que
-                                                    une las dos tablas con <strong>"1"</strong> en el lado
-                                                    de CLIENTES y
-                                                    <strong>"∞"</strong> en el lado de PEDIDOS.
-                                                </p>
-                                            </div>
-                                            <label class="gs-check"><input type="checkbox" class="guide-chk"
-                                                    data-guide="r4">
-                                                Completado</label>
-                                        </div>
-
-                                        <div class="guide-step" data-step="r5">
-                                            <div class="gs-marker gs-marker--green"><span>5</span></div>
-                                            <div class="gs-content">
-                                                <h5>Guardar el Diagrama de Relaciones</h5>
-                                                <p>Presiona <kbd>Ctrl + S</kbd> o cierra el panel y acepta
-                                                    guardar. ¡La
-                                                    relación
-                                                    1:N está creada! Ahora cuando agregues registros a
-                                                    PEDIDOS, el campo
-                                                    <code>ID_Cliente</code> solo aceptará valores que
-                                                    existan en
-                                                    CLIENTES.
-                                                </p>
-                                                <div class="gs-tip">🎯 <strong>Resultado visible:</strong>
-                                                    En la tabla
-                                                    PEDIDOS,
-                                                    si haces clic en el campo ID_Cliente, Access puede
-                                                    mostrarte una
-                                                    lista
-                                                    desplegable con los clientes existentes si configuras
-                                                    una Lista de
-                                                    búsqueda.
-                                                </div>
-                                            </div>
-                                            <label class="gs-check"><input type="checkbox" class="guide-chk"
-                                                    data-guide="r5">
-                                                Completado</label>
-                                        </div>
-                                    </div>
                                 </div>
                                 <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="g2_1">
                                     Completado</label>
                             </div>
+
+                            <div class="guide-steps">
+                                <div class="guide-step" data-step="r1">
+                                    <div class="gs-marker gs-marker--green"><span>1</span></div>
+                                    <div class="gs-content">
+                                        <h5>Abrir el Panel de Relaciones</h5>
+                                        <p>En la cinta de opciones, ve a la pestaña
+                                            <kbd>Herramientas de base de
+                                                datos</kbd> → haz clic en <kbd>Relaciones</kbd>. Se
+                                            abrirá un
+                                            panel
+                                            en
+                                            blanco (o con tablas previas si ya habías trabajado).
+                                            <strong>Cierra
+                                                todas
+                                                las tablas antes de abrir Relaciones.</strong>
+                                        </p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="r1">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="r2">
+                                    <div class="gs-marker gs-marker--green"><span>2</span></div>
+                                    <div class="gs-content">
+                                        <h5>Agregar las Tablas al Panel</h5>
+                                        <p>En el cuadro "Mostrar tabla" que aparece automáticamente,
+                                            haz doble
+                                            clic
+                                            sobre <strong>CLIENTES</strong> y luego sobre
+                                            <strong>PEDIDOS</strong>.
+                                            Haz
+                                            clic en <kbd>Cerrar</kbd>. Verás ambas tablas en la zona
+                                            superior
+                                            con
+                                            una
+                                            línea de unión entre ellas.
+                                        </p>
+                                        <div class="gs-tip">💡 Puedes reposicionar las tablas dentro
+                                            del panel
+                                            arrastrándolas por su barra de título para que queden
+                                            ordenadas.
+                                        </div>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="r2">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="r3">
+                                    <div class="gs-marker gs-marker--green"><span>3</span></div>
+                                    <div class="gs-content">
+                                        <h5>Crear el Vínculo (Arrastrar campos)</h5>
+                                        <p>Este es el paso clave. <strong>Haz clic sobre
+                                                <code>ID_Cliente</code>
+                                                en
+                                                la
+                                                tabla CLIENTES</strong> (no sueltes el mouse) y
+                                            <strong>arrástralo</strong> hasta el campo
+                                            <code>ID_Cliente</code>
+                                            en la
+                                            tabla PEDIDOS. Cuando sueltes, aparecerá el cuadro de
+                                            diálogo
+                                            "Modificar
+                                            relaciones".
+                                        </p>
+                                        <div class="gs-tip">⚠️ Siempre debes arrastrar desde la
+                                            tabla PADRE
+                                            (CLIENTES,
+                                            lado "1") hacia la tabla HIJO (PEDIDOS, lado "N"). Si lo
+                                            haces al
+                                            revés
+                                            funcionará, pero la convención es padre → hijo.</div>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="r3">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="r4">
+                                    <div class="gs-marker gs-marker--green"><span>4</span></div>
+                                    <div class="gs-content">
+                                        <h5>Configurar Integridad Referencial</h5>
+                                        <p>En el cuadro "Modificar relaciones" verás tres opciones
+                                            importantes:
+                                        </p>
+                                        <div class="gs-props">
+                                            <div class="gs-prop gs-prop--required"><strong>✅ Exigir
+                                                    integridad
+                                                    referencial:</strong> SIEMPRE actívala.
+                                                Garantiza que no
+                                                puedas
+                                                agregar un pedido con un ID_Cliente que no exista en
+                                                CLIENTES.
+                                            </div>
+                                            <div class="gs-prop"><strong>Actualizar en cascada
+                                                    campos
+                                                    relacionados:</strong> Si cambias el ID de un
+                                                cliente en
+                                                CLIENTES,
+                                                automáticamente se actualiza en todos sus pedidos.
+                                            </div>
+                                            <div class="gs-prop"><strong>Eliminar en cascada
+                                                    registros
+                                                    relacionados:</strong> Si eliminas un cliente,
+                                                elimina
+                                                también
+                                                todos
+                                                sus pedidos. Úsalo con precaución.</div>
+                                        </div>
+                                        <p>Haz clic derecho sobre la línea de unión y selecciona
+                                            <strong>Exigir
+                                                integridad referencial</strong>. Luego haz clic en
+                                            el botón
+                                            <strong>Crear</strong>. Verás
+                                            una
+                                            línea que
+                                            une las dos tablas con <strong>"1"</strong> en el lado
+                                            de CLIENTES y
+                                            <strong>"∞"</strong> en el lado de PEDIDOS.
+                                        </p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="r4">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="r5">
+                                    <div class="gs-marker gs-marker--green"><span>5</span></div>
+                                    <div class="gs-content">
+                                        <h5>Guardar el Diagrama de Relaciones</h5>
+                                        <p>Presiona <kbd>Ctrl + S</kbd> o cierra el panel y acepta
+                                            guardar. ¡La
+                                            relación
+                                            1:N está creada! Ahora cuando agregues registros a
+                                            PEDIDOS, el campo
+                                            <code>ID_Cliente</code> solo aceptará valores que
+                                            existan en
+                                            CLIENTES.
+                                        </p>
+                                        <div class="gs-tip">🎯 <strong>Resultado visible:</strong>
+                                            En la tabla
+                                            PEDIDOS,
+                                            si haces clic en el campo ID_Cliente, Access puede
+                                            mostrarte una
+                                            lista
+                                            desplegable con los clientes existentes si configuras
+                                            una Lista de
+                                            búsqueda.
+                                        </div>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="r5">
+                                        Completado</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
 
                     <!-- SECCIÓN C: MODIFICAR ESTRUCTURA (ALTER TABLE) -->
                     <div class="guide-section border-t-accent pt-28 mt-32" id="gs-modificar-tabla">
@@ -2491,1029 +2487,1023 @@
                                 </div>
                             </div>
                         </div> <!-- CIERRE CORRECTO DE simulator-container -->
-                    </div> <!-- CIERRE CORRECTO DE tab-panel m1-practica -->
-
-                    <!-- Tab: Entregables (M1) -->
-                    <div class="tab-panel" id="m1-entregables" role="tabpanel" aria-labelledby="tab-m1-ent">
-                        <div class="simulator-container">
-                            <div class="sim-header">
-                                <h3>📦 Entregables del Módulo Access</h3>
-                                <p>Tu misión final. Sigue las instrucciones del proyecto integrador, genera
-                                    la
-                                    base de datos y adjunta tus evidencias para certificar este nivel.</p>
-                            </div>
-
-                            <!-- PROYECTO INTEGRADOR M1 -->
-                            <div class="evidence-card" id="m1-proyecto">
-                                <div class="evidence-header">
-                                    <span class="evidence-icon">🚀</span>
-                                    <h4 class="evidence-title">Proyecto Integrador: Gestión de Suministros
-                                        Hospitalarios</h4>
-                                </div>
-                                <p class="text-text-2 text-095 mb-24">Aplicaremos lo aprendido para crear
-                                    una
-                                    base de datos robusta que controle el inventario de insumos médicos,
-                                    asegurando la integridad de la data.</p>
-
-                                <div class="guide-steps">
-                                    <div class="guide-step" data-step="m1p1">
-                                        <div class="gs-marker gs-marker--access"><span>1</span></div>
-                                        <div class="gs-content">
-                                            <h5>Diseño del Modelo: Suministros y Proveedores</h5>
-                                            <p>Identifica las entidades: <code>PROVEEDORES</code> (NIT,
-                                                Nombre,
-                                                Teléfono) y <code>INSUMOS</code> (Código, Descripción,
-                                                Precio,
-                                                ID_Proveedor). Considera la relación natural (1:N).</p>
-                                        </div>
-                                        <label class="gs-check"><input type="checkbox" class="guide-chk"
-                                                data-guide="m1p1">
-                                            Completado</label>
-                                    </div>
-
-                                    <div class="guide-step" data-step="m1p2">
-                                        <div class="gs-marker gs-marker--access"><span>2</span></div>
-                                        <div class="gs-content">
-                                            <h5>Creación de Tablas y Claves</h5>
-                                            <p>Crea ambas tablas en Access. Asegúrate de que
-                                                <code>NIT</code>
-                                                sea PK (Texto Corto) en Proveedores y <code>Código</code>
-                                                sea PK
-                                                en Insumos. Agrega <code>ID_Proveedor</code> (Texto Corto)
-                                                como
-                                                FK en Insumos.
-                                            </p>
-                                        </div>
-                                        <label class="gs-check"><input type="checkbox" class="guide-chk"
-                                                data-guide="m1p2">
-                                            Completado</label>
-                                    </div>
-
-                                    <div class="guide-step" data-step="m1p3">
-                                        <div class="gs-marker gs-marker--access"><span>3</span></div>
-                                        <div class="gs-content">
-                                            <h5>Reglas de Validación Avanzadas</h5>
-                                            <p>En Insumos, al campo <code>Precio</code> agrégale una Regla
-                                                de
-                                                Validación: <code>>0</code> y un Texto: "Debe ser mayor a
-                                                cero".
-                                                Al Teléfono del Proveedor añádele una <strong>Máscara de
-                                                    Entrada</strong>: <code>\(999\) 0000000;0;_</code></p>
-                                        </div>
-                                        <label class="gs-check"><input type="checkbox" class="guide-chk"
-                                                data-guide="m1p3">
-                                            Completado</label>
-                                    </div>
-
-                                    <div class="guide-step" data-step="m1p4">
-                                        <div class="gs-marker gs-marker--access"><span>4</span></div>
-                                        <div class="gs-content">
-                                            <h5>Relaciones e Integridad Referencial</h5>
-                                            <p>Abre Herramientas de BD -> Relaciones. Arrastra
-                                                <code>NIT</code>
-                                                a <code>ID_Proveedor</code>. Marca "Exigir integridad
-                                                referencial", "Actualizar en cascada" y "Eliminar en
-                                                cascada".
-                                            </p>
-                                        </div>
-                                        <label class="gs-check"><input type="checkbox" class="guide-chk"
-                                                data-guide="m1p4">
-                                            Completado</label>
-                                    </div>
-
-                                    <div class="guide-step" data-step="m1p5">
-                                        <div class="gs-marker gs-marker--access"><span>5</span></div>
-                                        <div class="gs-content">
-                                            <h5>Formulario Auto-Generado y Prueba Integral</h5>
-                                            <p>Selecciona la tabla Proveedores, ve a <kbd>Crear</kbd> ->
-                                                <kbd>Formulario</kbd>. Ingresa un proveedor. Posteriormente,
-                                                intenta cargarle un insumo directamente a un proveedor que
-                                                NO
-                                                existe. Observa cómo Access bloquea la acción. Toma captura
-                                                de
-                                                pantalla del mensaje de error.
-                                            </p>
-                                            <a href="https://drive.google.com" target="_blank" rel="noopener"
-                                                class="upload-cta">
-                                                <span class="upload-cta-icon">📤</span>
-                                                Subir Evidencias a Drive
-                                            </a>
-                                            <div class="folder-path">📁 TGA-Digital / Modulo 1 / Access /
-                                                TuNombre /</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                </div> <!-- CIERRE CORRECTO DE tab-panel m1-practica -->
 
-                    <!-- ══ TAB: TEMAS AVANZADOS DE ACCESS ══ -->
-                    <div class="tab-panel" id="m1-avanzado" role="tabpanel" aria-labelledby="tab-m1-avanzado">
-                        <div class="theory-grid">
+                <!-- Tab: Entregables (M1) -->
+                <div class="tab-panel" id="m1-entregables" role="tabpanel" aria-labelledby="tab-m1-ent">
+                    <div class="simulator-container">
+                        <div class="sim-header">
+                            <h3>📦 Entregables del Módulo Access</h3>
+                            <p>Tu misión final. Sigue las instrucciones del proyecto integrador, genera
+                                la
+                                base de datos y adjunta tus evidencias para certificar este nivel.</p>
+                        </div>
 
-                            <!-- ─── 1. CONDICIONALES / EXPRESIONES ─── -->
-                            <div class="theory-card theory-card--full border-l-primary">
-                                <h3>⚡ Expresiones Condicionales en Access</h3>
-                                <p>Access usa la función <strong>SiInm()</strong> (equivalente a SI() de
-                                    Excel) para
-                                    evaluar condiciones directamente en campos calculados de consultas,
-                                    formularios
-                                    e informes. Su sintaxis es:</p>
-                                <div class="info-box info-box--tip mt-15">
-                                    <span class="info-icon">📐</span>
-                                    <div>
-                                        <code>SiInm(<em>condición</em>; <em>valor_si_verdadero</em>; <em>valor_si_falso</em>)</code>
-                                        <p class="mt-8 text-095">Ejemplo:
-                                            <code>SiInm([Precio]&gt;=100000; &quot;Premium&quot;; &quot;Estándar&quot;)</code>
+                        <!-- PROYECTO INTEGRADOR M1 -->
+                        <div class="evidence-card" id="m1-proyecto">
+                            <div class="evidence-header">
+                                <span class="evidence-icon">🚀</span>
+                                <h4 class="evidence-title">Proyecto Integrador: Gestión de Suministros
+                                    Hospitalarios</h4>
+                            </div>
+                            <p class="text-text-2 text-095 mb-24">Aplicaremos lo aprendido para crear
+                                una
+                                base de datos robusta que controle el inventario de insumos médicos,
+                                asegurando la integridad de la data.</p>
+
+                            <div class="guide-steps">
+                                <div class="guide-step" data-step="m1p1">
+                                    <div class="gs-marker gs-marker--access"><span>1</span></div>
+                                    <div class="gs-content">
+                                        <h5>Diseño del Modelo: Suministros y Proveedores</h5>
+                                        <p>Identifica las entidades: <code>PROVEEDORES</code> (NIT,
+                                            Nombre,
+                                            Teléfono) y <code>INSUMOS</code> (Código, Descripción,
+                                            Precio,
+                                            ID_Proveedor). Considera la relación natural (1:N).</p>
+                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="m1p1">
+                                        Completado</label>
+                                </div>
+
+                                <div class="guide-step" data-step="m1p2">
+                                    <div class="gs-marker gs-marker--access"><span>2</span></div>
+                                    <div class="gs-content">
+                                        <h5>Creación de Tablas y Claves</h5>
+                                        <p>Crea ambas tablas en Access. Asegúrate de que
+                                            <code>NIT</code>
+                                            sea PK (Texto Corto) en Proveedores y <code>Código</code>
+                                            sea PK
+                                            en Insumos. Agrega <code>ID_Proveedor</code> (Texto Corto)
+                                            como
+                                            FK en Insumos.
                                         </p>
                                     </div>
-                                </div>
-                                <div class="datatypes-grid mt-15">
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">🔀</span>
-                                        <span class="dt-name">SiInm() Simple</span>
-                                        <span class="dt-desc">Evalúa una sola condición. Ej:
-                                            <code>SiInm([Stock]=0; &quot;Agotado&quot;; &quot;Disponible&quot;)</code></span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">🔀🔀</span>
-                                        <span class="dt-name">SiInm() Anidado</span>
-                                        <span class="dt-desc">Múltiples condiciones. Ej:
-                                            <code>SiInm([Nota]&gt;=90;&quot;A&quot;;SiInm([Nota]&gt;=70;&quot;B&quot;;&quot;C&quot;))</code></span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">📊</span>
-                                        <span class="dt-name">SiInm() con fechas</span>
-                                        <span class="dt-desc">Ej:
-                                            <code>SiInm([FechaVence]&lt;Fecha();&quot;Vencido&quot;;&quot;Vigente&quot;)</code></span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">🔢</span>
-                                        <span class="dt-name">ElegirV() (Switch)</span>
-                                        <span class="dt-desc">Evalúa múltiples pares condición-resultado.
-                                            Ideal para
-                                            categorías:
-                                            <code>ElegirV([Ciudad]=&quot;Medellín&quot;;&quot;Antioquia&quot;; [Ciudad]=&quot;Cali&quot;;&quot;Valle&quot;)</code></span>
-                                    </div>
-                                </div>
-                                <!-- EJERCICIO GUIADO -->
-                                <div class="info-box info-box--success mt-20">
-                                    <span class="info-icon">🎯</span>
-                                    <div>
-                                        <strong>Ejercicio Guiado: Categorizar Inventario por Precio</strong>
-                                        <p class="mt-4 text-095">Vamos a crear un campo calculado en una
-                                            consulta
-                                            que clasifique los productos por rango de precio.</p>
-                                        <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-                                            <li>Abre una <strong>Consulta de Selección</strong> en Vista
-                                                Diseño
-                                                basada en tu tabla de productos.</li>
-                                            <li>En una columna vacía de la cuadrícula,
-                                                escribe:<br><code>Categoria: SiInm([Precio]&gt;=500000; &quot;Alta Gama&quot;; SiInm([Precio]&gt;=100000; &quot;Media Gama&quot;; &quot;Económico&quot;))</code>
-                                            </li>
-                                            <li>Ejecuta la consulta con <kbd>F5</kbd>. Verás una nueva
-                                                columna
-                                                «Categoria» con la clasificación automática.</li>
-                                            <li>Guarda la consulta como <code>Q_Categorias_Precio</code>.
-                                            </li>
-                                        </ol>
-                                        <p class="text-090 text-success mt-4"><em>Resultado:</em> Access
-                                            clasifica
-                                            cada producto automáticamente sin modificar los datos
-                                            originales.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ─── 2. LISTAS DESPLEGABLES / CUADRO COMBINADO ─── -->
-                            <div class="theory-card theory-card--full border-l-blue">
-                                <h3>📋 Listas Desplegables: Cuadro Combinado y Cuadro de Lista</h3>
-                                <p>Los controles de lista son la clave para evitar errores de digitación y
-                                    garantizar consistencia en los datos. Existen dos tipos principales en
-                                    Access:
-                                </p>
-                                <div class="datatypes-grid mt-15 mb-15">
-                                    <div class="datatype-item col-span-2">
-                                        <span class="dt-icon">🔽</span>
-                                        <span class="dt-name">Cuadro Combinado (ComboBox)</span>
-                                        <span class="dt-desc">El usuario <em>puede escribir</em> o
-                                            seleccionar de la
-                                            lista. Ocupa una sola línea. Ideal para FKs (el usuario ve el
-                                            Nombre, el
-                                            campo guarda el ID).</span>
-                                    </div>
-                                    <div class="datatype-item col-span-2">
-                                        <span class="dt-icon">📋</span>
-                                        <span class="dt-name">Cuadro de Lista (ListBox)</span>
-                                        <span class="dt-desc">Siempre visible, el usuario <em>solo puede
-                                                seleccionar</em>. Ideal para filtros y paneles de
-                                            navegación.</span>
-                                    </div>
-                                </div>
-                                <h4 class="mt-15 mb-8">⚙️ Propiedades Clave de un Cuadro Combinado</h4>
-                                <div class="component-list">
-                                    <div class="component-item">
-                                        <span class="comp-icon">📂</span>
-                                        <div>
-                                            <strong>Tipo de origen de datos</strong>
-                                            <p><code>Tabla/Consulta</code> (datos dinámicos de la BD) |
-                                                <code>Lista de valores</code> (valores fijos separados por
-                                                <code>;</code>) | <code>Lista de campos</code>.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="component-item">
-                                        <span class="comp-icon">🔗</span>
-                                        <div>
-                                            <strong>Columna dependiente</strong>
-                                            <p>Indica <em>cuál columna</em> se guarda en la tabla.
-                                                Normalmente
-                                                <code>1</code> (la clave). La otra columna (el nombre
-                                                legible) puede
-                                                estar oculta con ancho 0.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="component-item">
-                                        <span class="comp-icon">👁️</span>
-                                        <div>
-                                            <strong>Número de columnas y anchos</strong>
-                                            <p>Ej: <code>Número de columnas: 2</code> y
-                                                <code>Anchos de columna: 0cm;4cm</code> muestra solo el
-                                                nombre, pero
-                                                guarda el ID.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="component-item">
-                                        <span class="comp-icon">✔️</span>
-                                        <div>
-                                            <strong>Limitar a lista</strong>
-                                            <p>Si se establece en <code>Sí</code>, el usuario <strong>solo
-                                                    puede
-                                                    elegir</strong> valores de la lista, imposibilitando la
-                                                entrada
-                                                de datos no válidos.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- EJERCICIO GUIADO -->
-                                <div class="info-box info-box--primary mt-20">
-                                    <span class="info-icon">🛠️</span>
-                                    <div>
-                                        <strong>Ejercicio: Crear una Lista Desplegable de
-                                            Categorías</strong>
-                                        <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-                                            <li>Abre un formulario en <strong>Vista Diseño</strong>.</li>
-                                            <li>En la pestaña <kbd>Diseño</kbd>, haz clic en <strong>Cuadro
-                                                    Combinado</strong> del panel de controles y dibuja el
-                                                control en
-                                                el formulario.</li>
-                                            <li>En el asistente, selecciona <em>«Los valores los
-                                                    escribiré»</em>. En
-                                                la lista escribe:<br><code>Electrónica</code> /
-                                                <code>Aseo</code> /
-                                                <code>Papelería</code> / <code>Herramientas</code>.
-                                            </li>
-                                            <li>En <strong>Hoja de propiedades</strong> → pestaña
-                                                <em>Datos</em>,
-                                                establece <strong>Limitar a lista: Sí</strong>.
-                                            </li>
-                                            <li>Nombra el control <code>cboCategoría</code> y guarda el
-                                                formulario.
-                                            </li>
-                                        </ol>
-                                        <p class="text-090 text-primary mt-4"><em>Resultado:</em> El usuario
-                                            solo
-                                            podrá elegir entre las categorías predefinidas, eliminando
-                                            errores
-                                            tipográficos.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ─── 3. VALIDACIÓN DE DATOS ─── -->
-                            <div class="theory-card theory-card--full border-l-orange">
-                                <h3>🛡️ Validación de Datos: Las 4 Capas de Protección</h3>
-                                <p>Access ofrece múltiples mecanismos para blindar la calidad de los datos.
-                                    Cada
-                                    capa tiene un propósito específico y se complementan entre sí:</p>
-                                <div class="datatypes-grid mt-15 mb-15">
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">1️⃣</span>
-                                        <span class="dt-name">Tipo de Datos</span>
-                                        <span class="dt-desc">Primera barrera: un campo <code>Número</code>
-                                            <strong>rechazará</strong> texto automáticamente. Nunca almacena
-                                            datos
-                                            incorrectos por tipo.</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">2️⃣</span>
-                                        <span class="dt-name">Máscara de Entrada</span>
-                                        <span class="dt-desc">Controla el <em>formato visual</em> mientras
-                                            se
-                                            escribe. Ej: <code>\(999\)&nbsp;000-0000</code> para teléfonos
-                                            colombianos o <code>000\.000\.000\-0</code> para NIT.</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">3️⃣</span>
-                                        <span class="dt-name">Regla de Validación</span>
-                                        <span class="dt-desc"><strong>Expresión lógica</strong> que el dato
-                                            debe
-                                            cumplir. Access muestra el «Texto de validación» personalizado
-                                            si falla.
-                                            Ej: <code>&gt;=0 Y &lt;=100</code> para notas.</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">4️⃣</span>
-                                        <span class="dt-name">Requerido + Indexado sin duplicados</span>
-                                        <span class="dt-desc"><strong>Requerido: Sí</strong> impide valores
-                                            nulos.
-                                            <strong>Indexado: Sí (sin duplicados)</strong> garantiza
-                                            unicidad (como
-                                            una PK alterna).</span>
-                                    </div>
-                                </div>
-                                <h4 class="mt-15 mb-10">📌 Reglas de Validación más Usadas en Contexto
-                                    Administrativo</h4>
-                                <table class="gs-table mt-8 mb-15">
-                                    <thead>
-                                        <tr>
-                                            <th>Campo</th>
-                                            <th>Regla</th>
-                                            <th>Mensaje de error sugerido</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><code>Salario</code></td>
-                                            <td><code>&gt;=1300000</code></td>
-                                            <td>"El salario no puede ser menor al mínimo legal."</td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>Nota</code></td>
-                                            <td><code>&gt;=0 Y &lt;=100</code></td>
-                                            <td>"La nota debe estar entre 0 y 100."</td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>FechaEntrega</code></td>
-                                            <td><code>&gt;=Fecha()</code></td>
-                                            <td>"La fecha de entrega no puede ser en el pasado."</td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>Stock</code></td>
-                                            <td><code>&gt;=0</code></td>
-                                            <td>"El stock no puede ser negativo."</td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>Porcentaje</code></td>
-                                            <td><code>&gt;=0 Y &lt;=1</code></td>
-                                            <td>"El descuento debe ser un valor entre 0 y 1."</td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>Email</code></td>
-                                            <td><code>Como "*@*.?*"</code></td>
-                                            <td>"Ingrese un correo electrónico válido."</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!-- EJERCICIO GUIADO -->
-                                <div class="info-box info-box--warning mt-20">
-                                    <span class="info-icon">🎯</span>
-                                    <div>
-                                        <strong>Ejercicio Integral: Blindar la Tabla Empleados</strong>
-                                        <p class="mt-4 text-095">Abre <code>tbl_Empleados</code> en Vista
-                                            Diseño y
-                                            configura:</p>
-                                        <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-                                            <li>Campo <code>Salario</code> (Moneda) →
-                                                <strong>Regla:</strong>
-                                                <code>&gt;=1300000</code> | <strong>Texto:</strong> «Salario
-                                                inferior al mínimo legal».
-                                            </li>
-                                            <li>Campo <code>Email</code> (Texto corto) →
-                                                <strong>Regla:</strong>
-                                                <code>Como "*@*.?*"</code> | <strong>Texto:</strong>
-                                                «Formato de
-                                                email inválido».
-                                            </li>
-                                            <li>Campo <code>Cedula</code> (Texto corto, 10 chars) →
-                                                <strong>Máscara:</strong> <code>0000000000;0;_</code> |
-                                                <strong>Requerido:</strong> Sí | <strong>Indexado:</strong>
-                                                Sí (sin
-                                                duplicados).
-                                            </li>
-                                            <li>Campo <code>FechaIngreso</code> (Fecha/Hora) → <strong>Valor
-                                                    predeterminado:</strong> <code>=Fecha()</code>.</li>
-                                            <li>Prueba ingresando un salario de 500.000 y verifica que
-                                                Access
-                                                bloquee la acción con tu mensaje personalizado.</li>
-                                        </ol>
-                                        <p class="text-090 text-warning mt-4"><em>Resultado:</em> Tu base de
-                                            datos
-                                            rechaza automáticamente datos incorrectos antes de que
-                                            contaminen el
-                                            sistema.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ─── 4. GUÍA DE LA CINTA DE OPCIONES: CREACIÓN DE FORMULARIOS ─── -->
-                            <div class="theory-card theory-card--full border-l-primary">
-                                <div class="section-badge mb-10">CINTA: CREAR > GRUPO: FORMULARIOS</div>
-                                <h3>🛠️ Manual Maestro de Creación de Formularios</h3>
-                                <p class="mb-20">Microsoft Access ofrece <strong>6 formas
-                                        fundamentales</strong> de iniciar un formulario. Cada una tiene un
-                                    "momento de gloria" dependiendo de si buscas velocidad o control total.
-                                </p>
-
-                                <div class="datatypes-grid mt-15 mb-25">
-                                    <!-- 1. FORMULARIO (1-CLIC) -->
-                                    <div class="datatype-item border-hover-primary">
-                                        <div class="flex-between mb-8">
-                                            <span class="dt-icon">📄</span>
-                                            <span class="badge-status-success">Instantáneo</span>
-                                        </div>
-                                        <span class="dt-name">1. Formulario (Simple)</span>
-                                        <span class="dt-desc">Genera un formulario básico con <strong>todos
-                                                los campos</strong> de la tabla seleccionada en un solo
-                                            clic.</span>
-                                        <div class="info-box info-box--info mt-10 p-8 text-085">
-                                            <strong>Uso:</strong> Cuando necesitas una interfaz rápida para
-                                            entrar datos sin diseñar nada.
-                                        </div>
-                                        <div class="reto-mini mt-10">
-                                            <span class="text-primary font-bold">🎯 Reto:</span> Selecciona
-                                            <code>tbl_Clientes</code> y pulsa este botón. ¡Ya tienes tu
-                                            primer formulario!
-                                            <br><label class="gs-check mt-5"><input type="checkbox" class="guide-chk">
-                                                Hecho</label>
-                                        </div>
-                                    </div>
-
-                                    <!-- 2. DISEÑO DEL FORMULARIO -->
-                                    <div class="datatype-item border-hover-accent">
-                                        <div class="flex-between mb-8">
-                                            <span class="dt-icon">📐</span>
-                                            <span class="badge-status-accent">Nivel Experto</span>
-                                        </div>
-                                        <span class="dt-name">2. Diseño del Formulario</span>
-                                        <span class="dt-desc">Abre un <strong>lienzo en blanco
-                                                total</strong> en Vista Diseño. Tú arrastras cada campo y
-                                            control.</span>
-                                        <div class="info-box info-box--warning mt-10 p-8 text-085">
-                                            <strong>Uso:</strong> Para formularios complejos, menús
-                                            principales o tableros de control (Dashboards).
-                                        </div>
-                                        <div class="reto-mini mt-10">
-                                            <span class="text-accent font-bold">🎯 Reto:</span> Crea un
-                                            formulario vacío y añade un "Título" desde la pestaña Diseño.
-                                            <br><label class="gs-check mt-5"><input type="checkbox" class="guide-chk">
-                                                Hecho</label>
-                                        </div>
-                                    </div>
-
-                                    <!-- 3. FORMULARIO EN BLANCO -->
-                                    <div class="datatype-item">
-                                        <div class="flex-between mb-8">
-                                            <span class="dt-icon">⬜</span>
-                                            <span class="badge-status-warn">Vista Presentación</span>
-                                        </div>
-                                        <span class="dt-name">3. Formulario en Blanco</span>
-                                        <span class="dt-desc">Similar al anterior, pero abre en
-                                            <strong>Vista Presentación</strong>. Puedes ver datos reales
-                                            mientras diseñas.</span>
-                                        <div class="info-box info-box--info mt-10 p-8 text-085">
-                                            <strong>Uso:</strong> Ideal para ajustar tamaños de cuadros
-                                            basándote en el contenido real de los registros.
-                                        </div>
-                                    </div>
-
-                                    <!-- 4. ASISTENTE PARA FORMULARIOS -->
-                                    <div class="datatype-item border-hover-success">
-                                        <div class="flex-between mb-8">
-                                            <span class="dt-icon">🪄</span>
-                                            <span class="badge-status-success">El Favorito</span>
-                                        </div>
-                                        <span class="dt-name">4. Asistente (Wizard)</span>
-                                        <span class="dt-desc">Te guía paso a paso: elige qué campos quieres,
-                                            qué tabla y qué <strong>distribución</strong> usar.</span>
-                                        <div class="info-box info-box--primary mt-10 p-8 text-085">
-                                            <strong>Uso:</strong> El equilibrio perfecto entre rapidez y
-                                            personalización. Permite mezclar campos de varias tablas.
-                                        </div>
-                                        <div class="reto-mini mt-10">
-                                            <span class="text-success font-bold">🎯 Reto:</span> Usa el
-                                            asistente para crear un formulario que SOLO tenga
-                                            <code>Nombre</code> y <code>Email</code>.
-                                            <br><label class="gs-check mt-5"><input type="checkbox" class="guide-chk">
-                                                Hecho</label>
-                                        </div>
-                                    </div>
-
-                                    <!-- 5. NAVEGACIÓN -->
-                                    <div class="datatype-item">
-                                        <div class="flex-between mb-8">
-                                            <span class="dt-icon">🧭</span>
-                                            <span class="badge-status-accent">Estructura</span>
-                                        </div>
-                                        <span class="dt-name">5. Navegación</span>
-                                        <span class="dt-desc">Crea un <strong>Menú de Pestañas</strong>
-                                            (Horizontal o Vertical) para agrupar varios formularios en uno
-                                            solo.</span>
-                                        <div class="info-box info-box--info mt-10 p-8 text-085">
-                                            <strong>Uso:</strong> Para organizar una base de datos grande.
-                                            Un menú arriba para: Clientes, Ventas, Reportes.
-                                        </div>
-                                    </div>
-
-                                    <!-- 6. MÁS FORMULARIOS (FORM. DIVIDIDO) -->
-                                    <div class="datatype-item">
-                                        <div class="flex-between mb-8">
-                                            <span class="dt-icon">🎭</span>
-                                            <span class="badge-status-warn">Varios tipos</span>
-                                        </div>
-                                        <span class="dt-name">6. Más Formularios</span>
-                                        <span class="dt-desc">Incluye el potente <strong>Formulario
-                                                Dividido</strong> (ver ficha arriba y lista abajo al mismo
-                                            tiempo).</span>
-                                        <div class="info-box info-box--success mt-10 p-8 text-085">
-                                            <strong>Uso:</strong> Selecciona "Formulario dividido" para
-                                            buscar registros en una lista y editarlos arriba.
-                                        </div>
-                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="m1p2">
+                                        Completado</label>
                                 </div>
 
-                                <!-- TABLA RESUMEN DE FLUJO -->
-                                <h4 class="mt-20 mb-10">🤔 ¿Cuál botón elijo para mi proyecto?</h4>
-                                <table class="gs-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Si mi objetivo es...</th>
-                                            <th>La mejor opción es...</th>
-                                            <th>Dificultad</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Solo ver datos rápido</td>
-                                            <td><strong>1. Formulario</strong></td>
-                                            <td>⭐</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Elegir campos de varias tablas</td>
-                                            <td><strong>4. Asistente</strong></td>
-                                            <td>⭐⭐</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Crear un "Menú Principal"</td>
-                                            <td><strong>5. Navegación / 2. Diseño</strong></td>
-                                            <td>⭐⭐⭐⭐</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Listas de búsqueda rápida</td>
-                                            <td><strong>6. Formulario Dividido</strong></td>
-                                            <td>⭐⭐</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-- ─── 5. FORMULARIOS AVANZADOS ─── -->
-                            <div class="theory-card theory-card--full border-l-green">
-                                <h3>📱 Formularios Avanzados: Más Allá del Asistente</h3>
-                                <p>Los formularios son la <strong>interfaz de usuario</strong> de Access.
-                                    Permiten
-                                    al personal administrativo ingresar, modificar y consultar datos de
-                                    forma segura
-                                    sin tocar las tablas directamente.</p>
-                                <div class="datatypes-grid mt-15 mb-15">
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">📑</span>
-                                        <span class="dt-name">Formulario Simple</span>
-                                        <span class="dt-desc">Muestra los campos de <em>un solo
-                                                registro</em> a la
-                                            vez. Ideal para captura de datos individual (ej: registrar un
-                                            empleado).</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">📋</span>
-                                        <span class="dt-name">Formulario Continuo</span>
-                                        <span class="dt-desc">Muestra <em>múltiples registros</em> con el
-                                            mismo
-                                            diseño. Perfecto para revisar listas (ej: lista de pedidos
-                                            pendientes).</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">🏠📑</span>
-                                        <span class="dt-name">Formulario Principal/Sub</span>
-                                        <span class="dt-desc">Un formulario «padre» (ej: CLIENTE) que
-                                            contiene un
-                                            subformulario «hijo» (PEDIDOS de ese cliente). Refleja la
-                                            relación 1:N
-                                            visualmente.</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">🔲</span>
-                                        <span class="dt-name">Formulario de Navegación</span>
-                                        <span class="dt-desc">Menú principal de la aplicación. Contiene
-                                            botones con
-                                            pestañas que abren otros formularios. Es el «tablero de mando»
-                                            de tu
-                                            BD.</span>
-                                    </div>
-                                </div>
-                                <h4 class="mt-15 mb-10">🔧 Propiedades de Formulario Esenciales</h4>
-                                <div class="component-list">
-                                    <div class="component-item">
-                                        <span class="comp-icon">🔒</span>
-                                        <div>
-                                            <strong>Permite agregar / eliminar registros</strong>
-                                            <p>Puedes desactivar estas propiedades en <code>Sí/No</code>
-                                                para crear
-                                                formularios de <em>solo lectura</em> o de <em>solo
-                                                    consulta</em> que
-                                                protegen los datos históricos.</p>
-                                        </div>
-                                    </div>
-                                    <div class="component-item">
-                                        <span class="comp-icon">🎨</span>
-                                        <div>
-                                            <strong>Formato Condicional</strong>
-                                            <p>Cambia el color/fuente de un control según una condición. Ej:
-                                                pintar
-                                                en rojo el campo <code>Stock</code> cuando sea menor a 5.
-                                                (Pestaña
-                                                Formato → Formato condicional).</p>
-                                        </div>
-                                    </div>
-                                    <div class="component-item">
-                                        <span class="comp-icon">🔍</span>
-                                        <div>
-                                            <strong>Filtros integrados</strong>
-                                            <p>Agrega un cuadro de texto vacío y en la propiedad
-                                                <strong>Filtro</strong> de su evento <em>Al cambiar</em>,
-                                                usa una
-                                                macro para filtrar el origen de registros dinámicamente.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- EJERCICIO GUIADO -->
-                                <div class="info-box info-box--success mt-20">
-                                    <span class="info-icon">🛠️</span>
-                                    <div>
-                                        <strong>Ejercicio: Formulario Principal + Subformulario</strong>
-                                        <p class="mt-4 text-095">Crea una pantalla donde veas el cliente
-                                            arriba y
-                                            sus pedidos abajo.</p>
-                                        <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-                                            <li>Selecciona la tabla <code>CLIENTES</code> → <kbd>Crear</kbd>
-                                                →
-                                                <kbd>Formulario</kbd>. Access genera el formulario
-                                                principal.
-                                            </li>
-                                            <li>Abre el formulario en <strong>Vista Diseño</strong>. En la
-                                                pestaña
-                                                <kbd>Diseño</kbd>, arrastra el control
-                                                <strong>Subformulario/Subinforme</strong> hacia la sección
-                                                de
-                                                detalles.
-                                            </li>
-                                            <li>El asistente preguntará qué tabla usar como subformulario:
-                                                elige
-                                                <code>PEDIDOS</code>.
-                                            </li>
-                                            <li>Access detectará automáticamente el vínculo por
-                                                <code>ID_Cliente</code>. Confirma y guarda con el nombre
-                                                <code>frm_ClienteConPedidos</code>.
-                                            </li>
-                                            <li>Prueba navegando entre clientes: el subformulario mostrará
-                                                solo los
-                                                pedidos del cliente activo.</li>
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ─── 5. EXPRESIONES Y CAMPO CALCULADO ─── -->
-                            <div class="theory-card theory-card--full">
-                                <h3>🧮 Expresiones y Campos Calculados</h3>
-                                <p>Las expresiones en Access son fórmulas que combinan campos, funciones y
-                                    operadores para calcular valores sin duplicar datos. Se usan en
-                                    <strong>consultas</strong>, <strong>formularios</strong> e
-                                    <strong>informes</strong>.
-                                </p>
-                                <div class="datatypes-grid mt-15 mb-15">
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">📅</span>
-                                        <span class="dt-name">Funciones de Fecha</span>
-                                        <span class="dt-desc"><code>Fecha()</code> → hoy |
-                                            <code>Año([FechaContrato])</code> → extrae el año |
-                                            <code>DifFecha("aaaa",[FechaIngreso];Fecha())</code> → años de
-                                            antigüedad.</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">🔡</span>
-                                        <span class="dt-name">Funciones de Texto</span>
-                                        <span class="dt-desc"><code>MayúsD([Nombre])</code> → capitaliza |
-                                            <code>Izq([Cedula];3)</code> → primeros 3 dígitos |
-                                            <code>[Nombre] & " " & [Apellido]</code> → concatenar.</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">🔢</span>
-                                        <span class="dt-name">Funciones Matemáticas</span>
-                                        <span class="dt-desc"><code>[Precio]*[Cantidad]</code> → subtotal |
-                                            <code>[Subtotal]*1.19</code> → con IVA |
-                                            <code>Redondear([Precio];0)</code> → sin decimales.</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">📊</span>
-                                        <span class="dt-name">Funciones de Agregado</span>
-                                        <span class="dt-desc">En informes y consultas agrupadas:
-                                            <code>Suma([Total])</code>, <code>Promedio([Nota])</code>,
-                                            <code>Conteo([ID])</code>, <code>Máx([Salario])</code>.</span>
-                                    </div>
-                                </div>
-                                <div class="info-box info-box--tip mt-15">
-                                    <span class="info-icon">💡</span>
-                                    <div>
-                                        <strong>El Constructor de Expresiones</strong>
-                                        <p class="mt-4 text-095">Access incluye una herramienta visual para
-                                            escribir
-                                            expresiones sin memorizar sintaxis. Haz clic en el botón
-                                            <strong>«...»</strong> en cualquier propiedad de campo o en la
-                                            cuadrícula de diseño de consultas. El constructor muestra todas
-                                            las
-                                            funciones disponibles organizadas por categoría.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- EJERCICIO GUIADO -->
-                                <div class="info-box info-box--primary mt-20">
-                                    <span class="info-icon">🎯</span>
-                                    <div>
-                                        <strong>Ejercicio: Consulta de Antigüedad Laboral</strong>
-                                        <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-                                            <li>Crea una <strong>Consulta de Selección</strong> basada en
-                                                <code>tbl_Empleados</code>.
-                                            </li>
-                                            <li>Agrega los campos <code>NombreCompleto</code>,
-                                                <code>Cargo</code> y
-                                                <code>FechaIngreso</code>.
-                                            </li>
-                                            <li>En una columna vacía, crea el campo
-                                                calculado:<br><code>Antigüedad_Años: DifFecha("aaaa",[FechaIngreso];Fecha())</code>
-                                            </li>
-                                            <li>En otra
-                                                columna:<br><code>Estado_Laboral: SiInm([Antigüedad_Años]&gt;=5;&quot;Veterano&quot;;SiInm([Antigüedad_Años]&gt;=1;&quot;Activo&quot;;&quot;Nuevo&quot;))</code>
-                                            </li>
-                                            <li>Ejecuta con <kbd>F5</kbd> y guarda como
-                                                <code>Q_Antigüedad_Empleados</code>.
-                                            </li>
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ─── 6. MACROS E INFORMES ─── -->
-                            <div class="theory-card theory-card--full border-l-primary">
-                                <h3>⚙️ Macros: Automatización sin Código</h3>
-                                <p>Las macros son secuencias de acciones predefinidas que Access ejecuta al
-                                    ocurrir
-                                    un evento (clic en un botón, apertura de formulario, etc.). Son el
-                                    puente entre
-                                    Access y la automatización sin programar VBA.</p>
-                                <div class="component-list mt-15">
-                                    <div class="component-item">
-                                        <span class="comp-icon">🖱️</span>
-                                        <div>
-                                            <strong>AbriFormulario / AbrirInforme</strong>
-                                            <p>Las acciones más comunes. Abren un formulario o informe,
-                                                opcionalmente con un filtro. Ej: abrir el formulario de
-                                                pedidos
-                                                filtrando solo los pendientes.</p>
-                                        </div>
-                                    </div>
-                                    <div class="component-item">
-                                        <span class="comp-icon">🔍</span>
-                                        <div>
-                                            <strong>BuscarRegistro / BuscarSiguiente</strong>
-                                            <p>Permite buscar dinámicamente un registro específico. Útil
-                                                para crear
-                                                barras de búsqueda en formularios.</p>
-                                        </div>
-                                    </div>
-                                    <div class="component-item">
-                                        <span class="comp-icon">💾</span>
-                                        <div>
-                                            <strong>GuardarRegistro / Actualizar</strong>
-                                            <p>Fuerza el guardado del registro actual sin cerrar el
-                                                formulario.
-                                                Ideal para botones «Guardar» personalizados que den
-                                                confirmación
-                                                visual al usuario.</p>
-                                        </div>
-                                    </div>
-                                    <div class="component-item">
-                                        <span class="comp-icon">📢</span>
-                                        <div>
-                                            <strong>CuadroDeMensaje (MsgBox)</strong>
-                                            <p>Muestra mensajes personalizados de confirmación o alerta. Ej:
-                                                «¿Está
-                                                seguro de eliminar este registro?» con botones Sí/No antes
-                                                de
-                                                ejecutar una acción.</p>
-                                        </div>
-                                    </div>
-                                    <div class="component-item">
-                                        <span class="comp-icon">🏁</span>
-                                        <div>
-                                            <strong>Macro AutoExec</strong>
-                                            <p>Si creas una macro con el nombre exacto
-                                                <code>AutoExec</code>, Access
-                                                la ejecuta <strong>automáticamente</strong> al abrir la base
-                                                de
-                                                datos. Úsala para mostrar el menú principal al inicio.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="component-item">
-                                        <span class="comp-icon">🔔</span>
-                                        <div>
-                                            <strong>EstablecerValor</strong>
-                                            <p>Cambia el valor de un control en tiempo de ejecución. Ej: al
-                                                seleccionar una categoría, limpiar automáticamente el campo
-                                                de
-                                                subcategoría relacionado.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- EJERCICIO GUIADO: MACROS -->
-                                <div class="info-box info-box--success mt-20">
-                                    <span class="info-icon">🛠️</span>
-                                    <div>
-                                        <strong>Ejercicio: Botón para Abrir Informe con Filtro</strong>
-                                        <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-                                            <li>Abre tu formulario principal en <strong>Vista
-                                                    Diseño</strong>.</li>
-                                            <li>Agrega un <strong>Botón de comando</strong> desde el panel
-                                                de
-                                                controles.</li>
-                                            <li>En el asistente, selecciona la categoría <em>«Informe de
-                                                    aplicación»</em> → acción <em>«Vista previa del
-                                                    informe»</em>.
-                                                Elige tu informe de inventario.</li>
-                                            <li>Si el asistente no está disponible, ve a la propiedad
-                                                <strong>«Al
-                                                    hacer clic»</strong> del botón → selecciona
-                                                <em>«Generador de
-                                                    macros»</em> → agrega la acción
-                                                <code>AbrirInforme</code>.
-                                            </li>
-                                            <li>En la propiedad «Condición WHERE» puedes agregar un filtro
-                                                dinámico:<br><code>[Categoria] = [Formularios]![frm_Principal]![cboCategoría]</code>
-                                            </li>
-                                        </ol>
-                                        <p class="text-090 text-success mt-4"><em>Resultado:</em> El botón
-                                            abre el
-                                            informe mostrando solo los registros de la categoría
-                                            seleccionada en el
-                                            formulario.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ─── 7. INFORMES AVANZADOS ─── -->
-                            <div class="theory-card theory-card--full border-l-orange">
-                                <h3>📄 Informes Avanzados: Del Dato al Documento Profesional</h3>
-                                <p>Los informes en Access son documentos diseñados para <strong>imprimir o
-                                        exportar
-                                        a PDF</strong>. Se estructuran en secciones con propósitos
-                                    específicos:</p>
-                                <div class="datatypes-grid mt-15 mb-15">
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">📝</span>
-                                        <span class="dt-name">Encabezado del Informe</span>
-                                        <span class="dt-desc">Aparece <strong>solo en la primera
-                                                página</strong>.
-                                            Ideal para el logo de la empresa, título del documento y fecha
+                                <div class="guide-step" data-step="m1p3">
+                                    <div class="gs-marker gs-marker--access"><span>3</span></div>
+                                    <div class="gs-content">
+                                        <h5>Reglas de Validación Avanzadas</h5>
+                                        <p>En Insumos, al campo <code>Precio</code> agrégale una Regla
                                             de
-                                            generación.</span>
+                                            Validación: <code>>0</code> y un Texto: "Debe ser mayor a
+                                            cero".
+                                            Al Teléfono del Proveedor añádele una <strong>Máscara de
+                                                Entrada</strong>: <code>\(999\) 0000000;0;_</code></p>
                                     </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">📋</span>
-                                        <span class="dt-name">Encabezado de Página</span>
-                                        <span class="dt-desc">Se repite en <strong>la parte superior de cada
-                                                página</strong>. Contiene los títulos de las
-                                            columnas.</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">📌</span>
-                                        <span class="dt-name">Encabezado de Grupo</span>
-                                        <span class="dt-desc">Aparece antes de cada grupo de registros. Ej:
-                                            <code>Categoría: Electrónica</code> antes de listar todos los
-                                            productos
-                                            electrónicos.</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">🔢</span>
-                                        <span class="dt-name">Sección de Detalle</span>
-                                        <span class="dt-desc">Se repite por cada <strong>registro
-                                                individual</strong>. Es el cuerpo del informe donde van los
-                                            datos de
-                                            cada fila.</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">∑</span>
-                                        <span class="dt-name">Pie de Grupo</span>
-                                        <span class="dt-desc">Muestra <strong>subtotales y
-                                                resúmenes</strong> al
-                                            final de cada grupo. Ej:
-                                            <code>Total Electrónica: $4.500.000</code>.</span>
-                                    </div>
-                                    <div class="datatype-item">
-                                        <span class="dt-icon">🏁</span>
-                                        <span class="dt-name">Pie de Informe</span>
-                                        <span class="dt-desc"><strong>Gran Total</strong> y resumen general.
-                                            Aparece
-                                            solo al final del documento completo.</span>
-                                    </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="m1p3">
+                                        Completado</label>
                                 </div>
-                                <div class="info-box info-box--tip mt-15">
-                                    <span class="info-icon">💡</span>
-                                    <div>
-                                        <strong>Técnica Profesional: Exportar a PDF automáticamente</strong>
-                                        <p class="mt-4 text-095">Crea una macro con la acción
-                                            <code>ExportarConFormato</code>, elige el tipo <em>PDF</em> y
-                                            una ruta
-                                            de guardado dinámica usando
-                                            <code>=CarpetaActual() & "\Informe_" & Formato(Fecha();"yyyymmdd") & ".pdf"</code>.
-                                            Adjunta esta macro al botón de tu formulario principal para
-                                            generar
-                                            reportes PDF con un solo clic.
+
+                                <div class="guide-step" data-step="m1p4">
+                                    <div class="gs-marker gs-marker--access"><span>4</span></div>
+                                    <div class="gs-content">
+                                        <h5>Relaciones e Integridad Referencial</h5>
+                                        <p>Abre Herramientas de BD -> Relaciones. Arrastra
+                                            <code>NIT</code>
+                                            a <code>ID_Proveedor</code>. Marca "Exigir integridad
+                                            referencial", "Actualizar en cascada" y "Eliminar en
+                                            cascada".
                                         </p>
                                     </div>
+                                    <label class="gs-check"><input type="checkbox" class="guide-chk" data-guide="m1p4">
+                                        Completado</label>
                                 </div>
-                                <!-- EJERCICIO FINAL INTEGRADOR -->
-                                <div class="info-box info-box--warning mt-20">
-                                    <span class="info-icon">🏆</span>
-                                    <div>
-                                        <strong>Ejercicio Integrador Final: Sistema de Inventario
-                                            Completo</strong>
-                                        <p class="mt-4 text-095">Aplica todos los temas vistos en esta
-                                            sección para
-                                            crear un mini-sistema de inventario:</p>
-                                        <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-                                            <li><strong>Validación:</strong> En <code>tbl_Productos</code>,
-                                                agrega
-                                                reglas de validación para Precio <code>&gt;0</code> y Stock
-                                                <code>&gt;=0</code>.
-                                            </li>
-                                            <li><strong>Lista desplegable:</strong> En el formulario de
-                                                Productos,
-                                                cambia el campo Categoría por un Cuadro Combinado enlazado a
-                                                una
-                                                tabla <code>tbl_Categorias</code> con «Limitar a lista: Sí».
-                                            </li>
-                                            <li><strong>Condicional:</strong> Crea la consulta
-                                                <code>Q_Estado_Stock</code>
-                                                con:<br><code>Estado: SiInm([Stock]=0;&quot;Agotado&quot;;SiInm([Stock]&lt;5;&quot;Crítico&quot;;&quot;Normal&quot;))</code>
-                                            </li>
-                                            <li><strong>Informe:</strong> Genera un informe agrupado por
-                                                Categoría
-                                                con subtotales de Stock y Valor Total
-                                                (<code>Suma([Precio]*[Stock])</code>) en el pie de grupo.
-                                            </li>
-                                            <li><strong>Macro:</strong> Crea un botón en el formulario
-                                                principal que
-                                                exporte el informe anterior a PDF automáticamente.</li>
-                                        </ol>
-                                        <p class="text-090 text-warning mt-4"><em>Entregable:</em> Una base
-                                            de datos
-                                            Access funcional con formularios, consultas con condicionales,
-                                            validación activa e informe exportable.</p>
+
+                                <div class="guide-step" data-step="m1p5">
+                                    <div class="gs-marker gs-marker--access"><span>5</span></div>
+                                    <div class="gs-content">
+                                        <h5>Formulario Auto-Generado y Prueba Integral</h5>
+                                        <p>Selecciona la tabla Proveedores, ve a <kbd>Crear</kbd> ->
+                                            <kbd>Formulario</kbd>. Ingresa un proveedor. Posteriormente,
+                                            intenta cargarle un insumo directamente a un proveedor que
+                                            NO
+                                            existe. Observa cómo Access bloquea la acción. Toma captura
+                                            de
+                                            pantalla del mensaje de error.
+                                        </p>
                                         <a href="https://drive.google.com" target="_blank" rel="noopener"
-                                            class="upload-cta mt-12">
+                                            class="upload-cta">
                                             <span class="upload-cta-icon">📤</span>
-                                            Subir Ejercicio Integrador a Drive
+                                            Subir Evidencias a Drive
                                         </a>
-                                        <div class="folder-path">📁 TGA-Digital / Modulo 1 / Temas-Avanzados
-                                            /
+                                        <div class="folder-path">📁 TGA-Digital / Modulo 1 / Access /
                                             TuNombre /</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="tab-panel" id="m1-quiz" role="tabpanel" aria-labelledby="tab-m1-quiz">
-                        <div class="quiz-container" id="quiz-m1" data-module="1"></div>
+                <!-- ══ TAB: TEMAS AVANZADOS DE ACCESS ══ -->
+                <div class="tab-panel" id="m1-avanzado" role="tabpanel" aria-labelledby="tab-m1-avanzado">
+                    <div class="theory-grid">
+
+                        <!-- ─── 1. CONDICIONALES / EXPRESIONES ─── -->
+                        <div class="theory-card theory-card--full border-l-primary">
+                            <h3>⚡ Expresiones Condicionales en Access</h3>
+                            <p>Access usa la función <strong>SiInm()</strong> (equivalente a SI() de
+                                Excel) para
+                                evaluar condiciones directamente en campos calculados de consultas,
+                                formularios
+                                e informes. Su sintaxis es:</p>
+                            <div class="info-box info-box--tip mt-15">
+                                <span class="info-icon">📐</span>
+                                <div>
+                                    <code>SiInm(<em>condición</em>; <em>valor_si_verdadero</em>; <em>valor_si_falso</em>)</code>
+                                    <p class="mt-8 text-095">Ejemplo:
+                                        <code>SiInm([Precio]&gt;=100000; &quot;Premium&quot;; &quot;Estándar&quot;)</code>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="datatypes-grid mt-15">
+                                <div class="datatype-item">
+                                    <span class="dt-icon">🔀</span>
+                                    <span class="dt-name">SiInm() Simple</span>
+                                    <span class="dt-desc">Evalúa una sola condición. Ej:
+                                        <code>SiInm([Stock]=0; &quot;Agotado&quot;; &quot;Disponible&quot;)</code></span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">🔀🔀</span>
+                                    <span class="dt-name">SiInm() Anidado</span>
+                                    <span class="dt-desc">Múltiples condiciones. Ej:
+                                        <code>SiInm([Nota]&gt;=90;&quot;A&quot;;SiInm([Nota]&gt;=70;&quot;B&quot;;&quot;C&quot;))</code></span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">📊</span>
+                                    <span class="dt-name">SiInm() con fechas</span>
+                                    <span class="dt-desc">Ej:
+                                        <code>SiInm([FechaVence]&lt;Fecha();&quot;Vencido&quot;;&quot;Vigente&quot;)</code></span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">🔢</span>
+                                    <span class="dt-name">ElegirV() (Switch)</span>
+                                    <span class="dt-desc">Evalúa múltiples pares condición-resultado.
+                                        Ideal para
+                                        categorías:
+                                        <code>ElegirV([Ciudad]=&quot;Medellín&quot;;&quot;Antioquia&quot;; [Ciudad]=&quot;Cali&quot;;&quot;Valle&quot;)</code></span>
+                                </div>
+                            </div>
+                            <!-- EJERCICIO GUIADO -->
+                            <div class="info-box info-box--success mt-20">
+                                <span class="info-icon">🎯</span>
+                                <div>
+                                    <strong>Ejercicio Guiado: Categorizar Inventario por Precio</strong>
+                                    <p class="mt-4 text-095">Vamos a crear un campo calculado en una
+                                        consulta
+                                        que clasifique los productos por rango de precio.</p>
+                                    <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+                                        <li>Abre una <strong>Consulta de Selección</strong> en Vista
+                                            Diseño
+                                            basada en tu tabla de productos.</li>
+                                        <li>En una columna vacía de la cuadrícula,
+                                            escribe:<br><code>Categoria: SiInm([Precio]&gt;=500000; &quot;Alta Gama&quot;; SiInm([Precio]&gt;=100000; &quot;Media Gama&quot;; &quot;Económico&quot;))</code>
+                                        </li>
+                                        <li>Ejecuta la consulta con <kbd>F5</kbd>. Verás una nueva
+                                            columna
+                                            «Categoria» con la clasificación automática.</li>
+                                        <li>Guarda la consulta como <code>Q_Categorias_Precio</code>.
+                                        </li>
+                                    </ol>
+                                    <p class="text-090 text-success mt-4"><em>Resultado:</em> Access
+                                        clasifica
+                                        cada producto automáticamente sin modificar los datos
+                                        originales.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ─── 2. LISTAS DESPLEGABLES / CUADRO COMBINADO ─── -->
+                        <div class="theory-card theory-card--full border-l-blue">
+                            <h3>📋 Listas Desplegables: Cuadro Combinado y Cuadro de Lista</h3>
+                            <p>Los controles de lista son la clave para evitar errores de digitación y
+                                garantizar consistencia en los datos. Existen dos tipos principales en
+                                Access:
+                            </p>
+                            <div class="datatypes-grid mt-15 mb-15">
+                                <div class="datatype-item col-span-2">
+                                    <span class="dt-icon">🔽</span>
+                                    <span class="dt-name">Cuadro Combinado (ComboBox)</span>
+                                    <span class="dt-desc">El usuario <em>puede escribir</em> o
+                                        seleccionar de la
+                                        lista. Ocupa una sola línea. Ideal para FKs (el usuario ve el
+                                        Nombre, el
+                                        campo guarda el ID).</span>
+                                </div>
+                                <div class="datatype-item col-span-2">
+                                    <span class="dt-icon">📋</span>
+                                    <span class="dt-name">Cuadro de Lista (ListBox)</span>
+                                    <span class="dt-desc">Siempre visible, el usuario <em>solo puede
+                                            seleccionar</em>. Ideal para filtros y paneles de
+                                        navegación.</span>
+                                </div>
+                            </div>
+                            <h4 class="mt-15 mb-8">⚙️ Propiedades Clave de un Cuadro Combinado</h4>
+                            <div class="component-list">
+                                <div class="component-item">
+                                    <span class="comp-icon">📂</span>
+                                    <div>
+                                        <strong>Tipo de origen de datos</strong>
+                                        <p><code>Tabla/Consulta</code> (datos dinámicos de la BD) |
+                                            <code>Lista de valores</code> (valores fijos separados por
+                                            <code>;</code>) | <code>Lista de campos</code>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="component-item">
+                                    <span class="comp-icon">🔗</span>
+                                    <div>
+                                        <strong>Columna dependiente</strong>
+                                        <p>Indica <em>cuál columna</em> se guarda en la tabla.
+                                            Normalmente
+                                            <code>1</code> (la clave). La otra columna (el nombre
+                                            legible) puede
+                                            estar oculta con ancho 0.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="component-item">
+                                    <span class="comp-icon">👁️</span>
+                                    <div>
+                                        <strong>Número de columnas y anchos</strong>
+                                        <p>Ej: <code>Número de columnas: 2</code> y
+                                            <code>Anchos de columna: 0cm;4cm</code> muestra solo el
+                                            nombre, pero
+                                            guarda el ID.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="component-item">
+                                    <span class="comp-icon">✔️</span>
+                                    <div>
+                                        <strong>Limitar a lista</strong>
+                                        <p>Si se establece en <code>Sí</code>, el usuario <strong>solo
+                                                puede
+                                                elegir</strong> valores de la lista, imposibilitando la
+                                            entrada
+                                            de datos no válidos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- EJERCICIO GUIADO -->
+                            <div class="info-box info-box--primary mt-20">
+                                <span class="info-icon">🛠️</span>
+                                <div>
+                                    <strong>Ejercicio: Crear una Lista Desplegable de
+                                        Categorías</strong>
+                                    <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+                                        <li>Abre un formulario en <strong>Vista Diseño</strong>.</li>
+                                        <li>En la pestaña <kbd>Diseño</kbd>, haz clic en <strong>Cuadro
+                                                Combinado</strong> del panel de controles y dibuja el
+                                            control en
+                                            el formulario.</li>
+                                        <li>En el asistente, selecciona <em>«Los valores los
+                                                escribiré»</em>. En
+                                            la lista escribe:<br><code>Electrónica</code> /
+                                            <code>Aseo</code> /
+                                            <code>Papelería</code> / <code>Herramientas</code>.
+                                        </li>
+                                        <li>En <strong>Hoja de propiedades</strong> → pestaña
+                                            <em>Datos</em>,
+                                            establece <strong>Limitar a lista: Sí</strong>.
+                                        </li>
+                                        <li>Nombra el control <code>cboCategoría</code> y guarda el
+                                            formulario.
+                                        </li>
+                                    </ol>
+                                    <p class="text-090 text-primary mt-4"><em>Resultado:</em> El usuario
+                                        solo
+                                        podrá elegir entre las categorías predefinidas, eliminando
+                                        errores
+                                        tipográficos.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ─── 3. VALIDACIÓN DE DATOS ─── -->
+                        <div class="theory-card theory-card--full border-l-orange">
+                            <h3>🛡️ Validación de Datos: Las 4 Capas de Protección</h3>
+                            <p>Access ofrece múltiples mecanismos para blindar la calidad de los datos.
+                                Cada
+                                capa tiene un propósito específico y se complementan entre sí:</p>
+                            <div class="datatypes-grid mt-15 mb-15">
+                                <div class="datatype-item">
+                                    <span class="dt-icon">1️⃣</span>
+                                    <span class="dt-name">Tipo de Datos</span>
+                                    <span class="dt-desc">Primera barrera: un campo <code>Número</code>
+                                        <strong>rechazará</strong> texto automáticamente. Nunca almacena
+                                        datos
+                                        incorrectos por tipo.</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">2️⃣</span>
+                                    <span class="dt-name">Máscara de Entrada</span>
+                                    <span class="dt-desc">Controla el <em>formato visual</em> mientras
+                                        se
+                                        escribe. Ej: <code>\(999\)&nbsp;000-0000</code> para teléfonos
+                                        colombianos o <code>000\.000\.000\-0</code> para NIT.</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">3️⃣</span>
+                                    <span class="dt-name">Regla de Validación</span>
+                                    <span class="dt-desc"><strong>Expresión lógica</strong> que el dato
+                                        debe
+                                        cumplir. Access muestra el «Texto de validación» personalizado
+                                        si falla.
+                                        Ej: <code>&gt;=0 Y &lt;=100</code> para notas.</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">4️⃣</span>
+                                    <span class="dt-name">Requerido + Indexado sin duplicados</span>
+                                    <span class="dt-desc"><strong>Requerido: Sí</strong> impide valores
+                                        nulos.
+                                        <strong>Indexado: Sí (sin duplicados)</strong> garantiza
+                                        unicidad (como
+                                        una PK alterna).</span>
+                                </div>
+                            </div>
+                            <h4 class="mt-15 mb-10">📌 Reglas de Validación más Usadas en Contexto
+                                Administrativo</h4>
+                            <table class="gs-table mt-8 mb-15">
+                                <thead>
+                                    <tr>
+                                        <th>Campo</th>
+                                        <th>Regla</th>
+                                        <th>Mensaje de error sugerido</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>Salario</code></td>
+                                        <td><code>&gt;=1300000</code></td>
+                                        <td>"El salario no puede ser menor al mínimo legal."</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Nota</code></td>
+                                        <td><code>&gt;=0 Y &lt;=100</code></td>
+                                        <td>"La nota debe estar entre 0 y 100."</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>FechaEntrega</code></td>
+                                        <td><code>&gt;=Fecha()</code></td>
+                                        <td>"La fecha de entrega no puede ser en el pasado."</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Stock</code></td>
+                                        <td><code>&gt;=0</code></td>
+                                        <td>"El stock no puede ser negativo."</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Porcentaje</code></td>
+                                        <td><code>&gt;=0 Y &lt;=1</code></td>
+                                        <td>"El descuento debe ser un valor entre 0 y 1."</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Email</code></td>
+                                        <td><code>Como "*@*.?*"</code></td>
+                                        <td>"Ingrese un correo electrónico válido."</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- EJERCICIO GUIADO -->
+                            <div class="info-box info-box--warning mt-20">
+                                <span class="info-icon">🎯</span>
+                                <div>
+                                    <strong>Ejercicio Integral: Blindar la Tabla Empleados</strong>
+                                    <p class="mt-4 text-095">Abre <code>tbl_Empleados</code> en Vista
+                                        Diseño y
+                                        configura:</p>
+                                    <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+                                        <li>Campo <code>Salario</code> (Moneda) →
+                                            <strong>Regla:</strong>
+                                            <code>&gt;=1300000</code> | <strong>Texto:</strong> «Salario
+                                            inferior al mínimo legal».
+                                        </li>
+                                        <li>Campo <code>Email</code> (Texto corto) →
+                                            <strong>Regla:</strong>
+                                            <code>Como "*@*.?*"</code> | <strong>Texto:</strong>
+                                            «Formato de
+                                            email inválido».
+                                        </li>
+                                        <li>Campo <code>Cedula</code> (Texto corto, 10 chars) →
+                                            <strong>Máscara:</strong> <code>0000000000;0;_</code> |
+                                            <strong>Requerido:</strong> Sí | <strong>Indexado:</strong>
+                                            Sí (sin
+                                            duplicados).
+                                        </li>
+                                        <li>Campo <code>FechaIngreso</code> (Fecha/Hora) → <strong>Valor
+                                                predeterminado:</strong> <code>=Fecha()</code>.</li>
+                                        <li>Prueba ingresando un salario de 500.000 y verifica que
+                                            Access
+                                            bloquee la acción con tu mensaje personalizado.</li>
+                                    </ol>
+                                    <p class="text-090 text-warning mt-4"><em>Resultado:</em> Tu base de
+                                        datos
+                                        rechaza automáticamente datos incorrectos antes de que
+                                        contaminen el
+                                        sistema.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ─── 4. GUÍA DE LA CINTA DE OPCIONES: CREACIÓN DE FORMULARIOS ─── -->
+                        <div class="theory-card theory-card--full border-l-primary">
+                            <div class="section-badge mb-10">CINTA: CREAR > GRUPO: FORMULARIOS</div>
+                            <h3>🛠️ Manual Maestro de Creación de Formularios</h3>
+                            <p class="mb-20">Microsoft Access ofrece <strong>6 formas
+                                    fundamentales</strong> de iniciar un formulario. Cada una tiene un
+                                "momento de gloria" dependiendo de si buscas velocidad o control total.
+                            </p>
+
+                            <div class="datatypes-grid mt-15 mb-25">
+                                <!-- 1. FORMULARIO (1-CLIC) -->
+                                <div class="datatype-item border-hover-primary">
+                                    <div class="flex-between mb-8">
+                                        <span class="dt-icon">📄</span>
+                                        <span class="badge-status-success">Instantáneo</span>
+                                    </div>
+                                    <span class="dt-name">1. Formulario (Simple)</span>
+                                    <span class="dt-desc">Genera un formulario básico con <strong>todos
+                                            los campos</strong> de la tabla seleccionada en un solo
+                                        clic.</span>
+                                    <div class="info-box info-box--info mt-10 p-8 text-085">
+                                        <strong>Uso:</strong> Cuando necesitas una interfaz rápida para
+                                        entrar datos sin diseñar nada.
+                                    </div>
+                                    <div class="reto-mini mt-10">
+                                        <span class="text-primary font-bold">🎯 Reto:</span> Selecciona
+                                        <code>tbl_Clientes</code> y pulsa este botón. ¡Ya tienes tu
+                                        primer formulario!
+                                        <br><label class="gs-check mt-5"><input type="checkbox" class="guide-chk">
+                                            Hecho</label>
+                                    </div>
+                                </div>
+
+                                <!-- 2. DISEÑO DEL FORMULARIO -->
+                                <div class="datatype-item border-hover-accent">
+                                    <div class="flex-between mb-8">
+                                        <span class="dt-icon">📐</span>
+                                        <span class="badge-status-accent">Nivel Experto</span>
+                                    </div>
+                                    <span class="dt-name">2. Diseño del Formulario</span>
+                                    <span class="dt-desc">Abre un <strong>lienzo en blanco
+                                            total</strong> en Vista Diseño. Tú arrastras cada campo y
+                                        control.</span>
+                                    <div class="info-box info-box--warning mt-10 p-8 text-085">
+                                        <strong>Uso:</strong> Para formularios complejos, menús
+                                        principales o tableros de control (Dashboards).
+                                    </div>
+                                    <div class="reto-mini mt-10">
+                                        <span class="text-accent font-bold">🎯 Reto:</span> Crea un
+                                        formulario vacío y añade un "Título" desde la pestaña Diseño.
+                                        <br><label class="gs-check mt-5"><input type="checkbox" class="guide-chk">
+                                            Hecho</label>
+                                    </div>
+                                </div>
+
+                                <!-- 3. FORMULARIO EN BLANCO -->
+                                <div class="datatype-item">
+                                    <div class="flex-between mb-8">
+                                        <span class="dt-icon">⬜</span>
+                                        <span class="badge-status-warn">Vista Presentación</span>
+                                    </div>
+                                    <span class="dt-name">3. Formulario en Blanco</span>
+                                    <span class="dt-desc">Similar al anterior, pero abre en
+                                        <strong>Vista Presentación</strong>. Puedes ver datos reales
+                                        mientras diseñas.</span>
+                                    <div class="info-box info-box--info mt-10 p-8 text-085">
+                                        <strong>Uso:</strong> Ideal para ajustar tamaños de cuadros
+                                        basándote en el contenido real de los registros.
+                                    </div>
+                                </div>
+
+                                <!-- 4. ASISTENTE PARA FORMULARIOS -->
+                                <div class="datatype-item border-hover-success">
+                                    <div class="flex-between mb-8">
+                                        <span class="dt-icon">🪄</span>
+                                        <span class="badge-status-success">El Favorito</span>
+                                    </div>
+                                    <span class="dt-name">4. Asistente (Wizard)</span>
+                                    <span class="dt-desc">Te guía paso a paso: elige qué campos quieres,
+                                        qué tabla y qué <strong>distribución</strong> usar.</span>
+                                    <div class="info-box info-box--primary mt-10 p-8 text-085">
+                                        <strong>Uso:</strong> El equilibrio perfecto entre rapidez y
+                                        personalización. Permite mezclar campos de varias tablas.
+                                    </div>
+                                    <div class="reto-mini mt-10">
+                                        <span class="text-success font-bold">🎯 Reto:</span> Usa el
+                                        asistente para crear un formulario que SOLO tenga
+                                        <code>Nombre</code> y <code>Email</code>.
+                                        <br><label class="gs-check mt-5"><input type="checkbox" class="guide-chk">
+                                            Hecho</label>
+                                    </div>
+                                </div>
+
+                                <!-- 5. NAVEGACIÓN -->
+                                <div class="datatype-item">
+                                    <div class="flex-between mb-8">
+                                        <span class="dt-icon">🧭</span>
+                                        <span class="badge-status-accent">Estructura</span>
+                                    </div>
+                                    <span class="dt-name">5. Navegación</span>
+                                    <span class="dt-desc">Crea un <strong>Menú de Pestañas</strong>
+                                        (Horizontal o Vertical) para agrupar varios formularios en uno
+                                        solo.</span>
+                                    <div class="info-box info-box--info mt-10 p-8 text-085">
+                                        <strong>Uso:</strong> Para organizar una base de datos grande.
+                                        Un menú arriba para: Clientes, Ventas, Reportes.
+                                    </div>
+                                </div>
+
+                                <!-- 6. MÁS FORMULARIOS (FORM. DIVIDIDO) -->
+                                <div class="datatype-item">
+                                    <div class="flex-between mb-8">
+                                        <span class="dt-icon">🎭</span>
+                                        <span class="badge-status-warn">Varios tipos</span>
+                                    </div>
+                                    <span class="dt-name">6. Más Formularios</span>
+                                    <span class="dt-desc">Incluye el potente <strong>Formulario
+                                            Dividido</strong> (ver ficha arriba y lista abajo al mismo
+                                        tiempo).</span>
+                                    <div class="info-box info-box--success mt-10 p-8 text-085">
+                                        <strong>Uso:</strong> Selecciona "Formulario dividido" para
+                                        buscar registros en una lista y editarlos arriba.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TABLA RESUMEN DE FLUJO -->
+                            <h4 class="mt-20 mb-10">🤔 ¿Cuál botón elijo para mi proyecto?</h4>
+                            <table class="gs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Si mi objetivo es...</th>
+                                        <th>La mejor opción es...</th>
+                                        <th>Dificultad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Solo ver datos rápido</td>
+                                        <td><strong>1. Formulario</strong></td>
+                                        <td>⭐</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Elegir campos de varias tablas</td>
+                                        <td><strong>4. Asistente</strong></td>
+                                        <td>⭐⭐</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Crear un "Menú Principal"</td>
+                                        <td><strong>5. Navegación / 2. Diseño</strong></td>
+                                        <td>⭐⭐⭐⭐</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Listas de búsqueda rápida</td>
+                                        <td><strong>6. Formulario Dividido</strong></td>
+                                        <td>⭐⭐</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- ─── 5. FORMULARIOS AVANZADOS ─── -->
+                        <div class="theory-card theory-card--full border-l-green">
+                            <h3>📱 Formularios Avanzados: Más Allá del Asistente</h3>
+                            <p>Los formularios son la <strong>interfaz de usuario</strong> de Access.
+                                Permiten
+                                al personal administrativo ingresar, modificar y consultar datos de
+                                forma segura
+                                sin tocar las tablas directamente.</p>
+                            <div class="datatypes-grid mt-15 mb-15">
+                                <div class="datatype-item">
+                                    <span class="dt-icon">📑</span>
+                                    <span class="dt-name">Formulario Simple</span>
+                                    <span class="dt-desc">Muestra los campos de <em>un solo
+                                            registro</em> a la
+                                        vez. Ideal para captura de datos individual (ej: registrar un
+                                        empleado).</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">📋</span>
+                                    <span class="dt-name">Formulario Continuo</span>
+                                    <span class="dt-desc">Muestra <em>múltiples registros</em> con el
+                                        mismo
+                                        diseño. Perfecto para revisar listas (ej: lista de pedidos
+                                        pendientes).</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">🏠📑</span>
+                                    <span class="dt-name">Formulario Principal/Sub</span>
+                                    <span class="dt-desc">Un formulario «padre» (ej: CLIENTE) que
+                                        contiene un
+                                        subformulario «hijo» (PEDIDOS de ese cliente). Refleja la
+                                        relación 1:N
+                                        visualmente.</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">🔲</span>
+                                    <span class="dt-name">Formulario de Navegación</span>
+                                    <span class="dt-desc">Menú principal de la aplicación. Contiene
+                                        botones con
+                                        pestañas que abren otros formularios. Es el «tablero de mando»
+                                        de tu
+                                        BD.</span>
+                                </div>
+                            </div>
+                            <h4 class="mt-15 mb-10">🔧 Propiedades de Formulario Esenciales</h4>
+                            <div class="component-list">
+                                <div class="component-item">
+                                    <span class="comp-icon">🔒</span>
+                                    <div>
+                                        <strong>Permite agregar / eliminar registros</strong>
+                                        <p>Puedes desactivar estas propiedades en <code>Sí/No</code>
+                                            para crear
+                                            formularios de <em>solo lectura</em> o de <em>solo
+                                                consulta</em> que
+                                            protegen los datos históricos.</p>
+                                    </div>
+                                </div>
+                                <div class="component-item">
+                                    <span class="comp-icon">🎨</span>
+                                    <div>
+                                        <strong>Formato Condicional</strong>
+                                        <p>Cambia el color/fuente de un control según una condición. Ej:
+                                            pintar
+                                            en rojo el campo <code>Stock</code> cuando sea menor a 5.
+                                            (Pestaña
+                                            Formato → Formato condicional).</p>
+                                    </div>
+                                </div>
+                                <div class="component-item">
+                                    <span class="comp-icon">🔍</span>
+                                    <div>
+                                        <strong>Filtros integrados</strong>
+                                        <p>Agrega un cuadro de texto vacío y en la propiedad
+                                            <strong>Filtro</strong> de su evento <em>Al cambiar</em>,
+                                            usa una
+                                            macro para filtrar el origen de registros dinámicamente.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- EJERCICIO GUIADO -->
+                            <div class="info-box info-box--success mt-20">
+                                <span class="info-icon">🛠️</span>
+                                <div>
+                                    <strong>Ejercicio: Formulario Principal + Subformulario</strong>
+                                    <p class="mt-4 text-095">Crea una pantalla donde veas el cliente
+                                        arriba y
+                                        sus pedidos abajo.</p>
+                                    <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+                                        <li>Selecciona la tabla <code>CLIENTES</code> → <kbd>Crear</kbd>
+                                            →
+                                            <kbd>Formulario</kbd>. Access genera el formulario
+                                            principal.
+                                        </li>
+                                        <li>Abre el formulario en <strong>Vista Diseño</strong>. En la
+                                            pestaña
+                                            <kbd>Diseño</kbd>, arrastra el control
+                                            <strong>Subformulario/Subinforme</strong> hacia la sección
+                                            de
+                                            detalles.
+                                        </li>
+                                        <li>El asistente preguntará qué tabla usar como subformulario:
+                                            elige
+                                            <code>PEDIDOS</code>.
+                                        </li>
+                                        <li>Access detectará automáticamente el vínculo por
+                                            <code>ID_Cliente</code>. Confirma y guarda con el nombre
+                                            <code>frm_ClienteConPedidos</code>.
+                                        </li>
+                                        <li>Prueba navegando entre clientes: el subformulario mostrará
+                                            solo los
+                                            pedidos del cliente activo.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ─── 5. EXPRESIONES Y CAMPO CALCULADO ─── -->
+                        <div class="theory-card theory-card--full">
+                            <h3>🧮 Expresiones y Campos Calculados</h3>
+                            <p>Las expresiones en Access son fórmulas que combinan campos, funciones y
+                                operadores para calcular valores sin duplicar datos. Se usan en
+                                <strong>consultas</strong>, <strong>formularios</strong> e
+                                <strong>informes</strong>.
+                            </p>
+                            <div class="datatypes-grid mt-15 mb-15">
+                                <div class="datatype-item">
+                                    <span class="dt-icon">📅</span>
+                                    <span class="dt-name">Funciones de Fecha</span>
+                                    <span class="dt-desc"><code>Fecha()</code> → hoy |
+                                        <code>Año([FechaContrato])</code> → extrae el año |
+                                        <code>DifFecha("aaaa",[FechaIngreso];Fecha())</code> → años de
+                                        antigüedad.</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">🔡</span>
+                                    <span class="dt-name">Funciones de Texto</span>
+                                    <span class="dt-desc"><code>MayúsD([Nombre])</code> → capitaliza |
+                                        <code>Izq([Cedula];3)</code> → primeros 3 dígitos |
+                                        <code>[Nombre] & " " & [Apellido]</code> → concatenar.</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">🔢</span>
+                                    <span class="dt-name">Funciones Matemáticas</span>
+                                    <span class="dt-desc"><code>[Precio]*[Cantidad]</code> → subtotal |
+                                        <code>[Subtotal]*1.19</code> → con IVA |
+                                        <code>Redondear([Precio];0)</code> → sin decimales.</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">📊</span>
+                                    <span class="dt-name">Funciones de Agregado</span>
+                                    <span class="dt-desc">En informes y consultas agrupadas:
+                                        <code>Suma([Total])</code>, <code>Promedio([Nota])</code>,
+                                        <code>Conteo([ID])</code>, <code>Máx([Salario])</code>.</span>
+                                </div>
+                            </div>
+                            <div class="info-box info-box--tip mt-15">
+                                <span class="info-icon">💡</span>
+                                <div>
+                                    <strong>El Constructor de Expresiones</strong>
+                                    <p class="mt-4 text-095">Access incluye una herramienta visual para
+                                        escribir
+                                        expresiones sin memorizar sintaxis. Haz clic en el botón
+                                        <strong>«...»</strong> en cualquier propiedad de campo o en la
+                                        cuadrícula de diseño de consultas. El constructor muestra todas
+                                        las
+                                        funciones disponibles organizadas por categoría.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- EJERCICIO GUIADO -->
+                            <div class="info-box info-box--primary mt-20">
+                                <span class="info-icon">🎯</span>
+                                <div>
+                                    <strong>Ejercicio: Consulta de Antigüedad Laboral</strong>
+                                    <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+                                        <li>Crea una <strong>Consulta de Selección</strong> basada en
+                                            <code>tbl_Empleados</code>.
+                                        </li>
+                                        <li>Agrega los campos <code>NombreCompleto</code>,
+                                            <code>Cargo</code> y
+                                            <code>FechaIngreso</code>.
+                                        </li>
+                                        <li>En una columna vacía, crea el campo
+                                            calculado:<br><code>Antigüedad_Años: DifFecha("aaaa",[FechaIngreso];Fecha())</code>
+                                        </li>
+                                        <li>En otra
+                                            columna:<br><code>Estado_Laboral: SiInm([Antigüedad_Años]&gt;=5;&quot;Veterano&quot;;SiInm([Antigüedad_Años]&gt;=1;&quot;Activo&quot;;&quot;Nuevo&quot;))</code>
+                                        </li>
+                                        <li>Ejecuta con <kbd>F5</kbd> y guarda como
+                                            <code>Q_Antigüedad_Empleados</code>.
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ─── 6. MACROS E INFORMES ─── -->
+                        <div class="theory-card theory-card--full border-l-primary">
+                            <h3>⚙️ Macros: Automatización sin Código</h3>
+                            <p>Las macros son secuencias de acciones predefinidas que Access ejecuta al
+                                ocurrir
+                                un evento (clic en un botón, apertura de formulario, etc.). Son el
+                                puente entre
+                                Access y la automatización sin programar VBA.</p>
+                            <div class="component-list mt-15">
+                                <div class="component-item">
+                                    <span class="comp-icon">🖱️</span>
+                                    <div>
+                                        <strong>AbriFormulario / AbrirInforme</strong>
+                                        <p>Las acciones más comunes. Abren un formulario o informe,
+                                            opcionalmente con un filtro. Ej: abrir el formulario de
+                                            pedidos
+                                            filtrando solo los pendientes.</p>
+                                    </div>
+                                </div>
+                                <div class="component-item">
+                                    <span class="comp-icon">🔍</span>
+                                    <div>
+                                        <strong>BuscarRegistro / BuscarSiguiente</strong>
+                                        <p>Permite buscar dinámicamente un registro específico. Útil
+                                            para crear
+                                            barras de búsqueda en formularios.</p>
+                                    </div>
+                                </div>
+                                <div class="component-item">
+                                    <span class="comp-icon">💾</span>
+                                    <div>
+                                        <strong>GuardarRegistro / Actualizar</strong>
+                                        <p>Fuerza el guardado del registro actual sin cerrar el
+                                            formulario.
+                                            Ideal para botones «Guardar» personalizados que den
+                                            confirmación
+                                            visual al usuario.</p>
+                                    </div>
+                                </div>
+                                <div class="component-item">
+                                    <span class="comp-icon">📢</span>
+                                    <div>
+                                        <strong>CuadroDeMensaje (MsgBox)</strong>
+                                        <p>Muestra mensajes personalizados de confirmación o alerta. Ej:
+                                            «¿Está
+                                            seguro de eliminar este registro?» con botones Sí/No antes
+                                            de
+                                            ejecutar una acción.</p>
+                                    </div>
+                                </div>
+                                <div class="component-item">
+                                    <span class="comp-icon">🏁</span>
+                                    <div>
+                                        <strong>Macro AutoExec</strong>
+                                        <p>Si creas una macro con el nombre exacto
+                                            <code>AutoExec</code>, Access
+                                            la ejecuta <strong>automáticamente</strong> al abrir la base
+                                            de
+                                            datos. Úsala para mostrar el menú principal al inicio.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="component-item">
+                                    <span class="comp-icon">🔔</span>
+                                    <div>
+                                        <strong>EstablecerValor</strong>
+                                        <p>Cambia el valor de un control en tiempo de ejecución. Ej: al
+                                            seleccionar una categoría, limpiar automáticamente el campo
+                                            de
+                                            subcategoría relacionado.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- EJERCICIO GUIADO: MACROS -->
+                            <div class="info-box info-box--success mt-20">
+                                <span class="info-icon">🛠️</span>
+                                <div>
+                                    <strong>Ejercicio: Botón para Abrir Informe con Filtro</strong>
+                                    <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+                                        <li>Abre tu formulario principal en <strong>Vista
+                                                Diseño</strong>.</li>
+                                        <li>Agrega un <strong>Botón de comando</strong> desde el panel
+                                            de
+                                            controles.</li>
+                                        <li>En el asistente, selecciona la categoría <em>«Informe de
+                                                aplicación»</em> → acción <em>«Vista previa del
+                                                informe»</em>.
+                                            Elige tu informe de inventario.</li>
+                                        <li>Si el asistente no está disponible, ve a la propiedad
+                                            <strong>«Al
+                                                hacer clic»</strong> del botón → selecciona
+                                            <em>«Generador de
+                                                macros»</em> → agrega la acción
+                                            <code>AbrirInforme</code>.
+                                        </li>
+                                        <li>En la propiedad «Condición WHERE» puedes agregar un filtro
+                                            dinámico:<br><code>[Categoria] = [Formularios]![frm_Principal]![cboCategoría]</code>
+                                        </li>
+                                    </ol>
+                                    <p class="text-090 text-success mt-4"><em>Resultado:</em> El botón
+                                        abre el
+                                        informe mostrando solo los registros de la categoría
+                                        seleccionada en el
+                                        formulario.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ─── 7. INFORMES AVANZADOS ─── -->
+                        <div class="theory-card theory-card--full border-l-orange">
+                            <h3>📄 Informes Avanzados: Del Dato al Documento Profesional</h3>
+                            <p>Los informes en Access son documentos diseñados para <strong>imprimir o
+                                    exportar
+                                    a PDF</strong>. Se estructuran en secciones con propósitos
+                                específicos:</p>
+                            <div class="datatypes-grid mt-15 mb-15">
+                                <div class="datatype-item">
+                                    <span class="dt-icon">📝</span>
+                                    <span class="dt-name">Encabezado del Informe</span>
+                                    <span class="dt-desc">Aparece <strong>solo en la primera
+                                            página</strong>.
+                                        Ideal para el logo de la empresa, título del documento y fecha
+                                        de
+                                        generación.</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">📋</span>
+                                    <span class="dt-name">Encabezado de Página</span>
+                                    <span class="dt-desc">Se repite en <strong>la parte superior de cada
+                                            página</strong>. Contiene los títulos de las
+                                        columnas.</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">📌</span>
+                                    <span class="dt-name">Encabezado de Grupo</span>
+                                    <span class="dt-desc">Aparece antes de cada grupo de registros. Ej:
+                                        <code>Categoría: Electrónica</code> antes de listar todos los
+                                        productos
+                                        electrónicos.</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">🔢</span>
+                                    <span class="dt-name">Sección de Detalle</span>
+                                    <span class="dt-desc">Se repite por cada <strong>registro
+                                            individual</strong>. Es el cuerpo del informe donde van los
+                                        datos de
+                                        cada fila.</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">∑</span>
+                                    <span class="dt-name">Pie de Grupo</span>
+                                    <span class="dt-desc">Muestra <strong>subtotales y
+                                            resúmenes</strong> al
+                                        final de cada grupo. Ej:
+                                        <code>Total Electrónica: $4.500.000</code>.</span>
+                                </div>
+                                <div class="datatype-item">
+                                    <span class="dt-icon">🏁</span>
+                                    <span class="dt-name">Pie de Informe</span>
+                                    <span class="dt-desc"><strong>Gran Total</strong> y resumen general.
+                                        Aparece
+                                        solo al final del documento completo.</span>
+                                </div>
+                            </div>
+                            <div class="info-box info-box--tip mt-15">
+                                <span class="info-icon">💡</span>
+                                <div>
+                                    <strong>Técnica Profesional: Exportar a PDF automáticamente</strong>
+                                    <p class="mt-4 text-095">Crea una macro con la acción
+                                        <code>ExportarConFormato</code>, elige el tipo <em>PDF</em> y
+                                        una ruta
+                                        de guardado dinámica usando
+                                        <code>=CarpetaActual() & "\Informe_" & Formato(Fecha();"yyyymmdd") & ".pdf"</code>.
+                                        Adjunta esta macro al botón de tu formulario principal para
+                                        generar
+                                        reportes PDF con un solo clic.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- EJERCICIO FINAL INTEGRADOR -->
+                            <div class="info-box info-box--warning mt-20">
+                                <span class="info-icon">🏆</span>
+                                <div>
+                                    <strong>Ejercicio Integrador Final: Sistema de Inventario
+                                        Completo</strong>
+                                    <p class="mt-4 text-095">Aplica todos los temas vistos en esta
+                                        sección para
+                                        crear un mini-sistema de inventario:</p>
+                                    <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+                                        <li><strong>Validación:</strong> En <code>tbl_Productos</code>,
+                                            agrega
+                                            reglas de validación para Precio <code>&gt;0</code> y Stock
+                                            <code>&gt;=0</code>.
+                                        </li>
+                                        <li><strong>Lista desplegable:</strong> En el formulario de
+                                            Productos,
+                                            cambia el campo Categoría por un Cuadro Combinado enlazado a
+                                            una
+                                            tabla <code>tbl_Categorias</code> con «Limitar a lista: Sí».
+                                        </li>
+                                        <li><strong>Condicional:</strong> Crea la consulta
+                                            <code>Q_Estado_Stock</code>
+                                            con:<br><code>Estado: SiInm([Stock]=0;&quot;Agotado&quot;;SiInm([Stock]&lt;5;&quot;Crítico&quot;;&quot;Normal&quot;))</code>
+                                        </li>
+                                        <li><strong>Informe:</strong> Genera un informe agrupado por
+                                            Categoría
+                                            con subtotales de Stock y Valor Total
+                                            (<code>Suma([Precio]*[Stock])</code>) en el pie de grupo.
+                                        </li>
+                                        <li><strong>Macro:</strong> Crea un botón en el formulario
+                                            principal que
+                                            exporte el informe anterior a PDF automáticamente.</li>
+                                    </ol>
+                                    <p class="text-090 text-warning mt-4"><em>Entregable:</em> Una base
+                                        de datos
+                                        Access funcional con formularios, consultas con condicionales,
+                                        validación activa e informe exportable.</p>
+                                    <a href="https://drive.google.com" target="_blank" rel="noopener"
+                                        class="upload-cta mt-12">
+                                        <span class="upload-cta-icon">📤</span>
+                                        Subir Ejercicio Integrador a Drive
+                                    </a>
+                                    <div class="folder-path">📁 TGA-Digital / Modulo 1 / Temas-Avanzados
+                                        /
+                                        TuNombre /</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div><!-- Fin Container Tabs -->
-            </div><!-- Fin Module Body -->
-            </div><!-- Fin Glass Content Container -->
+
+                <div class="tab-panel" id="m1-quiz" role="tabpanel" aria-labelledby="tab-m1-quiz">
+                    <div class="quiz-container" id="quiz-m1" data-module="1"></div>
+                </div>
+            </div> <!-- Fin Module Body -->
         </section>
 
         <!-- ─────────────────────────────────────
@@ -6312,148 +6302,148 @@ Ticket Promedio = DIVIDE([Total Ventas], [Cantidad Pedidos], 0)</pre>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> <!-- CIERRE de simulator-container -->
+                </div> <!-- FIX: CIERRE CORRECTO DE tab-panel m4-practica -->
 
-                    <!-- ═══════ TAB: ENTREGABLES M4 ═══════ -->
-                    <div class="tab-panel" id="m4-entregables" role="tabpanel" aria-labelledby="tab-m4-entregables">
-                        <div class="simulator-container">
-                            <div class="deliverable-section" id="entregables-m4">
-                                <div class="deliverable-header">
-                                    <span class="deliverable-icon">📊</span>
-                                    <div class="deliverable-info">
-                                        <h4>Checklist de Entregables — Módulo 4</h4>
-                                        <p>Tu reporte gerencial está listo. Asegúrate de cumplir con los estándares
-                                            visuales.</p>
-                                    </div>
+                <!-- ═══════ TAB: ENTREGABLES M4 ═══════ -->
+                <div class="tab-panel" id="m4-entregables" role="tabpanel" aria-labelledby="tab-m4-entregables">
+                    <div class="simulator-container">
+                        <div class="deliverable-section" id="entregables-m4">
+                            <div class="deliverable-header">
+                                <span class="deliverable-icon">📊</span>
+                                <div class="deliverable-info">
+                                    <h4>Checklist de Entregables — Módulo 4</h4>
+                                    <p>Tu reporte gerencial está listo. Asegúrate de cumplir con los estándares
+                                        visuales.</p>
                                 </div>
-
-                                <div class="quality-badge">
-                                    💎 Criterio de Excelencia: Dashboard interactivo y Modelo Estrella optimizado.
-                                </div>
-
-                                <div class="deliverable-footer">
-                                    <a href="https://drive.google.com" target="_blank" rel="noopener"
-                                        class="upload-cta">
-                                        <span class="upload-cta-icon">📤</span>
-                                        Subir Evidencias a Drive
-                                    </a>
-                                    <div class="folder-path">📁 TGA-Digital / Modulo 4 / Power BI / TuNombre /</div>
-                                </div>
-
-                                <div class="deliverable-grid">
-
-                                    <label class="entregable-item">
-                                        <input type="checkbox" class="guide-chk" data-guide="m4-d1">
-                                        <div class="entregable-content">
-                                            <div class="deliverable-main">
-                                                <span class="entregable-icon">📊</span>
-                                                <div>
-                                                    <strong>Dashboard_RRHH_TuNombre.pbix</strong>
-                                                    <p>Archivo nativo de Power BI Desktop con modelo estrella,
-                                                        medidas DAX y
-                                                        visuales.</p>
-                                                </div>
-                                            </div>
-                                            <span class="entregable-file">Dashboard_RRHH_TuNombre.pbix</span>
-                                        </div>
-                                    </label>
-
-                                    <label class="entregable-item">
-                                        <input type="checkbox" class="guide-chk" data-guide="m4-d2">
-                                        <div class="entregable-content">
-                                            <div class="deliverable-main">
-                                                <span class="entregable-icon">📄</span>
-                                                <div>
-                                                    <strong>Dashboard_RRHH_TuNombre.pdf</strong>
-                                                    <p>Exportación PDF del informe para revisión rápida sin instalar
-                                                        Power BI.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="entregable-file">Dashboard_RRHH_TuNombre.pdf</span>
-                                        </div>
-                                    </label>
-
-                                    <label class="entregable-item">
-                                        <input type="checkbox" class="guide-chk" data-guide="m4-d3">
-                                        <div class="entregable-content">
-                                            <div class="deliverable-main">
-                                                <span class="entregable-icon">📗</span>
-                                                <div>
-                                                    <strong>Nomina_Empresa.xlsx</strong>
-                                                    <p>Archivo de datos fuente con al menos 15 registros de nómina
-                                                        simulada.</p>
-                                                </div>
-                                            </div>
-                                            <span class="entregable-file">Nomina_Empresa.xlsx</span>
-                                        </div>
-                                    </label>
-
-                                    <label class="entregable-item">
-                                        <input type="checkbox" class="guide-chk" data-guide="drv4">
-                                        <div class="entregable-content">
-                                            <div class="entregable-main">
-                                                <span class="entregable-icon">🖼️</span>
-                                                <div>
-                                                    <strong>preview_dashboard.png</strong>
-                                                    <p>Captura de pantalla del tablero completo para
-                                                        previsualización rápida.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="entregable-file">preview_dashboard.png</span>
-                                        </div>
-                                    </label>
-
-                                    <label class="entregable-item">
-                                        <input type="checkbox" class="guide-chk" data-guide="drv5">
-                                        <div class="entregable-content">
-                                            <div class="entregable-main">
-                                                <span class="entregable-icon">📝</span>
-                                                <div>
-                                                    <strong>Reflexiones_Finales.txt</strong>
-                                                    <p>Breve análisis sobre el KPI más retador de implementar
-                                                        (Bonus).</p>
-                                                </div>
-                                            </div>
-                                            <span class="entregable-file">Reflexiones_Finales.txt</span>
-                                        </div>
-                                    </label>
-                                </div>
-
-                                <!-- Barra de progreso entregables -->
-                                <div id="guide-progress-bar-drv4"
-                                    class="mt-24 bg-gray-800-50 p-16 rounded-10 border border-border-color">
-                                    <div class="flex justify-between items-center mb-8">
-                                        <span class="font-700 text-09">☁️ Entregables subidos a
-                                            Drive</span>
-                                        <span id="guide-pct-drv4" class="font-800 text-blue">0 / 5
-                                            archivos</span>
-                                    </div>
-                                    <div class="w-full h-8 bg-white-05 rounded-6 overflow-hidden">
-                                        <div id="guide-bar-fill-drv4"
-                                            class="h-full w-0 bg-gradient-to-r-blue-green transition-width rounded-6">
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div><!-- fin entregables-m4 -->
-                        </div> <!-- fin m4-practica (NUEVO CIERRE CORRECTO) -->
-                        <div id="guide-progress-bar-m4b"
-                            class="mt-20 bg-gray-800-50 p-18 rounded-12 border border-border-color">
-                            <div class="flex justify-between items-center mb-10">
-                                <span class="font-700 text-095">📊 Progreso Ejercicio RRHH</span>
-                                <span id="guide-pct-m4b" class="font-800 text-warn">0 / 5 pasos</span>
                             </div>
-                            <div class="w-full h-8 bg-white-05 rounded-6 overflow-hidden">
-                                <div id="guide-bar-fill-m4b"
-                                    class="h-full w-0 bg-gradient-to-r-warn-blue transition-width rounded-6">
+
+                            <div class="quality-badge">
+                                💎 Criterio de Excelencia: Dashboard interactivo y Modelo Estrella optimizado.
+                            </div>
+
+                            <div class="deliverable-footer">
+                                <a href="https://drive.google.com" target="_blank" rel="noopener" class="upload-cta">
+                                    <span class="upload-cta-icon">📤</span>
+                                    Subir Evidencias a Drive
+                                </a>
+                                <div class="folder-path">📁 TGA-Digital / Modulo 4 / Power BI / TuNombre /</div>
+                            </div>
+
+                            <div class="deliverable-grid">
+
+                                <label class="entregable-item">
+                                    <input type="checkbox" class="guide-chk" data-guide="m4-d1">
+                                    <div class="entregable-content">
+                                        <div class="deliverable-main">
+                                            <span class="entregable-icon">📊</span>
+                                            <div>
+                                                <strong>Dashboard_RRHH_TuNombre.pbix</strong>
+                                                <p>Archivo nativo de Power BI Desktop con modelo estrella,
+                                                    medidas DAX y
+                                                    visuales.</p>
+                                            </div>
+                                        </div>
+                                        <span class="entregable-file">Dashboard_RRHH_TuNombre.pbix</span>
+                                    </div>
+                                </label>
+
+                                <label class="entregable-item">
+                                    <input type="checkbox" class="guide-chk" data-guide="m4-d2">
+                                    <div class="entregable-content">
+                                        <div class="deliverable-main">
+                                            <span class="entregable-icon">📄</span>
+                                            <div>
+                                                <strong>Dashboard_RRHH_TuNombre.pdf</strong>
+                                                <p>Exportación PDF del informe para revisión rápida sin instalar
+                                                    Power BI.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <span class="entregable-file">Dashboard_RRHH_TuNombre.pdf</span>
+                                    </div>
+                                </label>
+
+                                <label class="entregable-item">
+                                    <input type="checkbox" class="guide-chk" data-guide="m4-d3">
+                                    <div class="entregable-content">
+                                        <div class="deliverable-main">
+                                            <span class="entregable-icon">📗</span>
+                                            <div>
+                                                <strong>Nomina_Empresa.xlsx</strong>
+                                                <p>Archivo de datos fuente con al menos 15 registros de nómina
+                                                    simulada.</p>
+                                            </div>
+                                        </div>
+                                        <span class="entregable-file">Nomina_Empresa.xlsx</span>
+                                    </div>
+                                </label>
+
+                                <label class="entregable-item">
+                                    <input type="checkbox" class="guide-chk" data-guide="drv4">
+                                    <div class="entregable-content">
+                                        <div class="entregable-main">
+                                            <span class="entregable-icon">🖼️</span>
+                                            <div>
+                                                <strong>preview_dashboard.png</strong>
+                                                <p>Captura de pantalla del tablero completo para
+                                                    previsualización rápida.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <span class="entregable-file">preview_dashboard.png</span>
+                                    </div>
+                                </label>
+
+                                <label class="entregable-item">
+                                    <input type="checkbox" class="guide-chk" data-guide="drv5">
+                                    <div class="entregable-content">
+                                        <div class="entregable-main">
+                                            <span class="entregable-icon">📝</span>
+                                            <div>
+                                                <strong>Reflexiones_Finales.txt</strong>
+                                                <p>Breve análisis sobre el KPI más retador de implementar
+                                                    (Bonus).</p>
+                                            </div>
+                                        </div>
+                                        <span class="entregable-file">Reflexiones_Finales.txt</span>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <!-- Barra de progreso entregables -->
+                            <div id="guide-progress-bar-drv4"
+                                class="mt-24 bg-gray-800-50 p-16 rounded-10 border border-border-color">
+                                <div class="flex justify-between items-center mb-8">
+                                    <span class="font-700 text-09">☁️ Entregables subidos a
+                                        Drive</span>
+                                    <span id="guide-pct-drv4" class="font-800 text-blue">0 / 5
+                                        archivos</span>
                                 </div>
+                                <div class="w-full h-8 bg-white-05 rounded-6 overflow-hidden">
+                                    <div id="guide-bar-fill-drv4"
+                                        class="h-full w-0 bg-gradient-to-r-blue-green transition-width rounded-6">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!-- fin entregables-m4 -->
+                    </div> <!-- fin m4-practica (NUEVO CIERRE CORRECTO) -->
+                    <div id="guide-progress-bar-m4b"
+                        class="mt-20 bg-gray-800-50 p-18 rounded-12 border border-border-color">
+                        <div class="flex justify-between items-center mb-10">
+                            <span class="font-700 text-095">📊 Progreso Ejercicio RRHH</span>
+                            <span id="guide-pct-m4b" class="font-800 text-warn">0 / 5 pasos</span>
+                        </div>
+                        <div class="w-full h-8 bg-white-05 rounded-6 overflow-hidden">
+                            <div id="guide-bar-fill-m4b"
+                                class="h-full w-0 bg-gradient-to-r-warn-blue transition-width rounded-6">
                             </div>
                         </div>
-
                     </div>
-                </div><!-- fin tab entregables -->
+
+                </div>
+                <!-- Extra DIV removed to allow M4-Quiz to stay inside module-body -->
 
                 <div class="tab-panel" id="m4-quiz" role="tabpanel" aria-labelledby="tab-m4-quiz">
                     <div class="quiz-container" id="quiz-m4" data-module="4"></div>

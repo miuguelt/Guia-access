@@ -1,0 +1,174 @@
+L5836: d=-1 | </div>
+L5838: d=-2 | 
+L5839: d=-2 | <!-- ─────────────────────────────────────
+L5840: d=-2 | MÓDULO 4: POWER BI
+L5841: d=-2 | ───────────────────────────────────── -->
+L5842: d=-1 | <section id="modulo-4" class="section module-secti
+L5843: d=0 | <div class="module-header module-header--pbi">
+L5844: d=1 | <div class="container">
+L5845: d=2 | <div class="header-content-flex">
+L5846: d=3 | <div class="header-text">
+L5847: d=3 | <div class="module-badge">Módulo 4</div>
+L5848: d=3 | <h2 id="m4-heading" class="module-title">Modelado 
+L5849: d=3 | <p class="module-subtitle">Power BI · Modelo Estre
+L5850: d=2 | </div>
+L5851: d=3 | <div class="header-visual">
+L5852: d=3 | <img src="module4_3d_abstract.png" alt="Power BI H
+L5853: d=3 | loading="lazy">
+L5854: d=2 | </div>
+L5855: d=1 | </div>
+L5856: d=2 | <div class="module-progress-bar">
+L5857: d=2 | <div class="module-progress-fill w-0-pct" id="m4-p
+L5858: d=1 | </div>
+L5859: d=0 | </div>
+L5860: d=-1 | </div>
+L5861: d=-1 | 
+L5862: d=0 | <div class="container module-body">
+L5863: d=1 | <div class="tabs" role="tablist" aria-label="Módul
+L5864: d=1 | <button class="tab active" role="tab" aria-selecte
+L5865: d=1 | id="tab-m4-teoria">📖 Teoría</button>
+L5866: d=1 | <button class="tab" role="tab" aria-selected="fals
+L5867: d=1 | Modelo Estrella</button>
+L5868: d=1 | <button class="tab" role="tab" aria-selected="fals
+L5869: d=1 | id="tab-m4-dash">📊 Dashboard</button>
+L5870: d=1 | <button class="tab" role="tab" aria-selected="fals
+L5871: d=1 | id="tab-m4-pract">📋 Guía Práctica</button>
+L5872: d=1 | <button class="tab" role="tab" aria-selected="fals
+L5873: d=1 | id="tab-m4-entregables">📤 Entregables</button>
+L5874: d=1 | <button class="tab" role="tab" aria-selected="fals
+L5875: d=1 | Final</button>
+L5876: d=0 | </div>
+L5877: d=0 | 
+L5878: d=1 | <div class="tab-panel active" id="m4-teoria" role=
+L5879: d=2 | <div class="theory-grid">
+L5880: d=3 | <div class="theory-card">
+L5881: d=3 | <h3>¿Qué es Power BI?</h3>
+L5882: d=3 | <p>Power BI es la plataforma de <strong>Business I
+L5883: d=3 | importar datos, construir modelos relacionales/est
+L5884: d=3 | con KPIs y gráficos.</p>
+L5889: d=3 | </div>
+L5890: d=2 | </div>
+L5891: d=3 | <div class="theory-card">
+L5892: d=3 | <h3>Indicadores Administrativos Clave</h3>
+L5914: d=3 | </div>
+L5915: d=2 | </div>
+L5916: d=1 | </div>
+L5917: d=0 | </div>
+L5918: d=0 | 
+L5919: d=1 | <div class="tab-panel" id="m4-estrella" role="tabp
+L5920: d=2 | <div class="star-concepts mb-32">
+L5921: d=3 | <div class="comparison-breakdown">
+L5926: d=3 | </div>
+L5931: d=3 | </div>
+L5932: d=2 | </div>
+L5933: d=3 | <div class="info-box info-box--info mt-20">
+L5934: d=3 | <span class="info-icon">💡</span>
+L5935: d=3 | <p><strong>Regla de Oro:</strong> Las dimensiones 
+L5936: d=3 | hechos se <u>suman o promedian</u> (agregan).</p>
+L5937: d=2 | </div>
+L5938: d=1 | </div>
+L5939: d=1 | 
+L5940: d=2 | <div class="star-model-container" id="star-model-c
+L5941: d=2 | <!-- Built by JS -->
+L5942: d=1 | </div>
+L5943: d=0 | </div>
+L5944: d=0 | 
+L5945: d=1 | <div class="tab-panel" id="m4-dashboard" role="tab
+L5946: d=2 | <div class="dashboard-builder" id="dashboard-build
+L5947: d=2 | <!-- Built by JS -->
+L5948: d=1 | </div>
+L5949: d=0 | </div>
+L5950: d=0 | 
+L5951: d=0 | <!-- Tab: Práctica M4 (Power BI Dashboard) -->
+L5952: d=1 | <div class="tab-panel" id="m4-practica" role="tabp
+L5953: d=2 | <div class="simulator-container">
+L5954: d=3 | <div class="sim-header">
+L5955: d=3 | <h3>📋 Guía Práctica: Dashboard en Power BI</h3>
+L5956: d=3 | <p>Sigue cada paso y marca el check. Al final tend
+L5957: d=3 | KPIs, gráfico y filtros interactivos.</p>
+L5958: d=2 | </div>
+L5959: d=2 | 
+L5960: d=3 | <div class="info-box info-box--success mb-24">
+L5961: d=3 | <span class="info-icon">🎯</span>
+L5962: d=3 | <p><strong>Objetivo:</strong> Construir un tablero
+L5963: d=3 | visuales: una Tarjeta KPI de ventas totales, un Gr
+L5964: d=3 | Segmentación de datos por fecha. Todo conectado a 
+L5965: d=2 | </div>
+L5966: d=2 | 
+L5967: d=2 | <!-- PARTE 1: MODELO ESTRELLA -->
+L5968: d=3 | <div class="guide-section" id="gs-pbi-modelo">
+L5976: d=3 | </div>
+L6055: d=3 | </div>
+L6056: d=2 | </div>
+L6057: d=2 | 
+L6058: d=2 | <!-- PARTE 2: DAX -->
+L6059: d=3 | <div class="guide-section border-t-warn pt-28 mt-3
+L6067: d=3 | </div>
+L6129: d=3 | </div>
+L6130: d=2 | </div>
+L6131: d=2 | 
+L6132: d=2 | <!-- PARTE 3: VISUALES -->
+L6133: d=3 | <div class="guide-section border-t-purple pt-28 mt
+L6141: d=3 | </div>
+L6200: d=3 | </div>
+L6201: d=2 | </div>
+L6202: d=2 | 
+L6203: d=2 | <!-- PROYECTO INTEGRADOR M4 -->
+L6204: d=3 | <div class="evidence-card" id="m4-proyecto">
+L6208: d=3 | </div>
+L6209: d=3 | <p class="text-text-2 text-095 mb-24">Crearemos un
+L6210: d=3 | profesional que combine múltiples fuentes de datos
+L6211: d=3 | intuitiva para la toma de decisiones gerenciales.<
+L6212: d=3 | 
+L6273: d=3 | </div>
+L6274: d=3 | 
+L6299: d=3 | </div>
+L6300: d=2 | </div>
+L6301: d=2 | 
+L6302: d=2 | <!-- Barra de progreso -->
+L6303: d=3 | <div id="guide-progress-bar-m4"
+L6304: d=3 | class="mt-28 bg-gray-800-50 p-18 rounded-12 border
+L6308: d=3 | </div>
+L6313: d=3 | </div>
+L6314: d=2 | </div>
+L6315: d=1 | </div> <!-- CIERRE de simulator-container -->
+L6316: d=0 | </div> <!-- FIX: CIERRE CORRECTO DE tab-panel m4-p
+L6317: d=0 | 
+L6318: d=0 | <!-- ═══════ TAB: ENTREGABLES M4 ═══════ -->
+L6319: d=1 | <div class="tab-panel" id="m4-entregables" role="t
+L6320: d=2 | <div class="simulator-container">
+L6321: d=3 | <div class="deliverable-section" id="entregables-m
+L6329: d=3 | </div>
+L6330: d=3 | 
+L6333: d=3 | </div>
+L6334: d=3 | 
+L6341: d=3 | </div>
+L6342: d=3 | 
+L6422: d=3 | </div>
+L6423: d=3 | 
+L6424: d=3 | <!-- Barra de progreso entregables -->
+L6438: d=3 | </div>
+L6439: d=3 | 
+L6440: d=2 | </div><!-- fin entregables-m4 -->
+L6441: d=1 | </div> <!-- fin m4-practica (NUEVO CIERRE CORRECTO
+L6442: d=2 | <div id="guide-progress-bar-m4b"
+L6443: d=2 | class="mt-20 bg-gray-800-50 p-18 rounded-12 border
+L6444: d=3 | <div class="flex justify-between items-center mb-1
+L6445: d=3 | <span class="font-700 text-095">📊 Progreso Ejerci
+L6446: d=3 | <span id="guide-pct-m4b" class="font-800 text-warn
+L6447: d=2 | </div>
+L6448: d=3 | <div class="w-full h-8 bg-white-05 rounded-6 overf
+L6451: d=3 | </div>
+L6452: d=2 | </div>
+L6453: d=1 | </div>
+L6454: d=1 | 
+L6455: d=0 | </div>
+L6456: d=0 | <!-- Extra DIV removed to allow M4-Quiz to stay in
+L6457: d=0 | 
+L6458: d=1 | <div class="tab-panel" id="m4-quiz" role="tabpanel
+L6459: d=1 | <div class="quiz-container" id="quiz-m4" data-modu
+L6460: d=0 | </div>
+L6461: d=-1 | </div>
+L6463: d=-2 | 
+L6464: d=-2 | <!-- ─────────────────────────────────────
+L6465: d=-2 | MÓDULO 5: GUÍA FINAL INTEGRADOR

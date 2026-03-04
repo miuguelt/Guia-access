@@ -1,0 +1,14 @@
+{
+    "name": "mcp-ai-hardware",
+    "version": "1.0.0",
+    "description": "MCP Server acelerado por hardware local (NPU/GPU) vía Ollama para diagnosticar logs y generar UI en lote.",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^0.6.0",
+        "node-fetch": "^3.3.2"
+    }
+}

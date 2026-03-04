@@ -1,0 +1,35 @@
+L6431: d=5 | archivos</span>
+L6432: d=4 | </div>
+L6433: d=5 | <div class="w-full h-8 bg-white-05 rounded-6 overf
+L6434: d=6 | <div id="guide-bar-fill-drv4"
+L6435: d=6 | class="h-full w-0 bg-gradient-to-r-blue-green tran
+L6436: d=5 | </div>
+L6437: d=4 | </div>
+L6438: d=3 | </div>
+L6439: d=3 | 
+L6440: d=2 | </div><!-- fin entregables-m4 -->
+L6441: d=1 | </div> <!-- fin m4-practica (NUEVO CIERRE CORRECTO
+L6442: d=2 | <div id="guide-progress-bar-m4b"
+L6443: d=2 | class="mt-20 bg-gray-800-50 p-18 rounded-12 border
+L6444: d=3 | <div class="flex justify-between items-center mb-1
+L6445: d=3 | <span class="font-700 text-095">📊 Progreso Ejerci
+L6446: d=3 | <span id="guide-pct-m4b" class="font-800 text-warn
+L6447: d=2 | </div>
+L6448: d=3 | <div class="w-full h-8 bg-white-05 rounded-6 overf
+L6449: d=4 | <div id="guide-bar-fill-m4b"
+L6450: d=4 | class="h-full w-0 bg-gradient-to-r-warn-blue trans
+L6451: d=3 | </div>
+L6452: d=2 | </div>
+L6453: d=1 | </div>
+L6454: d=1 | 
+L6455: d=0 | </div>
+L6456: d=-1 | </div><!-- fin tab entregables -->
+L6457: d=-1 | 
+L6458: d=0 | <div class="tab-panel" id="m4-quiz" role="tabpanel
+L6459: d=0 | <div class="quiz-container" id="quiz-m4" data-modu
+L6460: d=-1 | </div>
+L6461: d=-2 | </div>
+L6462: d=-3 | </section>
+L6463: d=-3 | 
+L6464: d=-3 | <!-- ─────────────────────────────────────
+L6465: d=-3 | MÓDULO 5: GUÍA FINAL INTEGRADOR

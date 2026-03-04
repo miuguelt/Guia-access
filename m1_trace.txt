@@ -1,0 +1,1165 @@
+L1486: d=0 | 
+L1487: d=1 | <div id="integrity-result" aria-live="assertive" c
+L1488: d=1 | <!-- Dynamic content from JS -->
+L1489: d=0 | </div>
+L1490: d=-1 | </div>
+L1491: d=-2 | </div>
+L1492: d=-3 | </div>
+L1493: d=-4 | </div>
+L1494: d=-4 | 
+L1495: d=-4 | <!-- Tab: Práctica (M1) -->
+L1496: d=-3 | <div class="tab-panel" id="m1-practica" role="tabp
+L1497: d=-2 | <div class="simulator-container">
+L1498: d=-1 | <div class="sim-header">
+L1499: d=-1 | <h3>📋 Guía Práctica Completa: Tablas y Relaciones
+L1500: d=-1 | <p>Sigue cada paso cuidadosamente. Marca los pasos
+L1501: d=-1 | avance.</p>
+L1502: d=-2 | </div>
+L1503: d=-2 | 
+L1504: d=-2 | <!-- SECCIÓN A: CREAR TABLA -->
+L1505: d=-1 | <div class="guide-section" id="gs-crear-bd">
+L1506: d=0 | <div class="guide-section-header">
+L1507: d=0 | <span class="guide-section-icon">💾</span>
+L1508: d=1 | <div>
+L1509: d=1 | <h4 class="guide-section-title">PRÁCTICA 0 — Creac
+L1510: d=1 | </h4>
+L1511: d=1 | <p class="guide-section-sub">Antes de almacenar da
+L1512: d=1 | archivo
+L1513: d=1 | contenedor principal.</p>
+L1514: d=0 | </div>
+L1515: d=-1 | </div>
+L1516: d=-1 | 
+L1517: d=0 | <div class="guide-steps">
+L1518: d=1 | <div class="guide-step" data-step="g0_1">
+L1519: d=1 | <div class="gs-marker"><span>1</span></div>
+L1520: d=2 | <div class="gs-content">
+L1521: d=2 | <h5>Abrir Access y Crear Archivo</h5>
+L1522: d=2 | <p>Abre Microsoft Access. En la pantalla inicial, 
+L1523: d=2 | <strong>Base de
+L1524: d=2 | datos del escritorio en blanco</strong>. Asigna el
+L1525: d=2 | <code>drogueria</code> y haz clic en <kbd>Crear</k
+L1526: d=2 | </p>
+L1527: d=3 | <div class="gs-tip">💡 En SQL puro esto equivaldrí
+L1528: d=3 | <code>CREATE DATABASE drogueria;</code>
+L1529: d=2 | </div>
+L1530: d=1 | </div>
+L1531: d=1 | <label class="gs-check"><input type="checkbox" cla
+L1532: d=1 | Completado</label>
+L1533: d=0 | </div>
+L1534: d=-1 | </div>
+L1535: d=-2 | </div>
+L1536: d=-2 | 
+L1537: d=-1 | <div class="guide-section mt-32 border-t-accent pt
+L1538: d=0 | <div class="guide-section-header">
+L1539: d=0 | <span class="guide-section-icon">🗃️</span>
+L1540: d=1 | <div>
+L1541: d=1 | <h4 class="guide-section-title">PRÁCTICA 1 — Crear
+L1542: d=1 | Diseño)
+L1543: d=1 | </h4>
+L1544: d=1 | <p class="guide-section-sub">La Vista Diseño es el
+L1545: d=1 | permite
+L1546: d=1 | definir cada campo con precisión antes de ingresar
+L1547: d=1 | <code>CREATE TABLE Producto</code>.
+L1548: d=1 | </p>
+L1549: d=0 | </div>
+L1550: d=-1 | </div>
+L1551: d=-1 | 
+L1552: d=0 | <div class="guide-steps">
+L1553: d=1 | <div class="guide-step" data-step="g1">
+L1554: d=1 | <div class="gs-marker"><span>1</span></div>
+L1555: d=2 | <div class="gs-content">
+L1556: d=2 | <h5>Abrir Vista Diseño</h5>
+L1557: d=2 | <p>En la cinta de opciones, ve a la pestaña <kbd>C
+L1558: d=2 | en
+L1559: d=2 | <kbd>Diseño de tabla</kbd>. Se abrirá una cuadrícu
+L1560: d=2 | columnas: <em>Nombre del campo</em>, <em>Tipo de d
+L1561: d=2 | <em>Descripción</em>.
+L1562: d=2 | </p>
+L1563: d=3 | <div class="gs-tip">💡 NO uses "Tabla" desde la pe
+L1564: d=3 | abre la
+L1565: d=3 | vista Hoja de datos, que es menos profesional para
+L1566: d=2 | estructura.</div>
+L1567: d=1 | </div>
+L1568: d=1 | <label class="gs-check"><input type="checkbox" cla
+L1569: d=1 | Completado</label>
+L1570: d=0 | </div>
+L1571: d=0 | 
+L1572: d=1 | <div class="guide-step" data-step="g2">
+L1573: d=1 | <div class="gs-marker"><span>2</span></div>
+L1574: d=2 | <div class="gs-content">
+L1575: d=2 | <h5>Definir la Llave Primaria (PK)</h5>
+L1576: d=2 | <p>En la primera fila escribe <code>ID_Cliente</co
+L1577: d=2 | campo". En
+L1578: d=2 | "Tipo de datos" selecciona <strong>Autonumérico</s
+L1579: d=2 | clic
+L1580: d=2 | derecho sobre el selector de fila (▶) y elige <str
+L1581: d=2 | principal</strong> — o usa el botón 🔑 en la cinta
+L1582: d=2 | ícono de
+L1583: d=2 | llave aparecer en esa fila.</p>
+L1584: d=3 | <div class="gs-tip">⭐ El Autonumérico asigna IDs a
+L1585: d=3 | 3...)
+L1586: d=3 | sin que tengas que escribirlos. Nunca se repite, p
+L1587: d=2 | </div>
+L1588: d=1 | </div>
+L1589: d=1 | <label class="gs-check"><input type="checkbox" cla
+L1590: d=1 | Completado</label>
+L1591: d=0 | </div>
+L1592: d=0 | 
+L1593: d=1 | <div class="guide-step" data-step="g3">
+L1594: d=1 | <div class="gs-marker"><span>3</span></div>
+L1595: d=2 | <div class="gs-content">
+L1596: d=2 | <h5>Agregar los demás campos</h5>
+L1597: d=2 | <p>En las filas siguientes agrega:</p>
+L1598: d=2 | <table class="gs-table">
+L1599: d=2 | <thead>
+L1600: d=2 | <tr>
+L1601: d=2 | <th>Nombre del Campo</th>
+L1602: d=2 | <th>Tipo de Dato</th>
+L1603: d=2 | <th>Propósito</th>
+L1604: d=2 | </tr>
+L1605: d=2 | </thead>
+L1606: d=2 | <tbody>
+L1607: d=2 | <tr>
+L1608: d=2 | <td><code>NombreCliente</code></td>
+L1609: d=2 | <td>Texto corto</td>
+L1610: d=2 | <td>Nombre completo</td>
+L1611: d=2 | </tr>
+L1612: d=2 | <tr>
+L1613: d=2 | <td><code>NIT</code></td>
+L1614: d=2 | <td>Texto corto</td>
+L1615: d=2 | <td>Número fiscal (texto, no número)</td>
+L1616: d=2 | </tr>
+L1617: d=2 | <tr>
+L1618: d=2 | <td><code>Ciudad</code></td>
+L1619: d=2 | <td>Texto corto</td>
+L1620: d=2 | <td>Ciudad de residencia</td>
+L1621: d=2 | </tr>
+L1622: d=2 | <tr>
+L1623: d=2 | <td><code>Telefono</code></td>
+L1624: d=2 | <td>Texto corto</td>
+L1625: d=2 | <td>Teléfono (texto por guiones)</td>
+L1626: d=2 | </tr>
+L1627: d=2 | <tr>
+L1628: d=2 | <td><code>FechaRegistro</code></td>
+L1629: d=2 | <td>Fecha/Hora</td>
+L1630: d=2 | <td>Cuando ingresó al sistema</td>
+L1631: d=2 | </tr>
+L1632: d=2 | </tbody>
+L1633: d=2 | </table>
+L1634: d=3 | <div class="gs-tip">⚠️ El NIT y el Teléfono usan <
+L1635: d=3 | corto</strong>
+L1636: d=3 | aunque parezcan números, porque nunca harás operac
+L1637: d=3 | con
+L1638: d=2 | ellos y pueden tener guiones o espacios.</div>
+L1639: d=1 | </div>
+L1640: d=1 | <label class="gs-check"><input type="checkbox" cla
+L1641: d=1 | Completado</label>
+L1642: d=0 | </div>
+L1643: d=0 | 
+L1644: d=1 | <div class="guide-step" data-step="g4">
+L1645: d=1 | <div class="gs-marker"><span>4</span></div>
+L1646: d=2 | <div class="gs-content">
+L1647: d=2 | <h5>Configurar Propiedades de Campo (Panel Inferio
+L1648: d=2 | <p>Al hacer clic en cualquier campo, el panel infe
+L1649: d=2 | propiedades
+L1650: d=2 | avanzadas. Las más importantes:</p>
+L1651: d=3 | <div class="gs-props">
+L1652: d=4 | <div class="gs-prop"><strong>Tamaño del campo:</st
+L1653: d=4 | corto,
+L1654: d=4 | define el máximo de caracteres (ej: 50 para Nombre
+L1655: d=3 | </div>
+L1656: d=4 | <div class="gs-prop"><strong>Requerido:</strong> C
+L1657: d=4 | <em>Sí</em> para
+L1658: d=4 | campos obligatorios (ej: NombreCliente no puede qu
+L1659: d=3 | </div>
+L1660: d=4 | <div class="gs-prop"><strong>Indexado:</strong> Si
+L1661: d=4 | frecuentemente por
+L1662: d=3 | ese campo, actívalo para acelerar consultas.</div>
+L1663: d=4 | <div class="gs-prop"><strong>Valor predeterminado:
+L1664: d=4 | poner
+L1665: d=4 | <code>=Fecha()</code> en FechaRegistro para que se
+L1666: d=4 | automáticamente
+L1667: d=4 | hoy.
+L1668: d=3 | </div>
+L1669: d=2 | </div>
+L1670: d=1 | </div>
+L1671: d=1 | <label class="gs-check"><input type="checkbox" cla
+L1672: d=1 | Completado</label>
+L1673: d=0 | </div>
+L1674: d=0 | 
+L1675: d=1 | <div class="guide-step" data-step="g5">
+L1676: d=1 | <div class="gs-marker"><span>5</span></div>
+L1677: d=2 | <div class="gs-content">
+L1678: d=2 | <h5>Guardar la Tabla</h5>
+L1679: d=2 | <p>Presiona <kbd>Ctrl + S</kbd> o cierra la pestañ
+L1680: d=2 | nombre
+L1681: d=2 | — escribe <strong>CLIENTES</strong> (mayúsculas po
+L1682: d=2 | clic en
+L1683: d=2 | <strong>Aceptar</strong>. La tabla aparecerá en el
+L1684: d=2 | Navegación
+L1685: d=2 | izquierdo.
+L1686: d=2 | </p>
+L1687: d=3 | <div class="gs-tip">✅ ¡Primera tabla creada! Esto 
+L1688: d=3 | crear
+L1689: d=3 | tu <code>CREATE TABLE Producto</code> en base de d
+L1690: d=3 | proceso
+L1691: d=2 | siempre que necesites nuevas tablas.</div>
+L1692: d=1 | </div>
+L1693: d=0 | </div>
+L1694: d=0 | <label class="gs-check"><input type="checkbox" cla
+L1695: d=0 | Completado</label>
+L1696: d=-1 | </div>
+L1697: d=-2 | </div>
+L1698: d=-3 | </div>
+L1699: d=-3 | 
+L1700: d=-3 | <!-- SECCIÓN B: RELACIÓN 1:N -->
+L1701: d=-2 | <div class="guide-section border-t-primary pt-28 m
+L1702: d=-1 | <div class="guide-section-header">
+L1703: d=-1 | <span class="guide-section-icon">🔗</span>
+L1704: d=0 | <div>
+L1705: d=0 | <h4 class="guide-section-title">PRÁCTICA 2 — Crear
+L1706: d=0 | Integridad
+L1707: d=0 | (Frutas)</h4>
+L1708: d=0 | <p class="guide-section-sub">Aprenderemos a conect
+L1709: d=0 | Fruta)
+L1710: d=0 | para evitar registros huérfanos.</p>
+L1711: d=-1 | </div>
+L1712: d=-2 | </div>
+L1713: d=-2 | 
+L1714: d=-1 | <div class="guide-steps">
+L1715: d=0 | <div class="guide-step" data-step="g2_0">
+L1716: d=0 | <div class="gs-marker"><span>0</span></div>
+L1717: d=1 | <div class="gs-content">
+L1718: d=1 | <h5>Preparar las Tablas Base</h5>
+L1719: d=1 | <p>Antes de relacionar, asegúrate de tener creadas
+L1720: d=1 | Vista
+L1721: d=1 | Diseño:</p>
+L1722: d=1 | <ul class="list-disc ml-20 mt-8 mb-8 text-095 text
+L1723: d=1 | <li><strong>Tabla TipoFruta:</strong> Crea un camp
+L1724: d=1 | <code>idTipo</code>
+L1725: d=1 | (Autonumeración, Clave Principal) y <code>descripc
+L1726: d=1 | (Texto
+L1727: d=1 | corto).
+L1728: d=1 | </li>
+L1729: d=1 | <li><strong>Tabla Fruta:</strong> Crea un campo <c
+L1730: d=1 | (Autonumeración, Clave Principal), <code>nombreFru
+L1731: d=1 | (Texto
+L1732: d=1 | corto) y el más importante: <code>idTipoFruta</cod
+L1733: d=1 | dato:
+L1734: d=1 | <strong class="text-warn">Número</strong>).
+L1735: d=1 | </li>
+L1736: d=1 | </ul>
+L1737: d=2 | <div class="gs-tip">⚠️ CRÍTICO: El campo que recib
+L1738: d=2 | (idTipoFruta) NO puede ser Autonumérico, debe ser 
+L1739: d=2 | Entero
+L1740: d=1 | largo) para que coincida con el Autonumérico origi
+L1741: d=0 | </div>
+L1742: d=0 | <label class="gs-check"><input type="checkbox" cla
+L1743: d=0 | Completado</label>
+L1744: d=-1 | </div>
+L1745: d=0 | <div class="guide-step" data-step="g2_1">
+L1746: d=0 | <div class="gs-marker gs-marker--purple"><span>2</
+L1747: d=1 | <div class="gs-content">
+L1748: d=2 | <div class="info-box info-box--info mb-20">
+L1749: d=2 | <span class="info-icon">📌</span>
+L1750: d=2 | <p><strong>Preparación de la tabla PEDIDOS:</stron
+L1751: d=2 | PEDIDOS con
+L1752: d=2 | Vista
+L1753: d=2 | Diseño y agrega estos campos: <code>ID_Pedido</cod
+L1754: d=2 | (Autonumérico, PK),
+L1755: d=2 | <code>ID_Cliente</code> (<strong>Número · Entero
+L1756: d=2 | largo</strong>),
+L1757: d=2 | <code>FechaPedido</code> (Fecha/Hora), <code>Total
+L1758: d=2 | (Moneda). El
+L1759: d=2 | campo
+L1760: d=2 | <code>ID_Cliente</code> en PEDIDOS es la <em>clave
+L1761: d=2 | que enlazará
+L1762: d=2 | con
+L1763: d=2 | CLIENTES.
+L1764: d=2 | </p>
+L1765: d=1 | </div>
+L1766: d=1 | 
+L1767: d=2 | <div class="guide-steps">
+L1768: d=3 | <div class="guide-step" data-step="r1">
+L1769: d=3 | <div class="gs-marker gs-marker--green"><span>1</s
+L1770: d=4 | <div class="gs-content">
+L1771: d=4 | <h5>Abrir el Panel de Relaciones</h5>
+L1772: d=4 | <p>En la cinta de opciones, ve a la pestaña
+L1773: d=4 | <kbd>Herramientas de base de
+L1774: d=4 | datos</kbd> → haz clic en <kbd>Relaciones</kbd>. S
+L1775: d=4 | abrirá un
+L1776: d=4 | panel
+L1777: d=4 | en
+L1778: d=4 | blanco (o con tablas previas si ya habías trabajad
+L1779: d=4 | <strong>Cierra
+L1780: d=4 | todas
+L1781: d=4 | las tablas antes de abrir Relaciones.</strong>
+L1782: d=4 | </p>
+L1783: d=3 | </div>
+L1784: d=3 | <label class="gs-check"><input type="checkbox" cla
+L1785: d=3 | data-guide="r1">
+L1786: d=3 | Completado</label>
+L1787: d=2 | </div>
+L1788: d=2 | 
+L1789: d=3 | <div class="guide-step" data-step="r2">
+L1790: d=3 | <div class="gs-marker gs-marker--green"><span>2</s
+L1791: d=4 | <div class="gs-content">
+L1792: d=4 | <h5>Agregar las Tablas al Panel</h5>
+L1793: d=4 | <p>En el cuadro "Mostrar tabla" que aparece automá
+L1794: d=4 | haz doble
+L1795: d=4 | clic
+L1796: d=4 | sobre <strong>CLIENTES</strong> y luego sobre
+L1797: d=4 | <strong>PEDIDOS</strong>.
+L1798: d=4 | Haz
+L1799: d=4 | clic en <kbd>Cerrar</kbd>. Verás ambas tablas en l
+L1800: d=4 | superior
+L1801: d=4 | con
+L1802: d=4 | una
+L1803: d=4 | línea de unión entre ellas.
+L1804: d=4 | </p>
+L1805: d=5 | <div class="gs-tip">💡 Puedes reposicionar las tab
+L1806: d=5 | del panel
+L1807: d=5 | arrastrándolas por su barra de título para que que
+L1808: d=5 | ordenadas.
+L1809: d=4 | </div>
+L1810: d=3 | </div>
+L1811: d=3 | <label class="gs-check"><input type="checkbox" cla
+L1812: d=3 | data-guide="r2">
+L1813: d=3 | Completado</label>
+L1814: d=2 | </div>
+L1815: d=2 | 
+L1816: d=3 | <div class="guide-step" data-step="r3">
+L1817: d=3 | <div class="gs-marker gs-marker--green"><span>3</s
+L1818: d=4 | <div class="gs-content">
+L1819: d=4 | <h5>Crear el Vínculo (Arrastrar campos)</h5>
+L1820: d=4 | <p>Este es el paso clave. <strong>Haz clic sobre
+L1821: d=4 | <code>ID_Cliente</code>
+L1822: d=4 | en
+L1823: d=4 | la
+L1824: d=4 | tabla CLIENTES</strong> (no sueltes el mouse) y
+L1825: d=4 | <strong>arrástralo</strong> hasta el campo
+L1826: d=4 | <code>ID_Cliente</code>
+L1827: d=4 | en la
+L1828: d=4 | tabla PEDIDOS. Cuando sueltes, aparecerá el cuadro
+L1829: d=4 | diálogo
+L1830: d=4 | "Modificar
+L1831: d=4 | relaciones".
+L1832: d=4 | </p>
+L1833: d=5 | <div class="gs-tip">⚠️ Siempre debes arrastrar des
+L1834: d=5 | tabla PADRE
+L1835: d=5 | (CLIENTES,
+L1836: d=5 | lado "1") hacia la tabla HIJO (PEDIDOS, lado "N").
+L1837: d=5 | haces al
+L1838: d=5 | revés
+L1839: d=4 | funcionará, pero la convención es padre → hijo.</d
+L1840: d=3 | </div>
+L1841: d=3 | <label class="gs-check"><input type="checkbox" cla
+L1842: d=3 | data-guide="r3">
+L1843: d=3 | Completado</label>
+L1844: d=2 | </div>
+L1845: d=2 | 
+L1846: d=3 | <div class="guide-step" data-step="r4">
+L1847: d=3 | <div class="gs-marker gs-marker--green"><span>4</s
+L1848: d=4 | <div class="gs-content">
+L1849: d=4 | <h5>Configurar Integridad Referencial</h5>
+L1850: d=4 | <p>En el cuadro "Modificar relaciones" verás tres 
+L1851: d=4 | importantes:
+L1852: d=4 | </p>
+L1853: d=5 | <div class="gs-props">
+L1854: d=6 | <div class="gs-prop gs-prop--required"><strong>✅ E
+L1855: d=6 | integridad
+L1856: d=6 | referencial:</strong> SIEMPRE actívala.
+L1857: d=6 | Garantiza que no
+L1858: d=6 | puedas
+L1859: d=6 | agregar un pedido con un ID_Cliente que no exista 
+L1860: d=6 | CLIENTES.
+L1861: d=5 | </div>
+L1862: d=6 | <div class="gs-prop"><strong>Actualizar en cascada
+L1863: d=6 | campos
+L1864: d=6 | relacionados:</strong> Si cambias el ID de un
+L1865: d=6 | cliente en
+L1866: d=6 | CLIENTES,
+L1867: d=6 | automáticamente se actualiza en todos sus pedidos.
+L1868: d=5 | </div>
+L1869: d=6 | <div class="gs-prop"><strong>Eliminar en cascada
+L1870: d=6 | registros
+L1871: d=6 | relacionados:</strong> Si eliminas un cliente,
+L1872: d=6 | elimina
+L1873: d=6 | también
+L1874: d=6 | todos
+L1875: d=5 | sus pedidos. Úsalo con precaución.</div>
+L1876: d=4 | </div>
+L1877: d=4 | <p>Haz clic derecho sobre la línea de unión y sele
+L1878: d=4 | <strong>Exigir
+L1879: d=4 | integridad referencial</strong>. Luego haz clic en
+L1880: d=4 | el botón
+L1881: d=4 | <strong>Crear</strong>. Verás
+L1882: d=4 | una
+L1883: d=4 | línea que
+L1884: d=4 | une las dos tablas con <strong>"1"</strong> en el 
+L1885: d=4 | de CLIENTES y
+L1886: d=4 | <strong>"∞"</strong> en el lado de PEDIDOS.
+L1887: d=4 | </p>
+L1888: d=3 | </div>
+L1889: d=3 | <label class="gs-check"><input type="checkbox" cla
+L1890: d=3 | data-guide="r4">
+L1891: d=3 | Completado</label>
+L1892: d=2 | </div>
+L1893: d=2 | 
+L1894: d=3 | <div class="guide-step" data-step="r5">
+L1895: d=3 | <div class="gs-marker gs-marker--green"><span>5</s
+L1896: d=4 | <div class="gs-content">
+L1897: d=4 | <h5>Guardar el Diagrama de Relaciones</h5>
+L1898: d=4 | <p>Presiona <kbd>Ctrl + S</kbd> o cierra el panel 
+L1899: d=4 | guardar. ¡La
+L1900: d=4 | relación
+L1901: d=4 | 1:N está creada! Ahora cuando agregues registros a
+L1902: d=4 | PEDIDOS, el campo
+L1903: d=4 | <code>ID_Cliente</code> solo aceptará valores que
+L1904: d=4 | existan en
+L1905: d=4 | CLIENTES.
+L1906: d=4 | </p>
+L1907: d=5 | <div class="gs-tip">🎯 <strong>Resultado visible:<
+L1908: d=5 | En la tabla
+L1909: d=5 | PEDIDOS,
+L1910: d=5 | si haces clic en el campo ID_Cliente, Access puede
+L1911: d=5 | mostrarte una
+L1912: d=5 | lista
+L1913: d=5 | desplegable con los clientes existentes si configu
+L1914: d=5 | una Lista de
+L1915: d=5 | búsqueda.
+L1916: d=4 | </div>
+L1917: d=3 | </div>
+L1918: d=3 | <label class="gs-check"><input type="checkbox" cla
+L1919: d=3 | data-guide="r5">
+L1920: d=3 | Completado</label>
+L1921: d=2 | </div>
+L1922: d=1 | </div>
+L1923: d=0 | </div>
+L1924: d=0 | <label class="gs-check"><input type="checkbox" cla
+L1925: d=0 | Completado</label>
+L1926: d=-1 | </div>
+L1927: d=-2 | </div>
+L1928: d=-3 | </div>
+L1929: d=-3 | 
+L1930: d=-3 | <!-- SECCIÓN C: MODIFICAR ESTRUCTURA (ALTER TABLE)
+L1931: d=-2 | <div class="guide-section border-t-accent pt-28 mt
+L1932: d=-1 | <div class="guide-section-header">
+L1933: d=-1 | <span class="guide-section-icon">🔄</span>
+L1934: d=0 | <div>
+L1935: d=0 | <h4 class="guide-section-title">PRÁCTICA 3 — Modif
+L1936: d=0 | (ALTER
+L1937: d=0 | TABLE)</h4>
+L1938: d=0 | <p class="guide-section-sub">En Access, alterar un
+L1939: d=0 | sencillo
+L1940: d=0 | como volver a la Vista Diseño.</p>
+L1941: d=-1 | </div>
+L1942: d=-2 | </div>
+L1943: d=-2 | 
+L1944: d=-1 | <div class="guide-steps">
+L1945: d=0 | <div class="guide-step" data-step="g3_1">
+L1946: d=0 | <div class="gs-marker"><span>1</span></div>
+L1947: d=1 | <div class="gs-content">
+L1948: d=1 | <h5>Agregar un nuevo campo (ADD COLUMN)</h5>
+L1949: d=1 | <p>Ejemplo: A la tabla <code>Electrodomestico</cod
+L1950: d=1 | agregar el
+L1951: d=1 | campo de <code>precio</code>.</p>
+L1952: d=1 | <ul class="list-disc ml-20 mt-8 mb-8 text-095 text
+L1953: d=1 | <li>Abre <code>Electrodomestico</code> en <strong>
+L1954: d=1 | Diseño</strong> (clic derecho sobre la tabla > Vis
+L1955: d=1 | Diseño).</li>
+L1956: d=1 | <li>Sitúate en la primera fila en blanco al final 
+L1957: d=1 | lista de
+L1958: d=1 | campos.</li>
+L1959: d=1 | <li>Escribe <code>precio</code> y selecciona el ti
+L1960: d=1 | <strong>Moneda</strong>.
+L1961: d=1 | </li>
+L1962: d=1 | </ul>
+L1963: d=0 | </div>
+L1964: d=0 | <label class="gs-check"><input type="checkbox" cla
+L1965: d=0 | Completado</label>
+L1966: d=-1 | </div>
+L1967: d=-1 | 
+L1968: d=0 | <div class="guide-step" data-step="g3_2">
+L1969: d=0 | <div class="gs-marker"><span>2</span></div>
+L1970: d=1 | <div class="gs-content">
+L1971: d=1 | <h5>Ejemplo Completo: Modificar Joyas</h5>
+L1972: d=1 | <p>Tienes la tabla <code>Joyas(idJoya, nombreJoya)
+L1973: d=1 | piden
+L1974: d=1 | agregar <code>idMaterial</code>, <code>precio</cod
+L1975: d=1 | <code>kilates</code>.
+L1976: d=1 | </p>
+L1977: d=1 | <p>Abre <strong>Joyas</strong> en Vista Diseño y a
+L1978: d=1 | <ul class="list-disc ml-20 mt-8 mb-8 text-095 text
+L1979: d=1 | <li><code>idMaterial</code> (Tipo: <strong>Número<
+L1980: d=1 | ->
+L1981: d=1 | ¡Listo para ser llave foránea!</li>
+L1982: d=1 | <li><code>precio</code> (Tipo: <strong>Moneda</str
+L1983: d=1 | <li><code>kilates</code> (Tipo: <strong>Número</st
+L1984: d=1 | propiedades abajo pon <em>Doble</em> para aceptar
+L1985: d=1 | decimales).
+L1986: d=1 | </li>
+L1987: d=1 | </ul>
+L1988: d=2 | <div class="gs-tip">💾 Recuerda siempre guardar lo
+L1989: d=2 | (Ctrl + S).
+L1990: d=1 | </div>
+L1991: d=0 | </div>
+L1992: d=0 | <label class="gs-check"><input type="checkbox" cla
+L1993: d=0 | Completado</label>
+L1994: d=-1 | </div>
+L1995: d=-2 | </div>
+L1996: d=-3 | </div>
+L1997: d=-3 | 
+L1998: d=-3 | <!-- SECCIÓN D: RELACIÓN N:M -->
+L1999: d=-2 | <div class="guide-section border-t-purple pt-28 mt
+L2000: d=-1 | <div class="guide-section-header">
+L2001: d=-1 | <span class="guide-section-icon">🔀</span>
+L2002: d=0 | <div>
+L2003: d=0 | <h4 class="guide-section-title">PARTE 3 — Crear Re
+L2004: d=0 | Muchos
+L2005: d=0 | (N:M)
+L2006: d=0 | en
+L2007: d=0 | Access</h4>
+L2008: d=0 | <p class="guide-section-sub">Caso de uso: Estudian
+L2009: d=0 | estudiante
+L2010: d=0 | toma
+L2011: d=0 | varios cursos y cada curso tiene varios estudiante
+L2012: d=-1 | </div>
+L2013: d=-2 | </div>
+L2014: d=-2 | 
+L2015: d=-1 | <div class="guide-steps">
+L2016: d=0 | <div class="guide-step" data-step="n1">
+L2017: d=0 | <div class="gs-marker gs-marker--purple"><span>1</
+L2018: d=1 | <div class="gs-content">
+L2019: d=1 | <h5>Crear las dos Tablas Principales</h5>
+L2020: d=1 | <p>Crea <strong>ESTUDIANTES</strong> con los campo
+L2021: d=1 | <code>ID_Estudiante</code>
+L2022: d=1 | (Autonumérico, PK), <code>NombreEstudiante</code> 
+L2023: d=1 | corto),
+L2024: d=1 | <code>Documento</code> (Texto corto).
+L2025: d=1 | </p>
+L2026: d=1 | <p class="mt-15">Crea <strong>CURSOS</strong> con 
+L2027: d=1 | <code>ID_Curso</code> (Autonumérico, PK),
+L2028: d=1 | <code>NombreCurso</code>
+L2029: d=1 | (Texto
+L2030: d=1 | corto), <code>Creditos</code> (Número),
+L2031: d=1 | <code>Intensidad</code>
+L2032: d=1 | (Número).
+L2033: d=1 | </p>
+L2034: d=0 | </div>
+L2035: d=0 | <label class="gs-check"><input type="checkbox" cla
+L2036: d=0 | Completado</label>
+L2037: d=-1 | </div>
+L2038: d=-1 | 
+L2039: d=0 | <div class="guide-step" data-step="n2">
+L2040: d=0 | <div class="gs-marker gs-marker--purple"><span>2</
+L2041: d=1 | <div class="gs-content">
+L2042: d=1 | <h5>Crear la Tabla INTERMEDIA (INSCRIPCIONES)</h5>
+L2043: d=1 | <p>Ve a <kbd>Crear</kbd> → <kbd>Diseño de tabla</k
+L2044: d=1 | estos
+L2045: d=1 | campos:
+L2046: d=1 | </p>
+L2047: d=1 | <table class="gs-table">
+L2048: d=1 | <thead>
+L2049: d=1 | <tr>
+L2050: d=1 | <th>Campo</th>
+L2051: d=1 | <th>Tipo</th>
+L2052: d=1 | <th>Notas</th>
+L2053: d=1 | </tr>
+L2054: d=1 | </thead>
+L2055: d=1 | <tbody>
+L2056: d=1 | <tr>
+L2057: d=1 | <td><code>ID_Inscripcion</code></td>
+L2058: d=1 | <td>Autonumérico</td>
+L2059: d=1 | <td>🔑 PK — Clave principal</td>
+L2060: d=1 | </tr>
+L2061: d=1 | <tr>
+L2062: d=1 | <td><code>ID_Estudiante</code></td>
+L2063: d=1 | <td><strong>Número</strong></td>
+L2064: d=1 | <td>🔗 FK → ESTUDIANTES</td>
+L2065: d=1 | </tr>
+L2066: d=1 | <tr>
+L2067: d=1 | <td><code>ID_Curso</code></td>
+L2068: d=1 | <td><strong>Número</strong></td>
+L2069: d=1 | <td>🔗 FK → CURSOS</td>
+L2070: d=1 | </tr>
+L2071: d=1 | <tr>
+L2072: d=1 | <td><code>FechaInscripcion</code></td>
+L2073: d=1 | <td>Fecha/Hora</td>
+L2074: d=1 | <td>Dato propio de la relación</td>
+L2075: d=1 | </tr>
+L2076: d=1 | <tr>
+L2077: d=1 | <td><code>NotaFinal</code></td>
+L2078: d=1 | <td>Número</td>
+L2079: d=1 | <td>Dato propio de la relación</td>
+L2080: d=1 | </tr>
+L2081: d=1 | </tbody>
+L2082: d=1 | </table>
+L2083: d=1 | <p>Guarda la tabla como
+L2084: d=2 | <div class="gs-tip">⭐ La tabla INSCRIPCIONES "romp
+L2085: d=2 | N:M en
+L2086: d=2 | dos
+L2087: d=2 | relaciones 1:N: ESTUDIANTES (1) → INSCRIPCIONES (N
+L2088: d=2 | (1) →
+L2089: d=1 | INSCRIPCIONES (N).</div>
+L2090: d=0 | </div>
+L2091: d=0 | <label class="gs-check"><input type="checkbox" cla
+L2092: d=0 | Completado</label>
+L2093: d=-1 | </div>
+L2094: d=-1 | 
+L2095: d=0 | <div class="guide-step" data-step="n3">
+L2096: d=0 | <div class="gs-marker gs-marker--purple"><span>3</
+L2097: d=1 | <div class="gs-content">
+L2098: d=1 | <h5>Primera Relación 1:N — ESTUDIANTES → INSCRIPCI
+L2099: d=1 | <p>Abre el panel <kbd>Relaciones</kbd> y agrega la
+L2100: d=1 | Arrastra
+L2101: d=1 | <code>ID_Estudiante</code> desde
+L2102: d=1 | <strong>ESTUDIANTES</strong> hasta
+L2103: d=1 | <code>ID_Estudiante</code> en
+L2104: d=1 | <strong>INSCRIPCIONES</strong>. Activa
+L2105: d=1 | <strong>Exigir integridad referencial</strong> y h
+L2106: d=1 | <kbd>Crear</kbd>. Verás el "1" y el "∞" entre amba
+L2107: d=1 | </p>
+L2108: d=2 | <div
+L2109: d=2 | class="info-box info-box--tip py-8 px-12 mt-8 mb-1
+L2110: d=2 | <span class="info-icon">💡</span>
+L2111: d=3 | <div>
+L2112: d=3 | <strong>Teoría en Acción (PK a FK):</strong>
+L2113: d=3 | <p class="text-085 mt-4">Al arrastrar la línea, es
+L2114: d=3 | conectando
+L2115: d=3 | la
+L2116: d=3 | <strong>Llave Primaria (PK)</strong> de la tabla
+L2117: d=3 | PADRE
+L2118: d=3 | (`ID_Estudiante` en ESTUDIANTES) con la
+L2119: d=3 | <strong>Llave
+L2120: d=3 | Foránea
+L2121: d=3 | (FK)</strong> de la tabla HIJO (en
+L2122: d=3 | INSCRIPCIONES). Esto
+L2123: d=3 | crea
+L2124: d=3 | la
+L2125: d=3 | dependencia estricta 1 a Muchos.
+L2126: d=3 | </p>
+L2127: d=2 | </div>
+L2128: d=1 | </div>
+L2129: d=0 | </div>
+L2130: d=0 | <label class="gs-check"><input type="checkbox" cla
+L2131: d=0 | Completado</label>
+L2132: d=-1 | </div>
+L2133: d=-1 | 
+L2134: d=0 | <div class="guide-step" data-step="n4">
+L2135: d=0 | <div class="gs-marker gs-marker--purple"><span>4</
+L2136: d=1 | <div class="gs-content">
+L2137: d=1 | <h5>Segunda Relación 1:N — CURSOS → INSCRIPCIONES<
+L2138: d=1 | <p>Ahora arrastra <code>ID_Curso</code> desde
+L2139: d=1 | <strong>CURSOS</strong>
+L2140: d=1 | hasta
+L2141: d=1 | <code>ID_Curso</code> en <strong>INSCRIPCIONES</st
+L2142: d=1 | Activa
+L2143: d=1 | <strong>Exigir integridad referencial</strong> y c
+L2144: d=1 | relación.
+L2145: d=1 | Ahora
+L2146: d=1 | el
+L2147: d=1 | panel muestra el esquema completo N:M resuelto.
+L2148: d=1 | </p>
+L2149: d=2 | <div class="gs-tip">🏆 <strong>Resultado final:</s
+L2150: d=2 | ESTUDIANTES —
+L2151: d=2 | INSCRIPCIONES — CURSOS con líneas "1" a "∞" en cad
+L2152: d=2 | Esto
+L2153: d=2 | permite
+L2154: d=2 | registrar que el Estudiante #1 está inscrito en el
+L2155: d=2 | y el
+L2156: d=2 | Curso
+L2157: d=2 | #5, y
+L2158: d=2 | también que el Curso #3 tiene a los estudiantes #1
+L2159: d=1 | </div>
+L2160: d=0 | </div>
+L2161: d=0 | <label class="gs-check"><input type="checkbox" cla
+L2162: d=0 | Completado</label>
+L2163: d=-1 | </div>
+L2164: d=-1 | 
+L2165: d=0 | <div class="guide-step" data-step="n5">
+L2166: d=0 | <div class="gs-marker gs-marker--purple"><span>5</
+L2167: d=1 | <div class="gs-content">
+L2168: d=1 | <h5>Guardar y Verificar</h5>
+L2169: d=1 | <p>Guarda el diagrama (<kbd>Ctrl + S</kbd>). Para 
+L2170: d=1 | todo
+L2171: d=1 | funciona,
+L2172: d=1 | abre la tabla INSCRIPCIONES en <em>Vista Hoja de d
+L2173: d=1 | e
+L2174: d=1 | intenta
+L2175: d=1 | agregar un registro. El campo <code>ID_Estudiante<
+L2176: d=1 | solo
+L2177: d=1 | aceptará
+L2178: d=1 | IDs
+L2179: d=1 | existentes en ESTUDIANTES, y <code>ID_Curso</code>
+L2180: d=1 | aceptará IDs
+L2181: d=1 | de
+L2182: d=1 | CURSOS. Si ingresas un ID que no existe, Access mo
+L2183: d=1 | error de
+L2184: d=1 | integridad referencial.</p>
+L2185: d=0 | </div>
+L2186: d=0 | <label class="gs-check"><input type="checkbox" cla
+L2187: d=0 | Completado</label>
+L2188: d=-1 | </div>
+L2189: d=-2 | </div>
+L2190: d=-2 | 
+L2191: d=-1 | <div class="info-box info-box--tip mt-20">
+L2192: d=-1 | <span class="info-icon">🎓</span>
+L2193: d=-1 | <p><strong>Resumen del patrón N:M:</strong> Siempr
+L2194: d=-1 | (1) Crea
+L2195: d=-1 | tabla
+L2196: d=-1 | A, (2) Crea tabla B, (3) Crea tabla INTERMEDIA con
+L2197: d=-1 | más sus
+L2198: d=-1 | propios
+L2199: d=-1 | datos, (4) Crea relación 1:N de A a Intermedia, (5
+L2200: d=-1 | Intermedia. ¡Así se resuelve cualquier N:M!</p>
+L2201: d=-2 | </div>
+L2202: d=-3 | </div>
+L2203: d=-3 | 
+L2204: d=-3 | <!-- PARTE 4: EJEMPLO GUIADO FORMULARIOS -->
+L2205: d=-2 | <div class="guide-section border-t-accent pt-28 mt
+L2206: d=-1 | <div class="guide-section-header">
+L2207: d=-1 | <span class="guide-section-icon">📱</span>
+L2208: d=0 | <div>
+L2209: d=0 | <h4 class="guide-section-title">PARTE 4 — Ejemplo 
+L2210: d=0 | Formulario
+L2211: d=0 | con
+L2212: d=0 | Cuadro Combinado</h4>
+L2213: d=0 | <p class="guide-section-sub">Aprende a conectar la
+L2214: d=0 | con las
+L2215: d=0 | llaves
+L2216: d=0 | foráneas para evitar errores de digitación del usu
+L2217: d=-1 | </div>
+L2218: d=-2 | </div>
+L2219: d=-2 | 
+L2220: d=-1 | <div class="info-box info-box--warning mb-24">
+L2221: d=-1 | <span class="info-icon">🎯</span>
+L2222: d=-1 | <p><strong>Escenario:</strong> Has creado la tabla
+L2223: d=-1 | <code>INSCRIPCIONES</code>
+L2224: d=-1 | (con
+L2225: d=-1 | la FK
+L2226: d=-1 | `ID_Estudiante`). Si un usuario digita el ID "5" p
+L2227: d=-1 | 5 no
+L2228: d=-1 | existe,
+L2229: d=-1 | habrá un error. Vamos a cambiar el cuadro de texto
+L2230: d=-1 | <strong>Cuadro
+L2231: d=-1 | Combinado
+L2232: d=-1 | (Lista Desplegable)</strong> para que el usuario s
+L2233: d=-1 | nombre,
+L2234: d=-1 | pero
+L2235: d=-1 | la
+L2236: d=-1 | base de datos guarde el ID invisiblemente.
+L2237: d=-1 | </p>
+L2238: d=-2 | </div>
+L2239: d=-2 | 
+L2240: d=-1 | <div class="guide-steps">
+L2241: d=0 | <div class="guide-step" data-step="f1">
+L2242: d=0 | <div class="gs-marker gs-marker--access"><span>1</
+L2243: d=1 | <div class="gs-content">
+L2244: d=1 | <h5>Generar el Formulario Base</h5>
+L2245: d=1 | <p>Selecciona la tabla <strong>INSCRIPCIONES</stro
+L2246: d=1 | panel
+L2247: d=1 | izquierdo.
+L2248: d=1 | Luego ve a la pestaña <kbd>Crear</kbd> →
+L2249: d=1 | <kbd>Formulario</kbd>.
+L2250: d=1 | Access
+L2251: d=1 | creará un diseño básico automáticamente. Haz clic 
+L2252: d=1 | la
+L2253: d=1 | pestaña
+L2254: d=1 | del
+L2255: d=1 | nuevo formulario y selecciona <strong>Vista Diseño
+L2256: d=1 | </p>
+L2257: d=0 | </div>
+L2258: d=0 | <label class="gs-check"><input type="checkbox" cla
+L2259: d=0 | Completado</label>
+L2260: d=-1 | </div>
+L2261: d=-1 | 
+L2262: d=0 | <div class="guide-step" data-step="f2">
+L2263: d=0 | <div class="gs-marker gs-marker--access"><span>2</
+L2264: d=1 | <div class="gs-content">
+L2265: d=1 | <h5>Eliminar el Campo Textbox Original</h5>
+L2266: d=1 | <p>En el diseño, busca el cuadro de texto correspo
+L2267: d=1 | <code>ID_Estudiante</code>. Haz clic sobre él y pr
+L2268: d=1 | tecla
+L2269: d=1 | <kbd>Suprimir</kbd>. ¡Vamos a reemplazarlo por alg
+L2270: d=1 | mejor!
+L2271: d=1 | </p>
+L2272: d=0 | </div>
+L2273: d=0 | <label class="gs-check"><input type="checkbox" cla
+L2274: d=0 | Completado</label>
+L2275: d=-1 | </div>
+L2276: d=-1 | 
+L2277: d=0 | <div class="guide-step" data-step="f3">
+L2278: d=0 | <div class="gs-marker gs-marker--access"><span>3</
+L2279: d=1 | <div class="gs-content">
+L2280: d=1 | <h5>Insertar el Cuadro Combinado (Combobox)</h5>
+L2281: d=1 | <p>Arriba en la pestaña "Diseño de Formulario", de
+L2282: d=1 | galería de
+L2283: d=1 | <strong>Controles</strong>. Activa el botón de "Va
+L2284: d=1 | mágica" (Usar
+L2285: d=1 | asistentes para controles). Ahora haz clic en el i
+L2286: d=1 | <strong>Cuadro
+L2287: d=1 | Combinado 🔽</strong> y haz clic en el formulario 
+L2288: d=1 | insertarlo.
+L2289: d=1 | </p>
+L2290: d=0 | </div>
+L2291: d=0 | <label class="gs-check"><input type="checkbox" cla
+L2292: d=0 | Completado</label>
+L2293: d=-1 | </div>
+L2294: d=-1 | 
+L2295: d=0 | <div class="guide-step" data-step="f4">
+L2296: d=0 | <div class="gs-marker gs-marker--access"><span>4</
+L2297: d=1 | <div class="gs-content">
+L2298: d=1 | <h5>Configurar el Asistente del Cuadro Combinado</
+L2299: d=1 | <p>El Asistente te guiará con 4 preguntas vitales.
+L2300: d=1 | </p>
+L2301: d=1 | <ul class="pl-20 mt-8 mb-8 text-090 text-text-2 sp
+L2302: d=1 | <li><strong>Paso 1:</strong> Selecciona "Deseo que
+L2303: d=1 | busque
+L2304: d=1 | los
+L2305: d=1 | valores en otra tabla".</li>
+L2306: d=1 | <li><strong>Paso 2:</strong> ¿De qué tabla? Selecc
+L2307: d=1 | tabla
+L2308: d=1 | origen:
+L2309: d=1 | <strong>ESTUDIANTES</strong>.
+L2310: d=1 | </li>
+L2311: d=1 | <li><strong>Paso 3:</strong> Pasa dos campos a la 
+L2312: d=1 | <code>ID_Estudiante</code> (para guardar) y
+L2313: d=1 | <code>NombreEstudiante</code> (para que el usuario
+L2314: d=1 | vea).
+L2315: d=1 | </li>
+L2316: d=1 | <li><strong>Paso 4 (El secreto):</strong> Activa l
+L2317: d=1 | "Ocultar
+L2318: d=1 | la
+L2319: d=1 | columna clave (recomendado)".</li>
+L2320: d=1 | <li><strong>Paso 5:</strong> Selecciona "Almacenar
+L2321: d=1 | en este
+L2322: d=1 | campo" y
+L2323: d=1 | escoge la llave foránea: <strong>ID_Estudiante</st
+L2324: d=1 | (de la
+L2325: d=1 | tabla
+L2326: d=1 | Inscripciones).</li>
+L2327: d=1 | </ul>
+L2328: d=0 | </div>
+L2329: d=0 | <label class="gs-check"><input type="checkbox" cla
+L2330: d=0 | Completado</label>
+L2331: d=-1 | </div>
+L2332: d=-1 | 
+L2333: d=0 | <div class="guide-step" data-step="f5">
+L2334: d=0 | <div class="gs-marker gs-marker--access"><span>5</
+L2335: d=1 | <div class="gs-content">
+L2336: d=1 | <h5>¡Verifica la Magia!</h5>
+L2337: d=1 | <p>Cambia a <strong>Vista Formulario</strong>. Aho
+L2338: d=1 | despliegues
+L2339: d=1 | la
+L2340: d=1 | lista, verás los nombres de los estudiantes. Al el
+L2341: d=1 | Pérez"
+L2342: d=1 | (ejemplo), Access guardará silenciosamente su ID
+L2343: d=1 | autonumérico
+L2344: d=1 | subyacente
+L2345: d=1 | asegurando la <em>Integridad Referencial</em>. ¡Ha
+L2346: d=1 | un
+L2347: d=1 | sistema a
+L2348: d=1 | prueba de errores!</p>
+L2349: d=0 | </div>
+L2350: d=0 | <label class="gs-check"><input type="checkbox" cla
+L2351: d=0 | Completado</label>
+L2352: d=-1 | </div>
+L2353: d=-2 | </div>
+L2354: d=-2 | 
+L2355: d=-2 | <!-- PARTE 5: EJEMPLO GUIADO INFORMES -->
+L2356: d=-1 | <div class="guide-section border-t-blue pt-28 mt-3
+L2357: d=0 | <div class="guide-section-header">
+L2358: d=0 | <span class="guide-section-icon">📑</span>
+L2359: d=1 | <div>
+L2360: d=1 | <h4 class="guide-section-title">PARTE 5 — Ejemplo 
+L2361: d=1 | Respaldando la
+L2362: d=1 | Toma de
+L2363: d=1 | Decisiones con Informes y Agrupación</h4>
+L2364: d=1 | <p class="guide-section-sub">Transforma los datos 
+L2365: d=1 | documento
+L2366: d=1 | profesional, listo para imprimir o enviar en PDF a
+L2367: d=0 | </div>
+L2368: d=-1 | </div>
+L2369: d=-1 | 
+L2370: d=0 | <div class="info-box info-box--tip mb-24">
+L2371: d=0 | <span class="info-icon">📊</span>
+L2372: d=0 | <p><strong>Escenario:</strong> La gerencia solicit
+L2373: d=0 | de
+L2374: d=0 | Inventario Valorado</strong> agrupado por
+L2375: d=0 | <strong>Categoría</strong>. El
+L2376: d=0 | reporte debe mostrar el costo total de existencias
+L2377: d=0 | (Electrónica, Aseo, etc.) y un Gran Total al final
+L2378: d=0 | </p>
+L2379: d=-1 | </div>
+L2380: d=-1 | 
+L2381: d=0 | <div class="guide-steps">
+L2382: d=1 | <div class="guide-step" data-step="i1">
+L2383: d=1 | <div class="gs-marker gs-marker--access"><span>1</
+L2384: d=2 | <div class="gs-content">
+L2385: d=2 | <h5>Preparar el Origen de Datos (Record Source)</h
+L2386: d=2 | <p>Recuerda la teoría: <em>Un buen Informe nace de
+L2387: d=2 | Consulta</em>.
+L2388: d=2 | Ve a
+L2389: d=2 | <kbd>Crear</kbd> → <kbd>Diseño de Consulta</kbd>. 
+L2390: d=2 | tablas
+L2391: d=2 | "CURSOS", "INSCRIPCIONES" y "ESTUDIANTES". Arrastr
+L2392: d=2 | campos
+L2393: d=2 | <code>NombreCurso</code> y <code>NombreEstudiante<
+L2394: d=2 | la
+L2395: d=2 | cuadrícula
+L2396: d=2 | inferior. Guarda esta consulta como
+L2397: d=2 | <strong>"Q_Listado_Cursos"</strong>.
+L2398: d=2 | </p>
+L2399: d=1 | </div>
+L2400: d=1 | <label class="gs-check"><input type="checkbox" cla
+L2401: d=1 | Completado</label>
+L2402: d=0 | </div>
+L2403: d=0 | 
+L2404: d=1 | <div class="guide-step" data-step="i2">
+L2405: d=1 | <div class="gs-marker gs-marker--access"><span>2</
+L2406: d=2 | <div class="gs-content">
+L2407: d=2 | <h5>Lanzar el Asistente para Informes</h5>
+L2408: d=2 | <p>Con tu consulta nueva seleccionada en el panel 
+L2409: d=2 | (Q_Listado_Cursos),
+L2410: d=2 | ve a la pestaña <kbd>Crear</kbd> y haz clic en
+L2411: d=2 | <strong>Asistente
+L2412: d=2 | para
+L2413: d=2 | Informes</strong>. Pasa todos los campos disponibl
+L2414: d=2 | cuadro
+L2415: d=2 | de la
+L2416: d=2 | derecha ("Campos seleccionados").
+L2417: d=2 | </p>
+L2418: d=1 | </div>
+L2419: d=1 | <label class="gs-check"><input type="checkbox" cla
+L2420: d=1 | Completado</label>
+L2421: d=0 | </div>
+L2422: d=0 | 
+L2423: d=1 | <div class="guide-step" data-step="i3">
+L2424: d=1 | <div class="gs-marker gs-marker--access"><span>3</
+L2425: d=2 | <div class="gs-content">
+L2426: d=2 | <h5>Configurar Niveles de Agrupamiento</h5>
+L2427: d=2 | <p>Esta es la pantalla más crucial del asistente: 
+L2428: d=2 | agregar
+L2429: d=2 | algún
+L2430: d=2 | nivel de agrupamiento?"</em>. Selecciona
+L2431: d=2 | <strong>NombreCurso</strong> y
+L2432: d=2 | haz clic en la flecha <kbd>></kbd>. Verás en el di
+L2433: d=2 | vista
+L2434: d=2 | previa
+L2435: d=2 | cómo <code>NombreCurso</code> sube de jerarquía, q
+L2436: d=2 | los
+L2437: d=2 | estudiantes
+L2438: d=2 | tabulados debajo de él.
+L2439: d=2 | </p>
+L2440: d=1 | </div>
+L2441: d=1 | <label class="gs-check"><input type="checkbox" cla
+L2442: d=1 | Completado</label>
+L2443: d=0 | </div>
+L2444: d=0 | 
+L2445: d=1 | <div class="guide-step" data-step="i4">
+L2446: d=1 | <div class="gs-marker gs-marker--access"><span>4</
+L2447: d=2 | <div class="gs-content">
+L2448: d=2 | <h5>Ordenar y Personalizar Diseño</h5>
+L2449: d=2 | <p>En el siguiente paso, elige ordenar los registr
+L2450: d=2 | <strong>NombreEstudiante</strong> en modo Ascenden
+L2451: d=2 | elige
+L2452: d=2 | la
+L2453: d=2 | distribución en <strong>"Pasos"</strong> o "Bloque
+L2454: d=2 | le dará
+L2455: d=2 | ese
+L2456: d=2 | look
+L2457: d=2 | corporativo profesional! Finaliza el asistente y m
+L2458: d=2 | reporte
+L2459: d=2 | generado.
+L2460: d=2 | </p>
+L2461: d=1 | </div>
+L2462: d=1 | <label class="gs-check"><input type="checkbox" cla
+L2463: d=1 | Completado</label>
+L2464: d=0 | </div>
+L2465: d=0 | 
+L2466: d=1 | <div class="guide-step" data-step="i5">
+L2467: d=1 | <div class="gs-marker gs-marker--access"><span>5</
+L2468: d=2 | <div class="gs-content">
+L2469: d=2 | <h5>Toque Maestro: Totales (Vista Diseño)</h5>
+L2470: d=2 | <p>Haz clic derecho en tu informe y entra a <stron
+L2471: d=2 | Diseño</strong>.
+L2472: d=2 | Ve al
+L2473: d=2 | botón <em>Agrupar y Ordenar</em> (arriba). En la b
+L2474: d=2 | inferior que
+L2475: d=2 | se
+L2476: d=2 | abre,
+L2477: d=2 | dale a <code>Más ></code> junto a NombreCurso. Cam
+L2478: d=2 | sección
+L2479: d=2 | de
+L2480: d=2 | pie de
+L2481: d=2 | página" a <strong>"con una sección de pie de
+L2482: d=2 | página"</strong>. ¡Allí
+L2483: d=2 | puedes
+L2484: d=2 | arrastrar un Cuadro de Texto de la galería para po
+L2485: d=2 | fórmula
+L2486: d=2 | <code>=Cuenta([NombreEstudiante])</code> y mostrar
+L2487: d=2 | por
+L2488: d=2 | curso!
+L2489: d=2 | </p>
+L2490: d=1 | </div>
+L2491: d=0 | </div>
+L2492: d=-1 | </div>
+L2493: d=-2 | </div> <!-- CIERRE CORRECTO DE simulator-container
+L2494: d=-3 | </div> <!-- CIERRE CORRECTO DE tab-panel m1-practi
+L2495: d=-3 | 
+L2496: d=-3 | <!-- Tab: Entregables (M1) -->
+L2497: d=-2 | <div class="tab-panel" id="m1-entregables" role="t
+L2498: d=-1 | <div class="simulator-container">
+L2499: d=0 | <div class="sim-header">
+L2500: d=0 | <h3>📦 Entregables del Módulo Access</h3>
+L2501: d=0 | <p>Tu misión final. Sigue las instrucciones del pr
+L2502: d=0 | la
+L2503: d=0 | base de datos y adjunta tus evidencias para certif
+L2504: d=-1 | </div>
+L2505: d=-1 | 
+L2506: d=-1 | <!-- PROYECTO INTEGRADOR M1 -->
+L2507: d=0 | <div class="evidence-card" id="m1-proyecto">
+L2508: d=1 | <div class="evidence-header">
+L2509: d=1 | <span class="evidence-icon">🚀</span>
+L2510: d=1 | <h4 class="evidence-title">Proyecto Integrador: Ge
+L2511: d=1 | Hospitalarios</h4>
+L2512: d=0 | </div>
+L2513: d=0 | <p class="text-text-2 text-095 mb-24">Aplicaremos 
+L2514: d=0 | una
+L2515: d=0 | base de datos robusta que controle el inventario d
+L2516: d=0 | asegurando la integridad de la data.</p>
+L2517: d=0 | 
+L2518: d=1 | <div class="guide-steps">
+L2519: d=2 | <div class="guide-step" data-step="m1p1">
+L2520: d=2 | <div class="gs-marker gs-marker--access"><span>1</
+L2521: d=3 | <div class="gs-content">
+L2522: d=3 | <h5>Diseño del Modelo: Suministros y Proveedores</
+L2523: d=3 | <p>Identifica las entidades: <code>PROVEEDORES</co
+L2524: d=3 | Nombre,
+L2525: d=3 | Teléfono) y <code>INSUMOS</code> (Código, Descripc
+L2526: d=3 | Precio,
+L2527: d=3 | ID_Proveedor). Considera la relación natural (1:N)
+L2528: d=2 | </div>
+L2529: d=2 | <label class="gs-check"><input type="checkbox" cla
+L2530: d=2 | data-guide="m1p1">
+L2531: d=2 | Completado</label>
+L2532: d=1 | </div>
+L2533: d=1 | 
+L2534: d=2 | <div class="guide-step" data-step="m1p2">
+L2535: d=2 | <div class="gs-marker gs-marker--access"><span>2</
+L2536: d=3 | <div class="gs-content">
+L2537: d=3 | <h5>Creación de Tablas y Claves</h5>
+L2538: d=3 | <p>Crea ambas tablas en Access. Asegúrate de que
+L2539: d=3 | <code>NIT</code>
+L2540: d=3 | sea PK (Texto Corto) en Proveedores y <code>Código
+L2541: d=3 | sea PK
+L2542: d=3 | en Insumos. Agrega <code>ID_Proveedor</code> (Text
+L2543: d=3 | como
+L2544: d=3 | FK en Insumos.
+L2545: d=3 | </p>
+L2546: d=2 | </div>
+L2547: d=2 | <label class="gs-check"><input type="checkbox" cla
+L2548: d=2 | data-guide="m1p2">
+L2549: d=2 | Completado</label>
+L2550: d=1 | </div>
+L2551: d=1 | 
+L2552: d=2 | <div class="guide-step" data-step="m1p3">
+L2553: d=2 | <div class="gs-marker gs-marker--access"><span>3</
+L2554: d=3 | <div class="gs-content">
+L2555: d=3 | <h5>Reglas de Validación Avanzadas</h5>
+L2556: d=3 | <p>En Insumos, al campo <code>Precio</code> agréga
+L2557: d=3 | de
+L2558: d=3 | Validación: <code>>0</code> y un Texto: "Debe ser 
+L2559: d=3 | cero".
+L2560: d=3 | Al Teléfono del Proveedor añádele una <strong>Másc
+L2561: d=3 | Entrada</strong>: <code>\(999\) 0000000;0;_</code>
+L2562: d=2 | </div>
+L2563: d=2 | <label class="gs-check"><input type="checkbox" cla
+L2564: d=2 | data-guide="m1p3">
+L2565: d=2 | Completado</label>
+L2566: d=1 | </div>
+L2567: d=1 | 
+L2568: d=2 | <div class="guide-step" data-step="m1p4">
+L2569: d=2 | <div class="gs-marker gs-marker--access"><span>4</
+L2570: d=3 | <div class="gs-content">
+L2571: d=3 | <h5>Relaciones e Integridad Referencial</h5>
+L2572: d=3 | <p>Abre Herramientas de BD -> Relaciones. Arrastra
+L2573: d=3 | <code>NIT</code>
+L2574: d=3 | a <code>ID_Proveedor</code>. Marca "Exigir integri
+L2575: d=3 | referencial", "Actualizar en cascada" y "Eliminar 
+L2576: d=3 | cascada".
+L2577: d=3 | </p>
+L2578: d=2 | </div>
+L2579: d=2 | <label class="gs-check"><input type="checkbox" cla
+L2580: d=2 | data-guide="m1p4">
+L2581: d=2 | Completado</label>
+L2582: d=1 | </div>
+L2583: d=1 | 
+L2584: d=2 | <div class="guide-step" data-step="m1p5">
+L2585: d=2 | <div class="gs-marker gs-marker--access"><span>5</
+L2586: d=3 | <div class="gs-content">
+L2587: d=3 | <h5>Formulario Auto-Generado y Prueba Integral</h5
+L2588: d=3 | <p>Selecciona la tabla Proveedores, ve a <kbd>Crea
+L2589: d=3 | <kbd>Formulario</kbd>. Ingresa un proveedor. Poste
+L2590: d=3 | intenta cargarle un insumo directamente a un prove
+L2591: d=3 | NO
+L2592: d=3 | existe. Observa cómo Access bloquea la acción. Tom
+L2593: d=3 | de
+L2594: d=3 | pantalla del mensaje de error.
+L2595: d=3 | </p>
+L2596: d=3 | <a href="https://drive.google.com" target="_blank"
+L2597: d=3 | class="upload-cta">
+L2598: d=3 | <span class="upload-cta-icon">📤</span>
+L2599: d=3 | Subir Evidencias a Drive
+L2600: d=3 | </a>
+L2601: d=4 | <div class="folder-path">📁 TGA-Digital / Modulo 1
+L2602: d=3 | TuNombre /</div>
+L2603: d=2 | </div>
+L2604: d=1 | </div>
+L2605: d=0 | </div>
+L2606: d=-1 | </div>
+L2607: d=-2 | </div>
+L2608: d=-3 | </div>
+L2609: d=-3 | 
+L2610: d=-3 | <!-- ══ TAB: TEMAS AVANZADOS DE ACCESS ══ -->
+L2611: d=-2 | <div class="tab-panel" id="m1-avanzado" role="tabp
+L2612: d=-1 | <div class="theory-grid">
+L2613: d=-1 | 
+L2614: d=-1 | <!-- ─── 1. CONDICIONALES / EXPRESIONES ─── -->
+L2615: d=0 | <div class="theory-card theory-card--full border-l
+L2616: d=0 | <h3>⚡ Expresiones Condicionales en Access</h3>
+L2617: d=0 | <p>Access usa la función <strong>SiInm()</strong> 
+L2618: d=0 | Excel) para
+L2619: d=0 | evaluar condiciones directamente en campos calcula
+L2620: d=0 | formularios
+L2621: d=0 | e informes. Su sintaxis es:</p>
+L2622: d=1 | <div class="info-box info-box--tip mt-15">
+L2623: d=1 | <span class="info-icon">📐</span>
+L2624: d=2 | <div>
+L2625: d=2 | <code>SiInm(<em>condición</em>; <em>valor_si_verda
+L2626: d=2 | <p class="mt-8 text-095">Ejemplo:
+L2627: d=2 | <code>SiInm([Precio]&gt;=100000; &quot;Premium&quo
+L2628: d=2 | </p>
+L2629: d=1 | </div>
+L2630: d=0 | </div>
+L2631: d=1 | <div class="datatypes-grid mt-15">
+L2632: d=2 | <div class="datatype-item">
+L2633: d=2 | <span class="dt-icon">🔀</span>
+L2634: d=2 | <span class="dt-name">SiInm() Simple</span>
+L2635: d=2 | <span class="dt-desc">Evalúa una sola condición. E
+L2636: d=2 | <code>SiInm([Stock]=0; &quot;Agotado&quot;; &quot;
+L2637: d=1 | </div>
+L2638: d=2 | <div class="datatype-item">
+L2639: d=2 | <span class="dt-icon">🔀🔀</span>
+L2640: d=2 | <span class="dt-name">SiInm() Anidado</span>
+L2641: d=2 | <span class="dt-desc">Múltiples condiciones. Ej:
+L2642: d=2 | <code>SiInm([Nota]&gt;=90;&quot;A&quot;;SiInm([Not
+L2643: d=1 | </div>
+L2644: d=2 | <div class="datatype-item">
+L2645: d=2 | <span class="dt-icon">📊</span>
+L2646: d=2 | <span class="dt-name">SiInm() con fechas</span>
+L2647: d=2 | <span class="dt-desc">Ej:
+L2648: d=2 | <code>SiInm([FechaVence]&lt;Fecha();&quot;Vencido&
+L2649: d=1 | </div>
+L2650: d=2 | <div class="datatype-item">

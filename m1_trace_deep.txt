@@ -1,0 +1,290 @@
+L1520: d=3 | <div class="gs-content">
+L1521: d=3 | <h5>Abrir Access y Crear Archivo</h5>
+L1522: d=3 | <p>Abre Microsoft Access. En la pantalla inicial, 
+L1523: d=3 | <strong>Base de
+L1524: d=3 | datos del escritorio en blanco</strong>. Asigna el
+L1525: d=3 | <code>drogueria</code> y haz clic en <kbd>Crear</k
+L1526: d=3 | </p>
+L1527: d=4 | <div class="gs-tip">💡 En SQL puro esto equivaldrí
+L1528: d=4 | <code>CREATE DATABASE drogueria;</code>
+L1529: d=3 | </div>
+L1555: d=3 | <div class="gs-content">
+L1556: d=3 | <h5>Abrir Vista Diseño</h5>
+L1557: d=3 | <p>En la cinta de opciones, ve a la pestaña <kbd>C
+L1558: d=3 | en
+L1559: d=3 | <kbd>Diseño de tabla</kbd>. Se abrirá una cuadrícu
+L1560: d=3 | columnas: <em>Nombre del campo</em>, <em>Tipo de d
+L1561: d=3 | <em>Descripción</em>.
+L1562: d=3 | </p>
+L1563: d=4 | <div class="gs-tip">💡 NO uses "Tabla" desde la pe
+L1564: d=4 | abre la
+L1565: d=4 | vista Hoja de datos, que es menos profesional para
+L1566: d=3 | estructura.</div>
+L1574: d=3 | <div class="gs-content">
+L1575: d=3 | <h5>Definir la Llave Primaria (PK)</h5>
+L1576: d=3 | <p>En la primera fila escribe <code>ID_Cliente</co
+L1577: d=3 | campo". En
+L1578: d=3 | "Tipo de datos" selecciona <strong>Autonumérico</s
+L1579: d=3 | clic
+L1580: d=3 | derecho sobre el selector de fila (▶) y elige <str
+L1581: d=3 | principal</strong> — o usa el botón 🔑 en la cinta
+L1582: d=3 | ícono de
+L1583: d=3 | llave aparecer en esa fila.</p>
+L1584: d=4 | <div class="gs-tip">⭐ El Autonumérico asigna IDs a
+L1585: d=4 | 3...)
+L1586: d=4 | sin que tengas que escribirlos. Nunca se repite, p
+L1587: d=3 | </div>
+L1595: d=3 | <div class="gs-content">
+L1596: d=3 | <h5>Agregar los demás campos</h5>
+L1597: d=3 | <p>En las filas siguientes agrega:</p>
+L1598: d=3 | <table class="gs-table">
+L1599: d=3 | <thead>
+L1600: d=3 | <tr>
+L1601: d=3 | <th>Nombre del Campo</th>
+L1602: d=3 | <th>Tipo de Dato</th>
+L1603: d=3 | <th>Propósito</th>
+L1604: d=3 | </tr>
+L1605: d=3 | </thead>
+L1606: d=3 | <tbody>
+L1607: d=3 | <tr>
+L1608: d=3 | <td><code>NombreCliente</code></td>
+L1609: d=3 | <td>Texto corto</td>
+L1610: d=3 | <td>Nombre completo</td>
+L1611: d=3 | </tr>
+L1612: d=3 | <tr>
+L1613: d=3 | <td><code>NIT</code></td>
+L1614: d=3 | <td>Texto corto</td>
+L1615: d=3 | <td>Número fiscal (texto, no número)</td>
+L1616: d=3 | </tr>
+L1617: d=3 | <tr>
+L1618: d=3 | <td><code>Ciudad</code></td>
+L1619: d=3 | <td>Texto corto</td>
+L1620: d=3 | <td>Ciudad de residencia</td>
+L1621: d=3 | </tr>
+L1622: d=3 | <tr>
+L1623: d=3 | <td><code>Telefono</code></td>
+L1624: d=3 | <td>Texto corto</td>
+L1625: d=3 | <td>Teléfono (texto por guiones)</td>
+L1626: d=3 | </tr>
+L1627: d=3 | <tr>
+L1628: d=3 | <td><code>FechaRegistro</code></td>
+L1629: d=3 | <td>Fecha/Hora</td>
+L1630: d=3 | <td>Cuando ingresó al sistema</td>
+L1631: d=3 | </tr>
+L1632: d=3 | </tbody>
+L1633: d=3 | </table>
+L1634: d=4 | <div class="gs-tip">⚠️ El NIT y el Teléfono usan <
+L1635: d=4 | corto</strong>
+L1636: d=4 | aunque parezcan números, porque nunca harás operac
+L1637: d=4 | con
+L1638: d=3 | ellos y pueden tener guiones o espacios.</div>
+L1646: d=3 | <div class="gs-content">
+L1647: d=3 | <h5>Configurar Propiedades de Campo (Panel Inferio
+L1648: d=3 | <p>Al hacer clic en cualquier campo, el panel infe
+L1649: d=3 | propiedades
+L1650: d=3 | avanzadas. Las más importantes:</p>
+L1651: d=4 | <div class="gs-props">
+L1652: d=5 | <div class="gs-prop"><strong>Tamaño del campo:</st
+L1653: d=5 | corto,
+L1654: d=5 | define el máximo de caracteres (ej: 50 para Nombre
+L1655: d=4 | </div>
+L1656: d=5 | <div class="gs-prop"><strong>Requerido:</strong> C
+L1657: d=5 | <em>Sí</em> para
+L1658: d=5 | campos obligatorios (ej: NombreCliente no puede qu
+L1659: d=4 | </div>
+L1660: d=5 | <div class="gs-prop"><strong>Indexado:</strong> Si
+L1661: d=5 | frecuentemente por
+L1662: d=4 | ese campo, actívalo para acelerar consultas.</div>
+L1663: d=5 | <div class="gs-prop"><strong>Valor predeterminado:
+L1664: d=5 | poner
+L1665: d=5 | <code>=Fecha()</code> en FechaRegistro para que se
+L1666: d=5 | automáticamente
+L1667: d=5 | hoy.
+L1668: d=4 | </div>
+L1669: d=3 | </div>
+L1677: d=3 | <div class="gs-content">
+L1678: d=3 | <h5>Guardar la Tabla</h5>
+L1679: d=3 | <p>Presiona <kbd>Ctrl + S</kbd> o cierra la pestañ
+L1680: d=3 | nombre
+L1681: d=3 | — escribe <strong>CLIENTES</strong> (mayúsculas po
+L1682: d=3 | clic en
+L1683: d=3 | <strong>Aceptar</strong>. La tabla aparecerá en el
+L1684: d=3 | Navegación
+L1685: d=3 | izquierdo.
+L1686: d=3 | </p>
+L1687: d=4 | <div class="gs-tip">✅ ¡Primera tabla creada! Esto 
+L1688: d=4 | crear
+L1689: d=4 | tu <code>CREATE TABLE Producto</code> en base de d
+L1690: d=4 | proceso
+L1691: d=3 | siempre que necesites nuevas tablas.</div>
+L1737: d=3 | <div class="gs-tip">⚠️ CRÍTICO: El campo que recib
+L1738: d=3 | (idTipoFruta) NO puede ser Autonumérico, debe ser 
+L1739: d=3 | Entero
+L1748: d=3 | <div class="info-box info-box--info mb-20">
+L1749: d=3 | <span class="info-icon">📌</span>
+L1750: d=3 | <p><strong>Preparación de la tabla PEDIDOS:</stron
+L1751: d=3 | PEDIDOS con
+L1752: d=3 | Vista
+L1753: d=3 | Diseño y agrega estos campos: <code>ID_Pedido</cod
+L1754: d=3 | (Autonumérico, PK),
+L1755: d=3 | <code>ID_Cliente</code> (<strong>Número · Entero
+L1756: d=3 | largo</strong>),
+L1757: d=3 | <code>FechaPedido</code> (Fecha/Hora), <code>Total
+L1758: d=3 | (Moneda). El
+L1759: d=3 | campo
+L1760: d=3 | <code>ID_Cliente</code> en PEDIDOS es la <em>clave
+L1761: d=3 | que enlazará
+L1762: d=3 | con
+L1763: d=3 | CLIENTES.
+L1764: d=3 | </p>
+L1774: d=3 | <div class="gs-content">
+L1775: d=3 | <h5>Abrir el Panel de Relaciones</h5>
+L1776: d=3 | <p>En la cinta de opciones, ve a la pestaña
+L1777: d=3 | <kbd>Herramientas de base de
+L1778: d=3 | datos</kbd> → haz clic en <kbd>Relaciones</kbd>. S
+L1779: d=3 | abrirá un
+L1780: d=3 | panel
+L1781: d=3 | en
+L1782: d=3 | blanco (o con tablas previas si ya habías trabajad
+L1783: d=3 | <strong>Cierra
+L1784: d=3 | todas
+L1785: d=3 | las tablas antes de abrir Relaciones.</strong>
+L1786: d=3 | </p>
+L1794: d=3 | <div class="gs-content">
+L1795: d=3 | <h5>Agregar las Tablas al Panel</h5>
+L1796: d=3 | <p>En el cuadro "Mostrar tabla" que aparece automá
+L1797: d=3 | haz doble
+L1798: d=3 | clic
+L1799: d=3 | sobre <strong>CLIENTES</strong> y luego sobre
+L1800: d=3 | <strong>PEDIDOS</strong>.
+L1801: d=3 | Haz
+L1802: d=3 | clic en <kbd>Cerrar</kbd>. Verás ambas tablas en l
+L1803: d=3 | superior
+L1804: d=3 | con
+L1805: d=3 | una
+L1806: d=3 | línea de unión entre ellas.
+L1807: d=3 | </p>
+L1808: d=4 | <div class="gs-tip">💡 Puedes reposicionar las tab
+L1809: d=4 | del panel
+L1810: d=4 | arrastrándolas por su barra de título para que que
+L1811: d=4 | ordenadas.
+L1812: d=3 | </div>
+L1820: d=3 | <div class="gs-content">
+L1821: d=3 | <h5>Crear el Vínculo (Arrastrar campos)</h5>
+L1822: d=3 | <p>Este es el paso clave. <strong>Haz clic sobre
+L1823: d=3 | <code>ID_Cliente</code>
+L1824: d=3 | en
+L1825: d=3 | la
+L1826: d=3 | tabla CLIENTES</strong> (no sueltes el mouse) y
+L1827: d=3 | <strong>arrástralo</strong> hasta el campo
+L1828: d=3 | <code>ID_Cliente</code>
+L1829: d=3 | en la
+L1830: d=3 | tabla PEDIDOS. Cuando sueltes, aparecerá el cuadro
+L1831: d=3 | diálogo
+L1832: d=3 | "Modificar
+L1833: d=3 | relaciones".
+L1834: d=3 | </p>
+L1835: d=4 | <div class="gs-tip">⚠️ Siempre debes arrastrar des
+L1836: d=4 | tabla PADRE
+L1837: d=4 | (CLIENTES,
+L1838: d=4 | lado "1") hacia la tabla HIJO (PEDIDOS, lado "N").
+L1839: d=4 | haces al
+L1840: d=4 | revés
+L1841: d=3 | funcionará, pero la convención es padre → hijo.</d
+L1849: d=3 | <div class="gs-content">
+L1850: d=3 | <h5>Configurar Integridad Referencial</h5>
+L1851: d=3 | <p>En el cuadro "Modificar relaciones" verás tres 
+L1852: d=3 | importantes:
+L1853: d=3 | </p>
+L1854: d=4 | <div class="gs-props">
+L1855: d=5 | <div class="gs-prop gs-prop--required"><strong>✅ E
+L1856: d=5 | integridad
+L1857: d=5 | referencial:</strong> SIEMPRE actívala.
+L1858: d=5 | Garantiza que no
+L1859: d=5 | puedas
+L1860: d=5 | agregar un pedido con un ID_Cliente que no exista 
+L1861: d=5 | CLIENTES.
+L1862: d=4 | </div>
+L1863: d=5 | <div class="gs-prop"><strong>Actualizar en cascada
+L1864: d=5 | campos
+L1865: d=5 | relacionados:</strong> Si cambias el ID de un
+L1866: d=5 | cliente en
+L1867: d=5 | CLIENTES,
+L1868: d=5 | automáticamente se actualiza en todos sus pedidos.
+L1869: d=4 | </div>
+L1870: d=5 | <div class="gs-prop"><strong>Eliminar en cascada
+L1871: d=5 | registros
+L1872: d=5 | relacionados:</strong> Si eliminas un cliente,
+L1873: d=5 | elimina
+L1874: d=5 | también
+L1875: d=5 | todos
+L1876: d=4 | sus pedidos. Úsalo con precaución.</div>
+L1877: d=3 | </div>
+L1878: d=3 | <p>Haz clic derecho sobre la línea de unión y sele
+L1879: d=3 | <strong>Exigir
+L1880: d=3 | integridad referencial</strong>. Luego haz clic en
+L1881: d=3 | el botón
+L1882: d=3 | <strong>Crear</strong>. Verás
+L1883: d=3 | una
+L1884: d=3 | línea que
+L1885: d=3 | une las dos tablas con <strong>"1"</strong> en el 
+L1886: d=3 | de CLIENTES y
+L1887: d=3 | <strong>"∞"</strong> en el lado de PEDIDOS.
+L1888: d=3 | </p>
+L1896: d=3 | <div class="gs-content">
+L1897: d=3 | <h5>Guardar el Diagrama de Relaciones</h5>
+L1898: d=3 | <p>Presiona <kbd>Ctrl + S</kbd> o cierra el panel 
+L1899: d=3 | guardar. ¡La
+L1900: d=3 | relación
+L1901: d=3 | 1:N está creada! Ahora cuando agregues registros a
+L1902: d=3 | PEDIDOS, el campo
+L1903: d=3 | <code>ID_Cliente</code> solo aceptará valores que
+L1904: d=3 | existan en
+L1905: d=3 | CLIENTES.
+L1906: d=3 | </p>
+L1907: d=4 | <div class="gs-tip">🎯 <strong>Resultado visible:<
+L1908: d=4 | En la tabla
+L1909: d=4 | PEDIDOS,
+L1910: d=4 | si haces clic en el campo ID_Cliente, Access puede
+L1911: d=4 | mostrarte una
+L1912: d=4 | lista
+L1913: d=4 | desplegable con los clientes existentes si configu
+L1914: d=4 | una Lista de
+L1915: d=4 | búsqueda.
+L1916: d=3 | </div>
+L2107: d=3 | <div>
+L2108: d=3 | <strong>Teoría en Acción (PK a FK):</strong>
+L2109: d=3 | <p class="text-085 mt-4">Al arrastrar la línea, es
+L2110: d=3 | conectando
+L2111: d=3 | la
+L2112: d=3 | <strong>Llave Primaria (PK)</strong> de la tabla
+L2113: d=3 | PADRE
+L2114: d=3 | (`ID_Estudiante` en ESTUDIANTES) con la
+L2115: d=3 | <strong>Llave
+L2116: d=3 | Foránea
+L2117: d=3 | (FK)</strong> de la tabla HIJO (en
+L2118: d=3 | INSCRIPCIONES). Esto
+L2119: d=3 | crea
+L2120: d=3 | la
+L2121: d=3 | dependencia estricta 1 a Muchos.
+L2122: d=3 | </p>
+L2517: d=3 | <div class="gs-content">
+L2518: d=3 | <h5>Diseño del Modelo: Suministros y Proveedores</
+L2519: d=3 | <p>Identifica las entidades: <code>PROVEEDORES</co
+L2520: d=3 | Nombre,
+L2521: d=3 | Teléfono) y <code>INSUMOS</code> (Código, Descripc
+L2522: d=3 | Precio,
+L2523: d=3 | ID_Proveedor). Considera la relación natural (1:N)
+L2531: d=3 | <div class="gs-content">
+L2532: d=3 | <h5>Creación de Tablas y Claves</h5>
+L2533: d=3 | <p>Crea ambas tablas en Access. Asegúrate de que
+L2534: d=3 | <code>NIT</code>
+L2535: d=3 | sea PK (Texto Corto) en Proveedores y <code>Código
+L2536: d=3 | sea PK
+L2537: d=3 | en Insumos. Agrega <code>ID_Proveedor</code> (Text
+L2538: d=3 | como
+L2539: d=3 | FK en Insumos.
+L2540: d=3 | </p>
+L2548: d=3 | <div class="gs-content">
+L2549: d=3 | <h5>Reglas de Validación Avanzadas</h5>
+L2550: d=3 | <p>En Insumos, al campo <code>Precio</code> agréga

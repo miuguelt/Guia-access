@@ -1990,1012 +1990,1012 @@
 2489: [7]                                         </p>
 2490: [7]                                     </div>
 2491: [6]                                 </div>
-2492: [5]                             </div> <!-- Fin guide-container -->
-2493: [4]                         </div> <!-- Fin tab-panel m1-practica -->
-2494: [3] 
-2495: [3]                         <!-- Tab: Entregables (M1) -->
-2496: [3]                         <div class="tab-panel" id="m1-entregables" role="tabpanel" aria-labelledby="tab-m1-ent">
-2497: [4]                             <div class="simulator-container">
-2498: [5]                                 <div class="sim-header">
-2499: [6]                                     <h3>📦 Entregables del Módulo Access</h3>
-2500: [6]                                     <p>Tu misión final. Sigue las instrucciones del proyecto integrador, genera
-2501: [6]                                         la
-2502: [6]                                         base de datos y adjunta tus evidencias para certificar este nivel.</p>
-2503: [6]                                 </div>
-2504: [5] 
-2505: [5]                                 <!-- PROYECTO INTEGRADOR M1 -->
-2506: [5]                                 <div class="evidence-card" id="m1-proyecto">
-2507: [6]                                     <div class="evidence-header">
-2508: [7]                                         <span class="evidence-icon">🚀</span>
-2509: [7]                                         <h4 class="evidence-title">Proyecto Integrador: Gestión de Suministros
-2510: [7]                                             Hospitalarios</h4>
-2511: [7]                                     </div>
-2512: [6]                                     <p class="text-text-2 text-095 mb-24">Aplicaremos lo aprendido para crear
-2513: [6]                                         una
-2514: [6]                                         base de datos robusta que controle el inventario de insumos médicos,
-2515: [6]                                         asegurando la integridad de la data.</p>
-2516: [6] 
-2517: [6]                                     <div class="guide-steps">
-2518: [7]                                         <div class="guide-step" data-step="m1p1">
-2519: [8]                                             <div class="gs-marker gs-marker--access"><span>1</span></div>
-2520: [8]                                             <div class="gs-content">
-2521: [9]                                                 <h5>Diseño del Modelo: Suministros y Proveedores</h5>
-2522: [9]                                                 <p>Identifica las entidades: <code>PROVEEDORES</code> (NIT,
-2523: [9]                                                     Nombre,
-2524: [9]                                                     Teléfono) y <code>INSUMOS</code> (Código, Descripción,
-2525: [9]                                                     Precio,
-2526: [9]                                                     ID_Proveedor). Considera la relación natural (1:N).</p>
-2527: [9]                                             </div>
-2528: [8]                                             <label class="gs-check"><input type="checkbox" class="guide-chk"
-2529: [8]                                                     data-guide="m1p1">
-2530: [8]                                                 Completado</label>
-2531: [8]                                         </div>
-2532: [7] 
-2533: [7]                                         <div class="guide-step" data-step="m1p2">
-2534: [8]                                             <div class="gs-marker gs-marker--access"><span>2</span></div>
-2535: [8]                                             <div class="gs-content">
-2536: [9]                                                 <h5>Creación de Tablas y Claves</h5>
-2537: [9]                                                 <p>Crea ambas tablas en Access. Asegúrate de que
-2538: [9]                                                     <code>NIT</code>
-2539: [9]                                                     sea PK (Texto Corto) en Proveedores y <code>Código</code>
-2540: [9]                                                     sea PK
-2541: [9]                                                     en Insumos. Agrega <code>ID_Proveedor</code> (Texto Corto)
-2542: [9]                                                     como
-2543: [9]                                                     FK en Insumos.
-2544: [9]                                                 </p>
-2545: [9]                                             </div>
-2546: [8]                                             <label class="gs-check"><input type="checkbox" class="guide-chk"
-2547: [8]                                                     data-guide="m1p2">
-2548: [8]                                                 Completado</label>
-2549: [8]                                         </div>
-2550: [7] 
-2551: [7]                                         <div class="guide-step" data-step="m1p3">
-2552: [8]                                             <div class="gs-marker gs-marker--access"><span>3</span></div>
-2553: [8]                                             <div class="gs-content">
-2554: [9]                                                 <h5>Reglas de Validación Avanzadas</h5>
-2555: [9]                                                 <p>En Insumos, al campo <code>Precio</code> agrégale una Regla
-2556: [9]                                                     de
-2557: [9]                                                     Validación: <code>>0</code> y un Texto: "Debe ser mayor a
-2558: [9]                                                     cero".
-2559: [9]                                                     Al Teléfono del Proveedor añádele una <strong>Máscara de
-2560: [9]                                                         Entrada</strong>: <code>\(999\) 0000000;0;_</code></p>
-2561: [9]                                             </div>
-2562: [8]                                             <label class="gs-check"><input type="checkbox" class="guide-chk"
-2563: [8]                                                     data-guide="m1p3">
-2564: [8]                                                 Completado</label>
-2565: [8]                                         </div>
-2566: [7] 
-2567: [7]                                         <div class="guide-step" data-step="m1p4">
-2568: [8]                                             <div class="gs-marker gs-marker--access"><span>4</span></div>
-2569: [8]                                             <div class="gs-content">
-2570: [9]                                                 <h5>Relaciones e Integridad Referencial</h5>
-2571: [9]                                                 <p>Abre Herramientas de BD -> Relaciones. Arrastra
-2572: [9]                                                     <code>NIT</code>
-2573: [9]                                                     a <code>ID_Proveedor</code>. Marca "Exigir integridad
-2574: [9]                                                     referencial", "Actualizar en cascada" y "Eliminar en
-2575: [9]                                                     cascada".
-2576: [9]                                                 </p>
-2577: [9]                                             </div>
-2578: [8]                                             <label class="gs-check"><input type="checkbox" class="guide-chk"
-2579: [8]                                                     data-guide="m1p4">
-2580: [8]                                                 Completado</label>
-2581: [8]                                         </div>
-2582: [7] 
-2583: [7]                                         <div class="guide-step" data-step="m1p5">
-2584: [8]                                             <div class="gs-marker gs-marker--access"><span>5</span></div>
-2585: [8]                                             <div class="gs-content">
-2586: [9]                                                 <h5>Formulario Auto-Generado y Prueba Integral</h5>
-2587: [9]                                                 <p>Selecciona la tabla Proveedores, ve a <kbd>Crear</kbd> ->
-2588: [9]                                                     <kbd>Formulario</kbd>. Ingresa un proveedor. Posteriormente,
-2589: [9]                                                     intenta cargarle un insumo directamente a un proveedor que
-2590: [9]                                                     NO
-2591: [9]                                                     existe. Observa cómo Access bloquea la acción. Toma captura
-2592: [9]                                                     de
-2593: [9]                                                     pantalla del mensaje de error.
-2594: [9]                                                 </p>
-2595: [9]                                                 <a href="https://drive.google.com" target="_blank" rel="noopener"
-2596: [9]                                                     class="upload-cta">
-2597: [9]                                                     <span class="upload-cta-icon">📤</span>
-2598: [9]                                                     Subir Evidencias a Drive
-2599: [9]                                                 </a>
-2600: [9]                                                 <div class="folder-path">📁 TGA-Digital / Modulo 1 / Access /
-2601: [10]                                                     TuNombre /</div>
-2602: [9]                                             </div>
+2492: [5]                             </div>
+2493: [4]                         </div> <!-- CIERRE CORRECTO DE simulator-container -->
+2494: [3]                     </div> <!-- CIERRE CORRECTO DE tab-panel m1-practica -->
+2495: [2] 
+2496: [2]                     <!-- Tab: Entregables (M1) -->
+2497: [2]                     <div class="tab-panel" id="m1-entregables" role="tabpanel" aria-labelledby="tab-m1-ent">
+2498: [3]                         <div class="simulator-container">
+2499: [4]                             <div class="sim-header">
+2500: [5]                                 <h3>📦 Entregables del Módulo Access</h3>
+2501: [5]                                 <p>Tu misión final. Sigue las instrucciones del proyecto integrador, genera
+2502: [5]                                     la
+2503: [5]                                     base de datos y adjunta tus evidencias para certificar este nivel.</p>
+2504: [5]                             </div>
+2505: [4] 
+2506: [4]                             <!-- PROYECTO INTEGRADOR M1 -->
+2507: [4]                             <div class="evidence-card" id="m1-proyecto">
+2508: [5]                                 <div class="evidence-header">
+2509: [6]                                     <span class="evidence-icon">🚀</span>
+2510: [6]                                     <h4 class="evidence-title">Proyecto Integrador: Gestión de Suministros
+2511: [6]                                         Hospitalarios</h4>
+2512: [6]                                 </div>
+2513: [5]                                 <p class="text-text-2 text-095 mb-24">Aplicaremos lo aprendido para crear
+2514: [5]                                     una
+2515: [5]                                     base de datos robusta que controle el inventario de insumos médicos,
+2516: [5]                                     asegurando la integridad de la data.</p>
+2517: [5] 
+2518: [5]                                 <div class="guide-steps">
+2519: [6]                                     <div class="guide-step" data-step="m1p1">
+2520: [7]                                         <div class="gs-marker gs-marker--access"><span>1</span></div>
+2521: [7]                                         <div class="gs-content">
+2522: [8]                                             <h5>Diseño del Modelo: Suministros y Proveedores</h5>
+2523: [8]                                             <p>Identifica las entidades: <code>PROVEEDORES</code> (NIT,
+2524: [8]                                                 Nombre,
+2525: [8]                                                 Teléfono) y <code>INSUMOS</code> (Código, Descripción,
+2526: [8]                                                 Precio,
+2527: [8]                                                 ID_Proveedor). Considera la relación natural (1:N).</p>
+2528: [8]                                         </div>
+2529: [7]                                         <label class="gs-check"><input type="checkbox" class="guide-chk"
+2530: [7]                                                 data-guide="m1p1">
+2531: [7]                                             Completado</label>
+2532: [7]                                     </div>
+2533: [6] 
+2534: [6]                                     <div class="guide-step" data-step="m1p2">
+2535: [7]                                         <div class="gs-marker gs-marker--access"><span>2</span></div>
+2536: [7]                                         <div class="gs-content">
+2537: [8]                                             <h5>Creación de Tablas y Claves</h5>
+2538: [8]                                             <p>Crea ambas tablas en Access. Asegúrate de que
+2539: [8]                                                 <code>NIT</code>
+2540: [8]                                                 sea PK (Texto Corto) en Proveedores y <code>Código</code>
+2541: [8]                                                 sea PK
+2542: [8]                                                 en Insumos. Agrega <code>ID_Proveedor</code> (Texto Corto)
+2543: [8]                                                 como
+2544: [8]                                                 FK en Insumos.
+2545: [8]                                             </p>
+2546: [8]                                         </div>
+2547: [7]                                         <label class="gs-check"><input type="checkbox" class="guide-chk"
+2548: [7]                                                 data-guide="m1p2">
+2549: [7]                                             Completado</label>
+2550: [7]                                     </div>
+2551: [6] 
+2552: [6]                                     <div class="guide-step" data-step="m1p3">
+2553: [7]                                         <div class="gs-marker gs-marker--access"><span>3</span></div>
+2554: [7]                                         <div class="gs-content">
+2555: [8]                                             <h5>Reglas de Validación Avanzadas</h5>
+2556: [8]                                             <p>En Insumos, al campo <code>Precio</code> agrégale una Regla
+2557: [8]                                                 de
+2558: [8]                                                 Validación: <code>>0</code> y un Texto: "Debe ser mayor a
+2559: [8]                                                 cero".
+2560: [8]                                                 Al Teléfono del Proveedor añádele una <strong>Máscara de
+2561: [8]                                                     Entrada</strong>: <code>\(999\) 0000000;0;_</code></p>
+2562: [8]                                         </div>
+2563: [7]                                         <label class="gs-check"><input type="checkbox" class="guide-chk"
+2564: [7]                                                 data-guide="m1p3">
+2565: [7]                                             Completado</label>
+2566: [7]                                     </div>
+2567: [6] 
+2568: [6]                                     <div class="guide-step" data-step="m1p4">
+2569: [7]                                         <div class="gs-marker gs-marker--access"><span>4</span></div>
+2570: [7]                                         <div class="gs-content">
+2571: [8]                                             <h5>Relaciones e Integridad Referencial</h5>
+2572: [8]                                             <p>Abre Herramientas de BD -> Relaciones. Arrastra
+2573: [8]                                                 <code>NIT</code>
+2574: [8]                                                 a <code>ID_Proveedor</code>. Marca "Exigir integridad
+2575: [8]                                                 referencial", "Actualizar en cascada" y "Eliminar en
+2576: [8]                                                 cascada".
+2577: [8]                                             </p>
+2578: [8]                                         </div>
+2579: [7]                                         <label class="gs-check"><input type="checkbox" class="guide-chk"
+2580: [7]                                                 data-guide="m1p4">
+2581: [7]                                             Completado</label>
+2582: [7]                                     </div>
+2583: [6] 
+2584: [6]                                     <div class="guide-step" data-step="m1p5">
+2585: [7]                                         <div class="gs-marker gs-marker--access"><span>5</span></div>
+2586: [7]                                         <div class="gs-content">
+2587: [8]                                             <h5>Formulario Auto-Generado y Prueba Integral</h5>
+2588: [8]                                             <p>Selecciona la tabla Proveedores, ve a <kbd>Crear</kbd> ->
+2589: [8]                                                 <kbd>Formulario</kbd>. Ingresa un proveedor. Posteriormente,
+2590: [8]                                                 intenta cargarle un insumo directamente a un proveedor que
+2591: [8]                                                 NO
+2592: [8]                                                 existe. Observa cómo Access bloquea la acción. Toma captura
+2593: [8]                                                 de
+2594: [8]                                                 pantalla del mensaje de error.
+2595: [8]                                             </p>
+2596: [8]                                             <a href="https://drive.google.com" target="_blank" rel="noopener"
+2597: [8]                                                 class="upload-cta">
+2598: [8]                                                 <span class="upload-cta-icon">📤</span>
+2599: [8]                                                 Subir Evidencias a Drive
+2600: [8]                                             </a>
+2601: [8]                                             <div class="folder-path">📁 TGA-Digital / Modulo 1 / Access /
+2602: [9]                                                 TuNombre /</div>
 2603: [8]                                         </div>
 2604: [7]                                     </div>
 2605: [6]                                 </div>
 2606: [5]                             </div>
 2607: [4]                         </div>
-2608: [3] 
-2609: [3]                         <!-- ══ TAB: TEMAS AVANZADOS DE ACCESS ══ -->
-2610: [3]                         <div class="tab-panel" id="m1-avanzado" role="tabpanel" aria-labelledby="tab-m1-avanzado">
-2611: [4]                             <div class="theory-grid">
-2612: [5] 
-2613: [5]                                 <!-- ─── 1. CONDICIONALES / EXPRESIONES ─── -->
-2614: [5]                                 <div class="theory-card theory-card--full border-l-primary">
-2615: [6]                                     <h3>⚡ Expresiones Condicionales en Access</h3>
-2616: [6]                                     <p>Access usa la función <strong>SiInm()</strong> (equivalente a SI() de
-2617: [6]                                         Excel) para
-2618: [6]                                         evaluar condiciones directamente en campos calculados de consultas,
-2619: [6]                                         formularios
-2620: [6]                                         e informes. Su sintaxis es:</p>
-2621: [6]                                     <div class="info-box info-box--tip mt-15">
-2622: [7]                                         <span class="info-icon">📐</span>
-2623: [7]                                         <div>
-2624: [8]                                             <code>SiInm(<em>condición</em>; <em>valor_si_verdadero</em>; <em>valor_si_falso</em>)</code>
-2625: [8]                                             <p class="mt-8 text-095">Ejemplo:
-2626: [8]                                                 <code>SiInm([Precio]&gt;=100000; &quot;Premium&quot;; &quot;Estándar&quot;)</code>
-2627: [8]                                             </p>
-2628: [8]                                         </div>
+2608: [3]                     </div>
+2609: [2] 
+2610: [2]                     <!-- ══ TAB: TEMAS AVANZADOS DE ACCESS ══ -->
+2611: [2]                     <div class="tab-panel" id="m1-avanzado" role="tabpanel" aria-labelledby="tab-m1-avanzado">
+2612: [3]                         <div class="theory-grid">
+2613: [4] 
+2614: [4]                             <!-- ─── 1. CONDICIONALES / EXPRESIONES ─── -->
+2615: [4]                             <div class="theory-card theory-card--full border-l-primary">
+2616: [5]                                 <h3>⚡ Expresiones Condicionales en Access</h3>
+2617: [5]                                 <p>Access usa la función <strong>SiInm()</strong> (equivalente a SI() de
+2618: [5]                                     Excel) para
+2619: [5]                                     evaluar condiciones directamente en campos calculados de consultas,
+2620: [5]                                     formularios
+2621: [5]                                     e informes. Su sintaxis es:</p>
+2622: [5]                                 <div class="info-box info-box--tip mt-15">
+2623: [6]                                     <span class="info-icon">📐</span>
+2624: [6]                                     <div>
+2625: [7]                                         <code>SiInm(<em>condición</em>; <em>valor_si_verdadero</em>; <em>valor_si_falso</em>)</code>
+2626: [7]                                         <p class="mt-8 text-095">Ejemplo:
+2627: [7]                                             <code>SiInm([Precio]&gt;=100000; &quot;Premium&quot;; &quot;Estándar&quot;)</code>
+2628: [7]                                         </p>
 2629: [7]                                     </div>
-2630: [6]                                     <div class="datatypes-grid mt-15">
-2631: [7]                                         <div class="datatype-item">
-2632: [8]                                             <span class="dt-icon">🔀</span>
-2633: [8]                                             <span class="dt-name">SiInm() Simple</span>
-2634: [8]                                             <span class="dt-desc">Evalúa una sola condición. Ej:
-2635: [8]                                                 <code>SiInm([Stock]=0; &quot;Agotado&quot;; &quot;Disponible&quot;)</code></span>
-2636: [8]                                         </div>
-2637: [7]                                         <div class="datatype-item">
-2638: [8]                                             <span class="dt-icon">🔀🔀</span>
-2639: [8]                                             <span class="dt-name">SiInm() Anidado</span>
-2640: [8]                                             <span class="dt-desc">Múltiples condiciones. Ej:
-2641: [8]                                                 <code>SiInm([Nota]&gt;=90;&quot;A&quot;;SiInm([Nota]&gt;=70;&quot;B&quot;;&quot;C&quot;))</code></span>
-2642: [8]                                         </div>
-2643: [7]                                         <div class="datatype-item">
-2644: [8]                                             <span class="dt-icon">📊</span>
-2645: [8]                                             <span class="dt-name">SiInm() con fechas</span>
-2646: [8]                                             <span class="dt-desc">Ej:
-2647: [8]                                                 <code>SiInm([FechaVence]&lt;Fecha();&quot;Vencido&quot;;&quot;Vigente&quot;)</code></span>
-2648: [8]                                         </div>
-2649: [7]                                         <div class="datatype-item">
-2650: [8]                                             <span class="dt-icon">🔢</span>
-2651: [8]                                             <span class="dt-name">ElegirV() (Switch)</span>
-2652: [8]                                             <span class="dt-desc">Evalúa múltiples pares condición-resultado.
-2653: [8]                                                 Ideal para
-2654: [8]                                                 categorías:
-2655: [8]                                                 <code>ElegirV([Ciudad]=&quot;Medellín&quot;;&quot;Antioquia&quot;; [Ciudad]=&quot;Cali&quot;;&quot;Valle&quot;)</code></span>
-2656: [8]                                         </div>
+2630: [6]                                 </div>
+2631: [5]                                 <div class="datatypes-grid mt-15">
+2632: [6]                                     <div class="datatype-item">
+2633: [7]                                         <span class="dt-icon">🔀</span>
+2634: [7]                                         <span class="dt-name">SiInm() Simple</span>
+2635: [7]                                         <span class="dt-desc">Evalúa una sola condición. Ej:
+2636: [7]                                             <code>SiInm([Stock]=0; &quot;Agotado&quot;; &quot;Disponible&quot;)</code></span>
+2637: [7]                                     </div>
+2638: [6]                                     <div class="datatype-item">
+2639: [7]                                         <span class="dt-icon">🔀🔀</span>
+2640: [7]                                         <span class="dt-name">SiInm() Anidado</span>
+2641: [7]                                         <span class="dt-desc">Múltiples condiciones. Ej:
+2642: [7]                                             <code>SiInm([Nota]&gt;=90;&quot;A&quot;;SiInm([Nota]&gt;=70;&quot;B&quot;;&quot;C&quot;))</code></span>
+2643: [7]                                     </div>
+2644: [6]                                     <div class="datatype-item">
+2645: [7]                                         <span class="dt-icon">📊</span>
+2646: [7]                                         <span class="dt-name">SiInm() con fechas</span>
+2647: [7]                                         <span class="dt-desc">Ej:
+2648: [7]                                             <code>SiInm([FechaVence]&lt;Fecha();&quot;Vencido&quot;;&quot;Vigente&quot;)</code></span>
+2649: [7]                                     </div>
+2650: [6]                                     <div class="datatype-item">
+2651: [7]                                         <span class="dt-icon">🔢</span>
+2652: [7]                                         <span class="dt-name">ElegirV() (Switch)</span>
+2653: [7]                                         <span class="dt-desc">Evalúa múltiples pares condición-resultado.
+2654: [7]                                             Ideal para
+2655: [7]                                             categorías:
+2656: [7]                                             <code>ElegirV([Ciudad]=&quot;Medellín&quot;;&quot;Antioquia&quot;; [Ciudad]=&quot;Cali&quot;;&quot;Valle&quot;)</code></span>
 2657: [7]                                     </div>
-2658: [6]                                     <!-- EJERCICIO GUIADO -->
-2659: [6]                                     <div class="info-box info-box--success mt-20">
-2660: [7]                                         <span class="info-icon">🎯</span>
-2661: [7]                                         <div>
-2662: [8]                                             <strong>Ejercicio Guiado: Categorizar Inventario por Precio</strong>
-2663: [8]                                             <p class="mt-4 text-095">Vamos a crear un campo calculado en una
-2664: [8]                                                 consulta
-2665: [8]                                                 que clasifique los productos por rango de precio.</p>
-2666: [8]                                             <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-2667: [8]                                                 <li>Abre una <strong>Consulta de Selección</strong> en Vista
-2668: [8]                                                     Diseño
-2669: [8]                                                     basada en tu tabla de productos.</li>
-2670: [8]                                                 <li>En una columna vacía de la cuadrícula,
-2671: [8]                                                     escribe:<br><code>Categoria: SiInm([Precio]&gt;=500000; &quot;Alta Gama&quot;; SiInm([Precio]&gt;=100000; &quot;Media Gama&quot;; &quot;Económico&quot;))</code>
-2672: [8]                                                 </li>
-2673: [8]                                                 <li>Ejecuta la consulta con <kbd>F5</kbd>. Verás una nueva
-2674: [8]                                                     columna
-2675: [8]                                                     «Categoria» con la clasificación automática.</li>
-2676: [8]                                                 <li>Guarda la consulta como <code>Q_Categorias_Precio</code>.
-2677: [8]                                                 </li>
-2678: [8]                                             </ol>
-2679: [8]                                             <p class="text-090 text-success mt-4"><em>Resultado:</em> Access
-2680: [8]                                                 clasifica
-2681: [8]                                                 cada producto automáticamente sin modificar los datos
-2682: [8]                                                 originales.</p>
-2683: [8]                                         </div>
+2658: [6]                                 </div>
+2659: [5]                                 <!-- EJERCICIO GUIADO -->
+2660: [5]                                 <div class="info-box info-box--success mt-20">
+2661: [6]                                     <span class="info-icon">🎯</span>
+2662: [6]                                     <div>
+2663: [7]                                         <strong>Ejercicio Guiado: Categorizar Inventario por Precio</strong>
+2664: [7]                                         <p class="mt-4 text-095">Vamos a crear un campo calculado en una
+2665: [7]                                             consulta
+2666: [7]                                             que clasifique los productos por rango de precio.</p>
+2667: [7]                                         <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+2668: [7]                                             <li>Abre una <strong>Consulta de Selección</strong> en Vista
+2669: [7]                                                 Diseño
+2670: [7]                                                 basada en tu tabla de productos.</li>
+2671: [7]                                             <li>En una columna vacía de la cuadrícula,
+2672: [7]                                                 escribe:<br><code>Categoria: SiInm([Precio]&gt;=500000; &quot;Alta Gama&quot;; SiInm([Precio]&gt;=100000; &quot;Media Gama&quot;; &quot;Económico&quot;))</code>
+2673: [7]                                             </li>
+2674: [7]                                             <li>Ejecuta la consulta con <kbd>F5</kbd>. Verás una nueva
+2675: [7]                                                 columna
+2676: [7]                                                 «Categoria» con la clasificación automática.</li>
+2677: [7]                                             <li>Guarda la consulta como <code>Q_Categorias_Precio</code>.
+2678: [7]                                             </li>
+2679: [7]                                         </ol>
+2680: [7]                                         <p class="text-090 text-success mt-4"><em>Resultado:</em> Access
+2681: [7]                                             clasifica
+2682: [7]                                             cada producto automáticamente sin modificar los datos
+2683: [7]                                             originales.</p>
 2684: [7]                                     </div>
 2685: [6]                                 </div>
-2686: [5] 
-2687: [5]                                 <!-- ─── 2. LISTAS DESPLEGABLES / CUADRO COMBINADO ─── -->
-2688: [5]                                 <div class="theory-card theory-card--full border-l-blue">
-2689: [6]                                     <h3>📋 Listas Desplegables: Cuadro Combinado y Cuadro de Lista</h3>
-2690: [6]                                     <p>Los controles de lista son la clave para evitar errores de digitación y
-2691: [6]                                         garantizar consistencia en los datos. Existen dos tipos principales en
-2692: [6]                                         Access:
-2693: [6]                                     </p>
-2694: [6]                                     <div class="datatypes-grid mt-15 mb-15">
-2695: [7]                                         <div class="datatype-item col-span-2">
-2696: [8]                                             <span class="dt-icon">🔽</span>
-2697: [8]                                             <span class="dt-name">Cuadro Combinado (ComboBox)</span>
-2698: [8]                                             <span class="dt-desc">El usuario <em>puede escribir</em> o
-2699: [8]                                                 seleccionar de la
-2700: [8]                                                 lista. Ocupa una sola línea. Ideal para FKs (el usuario ve el
-2701: [8]                                                 Nombre, el
-2702: [8]                                                 campo guarda el ID).</span>
-2703: [8]                                         </div>
-2704: [7]                                         <div class="datatype-item col-span-2">
-2705: [8]                                             <span class="dt-icon">📋</span>
-2706: [8]                                             <span class="dt-name">Cuadro de Lista (ListBox)</span>
-2707: [8]                                             <span class="dt-desc">Siempre visible, el usuario <em>solo puede
-2708: [8]                                                     seleccionar</em>. Ideal para filtros y paneles de
-2709: [8]                                                 navegación.</span>
-2710: [8]                                         </div>
+2686: [5]                             </div>
+2687: [4] 
+2688: [4]                             <!-- ─── 2. LISTAS DESPLEGABLES / CUADRO COMBINADO ─── -->
+2689: [4]                             <div class="theory-card theory-card--full border-l-blue">
+2690: [5]                                 <h3>📋 Listas Desplegables: Cuadro Combinado y Cuadro de Lista</h3>
+2691: [5]                                 <p>Los controles de lista son la clave para evitar errores de digitación y
+2692: [5]                                     garantizar consistencia en los datos. Existen dos tipos principales en
+2693: [5]                                     Access:
+2694: [5]                                 </p>
+2695: [5]                                 <div class="datatypes-grid mt-15 mb-15">
+2696: [6]                                     <div class="datatype-item col-span-2">
+2697: [7]                                         <span class="dt-icon">🔽</span>
+2698: [7]                                         <span class="dt-name">Cuadro Combinado (ComboBox)</span>
+2699: [7]                                         <span class="dt-desc">El usuario <em>puede escribir</em> o
+2700: [7]                                             seleccionar de la
+2701: [7]                                             lista. Ocupa una sola línea. Ideal para FKs (el usuario ve el
+2702: [7]                                             Nombre, el
+2703: [7]                                             campo guarda el ID).</span>
+2704: [7]                                     </div>
+2705: [6]                                     <div class="datatype-item col-span-2">
+2706: [7]                                         <span class="dt-icon">📋</span>
+2707: [7]                                         <span class="dt-name">Cuadro de Lista (ListBox)</span>
+2708: [7]                                         <span class="dt-desc">Siempre visible, el usuario <em>solo puede
+2709: [7]                                                 seleccionar</em>. Ideal para filtros y paneles de
+2710: [7]                                             navegación.</span>
 2711: [7]                                     </div>
-2712: [6]                                     <h4 class="mt-15 mb-8">⚙️ Propiedades Clave de un Cuadro Combinado</h4>
-2713: [6]                                     <div class="component-list">
-2714: [7]                                         <div class="component-item">
-2715: [8]                                             <span class="comp-icon">📂</span>
-2716: [8]                                             <div>
-2717: [9]                                                 <strong>Tipo de origen de datos</strong>
-2718: [9]                                                 <p><code>Tabla/Consulta</code> (datos dinámicos de la BD) |
-2719: [9]                                                     <code>Lista de valores</code> (valores fijos separados por
-2720: [9]                                                     <code>;</code>) | <code>Lista de campos</code>.
-2721: [9]                                                 </p>
-2722: [9]                                             </div>
+2712: [6]                                 </div>
+2713: [5]                                 <h4 class="mt-15 mb-8">⚙️ Propiedades Clave de un Cuadro Combinado</h4>
+2714: [5]                                 <div class="component-list">
+2715: [6]                                     <div class="component-item">
+2716: [7]                                         <span class="comp-icon">📂</span>
+2717: [7]                                         <div>
+2718: [8]                                             <strong>Tipo de origen de datos</strong>
+2719: [8]                                             <p><code>Tabla/Consulta</code> (datos dinámicos de la BD) |
+2720: [8]                                                 <code>Lista de valores</code> (valores fijos separados por
+2721: [8]                                                 <code>;</code>) | <code>Lista de campos</code>.
+2722: [8]                                             </p>
 2723: [8]                                         </div>
-2724: [7]                                         <div class="component-item">
-2725: [8]                                             <span class="comp-icon">🔗</span>
-2726: [8]                                             <div>
-2727: [9]                                                 <strong>Columna dependiente</strong>
-2728: [9]                                                 <p>Indica <em>cuál columna</em> se guarda en la tabla.
-2729: [9]                                                     Normalmente
-2730: [9]                                                     <code>1</code> (la clave). La otra columna (el nombre
-2731: [9]                                                     legible) puede
-2732: [9]                                                     estar oculta con ancho 0.
-2733: [9]                                                 </p>
-2734: [9]                                             </div>
+2724: [7]                                     </div>
+2725: [6]                                     <div class="component-item">
+2726: [7]                                         <span class="comp-icon">🔗</span>
+2727: [7]                                         <div>
+2728: [8]                                             <strong>Columna dependiente</strong>
+2729: [8]                                             <p>Indica <em>cuál columna</em> se guarda en la tabla.
+2730: [8]                                                 Normalmente
+2731: [8]                                                 <code>1</code> (la clave). La otra columna (el nombre
+2732: [8]                                                 legible) puede
+2733: [8]                                                 estar oculta con ancho 0.
+2734: [8]                                             </p>
 2735: [8]                                         </div>
-2736: [7]                                         <div class="component-item">
-2737: [8]                                             <span class="comp-icon">👁️</span>
-2738: [8]                                             <div>
-2739: [9]                                                 <strong>Número de columnas y anchos</strong>
-2740: [9]                                                 <p>Ej: <code>Número de columnas: 2</code> y
-2741: [9]                                                     <code>Anchos de columna: 0cm;4cm</code> muestra solo el
-2742: [9]                                                     nombre, pero
-2743: [9]                                                     guarda el ID.
-2744: [9]                                                 </p>
-2745: [9]                                             </div>
+2736: [7]                                     </div>
+2737: [6]                                     <div class="component-item">
+2738: [7]                                         <span class="comp-icon">👁️</span>
+2739: [7]                                         <div>
+2740: [8]                                             <strong>Número de columnas y anchos</strong>
+2741: [8]                                             <p>Ej: <code>Número de columnas: 2</code> y
+2742: [8]                                                 <code>Anchos de columna: 0cm;4cm</code> muestra solo el
+2743: [8]                                                 nombre, pero
+2744: [8]                                                 guarda el ID.
+2745: [8]                                             </p>
 2746: [8]                                         </div>
-2747: [7]                                         <div class="component-item">
-2748: [8]                                             <span class="comp-icon">✔️</span>
-2749: [8]                                             <div>
-2750: [9]                                                 <strong>Limitar a lista</strong>
-2751: [9]                                                 <p>Si se establece en <code>Sí</code>, el usuario <strong>solo
-2752: [9]                                                         puede
-2753: [9]                                                         elegir</strong> valores de la lista, imposibilitando la
-2754: [9]                                                     entrada
-2755: [9]                                                     de datos no válidos.</p>
-2756: [9]                                             </div>
+2747: [7]                                     </div>
+2748: [6]                                     <div class="component-item">
+2749: [7]                                         <span class="comp-icon">✔️</span>
+2750: [7]                                         <div>
+2751: [8]                                             <strong>Limitar a lista</strong>
+2752: [8]                                             <p>Si se establece en <code>Sí</code>, el usuario <strong>solo
+2753: [8]                                                     puede
+2754: [8]                                                     elegir</strong> valores de la lista, imposibilitando la
+2755: [8]                                                 entrada
+2756: [8]                                                 de datos no válidos.</p>
 2757: [8]                                         </div>
 2758: [7]                                     </div>
-2759: [6]                                     <!-- EJERCICIO GUIADO -->
-2760: [6]                                     <div class="info-box info-box--primary mt-20">
-2761: [7]                                         <span class="info-icon">🛠️</span>
-2762: [7]                                         <div>
-2763: [8]                                             <strong>Ejercicio: Crear una Lista Desplegable de
-2764: [8]                                                 Categorías</strong>
-2765: [8]                                             <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-2766: [8]                                                 <li>Abre un formulario en <strong>Vista Diseño</strong>.</li>
-2767: [8]                                                 <li>En la pestaña <kbd>Diseño</kbd>, haz clic en <strong>Cuadro
-2768: [8]                                                         Combinado</strong> del panel de controles y dibuja el
-2769: [8]                                                     control en
-2770: [8]                                                     el formulario.</li>
-2771: [8]                                                 <li>En el asistente, selecciona <em>«Los valores los
-2772: [8]                                                         escribiré»</em>. En
-2773: [8]                                                     la lista escribe:<br><code>Electrónica</code> /
-2774: [8]                                                     <code>Aseo</code> /
-2775: [8]                                                     <code>Papelería</code> / <code>Herramientas</code>.
-2776: [8]                                                 </li>
-2777: [8]                                                 <li>En <strong>Hoja de propiedades</strong> → pestaña
-2778: [8]                                                     <em>Datos</em>,
-2779: [8]                                                     establece <strong>Limitar a lista: Sí</strong>.
-2780: [8]                                                 </li>
-2781: [8]                                                 <li>Nombra el control <code>cboCategoría</code> y guarda el
-2782: [8]                                                     formulario.
-2783: [8]                                                 </li>
-2784: [8]                                             </ol>
-2785: [8]                                             <p class="text-090 text-primary mt-4"><em>Resultado:</em> El usuario
-2786: [8]                                                 solo
-2787: [8]                                                 podrá elegir entre las categorías predefinidas, eliminando
-2788: [8]                                                 errores
-2789: [8]                                                 tipográficos.</p>
-2790: [8]                                         </div>
+2759: [6]                                 </div>
+2760: [5]                                 <!-- EJERCICIO GUIADO -->
+2761: [5]                                 <div class="info-box info-box--primary mt-20">
+2762: [6]                                     <span class="info-icon">🛠️</span>
+2763: [6]                                     <div>
+2764: [7]                                         <strong>Ejercicio: Crear una Lista Desplegable de
+2765: [7]                                             Categorías</strong>
+2766: [7]                                         <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+2767: [7]                                             <li>Abre un formulario en <strong>Vista Diseño</strong>.</li>
+2768: [7]                                             <li>En la pestaña <kbd>Diseño</kbd>, haz clic en <strong>Cuadro
+2769: [7]                                                     Combinado</strong> del panel de controles y dibuja el
+2770: [7]                                                 control en
+2771: [7]                                                 el formulario.</li>
+2772: [7]                                             <li>En el asistente, selecciona <em>«Los valores los
+2773: [7]                                                     escribiré»</em>. En
+2774: [7]                                                 la lista escribe:<br><code>Electrónica</code> /
+2775: [7]                                                 <code>Aseo</code> /
+2776: [7]                                                 <code>Papelería</code> / <code>Herramientas</code>.
+2777: [7]                                             </li>
+2778: [7]                                             <li>En <strong>Hoja de propiedades</strong> → pestaña
+2779: [7]                                                 <em>Datos</em>,
+2780: [7]                                                 establece <strong>Limitar a lista: Sí</strong>.
+2781: [7]                                             </li>
+2782: [7]                                             <li>Nombra el control <code>cboCategoría</code> y guarda el
+2783: [7]                                                 formulario.
+2784: [7]                                             </li>
+2785: [7]                                         </ol>
+2786: [7]                                         <p class="text-090 text-primary mt-4"><em>Resultado:</em> El usuario
+2787: [7]                                             solo
+2788: [7]                                             podrá elegir entre las categorías predefinidas, eliminando
+2789: [7]                                             errores
+2790: [7]                                             tipográficos.</p>
 2791: [7]                                     </div>
 2792: [6]                                 </div>
-2793: [5] 
-2794: [5]                                 <!-- ─── 3. VALIDACIÓN DE DATOS ─── -->
-2795: [5]                                 <div class="theory-card theory-card--full border-l-orange">
-2796: [6]                                     <h3>🛡️ Validación de Datos: Las 4 Capas de Protección</h3>
-2797: [6]                                     <p>Access ofrece múltiples mecanismos para blindar la calidad de los datos.
-2798: [6]                                         Cada
-2799: [6]                                         capa tiene un propósito específico y se complementan entre sí:</p>
-2800: [6]                                     <div class="datatypes-grid mt-15 mb-15">
-2801: [7]                                         <div class="datatype-item">
-2802: [8]                                             <span class="dt-icon">1️⃣</span>
-2803: [8]                                             <span class="dt-name">Tipo de Datos</span>
-2804: [8]                                             <span class="dt-desc">Primera barrera: un campo <code>Número</code>
-2805: [8]                                                 <strong>rechazará</strong> texto automáticamente. Nunca almacena
-2806: [8]                                                 datos
-2807: [8]                                                 incorrectos por tipo.</span>
-2808: [8]                                         </div>
-2809: [7]                                         <div class="datatype-item">
-2810: [8]                                             <span class="dt-icon">2️⃣</span>
-2811: [8]                                             <span class="dt-name">Máscara de Entrada</span>
-2812: [8]                                             <span class="dt-desc">Controla el <em>formato visual</em> mientras
-2813: [8]                                                 se
-2814: [8]                                                 escribe. Ej: <code>\(999\)&nbsp;000-0000</code> para teléfonos
-2815: [8]                                                 colombianos o <code>000\.000\.000\-0</code> para NIT.</span>
-2816: [8]                                         </div>
-2817: [7]                                         <div class="datatype-item">
-2818: [8]                                             <span class="dt-icon">3️⃣</span>
-2819: [8]                                             <span class="dt-name">Regla de Validación</span>
-2820: [8]                                             <span class="dt-desc"><strong>Expresión lógica</strong> que el dato
-2821: [8]                                                 debe
-2822: [8]                                                 cumplir. Access muestra el «Texto de validación» personalizado
-2823: [8]                                                 si falla.
-2824: [8]                                                 Ej: <code>&gt;=0 Y &lt;=100</code> para notas.</span>
-2825: [8]                                         </div>
-2826: [7]                                         <div class="datatype-item">
-2827: [8]                                             <span class="dt-icon">4️⃣</span>
-2828: [8]                                             <span class="dt-name">Requerido + Indexado sin duplicados</span>
-2829: [8]                                             <span class="dt-desc"><strong>Requerido: Sí</strong> impide valores
-2830: [8]                                                 nulos.
-2831: [8]                                                 <strong>Indexado: Sí (sin duplicados)</strong> garantiza
-2832: [8]                                                 unicidad (como
-2833: [8]                                                 una PK alterna).</span>
-2834: [8]                                         </div>
+2793: [5]                             </div>
+2794: [4] 
+2795: [4]                             <!-- ─── 3. VALIDACIÓN DE DATOS ─── -->
+2796: [4]                             <div class="theory-card theory-card--full border-l-orange">
+2797: [5]                                 <h3>🛡️ Validación de Datos: Las 4 Capas de Protección</h3>
+2798: [5]                                 <p>Access ofrece múltiples mecanismos para blindar la calidad de los datos.
+2799: [5]                                     Cada
+2800: [5]                                     capa tiene un propósito específico y se complementan entre sí:</p>
+2801: [5]                                 <div class="datatypes-grid mt-15 mb-15">
+2802: [6]                                     <div class="datatype-item">
+2803: [7]                                         <span class="dt-icon">1️⃣</span>
+2804: [7]                                         <span class="dt-name">Tipo de Datos</span>
+2805: [7]                                         <span class="dt-desc">Primera barrera: un campo <code>Número</code>
+2806: [7]                                             <strong>rechazará</strong> texto automáticamente. Nunca almacena
+2807: [7]                                             datos
+2808: [7]                                             incorrectos por tipo.</span>
+2809: [7]                                     </div>
+2810: [6]                                     <div class="datatype-item">
+2811: [7]                                         <span class="dt-icon">2️⃣</span>
+2812: [7]                                         <span class="dt-name">Máscara de Entrada</span>
+2813: [7]                                         <span class="dt-desc">Controla el <em>formato visual</em> mientras
+2814: [7]                                             se
+2815: [7]                                             escribe. Ej: <code>\(999\)&nbsp;000-0000</code> para teléfonos
+2816: [7]                                             colombianos o <code>000\.000\.000\-0</code> para NIT.</span>
+2817: [7]                                     </div>
+2818: [6]                                     <div class="datatype-item">
+2819: [7]                                         <span class="dt-icon">3️⃣</span>
+2820: [7]                                         <span class="dt-name">Regla de Validación</span>
+2821: [7]                                         <span class="dt-desc"><strong>Expresión lógica</strong> que el dato
+2822: [7]                                             debe
+2823: [7]                                             cumplir. Access muestra el «Texto de validación» personalizado
+2824: [7]                                             si falla.
+2825: [7]                                             Ej: <code>&gt;=0 Y &lt;=100</code> para notas.</span>
+2826: [7]                                     </div>
+2827: [6]                                     <div class="datatype-item">
+2828: [7]                                         <span class="dt-icon">4️⃣</span>
+2829: [7]                                         <span class="dt-name">Requerido + Indexado sin duplicados</span>
+2830: [7]                                         <span class="dt-desc"><strong>Requerido: Sí</strong> impide valores
+2831: [7]                                             nulos.
+2832: [7]                                             <strong>Indexado: Sí (sin duplicados)</strong> garantiza
+2833: [7]                                             unicidad (como
+2834: [7]                                             una PK alterna).</span>
 2835: [7]                                     </div>
-2836: [6]                                     <h4 class="mt-15 mb-10">📌 Reglas de Validación más Usadas en Contexto
-2837: [6]                                         Administrativo</h4>
-2838: [6]                                     <table class="gs-table mt-8 mb-15">
-2839: [6]                                         <thead>
-2840: [6]                                             <tr>
-2841: [6]                                                 <th>Campo</th>
-2842: [6]                                                 <th>Regla</th>
-2843: [6]                                                 <th>Mensaje de error sugerido</th>
-2844: [6]                                             </tr>
-2845: [6]                                         </thead>
-2846: [6]                                         <tbody>
-2847: [6]                                             <tr>
-2848: [6]                                                 <td><code>Salario</code></td>
-2849: [6]                                                 <td><code>&gt;=1300000</code></td>
-2850: [6]                                                 <td>"El salario no puede ser menor al mínimo legal."</td>
-2851: [6]                                             </tr>
-2852: [6]                                             <tr>
-2853: [6]                                                 <td><code>Nota</code></td>
-2854: [6]                                                 <td><code>&gt;=0 Y &lt;=100</code></td>
-2855: [6]                                                 <td>"La nota debe estar entre 0 y 100."</td>
-2856: [6]                                             </tr>
-2857: [6]                                             <tr>
-2858: [6]                                                 <td><code>FechaEntrega</code></td>
-2859: [6]                                                 <td><code>&gt;=Fecha()</code></td>
-2860: [6]                                                 <td>"La fecha de entrega no puede ser en el pasado."</td>
-2861: [6]                                             </tr>
-2862: [6]                                             <tr>
-2863: [6]                                                 <td><code>Stock</code></td>
-2864: [6]                                                 <td><code>&gt;=0</code></td>
-2865: [6]                                                 <td>"El stock no puede ser negativo."</td>
-2866: [6]                                             </tr>
-2867: [6]                                             <tr>
-2868: [6]                                                 <td><code>Porcentaje</code></td>
-2869: [6]                                                 <td><code>&gt;=0 Y &lt;=1</code></td>
-2870: [6]                                                 <td>"El descuento debe ser un valor entre 0 y 1."</td>
-2871: [6]                                             </tr>
-2872: [6]                                             <tr>
-2873: [6]                                                 <td><code>Email</code></td>
-2874: [6]                                                 <td><code>Como "*@*.?*"</code></td>
-2875: [6]                                                 <td>"Ingrese un correo electrónico válido."</td>
-2876: [6]                                             </tr>
-2877: [6]                                         </tbody>
-2878: [6]                                     </table>
-2879: [6]                                     <!-- EJERCICIO GUIADO -->
-2880: [6]                                     <div class="info-box info-box--warning mt-20">
-2881: [7]                                         <span class="info-icon">🎯</span>
-2882: [7]                                         <div>
-2883: [8]                                             <strong>Ejercicio Integral: Blindar la Tabla Empleados</strong>
-2884: [8]                                             <p class="mt-4 text-095">Abre <code>tbl_Empleados</code> en Vista
-2885: [8]                                                 Diseño y
-2886: [8]                                                 configura:</p>
-2887: [8]                                             <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-2888: [8]                                                 <li>Campo <code>Salario</code> (Moneda) →
-2889: [8]                                                     <strong>Regla:</strong>
-2890: [8]                                                     <code>&gt;=1300000</code> | <strong>Texto:</strong> «Salario
-2891: [8]                                                     inferior al mínimo legal».
-2892: [8]                                                 </li>
-2893: [8]                                                 <li>Campo <code>Email</code> (Texto corto) →
-2894: [8]                                                     <strong>Regla:</strong>
-2895: [8]                                                     <code>Como "*@*.?*"</code> | <strong>Texto:</strong>
-2896: [8]                                                     «Formato de
-2897: [8]                                                     email inválido».
-2898: [8]                                                 </li>
-2899: [8]                                                 <li>Campo <code>Cedula</code> (Texto corto, 10 chars) →
-2900: [8]                                                     <strong>Máscara:</strong> <code>0000000000;0;_</code> |
-2901: [8]                                                     <strong>Requerido:</strong> Sí | <strong>Indexado:</strong>
-2902: [8]                                                     Sí (sin
-2903: [8]                                                     duplicados).
-2904: [8]                                                 </li>
-2905: [8]                                                 <li>Campo <code>FechaIngreso</code> (Fecha/Hora) → <strong>Valor
-2906: [8]                                                         predeterminado:</strong> <code>=Fecha()</code>.</li>
-2907: [8]                                                 <li>Prueba ingresando un salario de 500.000 y verifica que
-2908: [8]                                                     Access
-2909: [8]                                                     bloquee la acción con tu mensaje personalizado.</li>
-2910: [8]                                             </ol>
-2911: [8]                                             <p class="text-090 text-warning mt-4"><em>Resultado:</em> Tu base de
-2912: [8]                                                 datos
-2913: [8]                                                 rechaza automáticamente datos incorrectos antes de que
-2914: [8]                                                 contaminen el
-2915: [8]                                                 sistema.</p>
-2916: [8]                                         </div>
+2836: [6]                                 </div>
+2837: [5]                                 <h4 class="mt-15 mb-10">📌 Reglas de Validación más Usadas en Contexto
+2838: [5]                                     Administrativo</h4>
+2839: [5]                                 <table class="gs-table mt-8 mb-15">
+2840: [5]                                     <thead>
+2841: [5]                                         <tr>
+2842: [5]                                             <th>Campo</th>
+2843: [5]                                             <th>Regla</th>
+2844: [5]                                             <th>Mensaje de error sugerido</th>
+2845: [5]                                         </tr>
+2846: [5]                                     </thead>
+2847: [5]                                     <tbody>
+2848: [5]                                         <tr>
+2849: [5]                                             <td><code>Salario</code></td>
+2850: [5]                                             <td><code>&gt;=1300000</code></td>
+2851: [5]                                             <td>"El salario no puede ser menor al mínimo legal."</td>
+2852: [5]                                         </tr>
+2853: [5]                                         <tr>
+2854: [5]                                             <td><code>Nota</code></td>
+2855: [5]                                             <td><code>&gt;=0 Y &lt;=100</code></td>
+2856: [5]                                             <td>"La nota debe estar entre 0 y 100."</td>
+2857: [5]                                         </tr>
+2858: [5]                                         <tr>
+2859: [5]                                             <td><code>FechaEntrega</code></td>
+2860: [5]                                             <td><code>&gt;=Fecha()</code></td>
+2861: [5]                                             <td>"La fecha de entrega no puede ser en el pasado."</td>
+2862: [5]                                         </tr>
+2863: [5]                                         <tr>
+2864: [5]                                             <td><code>Stock</code></td>
+2865: [5]                                             <td><code>&gt;=0</code></td>
+2866: [5]                                             <td>"El stock no puede ser negativo."</td>
+2867: [5]                                         </tr>
+2868: [5]                                         <tr>
+2869: [5]                                             <td><code>Porcentaje</code></td>
+2870: [5]                                             <td><code>&gt;=0 Y &lt;=1</code></td>
+2871: [5]                                             <td>"El descuento debe ser un valor entre 0 y 1."</td>
+2872: [5]                                         </tr>
+2873: [5]                                         <tr>
+2874: [5]                                             <td><code>Email</code></td>
+2875: [5]                                             <td><code>Como "*@*.?*"</code></td>
+2876: [5]                                             <td>"Ingrese un correo electrónico válido."</td>
+2877: [5]                                         </tr>
+2878: [5]                                     </tbody>
+2879: [5]                                 </table>
+2880: [5]                                 <!-- EJERCICIO GUIADO -->
+2881: [5]                                 <div class="info-box info-box--warning mt-20">
+2882: [6]                                     <span class="info-icon">🎯</span>
+2883: [6]                                     <div>
+2884: [7]                                         <strong>Ejercicio Integral: Blindar la Tabla Empleados</strong>
+2885: [7]                                         <p class="mt-4 text-095">Abre <code>tbl_Empleados</code> en Vista
+2886: [7]                                             Diseño y
+2887: [7]                                             configura:</p>
+2888: [7]                                         <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+2889: [7]                                             <li>Campo <code>Salario</code> (Moneda) →
+2890: [7]                                                 <strong>Regla:</strong>
+2891: [7]                                                 <code>&gt;=1300000</code> | <strong>Texto:</strong> «Salario
+2892: [7]                                                 inferior al mínimo legal».
+2893: [7]                                             </li>
+2894: [7]                                             <li>Campo <code>Email</code> (Texto corto) →
+2895: [7]                                                 <strong>Regla:</strong>
+2896: [7]                                                 <code>Como "*@*.?*"</code> | <strong>Texto:</strong>
+2897: [7]                                                 «Formato de
+2898: [7]                                                 email inválido».
+2899: [7]                                             </li>
+2900: [7]                                             <li>Campo <code>Cedula</code> (Texto corto, 10 chars) →
+2901: [7]                                                 <strong>Máscara:</strong> <code>0000000000;0;_</code> |
+2902: [7]                                                 <strong>Requerido:</strong> Sí | <strong>Indexado:</strong>
+2903: [7]                                                 Sí (sin
+2904: [7]                                                 duplicados).
+2905: [7]                                             </li>
+2906: [7]                                             <li>Campo <code>FechaIngreso</code> (Fecha/Hora) → <strong>Valor
+2907: [7]                                                     predeterminado:</strong> <code>=Fecha()</code>.</li>
+2908: [7]                                             <li>Prueba ingresando un salario de 500.000 y verifica que
+2909: [7]                                                 Access
+2910: [7]                                                 bloquee la acción con tu mensaje personalizado.</li>
+2911: [7]                                         </ol>
+2912: [7]                                         <p class="text-090 text-warning mt-4"><em>Resultado:</em> Tu base de
+2913: [7]                                             datos
+2914: [7]                                             rechaza automáticamente datos incorrectos antes de que
+2915: [7]                                             contaminen el
+2916: [7]                                             sistema.</p>
 2917: [7]                                     </div>
 2918: [6]                                 </div>
-2919: [5] 
-2920: [5]                                 <!-- ─── 4. GUÍA DE LA CINTA DE OPCIONES: CREACIÓN DE FORMULARIOS ─── -->
-2921: [5]                                 <div class="theory-card theory-card--full border-l-primary">
-2922: [6]                                     <div class="section-badge mb-10">CINTA: CREAR > GRUPO: FORMULARIOS</div>
-2923: [6]                                     <h3>🛠️ Manual Maestro de Creación de Formularios</h3>
-2924: [6]                                     <p class="mb-20">Microsoft Access ofrece <strong>6 formas
-2925: [6]                                             fundamentales</strong> de iniciar un formulario. Cada una tiene un
-2926: [6]                                         "momento de gloria" dependiendo de si buscas velocidad o control total.
-2927: [6]                                     </p>
-2928: [6] 
-2929: [6]                                     <div class="datatypes-grid mt-15 mb-25">
-2930: [7]                                         <!-- 1. FORMULARIO (1-CLIC) -->
-2931: [7]                                         <div class="datatype-item border-hover-primary">
-2932: [8]                                             <div class="flex-between mb-8">
-2933: [9]                                                 <span class="dt-icon">📄</span>
-2934: [9]                                                 <span class="badge-status-success">Instantáneo</span>
-2935: [9]                                             </div>
-2936: [8]                                             <span class="dt-name">1. Formulario (Simple)</span>
-2937: [8]                                             <span class="dt-desc">Genera un formulario básico con <strong>todos
-2938: [8]                                                     los campos</strong> de la tabla seleccionada en un solo
-2939: [8]                                                 clic.</span>
-2940: [8]                                             <div class="info-box info-box--info mt-10 p-8 text-085">
-2941: [9]                                                 <strong>Uso:</strong> Cuando necesitas una interfaz rápida para
-2942: [9]                                                 entrar datos sin diseñar nada.
-2943: [9]                                             </div>
-2944: [8]                                             <div class="reto-mini mt-10">
-2945: [9]                                                 <span class="text-primary font-bold">🎯 Reto:</span> Selecciona
-2946: [9]                                                 <code>tbl_Clientes</code> y pulsa este botón. ¡Ya tienes tu
-2947: [9]                                                 primer formulario!
-2948: [9]                                                 <br><label class="gs-check mt-5"><input type="checkbox"
-2949: [9]                                                         class="guide-chk">
-2950: [9]                                                     Hecho</label>
-2951: [9]                                             </div>
-2952: [8]                                         </div>
-2953: [7] 
-2954: [7]                                         <!-- 2. DISEÑO DEL FORMULARIO -->
-2955: [7]                                         <div class="datatype-item border-hover-accent">
-2956: [8]                                             <div class="flex-between mb-8">
-2957: [9]                                                 <span class="dt-icon">📐</span>
-2958: [9]                                                 <span class="badge-status-accent">Nivel Experto</span>
-2959: [9]                                             </div>
-2960: [8]                                             <span class="dt-name">2. Diseño del Formulario</span>
-2961: [8]                                             <span class="dt-desc">Abre un <strong>lienzo en blanco
-2962: [8]                                                     total</strong> en Vista Diseño. Tú arrastras cada campo y
-2963: [8]                                                 control.</span>
-2964: [8]                                             <div class="info-box info-box--warning mt-10 p-8 text-085">
-2965: [9]                                                 <strong>Uso:</strong> Para formularios complejos, menús
-2966: [9]                                                 principales o tableros de control (Dashboards).
-2967: [9]                                             </div>
-2968: [8]                                             <div class="reto-mini mt-10">
-2969: [9]                                                 <span class="text-accent font-bold">🎯 Reto:</span> Crea un
-2970: [9]                                                 formulario vacío y añade un "Título" desde la pestaña Diseño.
-2971: [9]                                                 <br><label class="gs-check mt-5"><input type="checkbox"
-2972: [9]                                                         class="guide-chk">
-2973: [9]                                                     Hecho</label>
-2974: [9]                                             </div>
-2975: [8]                                         </div>
-2976: [7] 
-2977: [7]                                         <!-- 3. FORMULARIO EN BLANCO -->
-2978: [7]                                         <div class="datatype-item">
-2979: [8]                                             <div class="flex-between mb-8">
-2980: [9]                                                 <span class="dt-icon">⬜</span>
-2981: [9]                                                 <span class="badge-status-warn">Vista Presentación</span>
-2982: [9]                                             </div>
-2983: [8]                                             <span class="dt-name">3. Formulario en Blanco</span>
-2984: [8]                                             <span class="dt-desc">Similar al anterior, pero abre en
-2985: [8]                                                 <strong>Vista Presentación</strong>. Puedes ver datos reales
-2986: [8]                                                 mientras diseñas.</span>
-2987: [8]                                             <div class="info-box info-box--info mt-10 p-8 text-085">
-2988: [9]                                                 <strong>Uso:</strong> Ideal para ajustar tamaños de cuadros
-2989: [9]                                                 basándote en el contenido real de los registros.
-2990: [9]                                             </div>
-2991: [8]                                         </div>
-2992: [7] 
-2993: [7]                                         <!-- 4. ASISTENTE PARA FORMULARIOS -->
-2994: [7]                                         <div class="datatype-item border-hover-success">
-2995: [8]                                             <div class="flex-between mb-8">
-2996: [9]                                                 <span class="dt-icon">🪄</span>
-2997: [9]                                                 <span class="badge-status-success">El Favorito</span>
-2998: [9]                                             </div>
-2999: [8]                                             <span class="dt-name">4. Asistente (Wizard)</span>
-3000: [8]                                             <span class="dt-desc">Te guía paso a paso: elige qué campos quieres,
-3001: [8]                                                 qué tabla y qué <strong>distribución</strong> usar.</span>
-3002: [8]                                             <div class="info-box info-box--primary mt-10 p-8 text-085">
-3003: [9]                                                 <strong>Uso:</strong> El equilibrio perfecto entre rapidez y
-3004: [9]                                                 personalización. Permite mezclar campos de varias tablas.
-3005: [9]                                             </div>
-3006: [8]                                             <div class="reto-mini mt-10">
-3007: [9]                                                 <span class="text-success font-bold">🎯 Reto:</span> Usa el
-3008: [9]                                                 asistente para crear un formulario que SOLO tenga
-3009: [9]                                                 <code>Nombre</code> y <code>Email</code>.
-3010: [9]                                                 <br><label class="gs-check mt-5"><input type="checkbox"
-3011: [9]                                                         class="guide-chk">
-3012: [9]                                                     Hecho</label>
-3013: [9]                                             </div>
-3014: [8]                                         </div>
-3015: [7] 
-3016: [7]                                         <!-- 5. NAVEGACIÓN -->
-3017: [7]                                         <div class="datatype-item">
-3018: [8]                                             <div class="flex-between mb-8">
-3019: [9]                                                 <span class="dt-icon">🧭</span>
-3020: [9]                                                 <span class="badge-status-accent">Estructura</span>
-3021: [9]                                             </div>
-3022: [8]                                             <span class="dt-name">5. Navegación</span>
-3023: [8]                                             <span class="dt-desc">Crea un <strong>Menú de Pestañas</strong>
-3024: [8]                                                 (Horizontal o Vertical) para agrupar varios formularios en uno
-3025: [8]                                                 solo.</span>
-3026: [8]                                             <div class="info-box info-box--info mt-10 p-8 text-085">
-3027: [9]                                                 <strong>Uso:</strong> Para organizar una base de datos grande.
-3028: [9]                                                 Un menú arriba para: Clientes, Ventas, Reportes.
-3029: [9]                                             </div>
-3030: [8]                                         </div>
-3031: [7] 
-3032: [7]                                         <!-- 6. MÁS FORMULARIOS (FORM. DIVIDIDO) -->
-3033: [7]                                         <div class="datatype-item">
-3034: [8]                                             <div class="flex-between mb-8">
-3035: [9]                                                 <span class="dt-icon">🎭</span>
-3036: [9]                                                 <span class="badge-status-warn">Varios tipos</span>
-3037: [9]                                             </div>
-3038: [8]                                             <span class="dt-name">6. Más Formularios</span>
-3039: [8]                                             <span class="dt-desc">Incluye el potente <strong>Formulario
-3040: [8]                                                     Dividido</strong> (ver ficha arriba y lista abajo al mismo
-3041: [8]                                                 tiempo).</span>
-3042: [8]                                             <div class="info-box info-box--success mt-10 p-8 text-085">
-3043: [9]                                                 <strong>Uso:</strong> Selecciona "Formulario dividido" para
-3044: [9]                                                 buscar registros en una lista y editarlos arriba.
-3045: [9]                                             </div>
-3046: [8]                                         </div>
-3047: [7]                                     </div>
-3048: [6] 
-3049: [6]                                     <!-- TABLA RESUMEN DE FLUJO -->
-3050: [6]                                     <h4 class="mt-20 mb-10">🤔 ¿Cuál botón elijo para mi proyecto?</h4>
-3051: [6]                                     <table class="gs-table">
-3052: [6]                                         <thead>
-3053: [6]                                             <tr>
-3054: [6]                                                 <th>Si mi objetivo es...</th>
-3055: [6]                                                 <th>La mejor opción es...</th>
-3056: [6]                                                 <th>Dificultad</th>
-3057: [6]                                             </tr>
-3058: [6]                                         </thead>
-3059: [6]                                         <tbody>
-3060: [6]                                             <tr>
-3061: [6]                                                 <td>Solo ver datos rápido</td>
-3062: [6]                                                 <td><strong>1. Formulario</strong></td>
-3063: [6]                                                 <td>⭐</td>
-3064: [6]                                             </tr>
-3065: [6]                                             <tr>
-3066: [6]                                                 <td>Elegir campos de varias tablas</td>
-3067: [6]                                                 <td><strong>4. Asistente</strong></td>
-3068: [6]                                                 <td>⭐⭐</td>
-3069: [6]                                             </tr>
-3070: [6]                                             <tr>
-3071: [6]                                                 <td>Crear un "Menú Principal"</td>
-3072: [6]                                                 <td><strong>5. Navegación / 2. Diseño</strong></td>
-3073: [6]                                                 <td>⭐⭐⭐⭐</td>
-3074: [6]                                             </tr>
-3075: [6]                                             <tr>
-3076: [6]                                                 <td>Listas de búsqueda rápida</td>
-3077: [6]                                                 <td><strong>6. Formulario Dividido</strong></td>
-3078: [6]                                                 <td>⭐⭐</td>
-3079: [6]                                             </tr>
-3080: [6]                                         </tbody>
-3081: [6]                                     </table>
-3082: [6]                                 </div>
-3083: [5] 
-3084: [5]                                 <!-- ─── 5. FORMULARIOS AVANZADOS ─── -->
-3085: [5]                                 <div class="theory-card theory-card--full border-l-green">
-3086: [6]                                     <h3>📱 Formularios Avanzados: Más Allá del Asistente</h3>
-3087: [6]                                     <p>Los formularios son la <strong>interfaz de usuario</strong> de Access.
-3088: [6]                                         Permiten
-3089: [6]                                         al personal administrativo ingresar, modificar y consultar datos de
-3090: [6]                                         forma segura
-3091: [6]                                         sin tocar las tablas directamente.</p>
-3092: [6]                                     <div class="datatypes-grid mt-15 mb-15">
-3093: [7]                                         <div class="datatype-item">
-3094: [8]                                             <span class="dt-icon">📑</span>
-3095: [8]                                             <span class="dt-name">Formulario Simple</span>
-3096: [8]                                             <span class="dt-desc">Muestra los campos de <em>un solo
-3097: [8]                                                     registro</em> a la
-3098: [8]                                                 vez. Ideal para captura de datos individual (ej: registrar un
-3099: [8]                                                 empleado).</span>
-3100: [8]                                         </div>
-3101: [7]                                         <div class="datatype-item">
-3102: [8]                                             <span class="dt-icon">📋</span>
-3103: [8]                                             <span class="dt-name">Formulario Continuo</span>
-3104: [8]                                             <span class="dt-desc">Muestra <em>múltiples registros</em> con el
-3105: [8]                                                 mismo
-3106: [8]                                                 diseño. Perfecto para revisar listas (ej: lista de pedidos
-3107: [8]                                                 pendientes).</span>
-3108: [8]                                         </div>
-3109: [7]                                         <div class="datatype-item">
-3110: [8]                                             <span class="dt-icon">🏠📑</span>
-3111: [8]                                             <span class="dt-name">Formulario Principal/Sub</span>
-3112: [8]                                             <span class="dt-desc">Un formulario «padre» (ej: CLIENTE) que
-3113: [8]                                                 contiene un
-3114: [8]                                                 subformulario «hijo» (PEDIDOS de ese cliente). Refleja la
-3115: [8]                                                 relación 1:N
-3116: [8]                                                 visualmente.</span>
-3117: [8]                                         </div>
-3118: [7]                                         <div class="datatype-item">
-3119: [8]                                             <span class="dt-icon">🔲</span>
-3120: [8]                                             <span class="dt-name">Formulario de Navegación</span>
-3121: [8]                                             <span class="dt-desc">Menú principal de la aplicación. Contiene
-3122: [8]                                                 botones con
-3123: [8]                                                 pestañas que abren otros formularios. Es el «tablero de mando»
-3124: [8]                                                 de tu
-3125: [8]                                                 BD.</span>
-3126: [8]                                         </div>
-3127: [7]                                     </div>
-3128: [6]                                     <h4 class="mt-15 mb-10">🔧 Propiedades de Formulario Esenciales</h4>
-3129: [6]                                     <div class="component-list">
-3130: [7]                                         <div class="component-item">
-3131: [8]                                             <span class="comp-icon">🔒</span>
-3132: [8]                                             <div>
-3133: [9]                                                 <strong>Permite agregar / eliminar registros</strong>
-3134: [9]                                                 <p>Puedes desactivar estas propiedades en <code>Sí/No</code>
-3135: [9]                                                     para crear
-3136: [9]                                                     formularios de <em>solo lectura</em> o de <em>solo
-3137: [9]                                                         consulta</em> que
-3138: [9]                                                     protegen los datos históricos.</p>
-3139: [9]                                             </div>
-3140: [8]                                         </div>
-3141: [7]                                         <div class="component-item">
-3142: [8]                                             <span class="comp-icon">🎨</span>
-3143: [8]                                             <div>
-3144: [9]                                                 <strong>Formato Condicional</strong>
-3145: [9]                                                 <p>Cambia el color/fuente de un control según una condición. Ej:
-3146: [9]                                                     pintar
-3147: [9]                                                     en rojo el campo <code>Stock</code> cuando sea menor a 5.
-3148: [9]                                                     (Pestaña
-3149: [9]                                                     Formato → Formato condicional).</p>
-3150: [9]                                             </div>
-3151: [8]                                         </div>
-3152: [7]                                         <div class="component-item">
-3153: [8]                                             <span class="comp-icon">🔍</span>
-3154: [8]                                             <div>
-3155: [9]                                                 <strong>Filtros integrados</strong>
-3156: [9]                                                 <p>Agrega un cuadro de texto vacío y en la propiedad
-3157: [9]                                                     <strong>Filtro</strong> de su evento <em>Al cambiar</em>,
-3158: [9]                                                     usa una
-3159: [9]                                                     macro para filtrar el origen de registros dinámicamente.
-3160: [9]                                                 </p>
-3161: [9]                                             </div>
-3162: [8]                                         </div>
-3163: [7]                                     </div>
-3164: [6]                                     <!-- EJERCICIO GUIADO -->
-3165: [6]                                     <div class="info-box info-box--success mt-20">
-3166: [7]                                         <span class="info-icon">🛠️</span>
-3167: [7]                                         <div>
-3168: [8]                                             <strong>Ejercicio: Formulario Principal + Subformulario</strong>
-3169: [8]                                             <p class="mt-4 text-095">Crea una pantalla donde veas el cliente
-3170: [8]                                                 arriba y
-3171: [8]                                                 sus pedidos abajo.</p>
-3172: [8]                                             <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-3173: [8]                                                 <li>Selecciona la tabla <code>CLIENTES</code> → <kbd>Crear</kbd>
-3174: [8]                                                     →
-3175: [8]                                                     <kbd>Formulario</kbd>. Access genera el formulario
-3176: [8]                                                     principal.
-3177: [8]                                                 </li>
-3178: [8]                                                 <li>Abre el formulario en <strong>Vista Diseño</strong>. En la
-3179: [8]                                                     pestaña
-3180: [8]                                                     <kbd>Diseño</kbd>, arrastra el control
-3181: [8]                                                     <strong>Subformulario/Subinforme</strong> hacia la sección
-3182: [8]                                                     de
-3183: [8]                                                     detalles.
-3184: [8]                                                 </li>
-3185: [8]                                                 <li>El asistente preguntará qué tabla usar como subformulario:
-3186: [8]                                                     elige
-3187: [8]                                                     <code>PEDIDOS</code>.
-3188: [8]                                                 </li>
-3189: [8]                                                 <li>Access detectará automáticamente el vínculo por
-3190: [8]                                                     <code>ID_Cliente</code>. Confirma y guarda con el nombre
-3191: [8]                                                     <code>frm_ClienteConPedidos</code>.
-3192: [8]                                                 </li>
-3193: [8]                                                 <li>Prueba navegando entre clientes: el subformulario mostrará
-3194: [8]                                                     solo los
-3195: [8]                                                     pedidos del cliente activo.</li>
-3196: [8]                                             </ol>
-3197: [8]                                         </div>
-3198: [7]                                     </div>
-3199: [6]                                 </div>
-3200: [5] 
-3201: [5]                                 <!-- ─── 5. EXPRESIONES Y CAMPO CALCULADO ─── -->
-3202: [5]                                 <div class="theory-card theory-card--full">
-3203: [6]                                     <h3>🧮 Expresiones y Campos Calculados</h3>
-3204: [6]                                     <p>Las expresiones en Access son fórmulas que combinan campos, funciones y
-3205: [6]                                         operadores para calcular valores sin duplicar datos. Se usan en
-3206: [6]                                         <strong>consultas</strong>, <strong>formularios</strong> e
-3207: [6]                                         <strong>informes</strong>.
-3208: [6]                                     </p>
-3209: [6]                                     <div class="datatypes-grid mt-15 mb-15">
-3210: [7]                                         <div class="datatype-item">
-3211: [8]                                             <span class="dt-icon">📅</span>
-3212: [8]                                             <span class="dt-name">Funciones de Fecha</span>
-3213: [8]                                             <span class="dt-desc"><code>Fecha()</code> → hoy |
-3214: [8]                                                 <code>Año([FechaContrato])</code> → extrae el año |
-3215: [8]                                                 <code>DifFecha("aaaa",[FechaIngreso];Fecha())</code> → años de
-3216: [8]                                                 antigüedad.</span>
-3217: [8]                                         </div>
-3218: [7]                                         <div class="datatype-item">
-3219: [8]                                             <span class="dt-icon">🔡</span>
-3220: [8]                                             <span class="dt-name">Funciones de Texto</span>
-3221: [8]                                             <span class="dt-desc"><code>MayúsD([Nombre])</code> → capitaliza |
-3222: [8]                                                 <code>Izq([Cedula];3)</code> → primeros 3 dígitos |
-3223: [8]                                                 <code>[Nombre] & " " & [Apellido]</code> → concatenar.</span>
-3224: [8]                                         </div>
-3225: [7]                                         <div class="datatype-item">
-3226: [8]                                             <span class="dt-icon">🔢</span>
-3227: [8]                                             <span class="dt-name">Funciones Matemáticas</span>
-3228: [8]                                             <span class="dt-desc"><code>[Precio]*[Cantidad]</code> → subtotal |
-3229: [8]                                                 <code>[Subtotal]*1.19</code> → con IVA |
-3230: [8]                                                 <code>Redondear([Precio];0)</code> → sin decimales.</span>
-3231: [8]                                         </div>
-3232: [7]                                         <div class="datatype-item">
-3233: [8]                                             <span class="dt-icon">📊</span>
-3234: [8]                                             <span class="dt-name">Funciones de Agregado</span>
-3235: [8]                                             <span class="dt-desc">En informes y consultas agrupadas:
-3236: [8]                                                 <code>Suma([Total])</code>, <code>Promedio([Nota])</code>,
-3237: [8]                                                 <code>Conteo([ID])</code>, <code>Máx([Salario])</code>.</span>
-3238: [8]                                         </div>
-3239: [7]                                     </div>
-3240: [6]                                     <div class="info-box info-box--tip mt-15">
-3241: [7]                                         <span class="info-icon">💡</span>
-3242: [7]                                         <div>
-3243: [8]                                             <strong>El Constructor de Expresiones</strong>
-3244: [8]                                             <p class="mt-4 text-095">Access incluye una herramienta visual para
-3245: [8]                                                 escribir
-3246: [8]                                                 expresiones sin memorizar sintaxis. Haz clic en el botón
-3247: [8]                                                 <strong>«...»</strong> en cualquier propiedad de campo o en la
-3248: [8]                                                 cuadrícula de diseño de consultas. El constructor muestra todas
-3249: [8]                                                 las
-3250: [8]                                                 funciones disponibles organizadas por categoría.
-3251: [8]                                             </p>
-3252: [8]                                         </div>
-3253: [7]                                     </div>
-3254: [6]                                     <!-- EJERCICIO GUIADO -->
-3255: [6]                                     <div class="info-box info-box--primary mt-20">
-3256: [7]                                         <span class="info-icon">🎯</span>
-3257: [7]                                         <div>
-3258: [8]                                             <strong>Ejercicio: Consulta de Antigüedad Laboral</strong>
-3259: [8]                                             <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-3260: [8]                                                 <li>Crea una <strong>Consulta de Selección</strong> basada en
-3261: [8]                                                     <code>tbl_Empleados</code>.
-3262: [8]                                                 </li>
-3263: [8]                                                 <li>Agrega los campos <code>NombreCompleto</code>,
-3264: [8]                                                     <code>Cargo</code> y
-3265: [8]                                                     <code>FechaIngreso</code>.
-3266: [8]                                                 </li>
-3267: [8]                                                 <li>En una columna vacía, crea el campo
-3268: [8]                                                     calculado:<br><code>Antigüedad_Años: DifFecha("aaaa",[FechaIngreso];Fecha())</code>
-3269: [8]                                                 </li>
-3270: [8]                                                 <li>En otra
-3271: [8]                                                     columna:<br><code>Estado_Laboral: SiInm([Antigüedad_Años]&gt;=5;&quot;Veterano&quot;;SiInm([Antigüedad_Años]&gt;=1;&quot;Activo&quot;;&quot;Nuevo&quot;))</code>
-3272: [8]                                                 </li>
-3273: [8]                                                 <li>Ejecuta con <kbd>F5</kbd> y guarda como
-3274: [8]                                                     <code>Q_Antigüedad_Empleados</code>.
-3275: [8]                                                 </li>
-3276: [8]                                             </ol>
-3277: [8]                                         </div>
-3278: [7]                                     </div>
-3279: [6]                                 </div>
-3280: [5] 
-3281: [5]                                 <!-- ─── 6. MACROS E INFORMES ─── -->
-3282: [5]                                 <div class="theory-card theory-card--full border-l-primary">
-3283: [6]                                     <h3>⚙️ Macros: Automatización sin Código</h3>
-3284: [6]                                     <p>Las macros son secuencias de acciones predefinidas que Access ejecuta al
-3285: [6]                                         ocurrir
-3286: [6]                                         un evento (clic en un botón, apertura de formulario, etc.). Son el
-3287: [6]                                         puente entre
-3288: [6]                                         Access y la automatización sin programar VBA.</p>
-3289: [6]                                     <div class="component-list mt-15">
-3290: [7]                                         <div class="component-item">
-3291: [8]                                             <span class="comp-icon">🖱️</span>
-3292: [8]                                             <div>
-3293: [9]                                                 <strong>AbriFormulario / AbrirInforme</strong>
-3294: [9]                                                 <p>Las acciones más comunes. Abren un formulario o informe,
-3295: [9]                                                     opcionalmente con un filtro. Ej: abrir el formulario de
-3296: [9]                                                     pedidos
-3297: [9]                                                     filtrando solo los pendientes.</p>
-3298: [9]                                             </div>
-3299: [8]                                         </div>
-3300: [7]                                         <div class="component-item">
-3301: [8]                                             <span class="comp-icon">🔍</span>
-3302: [8]                                             <div>
-3303: [9]                                                 <strong>BuscarRegistro / BuscarSiguiente</strong>
-3304: [9]                                                 <p>Permite buscar dinámicamente un registro específico. Útil
-3305: [9]                                                     para crear
-3306: [9]                                                     barras de búsqueda en formularios.</p>
-3307: [9]                                             </div>
-3308: [8]                                         </div>
-3309: [7]                                         <div class="component-item">
-3310: [8]                                             <span class="comp-icon">💾</span>
-3311: [8]                                             <div>
-3312: [9]                                                 <strong>GuardarRegistro / Actualizar</strong>
-3313: [9]                                                 <p>Fuerza el guardado del registro actual sin cerrar el
-3314: [9]                                                     formulario.
-3315: [9]                                                     Ideal para botones «Guardar» personalizados que den
-3316: [9]                                                     confirmación
-3317: [9]                                                     visual al usuario.</p>
-3318: [9]                                             </div>
-3319: [8]                                         </div>
-3320: [7]                                         <div class="component-item">
-3321: [8]                                             <span class="comp-icon">📢</span>
-3322: [8]                                             <div>
-3323: [9]                                                 <strong>CuadroDeMensaje (MsgBox)</strong>
-3324: [9]                                                 <p>Muestra mensajes personalizados de confirmación o alerta. Ej:
-3325: [9]                                                     «¿Está
-3326: [9]                                                     seguro de eliminar este registro?» con botones Sí/No antes
-3327: [9]                                                     de
-3328: [9]                                                     ejecutar una acción.</p>
-3329: [9]                                             </div>
-3330: [8]                                         </div>
-3331: [7]                                         <div class="component-item">
-3332: [8]                                             <span class="comp-icon">🏁</span>
-3333: [8]                                             <div>
-3334: [9]                                                 <strong>Macro AutoExec</strong>
-3335: [9]                                                 <p>Si creas una macro con el nombre exacto
-3336: [9]                                                     <code>AutoExec</code>, Access
-3337: [9]                                                     la ejecuta <strong>automáticamente</strong> al abrir la base
-3338: [9]                                                     de
-3339: [9]                                                     datos. Úsala para mostrar el menú principal al inicio.
-3340: [9]                                                 </p>
-3341: [9]                                             </div>
-3342: [8]                                         </div>
-3343: [7]                                         <div class="component-item">
-3344: [8]                                             <span class="comp-icon">🔔</span>
-3345: [8]                                             <div>
-3346: [9]                                                 <strong>EstablecerValor</strong>
-3347: [9]                                                 <p>Cambia el valor de un control en tiempo de ejecución. Ej: al
-3348: [9]                                                     seleccionar una categoría, limpiar automáticamente el campo
-3349: [9]                                                     de
-3350: [9]                                                     subcategoría relacionado.</p>
-3351: [9]                                             </div>
-3352: [8]                                         </div>
-3353: [7]                                     </div>
-3354: [6]                                     <!-- EJERCICIO GUIADO: MACROS -->
-3355: [6]                                     <div class="info-box info-box--success mt-20">
-3356: [7]                                         <span class="info-icon">🛠️</span>
-3357: [7]                                         <div>
-3358: [8]                                             <strong>Ejercicio: Botón para Abrir Informe con Filtro</strong>
-3359: [8]                                             <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-3360: [8]                                                 <li>Abre tu formulario principal en <strong>Vista
-3361: [8]                                                         Diseño</strong>.</li>
-3362: [8]                                                 <li>Agrega un <strong>Botón de comando</strong> desde el panel
-3363: [8]                                                     de
-3364: [8]                                                     controles.</li>
-3365: [8]                                                 <li>En el asistente, selecciona la categoría <em>«Informe de
-3366: [8]                                                         aplicación»</em> → acción <em>«Vista previa del
-3367: [8]                                                         informe»</em>.
-3368: [8]                                                     Elige tu informe de inventario.</li>
-3369: [8]                                                 <li>Si el asistente no está disponible, ve a la propiedad
-3370: [8]                                                     <strong>«Al
-3371: [8]                                                         hacer clic»</strong> del botón → selecciona
-3372: [8]                                                     <em>«Generador de
-3373: [8]                                                         macros»</em> → agrega la acción
-3374: [8]                                                     <code>AbrirInforme</code>.
-3375: [8]                                                 </li>
-3376: [8]                                                 <li>En la propiedad «Condición WHERE» puedes agregar un filtro
-3377: [8]                                                     dinámico:<br><code>[Categoria] = [Formularios]![frm_Principal]![cboCategoría]</code>
-3378: [8]                                                 </li>
-3379: [8]                                             </ol>
-3380: [8]                                             <p class="text-090 text-success mt-4"><em>Resultado:</em> El botón
-3381: [8]                                                 abre el
-3382: [8]                                                 informe mostrando solo los registros de la categoría
-3383: [8]                                                 seleccionada en el
-3384: [8]                                                 formulario.</p>
-3385: [8]                                         </div>
-3386: [7]                                     </div>
-3387: [6]                                 </div>
-3388: [5] 
-3389: [5]                                 <!-- ─── 7. INFORMES AVANZADOS ─── -->
-3390: [5]                                 <div class="theory-card theory-card--full border-l-orange">
-3391: [6]                                     <h3>📄 Informes Avanzados: Del Dato al Documento Profesional</h3>
-3392: [6]                                     <p>Los informes en Access son documentos diseñados para <strong>imprimir o
-3393: [6]                                             exportar
-3394: [6]                                             a PDF</strong>. Se estructuran en secciones con propósitos
-3395: [6]                                         específicos:</p>
-3396: [6]                                     <div class="datatypes-grid mt-15 mb-15">
-3397: [7]                                         <div class="datatype-item">
-3398: [8]                                             <span class="dt-icon">📝</span>
-3399: [8]                                             <span class="dt-name">Encabezado del Informe</span>
-3400: [8]                                             <span class="dt-desc">Aparece <strong>solo en la primera
-3401: [8]                                                     página</strong>.
-3402: [8]                                                 Ideal para el logo de la empresa, título del documento y fecha
-3403: [8]                                                 de
-3404: [8]                                                 generación.</span>
-3405: [8]                                         </div>
-3406: [7]                                         <div class="datatype-item">
-3407: [8]                                             <span class="dt-icon">📋</span>
-3408: [8]                                             <span class="dt-name">Encabezado de Página</span>
-3409: [8]                                             <span class="dt-desc">Se repite en <strong>la parte superior de cada
-3410: [8]                                                     página</strong>. Contiene los títulos de las
-3411: [8]                                                 columnas.</span>
-3412: [8]                                         </div>
-3413: [7]                                         <div class="datatype-item">
-3414: [8]                                             <span class="dt-icon">📌</span>
-3415: [8]                                             <span class="dt-name">Encabezado de Grupo</span>
-3416: [8]                                             <span class="dt-desc">Aparece antes de cada grupo de registros. Ej:
-3417: [8]                                                 <code>Categoría: Electrónica</code> antes de listar todos los
-3418: [8]                                                 productos
-3419: [8]                                                 electrónicos.</span>
-3420: [8]                                         </div>
-3421: [7]                                         <div class="datatype-item">
-3422: [8]                                             <span class="dt-icon">🔢</span>
-3423: [8]                                             <span class="dt-name">Sección de Detalle</span>
-3424: [8]                                             <span class="dt-desc">Se repite por cada <strong>registro
-3425: [8]                                                     individual</strong>. Es el cuerpo del informe donde van los
-3426: [8]                                                 datos de
-3427: [8]                                                 cada fila.</span>
-3428: [8]                                         </div>
-3429: [7]                                         <div class="datatype-item">
-3430: [8]                                             <span class="dt-icon">∑</span>
-3431: [8]                                             <span class="dt-name">Pie de Grupo</span>
-3432: [8]                                             <span class="dt-desc">Muestra <strong>subtotales y
-3433: [8]                                                     resúmenes</strong> al
-3434: [8]                                                 final de cada grupo. Ej:
-3435: [8]                                                 <code>Total Electrónica: $4.500.000</code>.</span>
-3436: [8]                                         </div>
-3437: [7]                                         <div class="datatype-item">
-3438: [8]                                             <span class="dt-icon">🏁</span>
-3439: [8]                                             <span class="dt-name">Pie de Informe</span>
-3440: [8]                                             <span class="dt-desc"><strong>Gran Total</strong> y resumen general.
-3441: [8]                                                 Aparece
-3442: [8]                                                 solo al final del documento completo.</span>
-3443: [8]                                         </div>
-3444: [7]                                     </div>
-3445: [6]                                     <div class="info-box info-box--tip mt-15">
-3446: [7]                                         <span class="info-icon">💡</span>
-3447: [7]                                         <div>
-3448: [8]                                             <strong>Técnica Profesional: Exportar a PDF automáticamente</strong>
-3449: [8]                                             <p class="mt-4 text-095">Crea una macro con la acción
-3450: [8]                                                 <code>ExportarConFormato</code>, elige el tipo <em>PDF</em> y
-3451: [8]                                                 una ruta
-3452: [8]                                                 de guardado dinámica usando
-3453: [8]                                                 <code>=CarpetaActual() & "\Informe_" & Formato(Fecha();"yyyymmdd") & ".pdf"</code>.
-3454: [8]                                                 Adjunta esta macro al botón de tu formulario principal para
-3455: [8]                                                 generar
-3456: [8]                                                 reportes PDF con un solo clic.
-3457: [8]                                             </p>
-3458: [8]                                         </div>
-3459: [7]                                     </div>
-3460: [6]                                     <!-- EJERCICIO FINAL INTEGRADOR -->
-3461: [6]                                     <div class="info-box info-box--warning mt-20">
-3462: [7]                                         <span class="info-icon">🏆</span>
-3463: [7]                                         <div>
-3464: [8]                                             <strong>Ejercicio Integrador Final: Sistema de Inventario
-3465: [8]                                                 Completo</strong>
-3466: [8]                                             <p class="mt-4 text-095">Aplica todos los temas vistos en esta
-3467: [8]                                                 sección para
-3468: [8]                                                 crear un mini-sistema de inventario:</p>
-3469: [8]                                             <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
-3470: [8]                                                 <li><strong>Validación:</strong> En <code>tbl_Productos</code>,
-3471: [8]                                                     agrega
-3472: [8]                                                     reglas de validación para Precio <code>&gt;0</code> y Stock
-3473: [8]                                                     <code>&gt;=0</code>.
-3474: [8]                                                 </li>
-3475: [8]                                                 <li><strong>Lista desplegable:</strong> En el formulario de
-3476: [8]                                                     Productos,
-3477: [8]                                                     cambia el campo Categoría por un Cuadro Combinado enlazado a
-3478: [8]                                                     una
-3479: [8]                                                     tabla <code>tbl_Categorias</code> con «Limitar a lista: Sí».
-3480: [8]                                                 </li>
-3481: [8]                                                 <li><strong>Condicional:</strong> Crea la consulta
-3482: [8]                                                     <code>Q_Estado_Stock</code>
-3483: [8]                                                     con:<br><code>Estado: SiInm([Stock]=0;&quot;Agotado&quot;;SiInm([Stock]&lt;5;&quot;Crítico&quot;;&quot;Normal&quot;))</code>
-3484: [8]                                                 </li>
-3485: [8]                                                 <li><strong>Informe:</strong> Genera un informe agrupado por
-3486: [8]                                                     Categoría
-3487: [8]                                                     con subtotales de Stock y Valor Total
-3488: [8]                                                     (<code>Suma([Precio]*[Stock])</code>) en el pie de grupo.
-3489: [8]                                                 </li>
-3490: [8]                                                 <li><strong>Macro:</strong> Crea un botón en el formulario
-3491: [8]                                                     principal que
-3492: [8]                                                     exporte el informe anterior a PDF automáticamente.</li>
-3493: [8]                                             </ol>
-3494: [8]                                             <p class="text-090 text-warning mt-4"><em>Entregable:</em> Una base
-3495: [8]                                                 de datos
-3496: [8]                                                 Access funcional con formularios, consultas con condicionales,
-3497: [8]                                                 validación activa e informe exportable.</p>
-3498: [8]                                             <a href="https://drive.google.com" target="_blank" rel="noopener"
-3499: [8]                                                 class="upload-cta mt-12">
-3500: [8]                                                 <span class="upload-cta-icon">📤</span>
+2919: [5]                             </div>
+2920: [4] 
+2921: [4]                             <!-- ─── 4. GUÍA DE LA CINTA DE OPCIONES: CREACIÓN DE FORMULARIOS ─── -->
+2922: [4]                             <div class="theory-card theory-card--full border-l-primary">
+2923: [5]                                 <div class="section-badge mb-10">CINTA: CREAR > GRUPO: FORMULARIOS</div>
+2924: [5]                                 <h3>🛠️ Manual Maestro de Creación de Formularios</h3>
+2925: [5]                                 <p class="mb-20">Microsoft Access ofrece <strong>6 formas
+2926: [5]                                         fundamentales</strong> de iniciar un formulario. Cada una tiene un
+2927: [5]                                     "momento de gloria" dependiendo de si buscas velocidad o control total.
+2928: [5]                                 </p>
+2929: [5] 
+2930: [5]                                 <div class="datatypes-grid mt-15 mb-25">
+2931: [6]                                     <!-- 1. FORMULARIO (1-CLIC) -->
+2932: [6]                                     <div class="datatype-item border-hover-primary">
+2933: [7]                                         <div class="flex-between mb-8">
+2934: [8]                                             <span class="dt-icon">📄</span>
+2935: [8]                                             <span class="badge-status-success">Instantáneo</span>
+2936: [8]                                         </div>
+2937: [7]                                         <span class="dt-name">1. Formulario (Simple)</span>
+2938: [7]                                         <span class="dt-desc">Genera un formulario básico con <strong>todos
+2939: [7]                                                 los campos</strong> de la tabla seleccionada en un solo
+2940: [7]                                             clic.</span>
+2941: [7]                                         <div class="info-box info-box--info mt-10 p-8 text-085">
+2942: [8]                                             <strong>Uso:</strong> Cuando necesitas una interfaz rápida para
+2943: [8]                                             entrar datos sin diseñar nada.
+2944: [8]                                         </div>
+2945: [7]                                         <div class="reto-mini mt-10">
+2946: [8]                                             <span class="text-primary font-bold">🎯 Reto:</span> Selecciona
+2947: [8]                                             <code>tbl_Clientes</code> y pulsa este botón. ¡Ya tienes tu
+2948: [8]                                             primer formulario!
+2949: [8]                                             <br><label class="gs-check mt-5"><input type="checkbox" class="guide-chk">
+2950: [8]                                                 Hecho</label>
+2951: [8]                                         </div>
+2952: [7]                                     </div>
+2953: [6] 
+2954: [6]                                     <!-- 2. DISEÑO DEL FORMULARIO -->
+2955: [6]                                     <div class="datatype-item border-hover-accent">
+2956: [7]                                         <div class="flex-between mb-8">
+2957: [8]                                             <span class="dt-icon">📐</span>
+2958: [8]                                             <span class="badge-status-accent">Nivel Experto</span>
+2959: [8]                                         </div>
+2960: [7]                                         <span class="dt-name">2. Diseño del Formulario</span>
+2961: [7]                                         <span class="dt-desc">Abre un <strong>lienzo en blanco
+2962: [7]                                                 total</strong> en Vista Diseño. Tú arrastras cada campo y
+2963: [7]                                             control.</span>
+2964: [7]                                         <div class="info-box info-box--warning mt-10 p-8 text-085">
+2965: [8]                                             <strong>Uso:</strong> Para formularios complejos, menús
+2966: [8]                                             principales o tableros de control (Dashboards).
+2967: [8]                                         </div>
+2968: [7]                                         <div class="reto-mini mt-10">
+2969: [8]                                             <span class="text-accent font-bold">🎯 Reto:</span> Crea un
+2970: [8]                                             formulario vacío y añade un "Título" desde la pestaña Diseño.
+2971: [8]                                             <br><label class="gs-check mt-5"><input type="checkbox" class="guide-chk">
+2972: [8]                                                 Hecho</label>
+2973: [8]                                         </div>
+2974: [7]                                     </div>
+2975: [6] 
+2976: [6]                                     <!-- 3. FORMULARIO EN BLANCO -->
+2977: [6]                                     <div class="datatype-item">
+2978: [7]                                         <div class="flex-between mb-8">
+2979: [8]                                             <span class="dt-icon">⬜</span>
+2980: [8]                                             <span class="badge-status-warn">Vista Presentación</span>
+2981: [8]                                         </div>
+2982: [7]                                         <span class="dt-name">3. Formulario en Blanco</span>
+2983: [7]                                         <span class="dt-desc">Similar al anterior, pero abre en
+2984: [7]                                             <strong>Vista Presentación</strong>. Puedes ver datos reales
+2985: [7]                                             mientras diseñas.</span>
+2986: [7]                                         <div class="info-box info-box--info mt-10 p-8 text-085">
+2987: [8]                                             <strong>Uso:</strong> Ideal para ajustar tamaños de cuadros
+2988: [8]                                             basándote en el contenido real de los registros.
+2989: [8]                                         </div>
+2990: [7]                                     </div>
+2991: [6] 
+2992: [6]                                     <!-- 4. ASISTENTE PARA FORMULARIOS -->
+2993: [6]                                     <div class="datatype-item border-hover-success">
+2994: [7]                                         <div class="flex-between mb-8">
+2995: [8]                                             <span class="dt-icon">🪄</span>
+2996: [8]                                             <span class="badge-status-success">El Favorito</span>
+2997: [8]                                         </div>
+2998: [7]                                         <span class="dt-name">4. Asistente (Wizard)</span>
+2999: [7]                                         <span class="dt-desc">Te guía paso a paso: elige qué campos quieres,
+3000: [7]                                             qué tabla y qué <strong>distribución</strong> usar.</span>
+3001: [7]                                         <div class="info-box info-box--primary mt-10 p-8 text-085">
+3002: [8]                                             <strong>Uso:</strong> El equilibrio perfecto entre rapidez y
+3003: [8]                                             personalización. Permite mezclar campos de varias tablas.
+3004: [8]                                         </div>
+3005: [7]                                         <div class="reto-mini mt-10">
+3006: [8]                                             <span class="text-success font-bold">🎯 Reto:</span> Usa el
+3007: [8]                                             asistente para crear un formulario que SOLO tenga
+3008: [8]                                             <code>Nombre</code> y <code>Email</code>.
+3009: [8]                                             <br><label class="gs-check mt-5"><input type="checkbox" class="guide-chk">
+3010: [8]                                                 Hecho</label>
+3011: [8]                                         </div>
+3012: [7]                                     </div>
+3013: [6] 
+3014: [6]                                     <!-- 5. NAVEGACIÓN -->
+3015: [6]                                     <div class="datatype-item">
+3016: [7]                                         <div class="flex-between mb-8">
+3017: [8]                                             <span class="dt-icon">🧭</span>
+3018: [8]                                             <span class="badge-status-accent">Estructura</span>
+3019: [8]                                         </div>
+3020: [7]                                         <span class="dt-name">5. Navegación</span>
+3021: [7]                                         <span class="dt-desc">Crea un <strong>Menú de Pestañas</strong>
+3022: [7]                                             (Horizontal o Vertical) para agrupar varios formularios en uno
+3023: [7]                                             solo.</span>
+3024: [7]                                         <div class="info-box info-box--info mt-10 p-8 text-085">
+3025: [8]                                             <strong>Uso:</strong> Para organizar una base de datos grande.
+3026: [8]                                             Un menú arriba para: Clientes, Ventas, Reportes.
+3027: [8]                                         </div>
+3028: [7]                                     </div>
+3029: [6] 
+3030: [6]                                     <!-- 6. MÁS FORMULARIOS (FORM. DIVIDIDO) -->
+3031: [6]                                     <div class="datatype-item">
+3032: [7]                                         <div class="flex-between mb-8">
+3033: [8]                                             <span class="dt-icon">🎭</span>
+3034: [8]                                             <span class="badge-status-warn">Varios tipos</span>
+3035: [8]                                         </div>
+3036: [7]                                         <span class="dt-name">6. Más Formularios</span>
+3037: [7]                                         <span class="dt-desc">Incluye el potente <strong>Formulario
+3038: [7]                                                 Dividido</strong> (ver ficha arriba y lista abajo al mismo
+3039: [7]                                             tiempo).</span>
+3040: [7]                                         <div class="info-box info-box--success mt-10 p-8 text-085">
+3041: [8]                                             <strong>Uso:</strong> Selecciona "Formulario dividido" para
+3042: [8]                                             buscar registros en una lista y editarlos arriba.
+3043: [8]                                         </div>
+3044: [7]                                     </div>
+3045: [6]                                 </div>
+3046: [5] 
+3047: [5]                                 <!-- TABLA RESUMEN DE FLUJO -->
+3048: [5]                                 <h4 class="mt-20 mb-10">🤔 ¿Cuál botón elijo para mi proyecto?</h4>
+3049: [5]                                 <table class="gs-table">
+3050: [5]                                     <thead>
+3051: [5]                                         <tr>
+3052: [5]                                             <th>Si mi objetivo es...</th>
+3053: [5]                                             <th>La mejor opción es...</th>
+3054: [5]                                             <th>Dificultad</th>
+3055: [5]                                         </tr>
+3056: [5]                                     </thead>
+3057: [5]                                     <tbody>
+3058: [5]                                         <tr>
+3059: [5]                                             <td>Solo ver datos rápido</td>
+3060: [5]                                             <td><strong>1. Formulario</strong></td>
+3061: [5]                                             <td>⭐</td>
+3062: [5]                                         </tr>
+3063: [5]                                         <tr>
+3064: [5]                                             <td>Elegir campos de varias tablas</td>
+3065: [5]                                             <td><strong>4. Asistente</strong></td>
+3066: [5]                                             <td>⭐⭐</td>
+3067: [5]                                         </tr>
+3068: [5]                                         <tr>
+3069: [5]                                             <td>Crear un "Menú Principal"</td>
+3070: [5]                                             <td><strong>5. Navegación / 2. Diseño</strong></td>
+3071: [5]                                             <td>⭐⭐⭐⭐</td>
+3072: [5]                                         </tr>
+3073: [5]                                         <tr>
+3074: [5]                                             <td>Listas de búsqueda rápida</td>
+3075: [5]                                             <td><strong>6. Formulario Dividido</strong></td>
+3076: [5]                                             <td>⭐⭐</td>
+3077: [5]                                         </tr>
+3078: [5]                                     </tbody>
+3079: [5]                                 </table>
+3080: [5]                             </div>
+3081: [4] 
+3082: [4]                             <!-- ─── 5. FORMULARIOS AVANZADOS ─── -->
+3083: [4]                             <div class="theory-card theory-card--full border-l-green">
+3084: [5]                                 <h3>📱 Formularios Avanzados: Más Allá del Asistente</h3>
+3085: [5]                                 <p>Los formularios son la <strong>interfaz de usuario</strong> de Access.
+3086: [5]                                     Permiten
+3087: [5]                                     al personal administrativo ingresar, modificar y consultar datos de
+3088: [5]                                     forma segura
+3089: [5]                                     sin tocar las tablas directamente.</p>
+3090: [5]                                 <div class="datatypes-grid mt-15 mb-15">
+3091: [6]                                     <div class="datatype-item">
+3092: [7]                                         <span class="dt-icon">📑</span>
+3093: [7]                                         <span class="dt-name">Formulario Simple</span>
+3094: [7]                                         <span class="dt-desc">Muestra los campos de <em>un solo
+3095: [7]                                                 registro</em> a la
+3096: [7]                                             vez. Ideal para captura de datos individual (ej: registrar un
+3097: [7]                                             empleado).</span>
+3098: [7]                                     </div>
+3099: [6]                                     <div class="datatype-item">
+3100: [7]                                         <span class="dt-icon">📋</span>
+3101: [7]                                         <span class="dt-name">Formulario Continuo</span>
+3102: [7]                                         <span class="dt-desc">Muestra <em>múltiples registros</em> con el
+3103: [7]                                             mismo
+3104: [7]                                             diseño. Perfecto para revisar listas (ej: lista de pedidos
+3105: [7]                                             pendientes).</span>
+3106: [7]                                     </div>
+3107: [6]                                     <div class="datatype-item">
+3108: [7]                                         <span class="dt-icon">🏠📑</span>
+3109: [7]                                         <span class="dt-name">Formulario Principal/Sub</span>
+3110: [7]                                         <span class="dt-desc">Un formulario «padre» (ej: CLIENTE) que
+3111: [7]                                             contiene un
+3112: [7]                                             subformulario «hijo» (PEDIDOS de ese cliente). Refleja la
+3113: [7]                                             relación 1:N
+3114: [7]                                             visualmente.</span>
+3115: [7]                                     </div>
+3116: [6]                                     <div class="datatype-item">
+3117: [7]                                         <span class="dt-icon">🔲</span>
+3118: [7]                                         <span class="dt-name">Formulario de Navegación</span>
+3119: [7]                                         <span class="dt-desc">Menú principal de la aplicación. Contiene
+3120: [7]                                             botones con
+3121: [7]                                             pestañas que abren otros formularios. Es el «tablero de mando»
+3122: [7]                                             de tu
+3123: [7]                                             BD.</span>
+3124: [7]                                     </div>
+3125: [6]                                 </div>
+3126: [5]                                 <h4 class="mt-15 mb-10">🔧 Propiedades de Formulario Esenciales</h4>
+3127: [5]                                 <div class="component-list">
+3128: [6]                                     <div class="component-item">
+3129: [7]                                         <span class="comp-icon">🔒</span>
+3130: [7]                                         <div>
+3131: [8]                                             <strong>Permite agregar / eliminar registros</strong>
+3132: [8]                                             <p>Puedes desactivar estas propiedades en <code>Sí/No</code>
+3133: [8]                                                 para crear
+3134: [8]                                                 formularios de <em>solo lectura</em> o de <em>solo
+3135: [8]                                                     consulta</em> que
+3136: [8]                                                 protegen los datos históricos.</p>
+3137: [8]                                         </div>
+3138: [7]                                     </div>
+3139: [6]                                     <div class="component-item">
+3140: [7]                                         <span class="comp-icon">🎨</span>
+3141: [7]                                         <div>
+3142: [8]                                             <strong>Formato Condicional</strong>
+3143: [8]                                             <p>Cambia el color/fuente de un control según una condición. Ej:
+3144: [8]                                                 pintar
+3145: [8]                                                 en rojo el campo <code>Stock</code> cuando sea menor a 5.
+3146: [8]                                                 (Pestaña
+3147: [8]                                                 Formato → Formato condicional).</p>
+3148: [8]                                         </div>
+3149: [7]                                     </div>
+3150: [6]                                     <div class="component-item">
+3151: [7]                                         <span class="comp-icon">🔍</span>
+3152: [7]                                         <div>
+3153: [8]                                             <strong>Filtros integrados</strong>
+3154: [8]                                             <p>Agrega un cuadro de texto vacío y en la propiedad
+3155: [8]                                                 <strong>Filtro</strong> de su evento <em>Al cambiar</em>,
+3156: [8]                                                 usa una
+3157: [8]                                                 macro para filtrar el origen de registros dinámicamente.
+3158: [8]                                             </p>
+3159: [8]                                         </div>
+3160: [7]                                     </div>
+3161: [6]                                 </div>
+3162: [5]                                 <!-- EJERCICIO GUIADO -->
+3163: [5]                                 <div class="info-box info-box--success mt-20">
+3164: [6]                                     <span class="info-icon">🛠️</span>
+3165: [6]                                     <div>
+3166: [7]                                         <strong>Ejercicio: Formulario Principal + Subformulario</strong>
+3167: [7]                                         <p class="mt-4 text-095">Crea una pantalla donde veas el cliente
+3168: [7]                                             arriba y
+3169: [7]                                             sus pedidos abajo.</p>
+3170: [7]                                         <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+3171: [7]                                             <li>Selecciona la tabla <code>CLIENTES</code> → <kbd>Crear</kbd>
+3172: [7]                                                 →
+3173: [7]                                                 <kbd>Formulario</kbd>. Access genera el formulario
+3174: [7]                                                 principal.
+3175: [7]                                             </li>
+3176: [7]                                             <li>Abre el formulario en <strong>Vista Diseño</strong>. En la
+3177: [7]                                                 pestaña
+3178: [7]                                                 <kbd>Diseño</kbd>, arrastra el control
+3179: [7]                                                 <strong>Subformulario/Subinforme</strong> hacia la sección
+3180: [7]                                                 de
+3181: [7]                                                 detalles.
+3182: [7]                                             </li>
+3183: [7]                                             <li>El asistente preguntará qué tabla usar como subformulario:
+3184: [7]                                                 elige
+3185: [7]                                                 <code>PEDIDOS</code>.
+3186: [7]                                             </li>
+3187: [7]                                             <li>Access detectará automáticamente el vínculo por
+3188: [7]                                                 <code>ID_Cliente</code>. Confirma y guarda con el nombre
+3189: [7]                                                 <code>frm_ClienteConPedidos</code>.
+3190: [7]                                             </li>
+3191: [7]                                             <li>Prueba navegando entre clientes: el subformulario mostrará
+3192: [7]                                                 solo los
+3193: [7]                                                 pedidos del cliente activo.</li>
+3194: [7]                                         </ol>
+3195: [7]                                     </div>
+3196: [6]                                 </div>
+3197: [5]                             </div>
+3198: [4] 
+3199: [4]                             <!-- ─── 5. EXPRESIONES Y CAMPO CALCULADO ─── -->
+3200: [4]                             <div class="theory-card theory-card--full">
+3201: [5]                                 <h3>🧮 Expresiones y Campos Calculados</h3>
+3202: [5]                                 <p>Las expresiones en Access son fórmulas que combinan campos, funciones y
+3203: [5]                                     operadores para calcular valores sin duplicar datos. Se usan en
+3204: [5]                                     <strong>consultas</strong>, <strong>formularios</strong> e
+3205: [5]                                     <strong>informes</strong>.
+3206: [5]                                 </p>
+3207: [5]                                 <div class="datatypes-grid mt-15 mb-15">
+3208: [6]                                     <div class="datatype-item">
+3209: [7]                                         <span class="dt-icon">📅</span>
+3210: [7]                                         <span class="dt-name">Funciones de Fecha</span>
+3211: [7]                                         <span class="dt-desc"><code>Fecha()</code> → hoy |
+3212: [7]                                             <code>Año([FechaContrato])</code> → extrae el año |
+3213: [7]                                             <code>DifFecha("aaaa",[FechaIngreso];Fecha())</code> → años de
+3214: [7]                                             antigüedad.</span>
+3215: [7]                                     </div>
+3216: [6]                                     <div class="datatype-item">
+3217: [7]                                         <span class="dt-icon">🔡</span>
+3218: [7]                                         <span class="dt-name">Funciones de Texto</span>
+3219: [7]                                         <span class="dt-desc"><code>MayúsD([Nombre])</code> → capitaliza |
+3220: [7]                                             <code>Izq([Cedula];3)</code> → primeros 3 dígitos |
+3221: [7]                                             <code>[Nombre] & " " & [Apellido]</code> → concatenar.</span>
+3222: [7]                                     </div>
+3223: [6]                                     <div class="datatype-item">
+3224: [7]                                         <span class="dt-icon">🔢</span>
+3225: [7]                                         <span class="dt-name">Funciones Matemáticas</span>
+3226: [7]                                         <span class="dt-desc"><code>[Precio]*[Cantidad]</code> → subtotal |
+3227: [7]                                             <code>[Subtotal]*1.19</code> → con IVA |
+3228: [7]                                             <code>Redondear([Precio];0)</code> → sin decimales.</span>
+3229: [7]                                     </div>
+3230: [6]                                     <div class="datatype-item">
+3231: [7]                                         <span class="dt-icon">📊</span>
+3232: [7]                                         <span class="dt-name">Funciones de Agregado</span>
+3233: [7]                                         <span class="dt-desc">En informes y consultas agrupadas:
+3234: [7]                                             <code>Suma([Total])</code>, <code>Promedio([Nota])</code>,
+3235: [7]                                             <code>Conteo([ID])</code>, <code>Máx([Salario])</code>.</span>
+3236: [7]                                     </div>
+3237: [6]                                 </div>
+3238: [5]                                 <div class="info-box info-box--tip mt-15">
+3239: [6]                                     <span class="info-icon">💡</span>
+3240: [6]                                     <div>
+3241: [7]                                         <strong>El Constructor de Expresiones</strong>
+3242: [7]                                         <p class="mt-4 text-095">Access incluye una herramienta visual para
+3243: [7]                                             escribir
+3244: [7]                                             expresiones sin memorizar sintaxis. Haz clic en el botón
+3245: [7]                                             <strong>«...»</strong> en cualquier propiedad de campo o en la
+3246: [7]                                             cuadrícula de diseño de consultas. El constructor muestra todas
+3247: [7]                                             las
+3248: [7]                                             funciones disponibles organizadas por categoría.
+3249: [7]                                         </p>
+3250: [7]                                     </div>
+3251: [6]                                 </div>
+3252: [5]                                 <!-- EJERCICIO GUIADO -->
+3253: [5]                                 <div class="info-box info-box--primary mt-20">
+3254: [6]                                     <span class="info-icon">🎯</span>
+3255: [6]                                     <div>
+3256: [7]                                         <strong>Ejercicio: Consulta de Antigüedad Laboral</strong>
+3257: [7]                                         <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+3258: [7]                                             <li>Crea una <strong>Consulta de Selección</strong> basada en
+3259: [7]                                                 <code>tbl_Empleados</code>.
+3260: [7]                                             </li>
+3261: [7]                                             <li>Agrega los campos <code>NombreCompleto</code>,
+3262: [7]                                                 <code>Cargo</code> y
+3263: [7]                                                 <code>FechaIngreso</code>.
+3264: [7]                                             </li>
+3265: [7]                                             <li>En una columna vacía, crea el campo
+3266: [7]                                                 calculado:<br><code>Antigüedad_Años: DifFecha("aaaa",[FechaIngreso];Fecha())</code>
+3267: [7]                                             </li>
+3268: [7]                                             <li>En otra
+3269: [7]                                                 columna:<br><code>Estado_Laboral: SiInm([Antigüedad_Años]&gt;=5;&quot;Veterano&quot;;SiInm([Antigüedad_Años]&gt;=1;&quot;Activo&quot;;&quot;Nuevo&quot;))</code>
+3270: [7]                                             </li>
+3271: [7]                                             <li>Ejecuta con <kbd>F5</kbd> y guarda como
+3272: [7]                                                 <code>Q_Antigüedad_Empleados</code>.
+3273: [7]                                             </li>
+3274: [7]                                         </ol>
+3275: [7]                                     </div>
+3276: [6]                                 </div>
+3277: [5]                             </div>
+3278: [4] 
+3279: [4]                             <!-- ─── 6. MACROS E INFORMES ─── -->
+3280: [4]                             <div class="theory-card theory-card--full border-l-primary">
+3281: [5]                                 <h3>⚙️ Macros: Automatización sin Código</h3>
+3282: [5]                                 <p>Las macros son secuencias de acciones predefinidas que Access ejecuta al
+3283: [5]                                     ocurrir
+3284: [5]                                     un evento (clic en un botón, apertura de formulario, etc.). Son el
+3285: [5]                                     puente entre
+3286: [5]                                     Access y la automatización sin programar VBA.</p>
+3287: [5]                                 <div class="component-list mt-15">
+3288: [6]                                     <div class="component-item">
+3289: [7]                                         <span class="comp-icon">🖱️</span>
+3290: [7]                                         <div>
+3291: [8]                                             <strong>AbriFormulario / AbrirInforme</strong>
+3292: [8]                                             <p>Las acciones más comunes. Abren un formulario o informe,
+3293: [8]                                                 opcionalmente con un filtro. Ej: abrir el formulario de
+3294: [8]                                                 pedidos
+3295: [8]                                                 filtrando solo los pendientes.</p>
+3296: [8]                                         </div>
+3297: [7]                                     </div>
+3298: [6]                                     <div class="component-item">
+3299: [7]                                         <span class="comp-icon">🔍</span>
+3300: [7]                                         <div>
+3301: [8]                                             <strong>BuscarRegistro / BuscarSiguiente</strong>
+3302: [8]                                             <p>Permite buscar dinámicamente un registro específico. Útil
+3303: [8]                                                 para crear
+3304: [8]                                                 barras de búsqueda en formularios.</p>
+3305: [8]                                         </div>
+3306: [7]                                     </div>
+3307: [6]                                     <div class="component-item">
+3308: [7]                                         <span class="comp-icon">💾</span>
+3309: [7]                                         <div>
+3310: [8]                                             <strong>GuardarRegistro / Actualizar</strong>
+3311: [8]                                             <p>Fuerza el guardado del registro actual sin cerrar el
+3312: [8]                                                 formulario.
+3313: [8]                                                 Ideal para botones «Guardar» personalizados que den
+3314: [8]                                                 confirmación
+3315: [8]                                                 visual al usuario.</p>
+3316: [8]                                         </div>
+3317: [7]                                     </div>
+3318: [6]                                     <div class="component-item">
+3319: [7]                                         <span class="comp-icon">📢</span>
+3320: [7]                                         <div>
+3321: [8]                                             <strong>CuadroDeMensaje (MsgBox)</strong>
+3322: [8]                                             <p>Muestra mensajes personalizados de confirmación o alerta. Ej:
+3323: [8]                                                 «¿Está
+3324: [8]                                                 seguro de eliminar este registro?» con botones Sí/No antes
+3325: [8]                                                 de
+3326: [8]                                                 ejecutar una acción.</p>
+3327: [8]                                         </div>
+3328: [7]                                     </div>
+3329: [6]                                     <div class="component-item">
+3330: [7]                                         <span class="comp-icon">🏁</span>
+3331: [7]                                         <div>
+3332: [8]                                             <strong>Macro AutoExec</strong>
+3333: [8]                                             <p>Si creas una macro con el nombre exacto
+3334: [8]                                                 <code>AutoExec</code>, Access
+3335: [8]                                                 la ejecuta <strong>automáticamente</strong> al abrir la base
+3336: [8]                                                 de
+3337: [8]                                                 datos. Úsala para mostrar el menú principal al inicio.
+3338: [8]                                             </p>
+3339: [8]                                         </div>
+3340: [7]                                     </div>
+3341: [6]                                     <div class="component-item">
+3342: [7]                                         <span class="comp-icon">🔔</span>
+3343: [7]                                         <div>
+3344: [8]                                             <strong>EstablecerValor</strong>
+3345: [8]                                             <p>Cambia el valor de un control en tiempo de ejecución. Ej: al
+3346: [8]                                                 seleccionar una categoría, limpiar automáticamente el campo
+3347: [8]                                                 de
+3348: [8]                                                 subcategoría relacionado.</p>
+3349: [8]                                         </div>
+3350: [7]                                     </div>
+3351: [6]                                 </div>
+3352: [5]                                 <!-- EJERCICIO GUIADO: MACROS -->
+3353: [5]                                 <div class="info-box info-box--success mt-20">
+3354: [6]                                     <span class="info-icon">🛠️</span>
+3355: [6]                                     <div>
+3356: [7]                                         <strong>Ejercicio: Botón para Abrir Informe con Filtro</strong>
+3357: [7]                                         <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+3358: [7]                                             <li>Abre tu formulario principal en <strong>Vista
+3359: [7]                                                     Diseño</strong>.</li>
+3360: [7]                                             <li>Agrega un <strong>Botón de comando</strong> desde el panel
+3361: [7]                                                 de
+3362: [7]                                                 controles.</li>
+3363: [7]                                             <li>En el asistente, selecciona la categoría <em>«Informe de
+3364: [7]                                                     aplicación»</em> → acción <em>«Vista previa del
+3365: [7]                                                     informe»</em>.
+3366: [7]                                                 Elige tu informe de inventario.</li>
+3367: [7]                                             <li>Si el asistente no está disponible, ve a la propiedad
+3368: [7]                                                 <strong>«Al
+3369: [7]                                                     hacer clic»</strong> del botón → selecciona
+3370: [7]                                                 <em>«Generador de
+3371: [7]                                                     macros»</em> → agrega la acción
+3372: [7]                                                 <code>AbrirInforme</code>.
+3373: [7]                                             </li>
+3374: [7]                                             <li>En la propiedad «Condición WHERE» puedes agregar un filtro
+3375: [7]                                                 dinámico:<br><code>[Categoria] = [Formularios]![frm_Principal]![cboCategoría]</code>
+3376: [7]                                             </li>
+3377: [7]                                         </ol>
+3378: [7]                                         <p class="text-090 text-success mt-4"><em>Resultado:</em> El botón
+3379: [7]                                             abre el
+3380: [7]                                             informe mostrando solo los registros de la categoría
+3381: [7]                                             seleccionada en el
+3382: [7]                                             formulario.</p>
+3383: [7]                                     </div>
+3384: [6]                                 </div>
+3385: [5]                             </div>
+3386: [4] 
+3387: [4]                             <!-- ─── 7. INFORMES AVANZADOS ─── -->
+3388: [4]                             <div class="theory-card theory-card--full border-l-orange">
+3389: [5]                                 <h3>📄 Informes Avanzados: Del Dato al Documento Profesional</h3>
+3390: [5]                                 <p>Los informes en Access son documentos diseñados para <strong>imprimir o
+3391: [5]                                         exportar
+3392: [5]                                         a PDF</strong>. Se estructuran en secciones con propósitos
+3393: [5]                                     específicos:</p>
+3394: [5]                                 <div class="datatypes-grid mt-15 mb-15">
+3395: [6]                                     <div class="datatype-item">
+3396: [7]                                         <span class="dt-icon">📝</span>
+3397: [7]                                         <span class="dt-name">Encabezado del Informe</span>
+3398: [7]                                         <span class="dt-desc">Aparece <strong>solo en la primera
+3399: [7]                                                 página</strong>.
+3400: [7]                                             Ideal para el logo de la empresa, título del documento y fecha
+3401: [7]                                             de
+3402: [7]                                             generación.</span>
+3403: [7]                                     </div>
+3404: [6]                                     <div class="datatype-item">
+3405: [7]                                         <span class="dt-icon">📋</span>
+3406: [7]                                         <span class="dt-name">Encabezado de Página</span>
+3407: [7]                                         <span class="dt-desc">Se repite en <strong>la parte superior de cada
+3408: [7]                                                 página</strong>. Contiene los títulos de las
+3409: [7]                                             columnas.</span>
+3410: [7]                                     </div>
+3411: [6]                                     <div class="datatype-item">
+3412: [7]                                         <span class="dt-icon">📌</span>
+3413: [7]                                         <span class="dt-name">Encabezado de Grupo</span>
+3414: [7]                                         <span class="dt-desc">Aparece antes de cada grupo de registros. Ej:
+3415: [7]                                             <code>Categoría: Electrónica</code> antes de listar todos los
+3416: [7]                                             productos
+3417: [7]                                             electrónicos.</span>
+3418: [7]                                     </div>
+3419: [6]                                     <div class="datatype-item">
+3420: [7]                                         <span class="dt-icon">🔢</span>
+3421: [7]                                         <span class="dt-name">Sección de Detalle</span>
+3422: [7]                                         <span class="dt-desc">Se repite por cada <strong>registro
+3423: [7]                                                 individual</strong>. Es el cuerpo del informe donde van los
+3424: [7]                                             datos de
+3425: [7]                                             cada fila.</span>
+3426: [7]                                     </div>
+3427: [6]                                     <div class="datatype-item">
+3428: [7]                                         <span class="dt-icon">∑</span>
+3429: [7]                                         <span class="dt-name">Pie de Grupo</span>
+3430: [7]                                         <span class="dt-desc">Muestra <strong>subtotales y
+3431: [7]                                                 resúmenes</strong> al
+3432: [7]                                             final de cada grupo. Ej:
+3433: [7]                                             <code>Total Electrónica: $4.500.000</code>.</span>
+3434: [7]                                     </div>
+3435: [6]                                     <div class="datatype-item">
+3436: [7]                                         <span class="dt-icon">🏁</span>
+3437: [7]                                         <span class="dt-name">Pie de Informe</span>
+3438: [7]                                         <span class="dt-desc"><strong>Gran Total</strong> y resumen general.
+3439: [7]                                             Aparece
+3440: [7]                                             solo al final del documento completo.</span>
+3441: [7]                                     </div>
+3442: [6]                                 </div>
+3443: [5]                                 <div class="info-box info-box--tip mt-15">
+3444: [6]                                     <span class="info-icon">💡</span>
+3445: [6]                                     <div>
+3446: [7]                                         <strong>Técnica Profesional: Exportar a PDF automáticamente</strong>
+3447: [7]                                         <p class="mt-4 text-095">Crea una macro con la acción
+3448: [7]                                             <code>ExportarConFormato</code>, elige el tipo <em>PDF</em> y
+3449: [7]                                             una ruta
+3450: [7]                                             de guardado dinámica usando
+3451: [7]                                             <code>=CarpetaActual() & "\Informe_" & Formato(Fecha();"yyyymmdd") & ".pdf"</code>.
+3452: [7]                                             Adjunta esta macro al botón de tu formulario principal para
+3453: [7]                                             generar
+3454: [7]                                             reportes PDF con un solo clic.
+3455: [7]                                         </p>
+3456: [7]                                     </div>
+3457: [6]                                 </div>
+3458: [5]                                 <!-- EJERCICIO FINAL INTEGRADOR -->
+3459: [5]                                 <div class="info-box info-box--warning mt-20">
+3460: [6]                                     <span class="info-icon">🏆</span>
+3461: [6]                                     <div>
+3462: [7]                                         <strong>Ejercicio Integrador Final: Sistema de Inventario
+3463: [7]                                             Completo</strong>
+3464: [7]                                         <p class="mt-4 text-095">Aplica todos los temas vistos en esta
+3465: [7]                                             sección para
+3466: [7]                                             crear un mini-sistema de inventario:</p>
+3467: [7]                                         <ol class="list-decimal pl-20 mt-8 mb-8 text-095 c-text-2 space-y-4">
+3468: [7]                                             <li><strong>Validación:</strong> En <code>tbl_Productos</code>,
+3469: [7]                                                 agrega
+3470: [7]                                                 reglas de validación para Precio <code>&gt;0</code> y Stock
+3471: [7]                                                 <code>&gt;=0</code>.
+3472: [7]                                             </li>
+3473: [7]                                             <li><strong>Lista desplegable:</strong> En el formulario de
+3474: [7]                                                 Productos,
+3475: [7]                                                 cambia el campo Categoría por un Cuadro Combinado enlazado a
+3476: [7]                                                 una
+3477: [7]                                                 tabla <code>tbl_Categorias</code> con «Limitar a lista: Sí».
+3478: [7]                                             </li>
+3479: [7]                                             <li><strong>Condicional:</strong> Crea la consulta
+3480: [7]                                                 <code>Q_Estado_Stock</code>
+3481: [7]                                                 con:<br><code>Estado: SiInm([Stock]=0;&quot;Agotado&quot;;SiInm([Stock]&lt;5;&quot;Crítico&quot;;&quot;Normal&quot;))</code>
+3482: [7]                                             </li>
+3483: [7]                                             <li><strong>Informe:</strong> Genera un informe agrupado por
+3484: [7]                                                 Categoría
+3485: [7]                                                 con subtotales de Stock y Valor Total
+3486: [7]                                                 (<code>Suma([Precio]*[Stock])</code>) en el pie de grupo.
+3487: [7]                                             </li>
+3488: [7]                                             <li><strong>Macro:</strong> Crea un botón en el formulario
+3489: [7]                                                 principal que
+3490: [7]                                                 exporte el informe anterior a PDF automáticamente.</li>
+3491: [7]                                         </ol>
+3492: [7]                                         <p class="text-090 text-warning mt-4"><em>Entregable:</em> Una base
+3493: [7]                                             de datos
+3494: [7]                                             Access funcional con formularios, consultas con condicionales,
+3495: [7]                                             validación activa e informe exportable.</p>
+3496: [7]                                         <a href="https://drive.google.com" target="_blank" rel="noopener"
+3497: [7]                                             class="upload-cta mt-12">
+3498: [7]                                             <span class="upload-cta-icon">📤</span>
+3499: [7]                                             Subir Ejercicio Integrador a Drive
+3500: [7]                                         </a>

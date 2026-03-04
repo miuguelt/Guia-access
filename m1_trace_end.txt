@@ -1,0 +1,6 @@
+L2515: d=3 | <div class="guide-step" data-step="m1p1">
+L2516: d=3 | <div class="gs-marker gs-marker--access"><span>1</
+L2517: d=4 | <div class="gs-content">
+L2518: d=4 | <h5>Diseño del Modelo: Suministros y Proveedores</
+L2519: d=4 | <p>Identifica las entidades: <code>PROVEEDORES</co
+L2520: d=4 | Nombre,
