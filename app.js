@@ -871,14 +871,20 @@ function initJoinsVisual() {
   function renderJoin(type) {
     let rows = [];
     if (type === 'INNER') {
+      const clientesMap = new Map(data.clientes.map(c => [c.id, c]));
       data.pedidos.forEach(p => {
-        const c = data.clientes.find(cl => cl.id === p.id_cli);
+        const c = clientesMap.get(p.id_cli);
         if (c) rows.push({ nombre: c.nombre, ciudad: c.ciudad, monto: '$' + p.monto.toLocaleString() });
       });
     } else {
+      const pedidosMap = new Map();
+      data.pedidos.forEach(p => {
+        if (!pedidosMap.has(p.id_cli)) pedidosMap.set(p.id_cli, []);
+        pedidosMap.get(p.id_cli).push(p);
+      });
       data.clientes.forEach(c => {
-        const peds = data.pedidos.filter(p => p.id_cli === c.id);
-        if (peds.length) peds.forEach(p => rows.push({ nombre: c.nombre, ciudad: c.ciudad, monto: '$' + p.monto.toLocaleString() }));
+        const peds = pedidosMap.get(c.id);
+        if (peds && peds.length) peds.forEach(p => rows.push({ nombre: c.nombre, ciudad: c.ciudad, monto: '$' + p.monto.toLocaleString() }));
         else rows.push({ nombre: c.nombre, ciudad: c.ciudad, monto: 'NULL' });
       });
     }
